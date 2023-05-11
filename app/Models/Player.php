@@ -12,6 +12,11 @@ class Player extends Model
     public $fillable = [
         'username',
         'account_hash',
+        'account_type',
         'data'
+    ];
+
+    protected $casts = [
+        'data' => 'array'
     ];
 }

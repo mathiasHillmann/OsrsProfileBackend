@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('username');
             $table->string('account_hash');
+            $table->string('account_type');
             $table->json('data');
             $table->timestamps();
         });

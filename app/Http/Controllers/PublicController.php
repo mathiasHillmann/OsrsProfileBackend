@@ -5,10 +5,14 @@ declare(strict_types=1);
 namespace App\Http\Controllers;
 
 use App\Enums\RunescapeTypes;
+use App\Models\Player;
 use App\Services\QuestService;
 use App\Services\SkillService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Response;
+use Symfony\Component\Routing\Annotation\Route;
 
 class PublicController extends Controller
 {
@@ -18,10 +22,40 @@ class PublicController extends Controller
     ) {
     }
 
+    #[Route('/public/player/{accountHash}', methods: ['GET'])]
     public function load(Request $request, string $accountHash): JsonResponse
     {
         try {
-            return $this->response($this->getDefaultValues());
+            $default = $this->getDefaultValues();
+
+            if ($player = Player::where('account_hash', $accountHash)->first()) {
+                $data = $player->data;
+
+                // Include new objects to track that are not in the player data
+                $data = array_merge($data, array_diff_key($default, $data));
+
+                return Response::json($data);
+            }
+
+            return Response::json($default);
+        } catch (\Throwable $th) {
+            return $this->response($th);
+        }
+    }
+
+    #[Route('/public/player/{accountHash}', methods: ['POST'])]
+    public function submit(Request $request, string $accountHash): JsonResponse
+    {
+        try {
+            $player = Player::updateOrCreate([
+                'account_hash' => $accountHash
+            ], [
+                'data' => $request->input('data'),
+                'username' => $request->input('username'),
+                'account_type' => $request->input('accountType'),
+            ]);
+
+            return $this->response($player);
         } catch (\Throwable $th) {
             return $this->response($th);
         }
@@ -44,14 +78,5 @@ class PublicController extends Controller
         });
 
         return $values;
-    }
-
-    private function makeTrackingObject(string $index, RunescapeTypes $type): array
-    {
-        return [
-            'index' => $index,
-            'type' => $type->value,
-            'value' => null,
-        ];
     }
 }

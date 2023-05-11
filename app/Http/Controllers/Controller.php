@@ -18,6 +18,7 @@ class Controller extends BaseController
     public function response($data = [], int $status = HttpFoundationResponse::HTTP_OK, string $message = null): JsonResponse
     {
         if ($data instanceof \Throwable) {
+            report($data);
             $status = HttpFoundationResponse::HTTP_INTERNAL_SERVER_ERROR;
 
             return Response::json(['message' => $message, 'error' => $data->getMessage(), 'file' => $data->getFile(), 'line' => $data->getLine()], $status);
