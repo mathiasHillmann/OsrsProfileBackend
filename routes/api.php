@@ -1,7 +1,6 @@
 <?php
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\ApiController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,3 +13,8 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
+
+Route::controller(ApiController::class)->group(function () {
+    Route::get('/player/{username}', 'load');
+    Route::get('/search/{search}', 'search');
+});

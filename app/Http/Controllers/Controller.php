@@ -15,7 +15,7 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, ValidatesRequests;
 
-    public function response($data = [], int $status = HttpFoundationResponse::HTTP_OK, string $message = null): JsonResponse
+    public function response($data = null, int $status = HttpFoundationResponse::HTTP_OK, string $message = null): JsonResponse
     {
         if ($data instanceof \Throwable) {
             report($data);

@@ -9,6 +9,9 @@ class Player extends Model
 {
     use HasFactory;
 
+    protected $primaryKey = null;
+    public $incrementing = false;
+
     public $fillable = [
         'username',
         'account_hash',

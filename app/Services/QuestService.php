@@ -4,7 +4,9 @@ declare(strict_types=1);
 
 namespace App\Services;
 
+use App\Enums\RunescapeQuestStatus;
 use App\Enums\RunescapeTypes;
+use Illuminate\Support\Collection;
 
 class QuestService
 {
@@ -14,6 +16,26 @@ class QuestService
             ...$this->getVarpQuests(),
             ...$this->getVarbQuests(),
         ];
+    }
+
+    public function translateQuestStatus(array &$data): void
+    {
+        $quests = $this->getValuesToTrack();
+
+        foreach ($quests as $questName => $quest) {
+            $item = &$data[$questName];
+            if (!$item) {
+                continue;
+            }
+
+            if (!$item['value'] || $item['value'] <= $quest['startValue']) {
+                $item = RunescapeQuestStatus::NotStarted->value;
+            } elseif ($item['value'] >= $quest['endValue']) {
+                $item = RunescapeQuestStatus::Complete->value;
+            } else {
+                $item = RunescapeQuestStatus::InProgress->value;
+            }
+        }
     }
 
     private function getVarbQuests(): array
