@@ -25,7 +25,7 @@ class QuestService
         foreach ($quests as $questName => $quest) {
             $item = &$data[$questName];
             if (!$item) {
-                continue;
+                $data[$questName] = RunescapeQuestStatus::Unknown->value;
             }
 
             if (!$item['value'] || $item['value'] <= $quest['startValue']) {

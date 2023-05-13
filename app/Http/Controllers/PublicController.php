@@ -26,13 +26,17 @@ class PublicController extends Controller
     public function load(Request $request, string $accountHash): JsonResponse
     {
         try {
-            $default = $this->getDefaultValues();
+            $default = $this->getDefaultValues($request);
 
             if ($player = Player::where('account_hash', $accountHash)->first()) {
                 $data = $player->data;
 
                 // Include new objects to track that are not in the player data
                 $data = array_merge($data, array_diff_key($default, $data));
+
+                // Remove all keys from data which are not present on the default values
+                // Used when someone changes the config of the plugin to not track X
+                $data = array_intersect_key($data, $default);
 
                 return Response::json($data);
             }
@@ -61,21 +65,28 @@ class PublicController extends Controller
         }
     }
 
-    private function getDefaultValues(): array
+    private function getDefaultValues(Request $request): array
     {
-        $values = [
-            ...$this->skillService->getValuesToTrack(),
-            ...$this->questService->getValuesToTrack(),
-        ];
+        $values = [];
 
-        // Filter all keys of a value to track to only index, type and value
-        array_walk($values, function (&$value) {
-            $value = [
-                'index' => $value['index'],
-                'type' => $value['type'],
-                'value' => null,
-            ];
-        });
+        if ($request->boolean('skills')) {
+            $values = array_merge($values, $this->skillService->getValuesToTrack());
+        }
+
+        if ($request->boolean('quests')) {
+            $values = array_merge($values, $this->questService->getValuesToTrack());
+        }
+
+        if (count($values) > 0) {
+            // Filter all keys of a value to track to only index, type and value
+            array_walk($values, function (&$value) {
+                $value = [
+                    'index' => $value['index'],
+                    'type' => $value['type'],
+                    'value' => null,
+                ];
+            });
+        }
 
         return $values;
     }

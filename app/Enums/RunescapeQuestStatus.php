@@ -9,4 +9,5 @@ enum RunescapeQuestStatus: string
     case Complete = 'complete';
     case InProgress = 'in_progress';
     case NotStarted = 'not_started';
+    case Unknown = 'unknown';
 }

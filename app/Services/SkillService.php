@@ -44,7 +44,11 @@ class SkillService
         foreach ($skills as $skillName => $skill) {
             $item = &$data[$skillName];
             if (!$item) {
-                continue;
+                $data[$skillName] = [
+                    'real_level' => null,
+                    'virtual_level' => null,
+                    'experience' => 0,
+                ];
             }
 
             $item = [
