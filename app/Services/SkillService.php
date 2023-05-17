@@ -6,7 +6,7 @@ namespace App\Services;
 
 use App\Enums\RunescapeTypes;
 
-class SkillService
+class SkillService implements TranslatingInterface
 {
     public function getValuesToTrack(): array
     {
@@ -37,30 +37,33 @@ class SkillService
         ];
     }
 
-    public function translateSkills(array &$data): void
+    public function translate(array &$data): void
     {
         $skills = $this->getValuesToTrack();
 
         foreach ($skills as $skillName => $skill) {
-            $item = &$data[$skillName];
+            $item = $data[$skillName];
             if (!$item) {
-                $data[$skillName] = [
-                    'real_level' => null,
-                    'virtual_level' => null,
+                $data['skills'][$skillName] = [
+                    'realLevel' => null,
+                    'virtualLevel' => null,
                     'experience' => 0,
                 ];
             }
 
-            $item = [
-                'real_level' => $this->experienceToLevel($item['value']),
-                'virtual_level' => $this->experienceToLevel($item['value'], true),
+            $data['skills'][$skillName] = [
+                'realLevel' => $this->experienceToLevel($item['value']),
+                'virtualLevel' => $this->experienceToLevel($item['value'], true),
                 'experience' => $item['value'],
             ];
+
+            unset($data[$skillName]);
         }
     }
 
     private function experienceToLevel(int $experience, bool $virtual = false): int
     {
+        // Xp of the next level - 1
         $level = match (true) {
             $experience <= 82 => 1,
             $experience <= 173 => 2,

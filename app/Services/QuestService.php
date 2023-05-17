@@ -6,9 +6,8 @@ namespace App\Services;
 
 use App\Enums\RunescapeQuestStatus;
 use App\Enums\RunescapeTypes;
-use Illuminate\Support\Collection;
 
-class QuestService
+class QuestService implements TranslatingInterface
 {
     public function getValuesToTrack(): array
     {
@@ -18,23 +17,25 @@ class QuestService
         ];
     }
 
-    public function translateQuestStatus(array &$data): void
+    public function translate(array &$data): void
     {
         $quests = $this->getValuesToTrack();
 
         foreach ($quests as $questName => $quest) {
-            $item = &$data[$questName];
+            $item = $data[$questName];
             if (!$item) {
-                $data[$questName] = RunescapeQuestStatus::Unknown->value;
+                $data['quests'][$questName] = RunescapeQuestStatus::Unknown->value;
             }
 
             if (!$item['value'] || $item['value'] <= $quest['startValue']) {
-                $item = RunescapeQuestStatus::NotStarted->value;
+                $data['quests'][$questName] = RunescapeQuestStatus::NotStarted->value;
             } elseif ($item['value'] >= $quest['endValue']) {
-                $item = RunescapeQuestStatus::Complete->value;
+                $data['quests'][$questName] = RunescapeQuestStatus::Complete->value;
             } else {
-                $item = RunescapeQuestStatus::InProgress->value;
+                $data['quests'][$questName] = RunescapeQuestStatus::InProgress->value;
             }
+
+            unset($data[$questName]);
         }
     }
 

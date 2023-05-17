@@ -8,6 +8,7 @@ use App\Enums\RunescapeTypes;
 use App\Models\Player;
 use App\Services\QuestService;
 use App\Services\SkillService;
+use App\Services\SummaryService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -21,6 +22,7 @@ class ApiController extends Controller
     public function __construct(
         private SkillService $skillService,
         private QuestService $questService,
+        private SummaryService $summaryService,
     ) {
     }
 
@@ -31,8 +33,9 @@ class ApiController extends Controller
             if ($player = Player::where('username', $username)->first()) {
                 $data = $player->data;
 
-                $this->questService->translateQuestStatus($data);
-                $this->skillService->translateSkills($data);
+                $this->questService->translate($data);
+                $this->skillService->translate($data);
+                $this->summaryService->translate($data, $player->updated_at);
 
                 return $this->response($data);
             } else {
