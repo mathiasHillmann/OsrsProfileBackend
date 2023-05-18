@@ -28,7 +28,7 @@ class PublicController extends Controller
         try {
             $default = $this->getDefaultValues($request);
 
-            if ($player = Player::where('account_hash', $accountHash)->first()) {
+            if ($player = Player::find($accountHash)) {
                 $data = $player->data;
 
                 // Include new objects to track that are not in the player data

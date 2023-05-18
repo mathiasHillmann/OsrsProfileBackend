@@ -13,8 +13,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('players', function (Blueprint $table) {
+            $table->string('account_hash')->primary();
             $table->string('username');
-            $table->string('account_hash');
             $table->string('account_type');
             $table->json('data');
             $table->timestamps();

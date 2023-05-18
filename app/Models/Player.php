@@ -9,12 +9,12 @@ class Player extends Model
 {
     use HasFactory;
 
-    protected $primaryKey = null;
+    protected $primaryKey = 'account_hash';
     public $incrementing = false;
 
     public $fillable = [
-        'username',
         'account_hash',
+        'username',
         'account_type',
         'data'
     ];

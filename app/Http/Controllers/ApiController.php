@@ -51,7 +51,7 @@ class ApiController extends Controller
     {
         try {
             $search = strtolower($search);
-            $players = Player::where(DB::raw('lower(username)'), 'like', "%{$search}%")->get(['username'])->pluck('username');
+            $players = Player::where(DB::raw('lower(username)'), 'like', "%{$search}%")->orderByRaw('LENGTH(username), username')->get(['username'])->pluck('username');
 
             return $this->response($players);
         } catch (\Throwable $th) {
