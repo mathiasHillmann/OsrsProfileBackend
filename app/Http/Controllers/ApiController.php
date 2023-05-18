@@ -35,7 +35,7 @@ class ApiController extends Controller
 
                 $this->questService->translate($data);
                 $this->skillService->translate($data);
-                $this->summaryService->translate($data, $player->updated_at);
+                $this->summaryService->translate($data, $player);
 
                 return $this->response($data);
             } else {

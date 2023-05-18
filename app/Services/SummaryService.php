@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace App\Services;
 
-use Carbon\Carbon;
+use App\Models\Player;
 
 class SummaryService implements TranslatingInterface
 {
-    public function translate(array &$data, Carbon $updatedAt = null): void
+    public function translate(array &$data, Player $player = null): void
     {
         $data['summary']['total'] = [
             'realLevel' => array_sum(array_column($data['skills'], 'realLevel')),
@@ -18,7 +18,9 @@ class SummaryService implements TranslatingInterface
 
         $data['summary']['combat'] = $this->calculateCombatLevel($data);
 
-        $data['summary']['updatedAt'] = $updatedAt;
+        $data['summary']['updatedAt'] = $player->updated_at;
+        $data['summary']['accountType'] = $player->account_type;
+        $data['summary']['username'] = $player->username;
     }
 
     private function calculateCombatLevel(array $data): ?int
