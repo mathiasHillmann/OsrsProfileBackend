@@ -4,7 +4,9 @@ declare(strict_types=1);
 
 namespace App\Services;
 
+use App\Enums\RunescapeQuestStatus;
 use App\Models\Player;
+use Illuminate\Support\Collection;
 
 class SummaryService implements TranslatingInterface
 {
@@ -21,6 +23,26 @@ class SummaryService implements TranslatingInterface
         $data['summary']['updatedAt'] = $player->updated_at;
         $data['summary']['accountType'] = $player->account_type;
         $data['summary']['username'] = $player->username;
+        $data['summary']['quests'] = [
+            RunescapeQuestStatus::NotStarted->value => Collection::wrap($data['quests'])->filter(fn ($status) => $status === RunescapeQuestStatus::NotStarted->value)->count(),
+            RunescapeQuestStatus::InProgress->value => Collection::wrap($data['quests'])->filter(fn ($status) => $status === RunescapeQuestStatus::InProgress->value)->count(),
+            RunescapeQuestStatus::Complete->value => Collection::wrap($data['quests'])->filter(fn ($status) => $status === RunescapeQuestStatus::Complete->value)->count(),
+            'total' => Collection::wrap($data['quests'])->count(),
+        ];
+        $data['summary']['diary'] = [
+            'not_started' => 0,
+            'in_progress' => 0,
+            'complete' => 0,
+            'total' => 492,
+        ];
+        $data['summary']['combatTasks'] = [
+            'complete' => 0,
+            'total' => 485,
+        ];
+        $data['summary']['collection'] = [
+            'complete' => 0,
+            'total' => 1443,
+        ];
     }
 
     private function calculateCombatLevel(array $data): ?int
