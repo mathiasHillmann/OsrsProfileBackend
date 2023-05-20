@@ -204,7 +204,7 @@ class SkillService implements TranslatingInterface
     {
         return [
             'index' => $index,
-            'type' => $type->value,
+            'type' => $type,
         ];
     }
 }

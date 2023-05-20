@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::controller(ApiController::class)->group(function () {
+    Route::get('/random', 'random');
     Route::get('/player/{username}', 'load');
     Route::get('/search/{search}', 'search');
 });

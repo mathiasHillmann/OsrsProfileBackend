@@ -23,15 +23,15 @@ class SummaryService implements TranslatingInterface
         $data['summary']['updatedAt'] = $player->updated_at;
         $data['summary']['accountType'] = $player->account_type;
         $data['summary']['username'] = $player->username;
-        $data['summary']['quests'] = [
-            RunescapeQuestStatus::NotStarted->value => Collection::wrap($data['quests'])->filter(fn ($status) => $status === RunescapeQuestStatus::NotStarted->value)->count(),
-            RunescapeQuestStatus::InProgress->value => Collection::wrap($data['quests'])->filter(fn ($status) => $status === RunescapeQuestStatus::InProgress->value)->count(),
-            RunescapeQuestStatus::Complete->value => Collection::wrap($data['quests'])->filter(fn ($status) => $status === RunescapeQuestStatus::Complete->value)->count(),
-            'total' => Collection::wrap($data['quests'])->count(),
+        $data['summary']['quest'] = [
+            RunescapeQuestStatus::Complete->value => Collection::wrap($data['quest'])->filter(fn ($status) => $status === RunescapeQuestStatus::Complete)->count(),
+            'total' => Collection::wrap($data['quest'])->count(),
+        ];
+        $data['summary']['miniquest'] = [
+            RunescapeQuestStatus::Complete->value => Collection::wrap($data['miniquest'])->filter(fn ($status) => $status === RunescapeQuestStatus::Complete)->count(),
+            'total' => Collection::wrap($data['miniquest'])->count(),
         ];
         $data['summary']['diary'] = [
-            'not_started' => 0,
-            'in_progress' => 0,
             'complete' => 0,
             'total' => 492,
         ];

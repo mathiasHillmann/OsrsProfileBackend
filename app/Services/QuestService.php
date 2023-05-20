@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Services;
 
 use App\Enums\RunescapeQuestStatus;
+use App\Enums\RunescapeQuestTypes;
 use App\Enums\RunescapeTypes;
 
 class QuestService implements TranslatingInterface
@@ -24,15 +25,15 @@ class QuestService implements TranslatingInterface
         foreach ($quests as $questName => $quest) {
             $item = $data[$questName];
             if (!$item) {
-                $data['quests'][$questName] = RunescapeQuestStatus::Unknown->value;
+                $data[$quest['questType']->value][$questName] = RunescapeQuestStatus::Unknown;
             }
 
             if (!$item['value'] || $item['value'] <= $quest['startValue']) {
-                $data['quests'][$questName] = RunescapeQuestStatus::NotStarted->value;
+                $data[$quest['questType']->value][$questName] = RunescapeQuestStatus::NotStarted;
             } elseif ($item['value'] >= $quest['endValue']) {
-                $data['quests'][$questName] = RunescapeQuestStatus::Complete->value;
+                $data[$quest['questType']->value][$questName] = RunescapeQuestStatus::Complete;
             } else {
-                $data['quests'][$questName] = RunescapeQuestStatus::InProgress->value;
+                $data[$quest['questType']->value][$questName] = RunescapeQuestStatus::InProgress;
             }
 
             unset($data[$questName]);
@@ -48,11 +49,11 @@ class QuestService implements TranslatingInterface
             'a_souls_bane' => $this->makeObject(2011, RunescapeTypes::VarBit, 0, 13),
             'a_tail_of_two_cats' => $this->makeObject(1028, RunescapeTypes::VarBit, 0, 70),
             'a_taste_of_hope' => $this->makeObject(6396, RunescapeTypes::VarBit, 0, 165),
-            'alfred_grimhand_barcrawl' => $this->makeObject(13714, RunescapeTypes::VarBit, 0, 2),
+            'alfred_grimhand_barcrawl' => $this->makeObject(13714, RunescapeTypes::VarBit, 0, 2, RunescapeQuestTypes::Miniquest),
             'animal_magnetism' => $this->makeObject(3185, RunescapeTypes::VarBit, 0, 240),
             'another_slice_of_ham' => $this->makeObject(3550, RunescapeTypes::VarBit, 0, 11),
-            'architectural_alliance' => $this->makeObject(13784, RunescapeTypes::VarBit, 0, 3),
-            'bear_your_soul' => $this->makeObject(5078, RunescapeTypes::VarBit, 0, 3),
+            'architectural_alliance' => $this->makeObject(13784, RunescapeTypes::VarBit, 0, 3, RunescapeQuestTypes::Miniquest),
+            'bear_your_soul' => $this->makeObject(5078, RunescapeTypes::VarBit, 0, 3, RunescapeQuestTypes::Miniquest),
             'below_ice_mountain' => $this->makeObject(12063, RunescapeTypes::VarBit, 0, 120),
             'beneath_cursed_sands' => $this->makeObject(13841, RunescapeTypes::VarBit, 0, 108),
             'between_a_rock' => $this->makeObject(299, RunescapeTypes::VarBit, 0, 110),
@@ -61,8 +62,8 @@ class QuestService implements TranslatingInterface
             'cold_war' => $this->makeObject(3293, RunescapeTypes::VarBit, 0, 135),
             'contact' => $this->makeObject(3274, RunescapeTypes::VarBit, 0, 130),
             'creature_of_fenkenstrain' => $this->makeObject(13715, RunescapeTypes::VarBit, 0, 9),
-            'curse_of_the_empty_lord' => $this->makeObject(13713, RunescapeTypes::VarBit, 0, 6),
-            'daddys_home' => $this->makeObject(10570, RunescapeTypes::VarBit, 0, 13),
+            'curse_of_the_empty_lord' => $this->makeObject(13713, RunescapeTypes::VarBit, 0, 6, RunescapeQuestTypes::Miniquest),
+            'daddys_home' => $this->makeObject(10570, RunescapeTypes::VarBit, 0, 13, RunescapeQuestTypes::Miniquest),
             'darkness_of_hallowvale' => $this->makeObject(2573, RunescapeTypes::VarBit, 0, 320),
             'death_to_the_dorgeshuun' => $this->makeObject(2258, RunescapeTypes::VarBit, 0, 13),
             'demon_slayer' => $this->makeObject(2561, RunescapeTypes::VarBit, 0, 3),
@@ -77,24 +78,24 @@ class QuestService implements TranslatingInterface
             'enlightened_journey' => $this->makeObject(2866, RunescapeTypes::VarBit, 0, 200),
             'fairytale_1_growing_pains' => $this->makeObject(1803, RunescapeTypes::VarBit, 0, 90),
             'fairytale_2_cure_a_queen' => $this->makeObject(2326, RunescapeTypes::VarBit, 10, 90),
-            'family_pest' => $this->makeObject(5347, RunescapeTypes::VarBit, 0, 3),
+            'family_pest' => $this->makeObject(5347, RunescapeTypes::VarBit, 0, 3, RunescapeQuestTypes::Miniquest),
             'forgettable_tale' => $this->makeObject(822, RunescapeTypes::VarBit, 0, 140),
             'gardenn_of_tranquillity' => $this->makeObject(961, RunescapeTypes::VarBit, 0, 60),
             'getting_ahead' => $this->makeObject(693, RunescapeTypes::VarBit, 0, 34),
             'ghosts_ahoy' => $this->makeObject(217, RunescapeTypes::VarBit, 0, 8),
             'goblin_diplomacy' => $this->makeObject(2378, RunescapeTypes::VarBit, 0, 6),
             'grim_tales' => $this->makeObject(2783, RunescapeTypes::VarBit, 0, 60),
-            'hopespears_will' => $this->makeObject(13619, RunescapeTypes::VarBit, 0, 2),
+            'hopespears_will' => $this->makeObject(13619, RunescapeTypes::VarBit, 0, 2, RunescapeQuestTypes::Miniquest),
             'horror_from_the_deep' => $this->makeObject(34, RunescapeTypes::VarBit, 0, 10),
             'icthlarins_little_helper' => $this->makeObject(418, RunescapeTypes::VarBit, 0, 26),
             'in_aid_of_the_myreque' => $this->makeObject(1990, RunescapeTypes::VarBit, 0, 430),
-            'in_search_of_knowledge' => $this->makeObject(8403, RunescapeTypes::VarBit, 0, 3),
-            'into_the_tombs' => $this->makeObject(13836, RunescapeTypes::VarBit, 0, 24),
+            'in_search_of_knowledge' => $this->makeObject(8403, RunescapeTypes::VarBit, 0, 3, RunescapeQuestTypes::Miniquest),
+            'into_the_tombs' => $this->makeObject(13836, RunescapeTypes::VarBit, 0, 24, RunescapeQuestTypes::Miniquest),
             'kings_ransom' => $this->makeObject(3888, RunescapeTypes::VarBit, 0, 90),
-            'lair_of_tarn_razorlor' => $this->makeObject(3290, RunescapeTypes::VarBit, 0, 3),
+            'lair_of_tarn_razorlor' => $this->makeObject(3290, RunescapeTypes::VarBit, 0, 3, RunescapeQuestTypes::Miniquest),
             'land_of_the_goblins' => $this->makeObject(13599, RunescapeTypes::VarBit, 0, 56),
             'lunar_diplomacy' => $this->makeObject(2448, RunescapeTypes::VarBit, 0, 190),
-            'mage_arena_2' => $this->makeObject(6067, RunescapeTypes::VarBit, 0, 4),
+            'mage_arena_2' => $this->makeObject(6067, RunescapeTypes::VarBit, 0, 4, RunescapeQuestTypes::Miniquest),
             'making_friends_with_my_arm' => $this->makeObject(6528, RunescapeTypes::VarBit, 0, 200),
             'making_history' => $this->makeObject(1383, RunescapeTypes::VarBit, 0, 4),
             'misthalin_mystery' => $this->makeObject(1383, RunescapeTypes::VarBit, 0, 4),
@@ -111,7 +112,7 @@ class QuestService implements TranslatingInterface
             'shadow_of_the_storm' => $this->makeObject(1372, RunescapeTypes::VarBit, 0, 125),
             'shield_of_arrav' => $this->makeObject(13716, RunescapeTypes::VarBit, 0, 2),
             'sins_of_the_father' => $this->makeObject(7255, RunescapeTypes::VarBit, 0, 138),
-            'skippy_and_the_mogres' => $this->makeObject(1344, RunescapeTypes::VarBit, 0, 3),
+            'skippy_and_the_mogres' => $this->makeObject(1344, RunescapeTypes::VarBit, 0, 3, RunescapeQuestTypes::Miniquest),
             'sleeping_giants' => $this->makeObject(13902, RunescapeTypes::VarBit, 0, 30),
             'song_of_the_elves' => $this->makeObject(9016, RunescapeTypes::VarBit, 0, 200),
             'spirits_of_the_ellid' => $this->makeObject(1444, RunescapeTypes::VarBit, 0, 60),
@@ -122,15 +123,15 @@ class QuestService implements TranslatingInterface
             'the_ascent_of_aceuus' => $this->makeObject(7856, RunescapeTypes::VarBit, 0, 14),
             'the_corsair_curse' => $this->makeObject(6071, RunescapeTypes::VarBit, 0, 60),
             'the_depths_of_despair' => $this->makeObject(6027, RunescapeTypes::VarBit, 0, 11),
-            'the_enchanted_key' => $this->makeObject(13717, RunescapeTypes::VarBit, 0, 2),
+            'the_enchanted_key' => $this->makeObject(13717, RunescapeTypes::VarBit, 0, 2, RunescapeQuestTypes::Miniquest),
             'the_eyes_of_glouphrie' => $this->makeObject(2497, RunescapeTypes::VarBit, 0, 60),
             'the_feud' => $this->makeObject(334, RunescapeTypes::VarBit, 0, 28),
             'the_forsaken_tower' => $this->makeObject(7796, RunescapeTypes::VarBit, 0, 11),
             'the_fremennik_exiles' => $this->makeObject(9459, RunescapeTypes::VarBit, 0, 130),
             'the_freminnik_isles' => $this->makeObject(3311, RunescapeTypes::VarBit, 0, 340),
-            'the_frozen_door' => $this->makeObject(13175, RunescapeTypes::VarBit, 0, 10),
+            'the_frozen_door' => $this->makeObject(13175, RunescapeTypes::VarBit, 0, 10, RunescapeQuestTypes::Miniquest),
             'the_garden_of_death' => $this->makeObject(14609, RunescapeTypes::VarBit, 0, 56),
-            'the_generals_shadow' => $this->makeObject(3330, RunescapeTypes::VarBit, 0, 30),
+            'the_generals_shadow' => $this->makeObject(3330, RunescapeTypes::VarBit, 0, 30, RunescapeQuestTypes::Miniquest),
             'the_giant_dwarf' => $this->makeObject(571, RunescapeTypes::VarBit, 0, 50),
             'the_golem' => $this->makeObject(346, RunescapeTypes::VarBit, 0, 10),
             'the_hand_in_the_sand' => $this->makeObject(1527, RunescapeTypes::VarBit, 0, 160),
@@ -160,7 +161,7 @@ class QuestService implements TranslatingInterface
             'druidic_ritual' => $this->makeObject(80, RunescapeTypes::VarPlayer, 0, 4),
             'dwarf_cannon' => $this->makeObject(0, RunescapeTypes::VarPlayer, 0, 11),
             'eadgars_ruse' => $this->makeObject(335, RunescapeTypes::VarPlayer, 0, 110),
-            'enter_the_abyss' => $this->makeObject(492, RunescapeTypes::VarPlayer, 0, 4),
+            'enter_the_abyss' => $this->makeObject(492, RunescapeTypes::VarPlayer, 0, 4, RunescapeQuestTypes::Miniquest),
             'ernest_the_chicken' => $this->makeObject(148, RunescapeTypes::VarPlayer, 0, 11),
             'family_crest' => $this->makeObject(148, RunescapeTypes::VarPlayer, 0, 11),
             'fight_arena' => $this->makeObject(17, RunescapeTypes::VarPlayer, 0, 14),
@@ -175,7 +176,7 @@ class QuestService implements TranslatingInterface
             'jungle_potion' => $this->makeObject(175, RunescapeTypes::VarPlayer, 0, 12),
             'legends_quest' => $this->makeObject(139, RunescapeTypes::VarPlayer, 0, 75),
             'lost_city' => $this->makeObject(147, RunescapeTypes::VarPlayer, 0, 6),
-            'mage_arena_1' => $this->makeObject(267, RunescapeTypes::VarPlayer, 0, 8),
+            'mage_arena_1' => $this->makeObject(267, RunescapeTypes::VarPlayer, 0, 8, RunescapeQuestTypes::Miniquest),
             'merlins_crystal' => $this->makeObject(14, RunescapeTypes::VarPlayer, 0, 7),
             'monks_friend' => $this->makeObject(30, RunescapeTypes::VarPlayer, 0, 80),
             'monkey_madness_1' => $this->makeObject(365, RunescapeTypes::VarPlayer, 0, 9),
@@ -223,11 +224,12 @@ class QuestService implements TranslatingInterface
         ];
     }
 
-    private function makeObject(int $index, RunescapeTypes $type, int $startValue, int $endValue): array
+    private function makeObject(int $index, RunescapeTypes $type, int $startValue, int $endValue, RunescapeQuestTypes $questType = RunescapeQuestTypes::Quest): array
     {
         return [
             'index' => $index,
-            'type' => $type->value,
+            'type' => $type,
+            'questType' => $questType,
             'startValue' => $startValue,
             'endValue' => $endValue,
         ];

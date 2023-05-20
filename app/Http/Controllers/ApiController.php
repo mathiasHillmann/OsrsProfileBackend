@@ -58,4 +58,19 @@ class ApiController extends Controller
             return $this->response($th);
         }
     }
+
+    #[Route('/api/random', methods: ['GET'])]
+    public function random(Request $request): JsonResponse
+    {
+        try {
+            $player = DB::table('players')
+                ->orderByRaw('RAND()')
+                ->select('username')
+                ->first();
+
+            return $this->response($player);
+        } catch (\Throwable $th) {
+            return $this->response($th);
+        }
+    }
 }
