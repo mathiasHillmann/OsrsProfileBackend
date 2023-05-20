@@ -42,22 +42,24 @@ class SkillService implements TranslatingInterface
         $skills = $this->getValuesToTrack();
 
         foreach ($skills as $skillName => $skill) {
-            $item = $data[$skillName];
+            $item = &$data[$skillName];
+
             if (!$item) {
-                $data['skills'][$skillName] = [
+                $item = $data['skills'][$skillName] = [
                     'realLevel' => null,
                     'virtualLevel' => null,
                     'experience' => 0,
                 ];
+            } else {
+                $data['skills'][$skillName] = [
+                    'realLevel' => $this->experienceToLevel($item['value']),
+                    'virtualLevel' => $this->experienceToLevel($item['value'], true),
+                    'experience' => $item['value'],
+                ];
             }
 
-            $data['skills'][$skillName] = [
-                'realLevel' => $this->experienceToLevel($item['value']),
-                'virtualLevel' => $this->experienceToLevel($item['value'], true),
-                'experience' => $item['value'],
-            ];
 
-            unset($data[$skillName]);
+            unset($item);
         }
     }
 

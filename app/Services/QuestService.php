@@ -23,20 +23,21 @@ class QuestService implements TranslatingInterface
         $quests = $this->getValuesToTrack();
 
         foreach ($quests as $questName => $quest) {
-            $item = $data[$questName];
+            $item = &$data[$questName];
+
             if (!$item) {
                 $data[$quest['questType']->value][$questName] = RunescapeQuestStatus::Unknown;
-            }
-
-            if (!$item['value'] || $item['value'] <= $quest['startValue']) {
-                $data[$quest['questType']->value][$questName] = RunescapeQuestStatus::NotStarted;
-            } elseif ($item['value'] >= $quest['endValue']) {
-                $data[$quest['questType']->value][$questName] = RunescapeQuestStatus::Complete;
             } else {
-                $data[$quest['questType']->value][$questName] = RunescapeQuestStatus::InProgress;
+                if (!$item['value'] || $item['value'] <= $quest['startValue']) {
+                    $data[$quest['questType']->value][$questName] = RunescapeQuestStatus::NotStarted;
+                } elseif ($item['value'] >= $quest['endValue']) {
+                    $data[$quest['questType']->value][$questName] = RunescapeQuestStatus::Complete;
+                } else {
+                    $data[$quest['questType']->value][$questName] = RunescapeQuestStatus::InProgress;
+                }
             }
 
-            unset($data[$questName]);
+            unset($item);
         }
     }
 
