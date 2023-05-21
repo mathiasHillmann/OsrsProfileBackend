@@ -11,8 +11,10 @@ use App\Services\SkillService;
 use App\Services\SummaryService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Illuminate\Mail\Message;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Response;
 use Symfony\Component\HttpFoundation\Response as HttpFoundationResponse;
 use Symfony\Component\Routing\Annotation\Route;
@@ -41,6 +43,20 @@ class ApiController extends Controller
             } else {
                 return $this->response(null, HttpFoundationResponse::HTTP_BAD_REQUEST, 'Player not found');
             }
+        } catch (\Throwable $th) {
+            return $this->response($th);
+        }
+    }
+
+    #[Route('/api/delete/{username}', methods: ['GET'])]
+    public function delete(Request $request): JsonResponse
+    {
+        try {
+            Mail::raw("Username: {$request->input('username')}", function (Message $m) {
+                $m->subject('Profile removal request');
+                $m->to('osrs.profile.dev@gmail.com');
+            });
+            return $this->response(message: 'OK');
         } catch (\Throwable $th) {
             return $this->response($th);
         }
