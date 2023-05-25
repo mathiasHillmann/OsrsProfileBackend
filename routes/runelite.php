@@ -1,6 +1,7 @@
 <?php
 
-use App\Http\Controllers\PublicController;
+use App\Http\Controllers\RuneliteController;
+use App\Http\Middleware\RuneliteMiddleware;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::controller(PublicController::class)->group(function () {
+Route::controller(RuneliteController::class)->middleware(RuneliteMiddleware::class)->group(function () {
     Route::get('/player/{accountHash}', 'load');
     Route::post('/player/{accountHash}', 'submit');
 });

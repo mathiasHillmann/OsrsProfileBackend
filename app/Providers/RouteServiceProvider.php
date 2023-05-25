@@ -34,8 +34,8 @@ class RouteServiceProvider extends ServiceProvider
                 ->group(base_path('routes/api.php'));
 
             Route::middleware('api')
-                ->prefix('public')
-                ->group(base_path('routes/public.php'));
+                ->prefix('runelite')
+                ->group(base_path('routes/runelite.php'));
         });
     }
 }

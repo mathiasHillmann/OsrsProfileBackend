@@ -4,17 +4,15 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers;
 
-use App\Enums\RunescapeTypes;
 use App\Models\Player;
 use App\Services\QuestService;
 use App\Services\SkillService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class PublicController extends Controller
+class RuneliteController extends Controller
 {
     public function __construct(
         private SkillService $skillService,
