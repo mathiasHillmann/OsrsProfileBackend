@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers;
 
+use App\Jobs\IncrementViewJob;
 use App\Models\Player;
 use App\Services\QuestService;
 use App\Services\SkillService;
@@ -30,8 +31,9 @@ class ApiController extends Controller
     {
         try {
             if ($player = Player::where('username', $username)->first()) {
-                $data = $player->data;
+                dispatch(new IncrementViewJob($username));
 
+                $data = $player->data;
                 $this->questService->translate($data);
                 $this->skillService->translate($data);
                 $this->summaryService->translate($data, $player);
@@ -45,7 +47,7 @@ class ApiController extends Controller
         }
     }
 
-    #[Route('/api/delete/{username}', methods: ['GET'])]
+    #[Route('/api/delete', methods: ['GET'])]
     public function delete(Request $request): JsonResponse
     {
         try {
@@ -82,6 +84,23 @@ class ApiController extends Controller
                 ->first();
 
             return $this->response($player);
+        } catch (\Throwable $th) {
+            return $this->response($th);
+        }
+    }
+
+    #[Route('/api/most-viewed', methods: ['GET'])]
+    public function mostViewed(Request $request): JsonResponse
+    {
+        try {
+            $players = DB::table('players')
+                ->orderBy('views', 'DESC')
+                ->select([DB::raw('ROW_NUMBER() OVER () AS `rank`'), 'username', 'views'])
+                ->where('views', '>', 0)
+                ->limit(100)
+                ->get();
+
+            return $this->response($players);
         } catch (\Throwable $th) {
             return $this->response($th);
         }
