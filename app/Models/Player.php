@@ -16,7 +16,8 @@ class Player extends Model
         'account_hash',
         'username',
         'account_type',
-        'data'
+        'data',
+        'views'
     ];
 
     protected $casts = [
