@@ -95,7 +95,7 @@ class ApiController extends Controller
         try {
             $players = DB::table('players')
                 ->orderBy('views', 'DESC')
-                ->select([DB::raw('ROW_NUMBER() OVER () AS `rank`'), 'username', 'views'])
+                ->select([DB::raw('ROW_NUMBER() OVER () AS `rank`'), 'username', 'views', 'account_type'])
                 ->where('views', '>', 0)
                 ->limit(100)
                 ->get();
