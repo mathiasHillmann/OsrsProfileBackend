@@ -20,7 +20,7 @@ class RuneliteController extends Controller
     ) {
     }
 
-    #[Route('/public/player/{accountHash}', methods: ['GET'])]
+    #[Route('/runelite/player/{accountHash}', methods: ['GET'])]
     public function load(Request $request, string $accountHash): JsonResponse
     {
         try {
@@ -45,7 +45,7 @@ class RuneliteController extends Controller
         }
     }
 
-    #[Route('/public/player/{accountHash}', methods: ['POST'])]
+    #[Route('/runelite/player/{accountHash}', methods: ['POST'])]
     public function submit(Request $request, string $accountHash): JsonResponse
     {
         try {

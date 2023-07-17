@@ -8,7 +8,7 @@ use App\Enums\RunescapeQuestStatus;
 use App\Models\Player;
 use Illuminate\Support\Collection;
 
-class SummaryService implements TranslatingInterface
+class SummaryService implements OsrsService
 {
     public function translate(array &$data, Player $player = null): void
     {
@@ -60,5 +60,10 @@ class SummaryService implements TranslatingInterface
         } else {
             return null;
         }
+    }
+
+    public function getValuesToTrack(): array
+    {
+        return [];
     }
 }

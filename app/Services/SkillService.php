@@ -6,7 +6,7 @@ namespace App\Services;
 
 use App\Enums\RunescapeTypes;
 
-class SkillService implements TranslatingInterface
+class SkillService implements OsrsService
 {
     public function getValuesToTrack(): array
     {
