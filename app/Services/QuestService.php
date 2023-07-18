@@ -36,49 +36,49 @@ class QuestService implements OsrsService
     public function getValuesToTrack(): array
     {
         $data = [
-            $this->makeObject(
+            'a_kingdom_divided' => $this->makeObject(
                 'A Kingdom Divided',
                 12296,
                 RunescapeTypes::VarBit,
                 0,
                 150,
             ),
-            $this->makeObject(
+            'a_night_at_the_theatre' => $this->makeObject(
                 'A Night at the Theatre',
                 12276,
                 RunescapeTypes::VarBit,
                 0,
                 86,
             ),
-            $this->makeObject(
+            'a_porcine_of_interest' => $this->makeObject(
                 'A Porcine of Interest',
                 10582,
                 RunescapeTypes::VarBit,
                 0,
                 40,
             ),
-            $this->makeObject(
+            'a_souls_bane' => $this->makeObject(
                 "A Soul's Bane",
                 2011,
                 RunescapeTypes::VarBit,
                 0,
                 13,
             ),
-            $this->makeObject(
+            'a_tail_of_two_cats' => $this->makeObject(
                 'A Tail of Two Cats',
                 1028,
                 RunescapeTypes::VarBit,
                 0,
                 70,
             ),
-            $this->makeObject(
+            'a_taste_of_hope' => $this->makeObject(
                 'A Taste of Hope',
                 6396,
                 RunescapeTypes::VarBit,
                 0,
                 165,
             ),
-            $this->makeObject(
+            'alfred_grimhand_barcrawl' => $this->makeObject(
                 'Alfred Grimhand\'s Barcrawl',
                 13714,
                 RunescapeTypes::VarBit,
@@ -86,21 +86,21 @@ class QuestService implements OsrsService
                 2,
                 RunescapeQuestTypes::Miniquest
             ),
-            $this->makeObject(
+            'animal_magnetism' => $this->makeObject(
                 'Animal Magnetism',
                 3185,
                 RunescapeTypes::VarBit,
                 0,
                 240,
             ),
-            $this->makeObject(
+            'another_slice_of_ham' => $this->makeObject(
                 'Another Slice of Ham',
                 3550,
                 RunescapeTypes::VarBit,
                 0,
                 11,
             ),
-            $this->makeObject(
+            'architectural_alliance' => $this->makeObject(
                 'Architectural Alliance',
                 13784,
                 RunescapeTypes::VarBit,
@@ -108,7 +108,7 @@ class QuestService implements OsrsService
                 3,
                 RunescapeQuestTypes::Miniquest,
             ),
-            $this->makeObject(
+            'bear_your_soul' => $this->makeObject(
                 'Bear Your Soul',
                 5078,
                 RunescapeTypes::VarBit,
@@ -116,63 +116,63 @@ class QuestService implements OsrsService
                 3,
                 RunescapeQuestTypes::Miniquest,
             ),
-            $this->makeObject(
+            'below_ice_mountain' => $this->makeObject(
                 'Below Ice Mountain',
                 12063,
                 RunescapeTypes::VarBit,
                 0,
                 120,
             ),
-            $this->makeObject(
+            'beneath_cursed_sands' => $this->makeObject(
                 'Beneath Cursed Sands',
                 13841,
                 RunescapeTypes::VarBit,
                 0,
                 108,
             ),
-            $this->makeObject(
+            'between_a_rock' => $this->makeObject(
                 'Between a Rock',
                 299,
                 RunescapeTypes::VarBit,
                 0,
                 110,
             ),
-            $this->makeObject(
+            'bone_voyage' => $this->makeObject(
                 'Bone Voyage',
                 5795,
                 RunescapeTypes::VarBit,
                 0,
                 50,
             ),
-            $this->makeObject(
+            'client_of_kourend' => $this->makeObject(
                 'Client of Kourend',
                 5619,
                 RunescapeTypes::VarBit,
                 0,
                 7,
             ),
-            $this->makeObject(
+            'cold_war' => $this->makeObject(
                 'Cold War',
                 3293,
                 RunescapeTypes::VarBit,
                 0,
                 135,
             ),
-            $this->makeObject(
+            'contact' => $this->makeObject(
                 'Contact!',
                 3274,
                 RunescapeTypes::VarBit,
                 0,
                 130,
             ),
-            $this->makeObject(
+            'creature_of_fenkenstrain' => $this->makeObject(
                 'Creature of Fenkenstrain',
                 13715,
                 RunescapeTypes::VarBit,
                 0,
                 9
             ),
-            $this->makeObject(
+            'curse_of_the_empty_lord' => $this->makeObject(
                 'Curse of the Empty Lord',
                 13713,
                 RunescapeTypes::VarBit,
@@ -180,7 +180,7 @@ class QuestService implements OsrsService
                 6,
                 RunescapeQuestTypes::Miniquest
             ),
-            $this->makeObject(
+            'daddys_home' => $this->makeObject(
                 "Daddy's Home",
                 10570,
                 RunescapeTypes::VarBit,
@@ -188,112 +188,112 @@ class QuestService implements OsrsService
                 13,
                 RunescapeQuestTypes::Miniquest,
             ),
-            $this->makeObject(
+            'darkness_of_hallowvale' => $this->makeObject(
                 'Darkness of Hallowvale',
                 2573,
                 RunescapeTypes::VarBit,
                 0,
                 320,
             ),
-            $this->makeObject(
+            'death_to_the_dorgeshuun' => $this->makeObject(
                 'Death to the Dorgeshuun',
                 2258,
                 RunescapeTypes::VarBit,
                 0,
                 13,
             ),
-            $this->makeObject(
+            'demon_slayer' => $this->makeObject(
                 'Demon Slayer',
                 2561,
                 RunescapeTypes::VarBit,
                 0,
                 3,
             ),
-            $this->makeObject(
+            'desert_treasure_1' => $this->makeObject(
                 'Desert Treasure I',
                 358,
                 RunescapeTypes::VarBit,
                 0,
                 15,
             ),
-            $this->makeObject(
+            'desert_treasure_2' => $this->makeObject(
                 'Desert Treasure II - The Fallen Empire',
                 14862,
                 RunescapeTypes::VarBit,
                 0,
                 118,
             ),
-            $this->makeObject(
+            'devious_minds' => $this->makeObject(
                 'Devious Minds',
                 1465,
                 RunescapeTypes::VarBit,
                 0,
                 80,
             ),
-            $this->makeObject(
+            'dragon_slayer_2' => $this->makeObject(
                 'Dragon Slayer II',
                 6104,
                 RunescapeTypes::VarBit,
                 0,
                 215,
             ),
-            $this->makeObject(
+            'dream_mentor' => $this->makeObject(
                 'Dream Mentor',
                 3618,
                 RunescapeTypes::VarBit,
                 0,
                 28,
             ),
-            $this->makeObject(
+            'eagles_peak' => $this->makeObject(
                 "Eagle's Peak",
                 2780,
                 RunescapeTypes::VarBit,
                 0,
                 40,
             ),
-            $this->makeObject(
+            'elemental_workshop_1' => $this->makeObject(
                 'Elemental Workshop I',
                 13718,
                 RunescapeTypes::VarBit,
                 0,
                 2,
             ),
-            $this->makeObject(
+            'elemental_workshop_2' => $this->makeObject(
                 'Elemental Workshop II',
                 2639,
                 RunescapeTypes::VarBit,
                 0,
                 11,
             ),
-            $this->makeObject(
+            'enakhras_lament' => $this->makeObject(
                 "Enakhra's Lament",
                 1560,
                 RunescapeTypes::VarBit,
                 0,
                 70,
             ),
-            $this->makeObject(
+            'enlightened_journey' => $this->makeObject(
                 'Enlightened Journey',
                 2866,
                 RunescapeTypes::VarBit,
                 0,
                 200,
             ),
-            $this->makeObject(
+            'fairytale_1_growing_pains' => $this->makeObject(
                 'Fairytale I - Growing Pains',
                 1803,
                 RunescapeTypes::VarBit,
                 0,
                 90,
             ),
-            $this->makeObject(
+            'fairytale_2_cure_a_queen' => $this->makeObject(
                 'Fairytale II - Cure a Queen',
                 2326,
                 RunescapeTypes::VarBit,
                 10,
                 90
             ),
-            $this->makeObject(
+            'family_pest' => $this->makeObject(
                 'Family Pest',
                 5347,
                 RunescapeTypes::VarBit,
@@ -301,49 +301,49 @@ class QuestService implements OsrsService
                 3,
                 RunescapeQuestTypes::Miniquest,
             ),
-            $this->makeObject(
+            'forgettable_tale' => $this->makeObject(
                 'Forgettable Tale',
                 822,
                 RunescapeTypes::VarBit,
                 0,
                 140,
             ),
-            $this->makeObject(
+            'gardenn_of_tranquillity' => $this->makeObject(
                 'Garden of Tranquillity',
                 961,
                 RunescapeTypes::VarBit,
                 0,
                 60,
             ),
-            $this->makeObject(
+            'getting_ahead' => $this->makeObject(
                 'Getting Ahead',
                 693,
                 RunescapeTypes::VarBit,
                 0,
                 34,
             ),
-            $this->makeObject(
+            'ghosts_ahoy' => $this->makeObject(
                 "Ghost's ahoy",
                 217,
                 RunescapeTypes::VarBit,
                 0,
                 8,
             ),
-            $this->makeObject(
+            'goblin_diplomacy' => $this->makeObject(
                 'Goblin Diplomacy',
                 2378,
                 RunescapeTypes::VarBit,
                 0,
                 6,
             ),
-            $this->makeObject(
+            'grim_tales' => $this->makeObject(
                 'Grim Tales',
                 2783,
                 RunescapeTypes::VarBit,
                 0,
                 60,
             ),
-            $this->makeObject(
+            'hopespears_will' => $this->makeObject(
                 "Hopespear's Will",
                 13619,
                 RunescapeTypes::VarBit,
@@ -351,28 +351,28 @@ class QuestService implements OsrsService
                 2,
                 RunescapeQuestTypes::Miniquest
             ),
-            $this->makeObject(
+            'horror_from_the_deep' => $this->makeObject(
                 'Horror from the Deep',
                 34,
                 RunescapeTypes::VarBit,
                 0,
                 10,
             ),
-            $this->makeObject(
+            'icthlarins_little_helper' => $this->makeObject(
                 "Icthlarin's Little Helper",
                 418,
                 RunescapeTypes::VarBit,
                 0,
                 26,
             ),
-            $this->makeObject(
+            'in_aid_of_the_myreque' => $this->makeObject(
                 'In Aid of the Myreque',
                 1990,
                 RunescapeTypes::VarBit,
                 0,
                 430,
             ),
-            $this->makeObject(
+            'in_search_of_knowledge' => $this->makeObject(
                 'In Search of Knowledge',
                 8403,
                 RunescapeTypes::VarBit,
@@ -380,7 +380,7 @@ class QuestService implements OsrsService
                 3,
                 RunescapeQuestTypes::Miniquest,
             ),
-            $this->makeObject(
+            'into_the_tombs' => $this->makeObject(
                 'Into the Tombs',
                 13836,
                 RunescapeTypes::VarBit,
@@ -388,14 +388,14 @@ class QuestService implements OsrsService
                 24,
                 RunescapeQuestTypes::Miniquest,
             ),
-            $this->makeObject(
+            'kings_ransom' => $this->makeObject(
                 "King's ransom",
                 3888,
                 RunescapeTypes::VarBit,
                 0,
                 90,
             ),
-            $this->makeObject(
+            'lair_of_tarn_razorlor' => $this->makeObject(
                 'Lair of Tarn Razorlor',
                 3290,
                 RunescapeTypes::VarBit,
@@ -403,21 +403,21 @@ class QuestService implements OsrsService
                 3,
                 RunescapeQuestTypes::Miniquest,
             ),
-            $this->makeObject(
+            'land_of_the_goblins' => $this->makeObject(
                 'Land of the Goblins',
                 13599,
                 RunescapeTypes::VarBit,
                 0,
                 56,
             ),
-            $this->makeObject(
+            'lunar_diplomacy' => $this->makeObject(
                 'Lunar Diplomacy',
                 2448,
                 RunescapeTypes::VarBit,
                 0,
                 190,
             ),
-            $this->makeObject(
+            'mage_arena_2' => $this->makeObject(
                 'Mage Arena II',
                 6067,
                 RunescapeTypes::VarBit,
@@ -425,119 +425,119 @@ class QuestService implements OsrsService
                 4,
                 RunescapeQuestTypes::Miniquest,
             ),
-            $this->makeObject(
+            'making_friends_with_my_arm' => $this->makeObject(
                 'Making Friends with my Arm',
                 6528,
                 RunescapeTypes::VarBit,
                 0,
                 200,
             ),
-            $this->makeObject(
+            'making_history' => $this->makeObject(
                 'Making History',
                 1383,
                 RunescapeTypes::VarBit,
                 0,
                 4,
             ),
-            $this->makeObject(
+            'misthalin_mystery' => $this->makeObject(
                 'Misthalin Mystery',
                 1383,
                 RunescapeTypes::VarBit,
                 0,
                 4,
             ),
-            $this->makeObject(
+            'monkey_madness_2' => $this->makeObject(
                 'Monkey Madness II',
                 5027,
                 RunescapeTypes::VarBit,
                 0,
                 195,
             ),
-            $this->makeObject(
+            'mountain_daughter' => $this->makeObject(
                 'Mountain Daughter',
                 260,
                 RunescapeTypes::VarBit,
                 0,
                 70,
             ),
-            $this->makeObject(
+            'mournings_end_part_2' => $this->makeObject(
                 "Mourning's End Part 2",
                 1103,
                 RunescapeTypes::VarBit,
                 0,
                 60,
             ),
-            $this->makeObject(
+            'my_arms_big_adventure' => $this->makeObject(
                 'My Arms Big Adventure',
                 2790,
                 RunescapeTypes::VarBit,
                 0,
                 320,
             ),
-            $this->makeObject(
+            'olafs_quest' => $this->makeObject(
                 "Olaf's quest",
                 3534,
                 RunescapeTypes::VarBit,
                 0,
                 80,
             ),
-            $this->makeObject(
+            'ratcatchers' => $this->makeObject(
                 'Ratcatchers',
                 144,
                 RunescapeTypes::VarBit,
                 0,
                 127,
             ),
-            $this->makeObject(
+            'recipe_for_disaster' => $this->makeObject(
                 'Recipe for Disaster',
                 1850,
                 RunescapeTypes::VarBit,
                 0,
                 5,
             ),
-            $this->makeObject(
+            'recruitment_drive' => $this->makeObject(
                 'Recruitment Drive',
                 657,
                 RunescapeTypes::VarBit,
                 0,
                 2,
             ),
-            $this->makeObject(
+            'royal_trouble' => $this->makeObject(
                 'Royal Trouble',
                 2140,
                 RunescapeTypes::VarBit,
                 0,
                 30,
             ),
-            $this->makeObject(
+            'secrets_of_the_north' => $this->makeObject(
                 'Secrets of the North',
                 14722,
                 RunescapeTypes::VarBit,
                 0,
                 90,
             ),
-            $this->makeObject(
+            'shadow_of_the_storm' => $this->makeObject(
                 'Shadow of the Storm',
                 1372,
                 RunescapeTypes::VarBit,
                 0,
                 125,
             ),
-            $this->makeObject(
+            'shield_of_arrav' => $this->makeObject(
                 'Shield of Arrav',
                 13716,
                 RunescapeTypes::VarBit,
                 0,
                 2,
             ),
-            $this->makeObject(
+            'sins_of_the_father' => $this->makeObject(
                 'Sins of the Father',
                 7255,
                 RunescapeTypes::VarBit,
                 0,
                 138,
             ),
-            $this->makeObject(
+            'skippy_and_the_mogres' => $this->makeObject(
                 'Skippy and the Mogres',
                 1344,
                 RunescapeTypes::VarBit,
@@ -545,77 +545,77 @@ class QuestService implements OsrsService
                 3,
                 RunescapeQuestTypes::Miniquest,
             ),
-            $this->makeObject(
+            'sleeping_giants' => $this->makeObject(
                 'Sleeping Giants',
                 13902,
                 RunescapeTypes::VarBit,
                 0,
                 30,
             ),
-            $this->makeObject(
+            'song_of_the_elves' => $this->makeObject(
                 'Song of the Elves',
                 9016,
                 RunescapeTypes::VarBit,
                 0,
                 200,
             ),
-            $this->makeObject(
+            'spirits_of_the_ellid' => $this->makeObject(
                 'Spirits of the Ellid',
                 1444,
                 RunescapeTypes::VarBit,
                 0,
                 60,
             ),
-            $this->makeObject(
+            'swam_song' => $this->makeObject(
                 'Swam Song',
                 2098,
                 RunescapeTypes::VarBit,
                 0,
                 200,
             ),
-            $this->makeObject(
+            'tale_of_the_righteous' => $this->makeObject(
                 'Tale of the Righteous',
                 6358,
                 RunescapeTypes::VarBit,
                 0,
                 17,
             ),
-            $this->makeObject(
+            'tears_of_guthix' => $this->makeObject(
                 'Tears of Guthix',
                 451,
                 RunescapeTypes::VarBit,
                 0,
                 2,
             ),
-            $this->makeObject(
+            'temple_of_the_eye' => $this->makeObject(
                 'Temple of the Eye',
                 13738,
                 RunescapeTypes::VarBit,
                 0,
                 130,
             ),
-            $this->makeObject(
+            'the_ascent_of_aceuus' => $this->makeObject(
                 'The Ascent of Aceuus',
                 7856,
                 RunescapeTypes::VarBit,
                 0,
                 14,
             ),
-            $this->makeObject(
+            'the_corsair_curse' => $this->makeObject(
                 'The Corsair Curse',
                 6071,
                 RunescapeTypes::VarBit,
                 0,
                 60,
             ),
-            $this->makeObject(
+            'the_depths_of_despair' => $this->makeObject(
                 'The Depths of Despair',
                 6027,
                 RunescapeTypes::VarBit,
                 0,
                 11,
             ),
-            $this->makeObject(
+            'the_enchanted_key' => $this->makeObject(
                 'The Enchanted Key',
                 13717,
                 RunescapeTypes::VarBit,
@@ -623,42 +623,42 @@ class QuestService implements OsrsService
                 2,
                 RunescapeQuestTypes::Miniquest,
             ),
-            $this->makeObject(
+            'the_eyes_of_glouphrie' => $this->makeObject(
                 'The Eyes of Glouphrie',
                 2497,
                 RunescapeTypes::VarBit,
                 0,
                 60,
             ),
-            $this->makeObject(
+            'the_feud' => $this->makeObject(
                 'The Feud',
                 334,
                 RunescapeTypes::VarBit,
                 0,
                 28,
             ),
-            $this->makeObject(
+            'the_forsaken_tower' => $this->makeObject(
                 'The Forsaken Tower',
                 7796,
                 RunescapeTypes::VarBit,
                 0,
                 11,
             ),
-            $this->makeObject(
+            'the_fremennik_exiles' => $this->makeObject(
                 'The Fremennik Exiles',
                 9459,
                 RunescapeTypes::VarBit,
                 0,
                 130,
             ),
-            $this->makeObject(
+            'the_freminnik_isles' => $this->makeObject(
                 'The Freminnik Isles',
                 3311,
                 RunescapeTypes::VarBit,
                 0,
                 340,
             ),
-            $this->makeObject(
+            'the_frozen_door' => $this->makeObject(
                 'The Frozen Door',
                 13175,
                 RunescapeTypes::VarBit,
@@ -666,14 +666,14 @@ class QuestService implements OsrsService
                 10,
                 RunescapeQuestTypes::Miniquest
             ),
-            $this->makeObject(
+            'the_garden_of_death' => $this->makeObject(
                 'The Garden of Death',
                 14609,
                 RunescapeTypes::VarBit,
                 0,
                 56,
             ),
-            $this->makeObject(
+            'the_generals_shadow' => $this->makeObject(
                 "The General's Shadow",
                 3330,
                 RunescapeTypes::VarBit,
@@ -681,168 +681,168 @@ class QuestService implements OsrsService
                 30,
                 RunescapeQuestTypes::Miniquest,
             ),
-            $this->makeObject(
+            'the_giant_dwarf' => $this->makeObject(
                 'The Giant Dwarf',
                 571,
                 RunescapeTypes::VarBit,
                 0,
                 50,
             ),
-            $this->makeObject(
+            'the_golem' => $this->makeObject(
                 'The Golem',
                 346,
                 RunescapeTypes::VarBit,
                 0,
                 10,
             ),
-            $this->makeObject(
+            'the_hand_in_the_sand' => $this->makeObject(
                 'The Hand in the Sand',
                 1527,
                 RunescapeTypes::VarBit,
                 0,
                 160,
             ),
-            $this->makeObject(
+            'the_lost_tribe' => $this->makeObject(
                 'The Lost Tribe',
                 532,
                 RunescapeTypes::VarBit,
                 0,
                 11,
             ),
-            $this->makeObject(
+            'the_queen_of_thieves' => $this->makeObject(
                 'The Queen of Thieves',
                 6037,
                 RunescapeTypes::VarBit,
                 0,
                 13,
             ),
-            $this->makeObject(
+            'the_slug_menace' => $this->makeObject(
                 'The Slug Menace',
                 2610,
                 RunescapeTypes::VarBit,
                 0,
                 14,
             ),
-            $this->makeObject(
+            'tower_of_life' => $this->makeObject(
                 'Tower of Life',
                 3337,
                 RunescapeTypes::VarBit,
                 0,
                 18,
             ),
-            $this->makeObject(
+            'wanted' => $this->makeObject(
                 'Wanted',
                 1051,
                 RunescapeTypes::VarBit,
                 0,
                 11,
             ),
-            $this->makeObject(
+            'what_lies_below' => $this->makeObject(
                 'What Lies Below',
                 3523,
                 RunescapeTypes::VarBit,
                 0,
                 150,
             ),
-            $this->makeObject(
+            'x_marks_the_spot' => $this->makeObject(
                 'X Marks the Spot',
                 8063,
                 RunescapeTypes::VarBit,
                 0,
                 8,
             ),
-            $this->makeObject(
+            'zogre_flesh_eaters' => $this->makeObject(
                 'Zogre Flesh Eaters',
                 487,
                 RunescapeTypes::VarBit,
                 0,
                 11,
             ),
-            $this->makeObject(
+            'big_chompy_bird_hunting' => $this->makeObject(
                 'Big Chompy Bird Hunting',
                 293,
                 RunescapeTypes::VarPlayer,
                 0,
                 65,
             ),
-            $this->makeObject(
+            'biohazard' => $this->makeObject(
                 'Biohazard',
                 68,
                 RunescapeTypes::VarPlayer,
                 0,
                 16,
             ),
-            $this->makeObject(
+            'black_knight_fortress' => $this->makeObject(
                 "Black Knights' Fortress",
                 130,
                 RunescapeTypes::VarPlayer,
                 0,
                 4,
             ),
-            $this->makeObject(
+            'cabin_fever' => $this->makeObject(
                 'Cabin Fever',
                 655,
                 RunescapeTypes::VarPlayer,
                 0,
                 140
             ),
-            $this->makeObject(
+            'clock_tower' => $this->makeObject(
                 'Clock Tower',
                 10,
                 RunescapeTypes::VarPlayer,
                 0,
                 8,
             ),
-            $this->makeObject(
+            'cooks_assistant' => $this->makeObject(
                 "Cook's assistant",
                 29,
                 RunescapeTypes::VarPlayer,
                 0,
                 2,
             ),
-            $this->makeObject(
+            'death_plateau' => $this->makeObject(
                 'Death Plateau',
                 314,
                 RunescapeTypes::VarPlayer,
                 0,
                 80,
             ),
-            $this->makeObject(
+            'dorics_quest' => $this->makeObject(
                 "Doric's Quest",
                 31,
                 RunescapeTypes::VarPlayer,
                 0,
                 100,
             ),
-            $this->makeObject(
+            'dragon_slayer_1' => $this->makeObject(
                 'Dragon Slayer I',
                 176,
                 RunescapeTypes::VarPlayer,
                 0,
                 10,
             ),
-            $this->makeObject(
+            'druidic_ritual' => $this->makeObject(
                 'Druidic Ritual',
                 80,
                 RunescapeTypes::VarPlayer,
                 0,
                 4,
             ),
-            $this->makeObject(
+            'dwarf_cannon' => $this->makeObject(
                 'Dwarf Cannon',
                 0,
                 RunescapeTypes::VarPlayer,
                 0,
                 11,
             ),
-            $this->makeObject(
+            'eadgars_ruse' => $this->makeObject(
                 "Eadgar's Ruse",
                 335,
                 RunescapeTypes::VarPlayer,
                 0,
                 110,
             ),
-            $this->makeObject(
+            'enter_the_abyss' => $this->makeObject(
                 'Enter the Abyss',
                 492,
                 RunescapeTypes::VarPlayer,
@@ -850,105 +850,105 @@ class QuestService implements OsrsService
                 4,
                 RunescapeQuestTypes::Miniquest,
             ),
-            $this->makeObject(
+            'ernest_the_chicken' => $this->makeObject(
                 'Ernest the Chicken',
                 148,
                 RunescapeTypes::VarPlayer,
                 0,
                 11,
             ),
-            $this->makeObject(
+            'family_crest' => $this->makeObject(
                 'Family Crest',
                 148,
                 RunescapeTypes::VarPlayer,
                 0,
                 11,
             ),
-            $this->makeObject(
+            'fight_arena' => $this->makeObject(
                 'Fight Arena',
                 17,
                 RunescapeTypes::VarPlayer,
                 0,
                 14,
             ),
-            $this->makeObject(
+            'fishing_contest' => $this->makeObject(
                 'Fishing Contest',
                 11,
                 RunescapeTypes::VarPlayer,
                 0,
                 5,
             ),
-            $this->makeObject(
+            'gertrudes_cat' => $this->makeObject(
                 "Gertrude's cat",
                 180,
                 RunescapeTypes::VarPlayer,
                 0,
                 6,
             ),
-            $this->makeObject(
+            'haunted_mine' => $this->makeObject(
                 'Haunted Mine',
                 382,
                 RunescapeTypes::VarPlayer,
                 0,
                 11,
             ),
-            $this->makeObject(
+            'hazeel_cult' => $this->makeObject(
                 'Hazeel Cult',
                 223,
                 RunescapeTypes::VarPlayer,
                 0,
                 9,
             ),
-            $this->makeObject(
+            'heroes_quest' => $this->makeObject(
                 "Heroes' Quest",
                 188,
                 RunescapeTypes::VarPlayer,
                 0,
                 15,
             ),
-            $this->makeObject(
+            'holy_grail' => $this->makeObject(
                 'Holy Grail',
                 5,
                 RunescapeTypes::VarPlayer,
                 0,
                 10,
             ),
-            $this->makeObject(
+            'imp_catcher' => $this->makeObject(
                 'Imp Catcher',
                 160,
                 RunescapeTypes::VarPlayer,
                 0,
                 2,
             ),
-            $this->makeObject(
+            'in_search_of_the_myreque' => $this->makeObject(
                 'In Search of the Myreque',
                 387,
                 RunescapeTypes::VarPlayer,
                 0,
                 105,
             ),
-            $this->makeObject(
+            'jungle_potion' => $this->makeObject(
                 'Jungle Potion',
                 175,
                 RunescapeTypes::VarPlayer,
                 0,
                 12,
             ),
-            $this->makeObject(
+            'legends_quest' => $this->makeObject(
                 "Legends' Quest",
                 139,
                 RunescapeTypes::VarPlayer,
                 0,
                 75,
             ),
-            $this->makeObject(
+            'lost_city' => $this->makeObject(
                 'Lost City',
                 147,
                 RunescapeTypes::VarPlayer,
                 0,
                 6,
             ),
-            $this->makeObject(
+            'mage_arena_1' => $this->makeObject(
                 'Mage Arena I',
                 267,
                 RunescapeTypes::VarPlayer,
@@ -956,308 +956,308 @@ class QuestService implements OsrsService
                 8,
                 RunescapeQuestTypes::Miniquest,
             ),
-            $this->makeObject(
+            'merlins_crystal' => $this->makeObject(
                 "Merlin's Crystal",
                 14,
                 RunescapeTypes::VarPlayer,
                 0,
                 7,
             ),
-            $this->makeObject(
+            'monks_friend' => $this->makeObject(
                 "Monk's Friend",
                 30,
                 RunescapeTypes::VarPlayer,
                 0,
                 80,
             ),
-            $this->makeObject(
+            'monkey_madness_1' => $this->makeObject(
                 'Monkey Madness I',
                 365,
                 RunescapeTypes::VarPlayer,
                 0,
                 9,
             ),
-            $this->makeObject(
+            'mournings_end_part_1' => $this->makeObject(
                 "Mourning's End Part I",
                 517,
                 RunescapeTypes::VarPlayer,
                 0,
                 9,
             ),
-            $this->makeObject(
+            'murder_mystery' => $this->makeObject(
                 'Murder Mystery',
                 192,
                 RunescapeTypes::VarPlayer,
                 0,
                 2,
             ),
-            $this->makeObject(
+            'nature_spirit' => $this->makeObject(
                 'Nature Spirit',
                 307,
                 RunescapeTypes::VarPlayer,
                 0,
                 110,
             ),
-            $this->makeObject(
+            'observatory_quest' => $this->makeObject(
                 'Observatory Quest',
                 112,
                 RunescapeTypes::VarPlayer,
                 0,
                 7,
             ),
-            $this->makeObject(
+            'one_small_favour' => $this->makeObject(
                 'One Small Favour',
                 416,
                 RunescapeTypes::VarPlayer,
                 0,
                 285,
             ),
-            $this->makeObject(
+            'pirates_treasure' => $this->makeObject(
                 "Pirate's Treasure",
                 71,
                 RunescapeTypes::VarPlayer,
                 0,
                 4,
             ),
-            $this->makeObject(
+            'plague_city' => $this->makeObject(
                 'Plague City',
                 165,
                 RunescapeTypes::VarPlayer,
                 0,
                 29,
             ),
-            $this->makeObject(
+            'priest_in_peril' => $this->makeObject(
                 'Priest in Peril',
                 302,
                 RunescapeTypes::VarPlayer,
                 0,
                 60,
             ),
-            $this->makeObject(
+            'prince_ali_rescue' => $this->makeObject(
                 'Prince Ali Rescue',
                 273,
                 RunescapeTypes::VarPlayer,
                 0,
                 110,
             ),
-            $this->makeObject(
+            'rag_and_bone_man_1' => $this->makeObject(
                 'Rag and Bone Man I',
                 714,
                 RunescapeTypes::VarPlayer,
                 0,
                 4,
             ),
-            $this->makeObject(
+            'rag_and_bone_man_2' => $this->makeObject(
                 "Rag and Bone Man II",
                 714,
                 RunescapeTypes::VarPlayer,
                 3,
                 6,
             ),
-            $this->makeObject(
+            'regicide' => $this->makeObject(
                 'Regicide',
                 328,
                 RunescapeTypes::VarPlayer,
                 0,
                 15,
             ),
-            $this->makeObject(
+            'romeo_and_juliet' => $this->makeObject(
                 'Romeo and Juliet',
                 144,
                 RunescapeTypes::VarPlayer,
                 0,
                 100,
             ),
-            $this->makeObject(
+            'roving_elves' => $this->makeObject(
                 'Roving Elves',
                 402,
                 RunescapeTypes::VarPlayer,
                 0,
                 6,
             ),
-            $this->makeObject(
+            'rum_deal' => $this->makeObject(
                 'Rum Deal',
                 600,
                 RunescapeTypes::VarPlayer,
                 0,
                 19,
             ),
-            $this->makeObject(
+            'rune_mysteries' => $this->makeObject(
                 'Rune Mysteries',
                 63,
                 RunescapeTypes::VarPlayer,
                 0,
                 6,
             ),
-            $this->makeObject(
+            'scorpion_catcher' => $this->makeObject(
                 'Scorpion Catcher',
                 76,
                 RunescapeTypes::VarPlayer,
                 0,
                 6,
             ),
-            $this->makeObject(
+            'sea_slug' => $this->makeObject(
                 'Sea Slug',
                 159,
                 RunescapeTypes::VarPlayer,
                 0,
                 12,
             ),
-            $this->makeObject(
+            'shades_of_mortton' => $this->makeObject(
                 "Shades of Mort'ton",
                 339,
                 RunescapeTypes::VarPlayer,
                 0,
                 85,
             ),
-            $this->makeObject(
+            'sheep_herder' => $this->makeObject(
                 'Sheep herder',
                 60,
                 RunescapeTypes::VarPlayer,
                 0,
                 3,
             ),
-            $this->makeObject(
+            'shilo_village' => $this->makeObject(
                 'Shilo Village',
                 116,
                 RunescapeTypes::VarPlayer,
                 0,
                 15,
             ),
-            $this->makeObject(
+            'tai_bwo_wannai_trio' => $this->makeObject(
                 'Tai Bwo Wannai Trio',
                 320,
                 RunescapeTypes::VarPlayer,
                 2,
                 6,
             ),
-            $this->makeObject(
+            'temple_of_ikov' => $this->makeObject(
                 'Temple of Ikov',
                 26,
                 RunescapeTypes::VarPlayer,
                 0,
                 80,
             ),
-            $this->makeObject(
+            'the_digsite' => $this->makeObject(
                 'The Digsite',
                 131,
                 RunescapeTypes::VarPlayer,
                 0,
                 9,
             ),
-            $this->makeObject(
+            'the_fremennik_trials' => $this->makeObject(
                 'The Fremennik Trials',
                 347,
                 RunescapeTypes::VarPlayer,
                 0,
                 10,
             ),
-            $this->makeObject(
+            'the_grand_tree' => $this->makeObject(
                 'The Grand Tree',
                 150,
                 RunescapeTypes::VarPlayer,
                 0,
                 160,
             ),
-            $this->makeObject(
+            'the_great_brain_robbery' => $this->makeObject(
                 'The Great Brain Robbery',
                 980,
                 RunescapeTypes::VarPlayer,
                 0,
                 130,
             ),
-            $this->makeObject(
+            'the_knights_sword' => $this->makeObject(
                 "The Knight's Sword",
                 122,
                 RunescapeTypes::VarPlayer,
                 0,
                 7,
             ),
-            $this->makeObject(
+            'the_restless_ghost' => $this->makeObject(
                 'The Restless Ghost',
                 107,
                 RunescapeTypes::VarPlayer,
                 0,
                 5,
             ),
-            $this->makeObject(
+            'the_tourist_trap' => $this->makeObject(
                 'The Tourist Trap',
                 197,
                 RunescapeTypes::VarPlayer,
                 0,
                 30,
             ),
-            $this->makeObject(
+            'throne_of_miscellania' => $this->makeObject(
                 'Throne of Miscellania',
                 359,
                 RunescapeTypes::VarPlayer,
                 0,
                 100,
             ),
-            $this->makeObject(
+            'tree_gnome_village' => $this->makeObject(
                 'Tree Gnome Village',
                 111,
                 RunescapeTypes::VarPlayer,
                 0,
                 9,
             ),
-            $this->makeObject(
+            'tribal_totem' => $this->makeObject(
                 'Tribal Totem',
                 200,
                 RunescapeTypes::VarPlayer,
                 0,
                 5,
             ),
-            $this->makeObject(
+            'troll_romance' => $this->makeObject(
                 'Troll Romance',
                 385,
                 RunescapeTypes::VarPlayer,
                 0,
                 45,
             ),
-            $this->makeObject(
+            'troll_stronghold' => $this->makeObject(
                 'Troll Stronghold',
                 317,
                 RunescapeTypes::VarPlayer,
                 0,
                 50,
             ),
-            $this->makeObject(
+            'underground_pass' => $this->makeObject(
                 'Underground Pass',
                 161,
                 RunescapeTypes::VarPlayer,
                 0,
                 11,
             ),
-            $this->makeObject(
+            'vampyre_slayer' => $this->makeObject(
                 'Vampyre Slayer',
                 178,
                 RunescapeTypes::VarPlayer,
                 0,
                 3,
             ),
-            $this->makeObject(
+            'watchtower' => $this->makeObject(
                 'Watchtower',
                 212,
                 RunescapeTypes::VarPlayer,
                 0,
                 13,
             ),
-            $this->makeObject(
+            'waterfall_quest' => $this->makeObject(
                 'Waterfall quest',
                 65,
                 RunescapeTypes::VarPlayer,
                 0,
                 10,
             ),
-            $this->makeObject(
+            'witchs_house' => $this->makeObject(
                 "Witch's house",
                 226,
                 RunescapeTypes::VarPlayer,
                 0,
                 7,
             ),
-            $this->makeObject(
+            'witchs_potion' => $this->makeObject(
                 "Witch's potion",
                 67,
                 RunescapeTypes::VarPlayer,
@@ -1266,7 +1266,7 @@ class QuestService implements OsrsService
             ),
         ];
 
-        usort($data, fn ($a, $b) => strcmp($a['text'], $b['text']));
+        uasort($data, fn ($a, $b) => strcmp($a['text'], $b['text']));
 
         return $data;
     }

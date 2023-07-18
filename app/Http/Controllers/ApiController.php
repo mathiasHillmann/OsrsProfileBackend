@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 
 use App\Jobs\IncrementViewJob;
 use App\Models\Player;
+use App\Services\AchievementDiaryService;
 use App\Services\QuestService;
 use App\Services\SkillService;
 use App\Services\SummaryService;
@@ -23,6 +24,7 @@ class ApiController extends Controller
         private SkillService $skillService,
         private QuestService $questService,
         private SummaryService $summaryService,
+        private AchievementDiaryService $achievementDiaryService,
     ) {
     }
 
@@ -36,6 +38,7 @@ class ApiController extends Controller
                 $data = $player->data;
                 $this->questService->translate($data);
                 $this->skillService->translate($data);
+                $this->achievementDiaryService->translate($data);
                 $this->summaryService->translate($data, $player);
 
                 return $this->response($data);
