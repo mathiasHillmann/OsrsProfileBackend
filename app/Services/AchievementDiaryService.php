@@ -14,8 +14,17 @@ class AchievementDiaryService implements OsrsService
     {
         $diaries = $this->getValuesToTrack();
 
-        foreach ($diaries as $diary) {
-            dd($diary);
+        foreach ($diaries as $diaryName => $diary) {
+            $item = &$data[$diaryName];
+
+            if (!$item) {
+                $data['diaries'][$diary['region']->value][$diary['tier']->value] = null;
+            } else {
+                $data['diaries'][$diary['region']->value][$diary['tier']->value] = (bool) $item['value'];
+            }
+
+            unset($item);
+            unset($data[$diaryName]);
         }
     }
 

@@ -30,6 +30,7 @@ class QuestService implements OsrsService
             }
 
             unset($item);
+            unset($data[$questName]);
         }
     }
 
@@ -483,7 +484,7 @@ class QuestService implements OsrsService
             ),
             'ratcatchers' => $this->makeObject(
                 'Ratcatchers',
-                144,
+                1404,
                 RunescapeTypes::VarBit,
                 0,
                 127,

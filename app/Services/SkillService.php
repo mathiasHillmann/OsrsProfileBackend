@@ -58,7 +58,7 @@ class SkillService implements OsrsService
                 ];
             }
 
-
+            unset($data[$skillName]);
             unset($item);
         }
     }

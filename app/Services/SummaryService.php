@@ -31,9 +31,10 @@ class SummaryService implements OsrsService
             RunescapeQuestStatus::Complete->value => Collection::wrap($data['miniquest'])->filter(fn ($status) => $status === RunescapeQuestStatus::Complete)->count(),
             'total' => Collection::wrap($data['miniquest'])->count(),
         ];
+        [$diaryCompleted, $diaryTotal] = $this->countCompletedDiaries($data['diaries']);
         $data['summary']['diary'] = [
-            'complete' => 0,
-            'total' => 492,
+            'complete' => $diaryCompleted,
+            'total' => $diaryTotal,
         ];
         $data['summary']['combatTasks'] = [
             'complete' => 0,
@@ -60,6 +61,24 @@ class SummaryService implements OsrsService
         } else {
             return null;
         }
+    }
+
+    private function countCompletedDiaries(array $diaries): array
+    {
+        $completed = 0;
+        $total = 0;
+
+        foreach ($diaries as $diary) {
+            foreach ($diary as $tier) {
+                if ($tier === true) {
+                    $completed++;
+                }
+
+                $total++;
+            }
+        }
+
+        return [$completed, $total];
     }
 
     public function getValuesToTrack(): array
