@@ -8,7 +8,7 @@ use App\Enums\RunescapeQuestStatus;
 use App\Models\Player;
 use Illuminate\Support\Collection;
 
-class SummaryService implements TranslatingInterface
+class SummaryService implements OsrsService
 {
     public function translate(array &$data, Player $player = null): void
     {
@@ -24,16 +24,17 @@ class SummaryService implements TranslatingInterface
         $data['summary']['accountType'] = $player->account_type;
         $data['summary']['username'] = $player->username;
         $data['summary']['quest'] = [
-            RunescapeQuestStatus::Complete->value => Collection::wrap($data['quest'])->filter(fn ($status) => $status === RunescapeQuestStatus::Complete)->count(),
+            RunescapeQuestStatus::Complete->value => Collection::wrap($data['quest'])->filter(fn ($quest) => $quest['status'] === RunescapeQuestStatus::Complete)->count(),
             'total' => Collection::wrap($data['quest'])->count(),
         ];
         $data['summary']['miniquest'] = [
-            RunescapeQuestStatus::Complete->value => Collection::wrap($data['miniquest'])->filter(fn ($status) => $status === RunescapeQuestStatus::Complete)->count(),
+            RunescapeQuestStatus::Complete->value => Collection::wrap($data['miniquest'])->filter(fn ($quest) => $quest['status'] === RunescapeQuestStatus::Complete)->count(),
             'total' => Collection::wrap($data['miniquest'])->count(),
         ];
+        [$diaryCompleted, $diaryTotal] = $this->countCompletedDiaries($data['diaries']);
         $data['summary']['diary'] = [
-            'complete' => 0,
-            'total' => 492,
+            'complete' => $diaryCompleted,
+            'total' => $diaryTotal,
         ];
         $data['summary']['combatTasks'] = [
             'complete' => 0,
@@ -60,5 +61,28 @@ class SummaryService implements TranslatingInterface
         } else {
             return null;
         }
+    }
+
+    private function countCompletedDiaries(array $diaries): array
+    {
+        $completed = 0;
+        $total = 0;
+
+        foreach ($diaries as $diary) {
+            foreach ($diary as $tier) {
+                if ($tier === true) {
+                    $completed++;
+                }
+
+                $total++;
+            }
+        }
+
+        return [$completed, $total];
+    }
+
+    public function getValuesToTrack(): array
+    {
+        return [];
     }
 }

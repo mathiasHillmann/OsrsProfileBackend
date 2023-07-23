@@ -5,10 +5,12 @@ declare(strict_types=1);
 namespace App\Http\Controllers;
 
 use App\Models\Player;
+use App\Services\AchievementDiaryService;
 use App\Services\QuestService;
 use App\Services\SkillService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -17,10 +19,11 @@ class RuneliteController extends Controller
     public function __construct(
         private SkillService $skillService,
         private QuestService $questService,
+        private AchievementDiaryService $achievementDiaryService,
     ) {
     }
 
-    #[Route('/public/player/{accountHash}', methods: ['GET'])]
+    #[Route('/runelite/player/{accountHash}', methods: ['GET'])]
     public function load(Request $request, string $accountHash): JsonResponse
     {
         try {
@@ -45,7 +48,7 @@ class RuneliteController extends Controller
         }
     }
 
-    #[Route('/public/player/{accountHash}', methods: ['POST'])]
+    #[Route('/runelite/player/{accountHash}', methods: ['POST'])]
     public function submit(Request $request, string $accountHash): JsonResponse
     {
         try {
@@ -73,6 +76,10 @@ class RuneliteController extends Controller
 
         if ($request->boolean('quests')) {
             $values = array_merge($values, $this->questService->getValuesToTrack());
+        }
+
+        if ($request->boolean('diaries')) {
+            $values = array_merge($values, $this->achievementDiaryService->getValuesToTrack());
         }
 
         if (count($values) > 0) {
