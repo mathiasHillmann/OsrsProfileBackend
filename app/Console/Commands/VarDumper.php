@@ -36,6 +36,7 @@ class VarDumper extends Command
     const VARIABLES_SOURCES = [
         'quests' => 'rs2asm/4024.rs2asm',
         'combat_achievements' => 'rs2asm/4834.rs2asm',
+        'achievement_diaries' => 'rs2asm/56.rs2asm',
     ];
 
     /**
