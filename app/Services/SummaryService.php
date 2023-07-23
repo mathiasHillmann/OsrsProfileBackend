@@ -24,11 +24,11 @@ class SummaryService implements OsrsService
         $data['summary']['accountType'] = $player->account_type;
         $data['summary']['username'] = $player->username;
         $data['summary']['quest'] = [
-            RunescapeQuestStatus::Complete->value => Collection::wrap($data['quest'])->filter(fn ($status) => $status === RunescapeQuestStatus::Complete)->count(),
+            RunescapeQuestStatus::Complete->value => Collection::wrap($data['quest'])->filter(fn ($quest) => $quest['status'] === RunescapeQuestStatus::Complete)->count(),
             'total' => Collection::wrap($data['quest'])->count(),
         ];
         $data['summary']['miniquest'] = [
-            RunescapeQuestStatus::Complete->value => Collection::wrap($data['miniquest'])->filter(fn ($status) => $status === RunescapeQuestStatus::Complete)->count(),
+            RunescapeQuestStatus::Complete->value => Collection::wrap($data['miniquest'])->filter(fn ($quest) => $quest['status'] === RunescapeQuestStatus::Complete)->count(),
             'total' => Collection::wrap($data['miniquest'])->count(),
         ];
         [$diaryCompleted, $diaryTotal] = $this->countCompletedDiaries($data['diaries']);

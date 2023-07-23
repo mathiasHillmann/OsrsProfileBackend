@@ -18,16 +18,21 @@ class QuestService implements OsrsService
             $item = &$data[$questName];
 
             if (!$item) {
-                $data[$quest['questType']->value][$questName] = RunescapeQuestStatus::Unknown;
+                $status = RunescapeQuestStatus::Unknown;
             } else {
                 if (!$item['value'] || $item['value'] <= $quest['startValue']) {
-                    $data[$quest['questType']->value][$questName] = RunescapeQuestStatus::NotStarted;
+                    $status = RunescapeQuestStatus::NotStarted;
                 } elseif ($item['value'] >= $quest['endValue']) {
-                    $data[$quest['questType']->value][$questName] = RunescapeQuestStatus::Complete;
+                    $status = RunescapeQuestStatus::Complete;
                 } else {
-                    $data[$quest['questType']->value][$questName] = RunescapeQuestStatus::InProgress;
+                    $status = RunescapeQuestStatus::InProgress;
                 }
             }
+
+            $data[$quest['questType']->value][$questName] = [
+                'text' => $quest['text'],
+                'status' => $status,
+            ];
 
             unset($item);
             unset($data[$questName]);
