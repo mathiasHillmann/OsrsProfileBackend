@@ -8,6 +8,8 @@ use App\Jobs\IncrementViewJob;
 use App\Models\Player;
 use App\Services\AchievementDiaryService;
 use App\Services\BossService;
+use App\Services\HiscoreService;
+use App\Services\MinigameService;
 use App\Services\QuestService;
 use App\Services\SkillService;
 use App\Services\SummaryService;
@@ -22,11 +24,13 @@ use Symfony\Component\Routing\Annotation\Route;
 class ApiController extends Controller
 {
     public function __construct(
+        private HiscoreService $hiscoreService,
         private SkillService $skillService,
         private QuestService $questService,
         private SummaryService $summaryService,
         private AchievementDiaryService $achievementDiaryService,
         private BossService $bossService,
+        private MinigameService $minigameService,
     ) {
     }
 
@@ -37,11 +41,14 @@ class ApiController extends Controller
             if ($player = Player::where('username', $username)->first()) {
                 dispatch(new IncrementViewJob($username));
 
+                $hiscoreData = $this->hiscoreService->fetchPlayer($player);
                 $data = $player->data;
+
                 $this->questService->translate($data);
                 $this->skillService->translate($data);
                 $this->achievementDiaryService->translate($data);
-                $this->bossService->translate($data);
+                $this->bossService->translate($data, $hiscoreData);
+                $this->minigameService->translate($data, $hiscoreData);
                 $this->summaryService->translate($data, $player);
 
                 return $this->response($data);

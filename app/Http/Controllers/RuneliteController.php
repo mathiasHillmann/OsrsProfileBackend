@@ -8,6 +8,7 @@ use App\Http\Requests\RuneliteSubmitRequest;
 use App\Models\Player;
 use App\Services\AchievementDiaryService;
 use App\Services\BossService;
+use App\Services\MinigameService;
 use App\Services\QuestService;
 use App\Services\SkillService;
 use Illuminate\Http\JsonResponse;
@@ -22,6 +23,7 @@ class RuneliteController extends Controller
         private QuestService $questService,
         private AchievementDiaryService $achievementDiaryService,
         private BossService $bossService,
+        private MinigameService $minigameService,
     ) {
     }
 
@@ -86,6 +88,10 @@ class RuneliteController extends Controller
 
         if ($request->boolean('bosskills')) {
             $values = array_merge($values, $this->bossService->getValuesToTrack());
+        }
+
+        if ($request->boolean('minigames')) {
+            $values = array_merge($values, $this->minigameService->getValuesToTrack());
         }
 
         if (count($values) > 0) {
