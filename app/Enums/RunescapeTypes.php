@@ -9,4 +9,6 @@ enum RunescapeTypes: string
     case VarPlayer = 'varp';
     case VarBit = 'varb';
     case Skill = 'skill';
+    case Killcount = 'killcount';
+    case PersonalBest = 'personalbest';
 }
