@@ -15,28 +15,35 @@ class MinigameService implements OsrsService
         foreach ($minigames as $minigameName => $minigame) {
             $item = &$data[$minigameName];
 
+            $rank = null;
+            $score = null;
+
             if ($item) {
-                $kc = $item['value'];
+                $score = $item['value'];
 
                 if ($hiscoreData && $minigame['hiscore_id']) {
                     $key = array_search($minigame['hiscore_id'], array_column($hiscoreData['activities'], 'id'));
-                    $hiscoreKc = $hiscoreData['activities'][$key]['score'];
+                    $hiscoreScore = $hiscoreData['activities'][$key]['score'];
+                    $rank = $hiscoreData['activities'][$key]['rank'] ?? null;
 
-                    if ($hiscoreKc > $kc) {
-                        $kc = $hiscoreKc;
+                    if ($rank === -1) {
+                        $rank = null;
+                    }
+
+                    if ($hiscoreScore > $score) {
+                        $score = $hiscoreScore;
                     }
                 }
 
-                if ($kc !== null && $kc < 0) {
-                    $kc = 0;
+                if ($score !== null && $score < 0) {
+                    $score = 0;
                 }
-            } else {
-                $kc = null;
             }
 
             $data['minigames'][$minigameName] = [
                 'text' => $minigame['text'],
-                'kc' => $kc,
+                'score' => $score,
+                'rank' => $rank,
             ];
 
             unset($item);
@@ -102,13 +109,13 @@ class MinigameService implements OsrsService
                 15,
             ),
             'bh_hunter' => $this->makeObject(
-                "bounty Hunter - Hunter",
+                "Bounty Hunter - Hunter",
                 RunescapeTypes::Killcount,
                 'bh hunter',
                 1,
             ),
             'bh_rogue' => $this->makeObject(
-                "bounty Hunter - Rogue",
+                "Bounty Hunter - Rogue",
                 RunescapeTypes::Killcount,
                 'bh rogue',
                 2,

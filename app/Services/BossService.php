@@ -22,12 +22,21 @@ class BossService implements OsrsService
             $item = &$data[$bossName];
             $bossPb = &$data[$prettyName . '_pb'];
 
+            $rank = null;
+            $kc = null;
+            $pb = null;
+
             if ($item) {
                 $kc = $item['value'];
 
                 if ($hiscoreData && $boss['hiscore_id']) {
                     $key = array_search($boss['hiscore_id'], array_column($hiscoreData['activities'], 'id'));
                     $hiscoreKc = $hiscoreData['activities'][$key]['score'];
+                    $rank = $hiscoreData['activities'][$key]['rank'] ?? null;
+
+                    if ($rank === -1) {
+                        $rank = null;
+                    }
 
                     if ($hiscoreKc > $kc) {
                         $kc = $hiscoreKc;
@@ -37,24 +46,17 @@ class BossService implements OsrsService
                 if ($kc !== null && $kc < 0) {
                     $kc = 0;
                 }
-            } else {
-                $kc = null;
             }
 
             if ($bossPb) {
                 $pb = $bossPb['value'];
-
-                if ($pb !== null) {
-                    $pb = sprintf('%02d:%02d', ($pb / 60 % 60), $pb % 60);
-                }
-            } else {
-                $pb = null;
             }
 
             $data['bosses'][$prettyName] = [
                 'text' => $boss['text'],
                 'kc' => $kc,
                 'pb' => $pb,
+                'rank' => $rank,
             ];
 
             unset($item);

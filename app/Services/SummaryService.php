@@ -10,12 +10,18 @@ use Illuminate\Support\Collection;
 
 class SummaryService implements OsrsService
 {
-    public function translate(array &$data, Player $player = null): void
+    public function translate(array &$data, Player $player = null, array $hiscoreData = []): void
     {
+        $overallRank = $hiscoreData['skills'][0]['rank'] ?? null;
+        if ($overallRank === -1) {
+            $overallRank = null;
+        }
+
         $data['summary']['total'] = [
             'realLevel' => array_sum(array_column($data['skills'], 'realLevel')),
             'virtualLevel' => array_sum(array_column($data['skills'], 'virtualLevel')),
             'experience' => array_sum(array_column($data['skills'], 'experience')),
+            'rank' => $overallRank,
         ];
 
         $data['summary']['combat'] = $this->calculateCombatLevel($data);

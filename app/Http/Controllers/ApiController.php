@@ -45,11 +45,11 @@ class ApiController extends Controller
                 $data = $player->data;
 
                 $this->questService->translate($data);
-                $this->skillService->translate($data);
+                $this->skillService->translate($data, $hiscoreData);
                 $this->achievementDiaryService->translate($data);
                 $this->bossService->translate($data, $hiscoreData);
                 $this->minigameService->translate($data, $hiscoreData);
-                $this->summaryService->translate($data, $player);
+                $this->summaryService->translate($data, $player, $hiscoreData);
 
                 return $this->response($data);
             } else {
