@@ -11,33 +11,33 @@ class SkillService implements OsrsService
     public function getValuesToTrack(): array
     {
         return [
-            'agility' => $this->makeObject('AGILITY', RunescapeTypes::Skill),
-            'attack' => $this->makeObject('ATTACK', RunescapeTypes::Skill),
-            'construction' => $this->makeObject('CONSTRUCTION', RunescapeTypes::Skill),
-            'cooking' => $this->makeObject('COOKING', RunescapeTypes::Skill),
-            'crafting' => $this->makeObject('CRAFTING', RunescapeTypes::Skill),
-            'defence' => $this->makeObject('DEFENCE', RunescapeTypes::Skill),
-            'farming' => $this->makeObject('FARMING', RunescapeTypes::Skill),
-            'firemaking' => $this->makeObject('FIREMAKING', RunescapeTypes::Skill),
-            'fishing' => $this->makeObject('FISHING', RunescapeTypes::Skill),
-            'fletching' => $this->makeObject('FLETCHING', RunescapeTypes::Skill),
-            'herblore' => $this->makeObject('HERBLORE', RunescapeTypes::Skill),
-            'hitpoints' => $this->makeObject('HITPOINTS', RunescapeTypes::Skill),
-            'hunter' => $this->makeObject('HUNTER', RunescapeTypes::Skill),
-            'magic' => $this->makeObject('MAGIC', RunescapeTypes::Skill),
-            'mining' => $this->makeObject('MINING', RunescapeTypes::Skill),
-            'prayer' => $this->makeObject('PRAYER', RunescapeTypes::Skill),
-            'ranged' => $this->makeObject('RANGED', RunescapeTypes::Skill),
-            'runecraft' => $this->makeObject('RUNECRAFT', RunescapeTypes::Skill),
-            'slayer' => $this->makeObject('SLAYER', RunescapeTypes::Skill),
-            'smithing' => $this->makeObject('SMITHING', RunescapeTypes::Skill),
-            'strength' => $this->makeObject('STRENGTH', RunescapeTypes::Skill),
-            'thieving' => $this->makeObject('THIEVING', RunescapeTypes::Skill),
-            'woodcutting' => $this->makeObject('WOODCUTTING', RunescapeTypes::Skill),
+            'agility' => $this->makeObject('AGILITY', RunescapeTypes::Skill, 17),
+            'attack' => $this->makeObject('ATTACK', RunescapeTypes::Skill, 1),
+            'construction' => $this->makeObject('CONSTRUCTION', RunescapeTypes::Skill, 23),
+            'cooking' => $this->makeObject('COOKING', RunescapeTypes::Skill, 8),
+            'crafting' => $this->makeObject('CRAFTING', RunescapeTypes::Skill, 13),
+            'defence' => $this->makeObject('DEFENCE', RunescapeTypes::Skill, 2),
+            'farming' => $this->makeObject('FARMING', RunescapeTypes::Skill, 20),
+            'firemaking' => $this->makeObject('FIREMAKING', RunescapeTypes::Skill, 12),
+            'fishing' => $this->makeObject('FISHING', RunescapeTypes::Skill, 11),
+            'fletching' => $this->makeObject('FLETCHING', RunescapeTypes::Skill, 10),
+            'herblore' => $this->makeObject('HERBLORE', RunescapeTypes::Skill, 16),
+            'hitpoints' => $this->makeObject('HITPOINTS', RunescapeTypes::Skill, 4),
+            'hunter' => $this->makeObject('HUNTER', RunescapeTypes::Skill, 22),
+            'magic' => $this->makeObject('MAGIC', RunescapeTypes::Skill, 7),
+            'mining' => $this->makeObject('MINING', RunescapeTypes::Skill, 15),
+            'prayer' => $this->makeObject('PRAYER', RunescapeTypes::Skill, 6),
+            'ranged' => $this->makeObject('RANGED', RunescapeTypes::Skill, 5),
+            'runecraft' => $this->makeObject('RUNECRAFT', RunescapeTypes::Skill, 21),
+            'slayer' => $this->makeObject('SLAYER', RunescapeTypes::Skill, 19),
+            'smithing' => $this->makeObject('SMITHING', RunescapeTypes::Skill, 14),
+            'strength' => $this->makeObject('STRENGTH', RunescapeTypes::Skill, 3),
+            'thieving' => $this->makeObject('THIEVING', RunescapeTypes::Skill, 18),
+            'woodcutting' => $this->makeObject('WOODCUTTING', RunescapeTypes::Skill, 9),
         ];
     }
 
-    public function translate(array &$data): void
+    public function translate(array &$data, array $hiscoreData = []): void
     {
         $skills = $this->getValuesToTrack();
 
@@ -49,6 +49,7 @@ class SkillService implements OsrsService
                     'realLevel' => null,
                     'virtualLevel' => null,
                     'experience' => 0,
+                    'rank' => null,
                 ];
             } else {
                 $data['skills'][$skillName] = [
@@ -56,6 +57,17 @@ class SkillService implements OsrsService
                     'virtualLevel' => $this->experienceToLevel($item['value'], true),
                     'experience' => $item['value'],
                 ];
+
+                if ($hiscoreData && $skill['hiscore_id']) {
+                    $key = array_search($skill['hiscore_id'], array_column($hiscoreData['skills'], 'id'));
+                    $rank = $hiscoreData['skills'][$key]['rank'] ?? null;
+
+                    if ($rank === -1) {
+                        $rank = null;
+                    }
+
+                    $data['skills'][$skillName]['rank'] = $rank;
+                }
             }
 
             unset($data[$skillName]);
@@ -202,11 +214,12 @@ class SkillService implements OsrsService
         return $level;
     }
 
-    private function makeObject(string $index, RunescapeTypes $type): array
+    private function makeObject(string $index, RunescapeTypes $type, int $hiscoreId = null): array
     {
         return [
             'index' => $index,
             'type' => $type,
+            'hiscore_id' => $hiscoreId
         ];
     }
 }

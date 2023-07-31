@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Enums\RunescapeAccountTypes;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -21,6 +22,7 @@ class Player extends Model
     ];
 
     protected $casts = [
-        'data' => 'array'
+        'data' => 'array',
+        'account_type' => RunescapeAccountTypes::class,
     ];
 }
