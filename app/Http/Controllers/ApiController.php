@@ -7,6 +7,9 @@ namespace App\Http\Controllers;
 use App\Jobs\IncrementViewJob;
 use App\Models\Player;
 use App\Services\AchievementDiaryService;
+use App\Services\BossService;
+use App\Services\HiscoreService;
+use App\Services\MinigameService;
 use App\Services\QuestService;
 use App\Services\SkillService;
 use App\Services\SummaryService;
@@ -21,10 +24,13 @@ use Symfony\Component\Routing\Annotation\Route;
 class ApiController extends Controller
 {
     public function __construct(
+        private HiscoreService $hiscoreService,
         private SkillService $skillService,
         private QuestService $questService,
         private SummaryService $summaryService,
         private AchievementDiaryService $achievementDiaryService,
+        private BossService $bossService,
+        private MinigameService $minigameService,
     ) {
     }
 
@@ -35,11 +41,15 @@ class ApiController extends Controller
             if ($player = Player::where('username', $username)->first()) {
                 dispatch(new IncrementViewJob($username));
 
+                $hiscoreData = $this->hiscoreService->fetchPlayer($player);
                 $data = $player->data;
+
                 $this->questService->translate($data);
-                $this->skillService->translate($data);
+                $this->skillService->translate($data, $hiscoreData);
                 $this->achievementDiaryService->translate($data);
-                $this->summaryService->translate($data, $player);
+                $this->bossService->translate($data, $hiscoreData);
+                $this->minigameService->translate($data, $hiscoreData);
+                $this->summaryService->translate($data, $player, $hiscoreData);
 
                 return $this->response($data);
             } else {
@@ -69,7 +79,10 @@ class ApiController extends Controller
     {
         try {
             $search = strtolower($search);
-            $players = Player::where(DB::raw('lower(username)'), 'like', "%{$search}%")->orderByRaw('LENGTH(username), username')->get(['username'])->pluck('username');
+            $players = Player::where(DB::raw('lower(username)'), 'like', "%{$search}%")
+                ->orderByRaw('LENGTH(username), username')
+                ->get(['username'])
+                ->pluck('username');
 
             return $this->response($players);
         } catch (\Throwable $th) {

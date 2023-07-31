@@ -4,13 +4,15 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\RuneliteSubmitRequest;
 use App\Models\Player;
 use App\Services\AchievementDiaryService;
+use App\Services\BossService;
+use App\Services\MinigameService;
 use App\Services\QuestService;
 use App\Services\SkillService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -20,6 +22,8 @@ class RuneliteController extends Controller
         private SkillService $skillService,
         private QuestService $questService,
         private AchievementDiaryService $achievementDiaryService,
+        private BossService $bossService,
+        private MinigameService $minigameService,
     ) {
     }
 
@@ -49,7 +53,7 @@ class RuneliteController extends Controller
     }
 
     #[Route('/runelite/player/{accountHash}', methods: ['POST'])]
-    public function submit(Request $request, string $accountHash): JsonResponse
+    public function submit(RuneliteSubmitRequest $request, string $accountHash): JsonResponse
     {
         try {
             $player = Player::updateOrCreate([
@@ -80,6 +84,14 @@ class RuneliteController extends Controller
 
         if ($request->boolean('diaries')) {
             $values = array_merge($values, $this->achievementDiaryService->getValuesToTrack());
+        }
+
+        if ($request->boolean('bosskills')) {
+            $values = array_merge($values, $this->bossService->getValuesToTrack());
+        }
+
+        if ($request->boolean('minigames')) {
+            $values = array_merge($values, $this->minigameService->getValuesToTrack());
         }
 
         if (count($values) > 0) {
