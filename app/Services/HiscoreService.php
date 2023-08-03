@@ -13,10 +13,10 @@ class HiscoreService
     private function getHiscoresEndpoint(Player $player): string
     {
         $type = match ($player->account_type) {
-            RunescapeAccountTypes::Normal => 'hiscore_oldschool',
             RunescapeAccountTypes::Ironman => 'hiscore_oldschool_ironman',
             RunescapeAccountTypes::HardcoreIronman => 'hiscore_oldschool_hardcore_ironman',
             RunescapeAccountTypes::UltimateIronman => 'hiscore_oldschool_ultimate',
+            default => 'hiscore_oldschool',
         };
 
         return "https://services.runescape.com/m={$type}/index_lite.json";
