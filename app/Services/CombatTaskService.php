@@ -6,7 +6,7 @@ namespace App\Services;
 
 use App\Enums\RunescapeTypes;
 
-class CombatAchievementService implements OsrsService
+class CombatTaskService implements OsrsService
 {
     private const TASKS = [
         0 =>
@@ -16,6 +16,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Noxious Foe',
             'description' => 'Kill an Aberrant Spectre.',
+            'boss' => false,
         ],
         1 => [
             'monster' => 'Abyssal Sire',
@@ -23,6 +24,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Abyssal Adept',
             'description' => 'Kill the Abyssal Sire 20 times.',
+            'boss' => true,
         ],
         2 => [
             'monster' => 'Abyssal Sire',
@@ -30,6 +32,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Abyssal Veteran',
             'description' => 'Kill the Abyssal Sire 50 times.',
+            'boss' => true,
         ],
         3 => [
             'monster' => 'Abyssal Sire',
@@ -37,6 +40,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'They Grow Up Too Fast',
             'description' => 'Kill the Abyssal Sire without letting any Scion mature.',
+            'boss' => true,
         ],
         4 => [
             'monster' => 'Abyssal Sire',
@@ -44,6 +48,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Respiratory Runner',
             'description' => 'Kill the Abyssal Sire after only stunning him once.',
+            'boss' => true,
         ],
         5 => [
             'monster' => 'Abyssal Sire',
@@ -51,6 +56,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Don\'t Whip Me',
             'description' => 'Kill the Abyssal Sire without being hit by any external tentacles.',
+            'boss' => true,
         ],
         6 => [
             'monster' => 'Abyssal Sire',
@@ -58,6 +64,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Demonic Rebound',
             'description' => 'Use the Vengeance spell to reflect the damage from the Abyssal Sire\'s explosion back to him.',
+            'boss' => true,
         ],
         7 => [
             'monster' => 'Abyssal Sire',
@@ -65,6 +72,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Don\'t Stop Moving',
             'description' => 'Kill the Abyssal Sire without taking damage from any miasma pools.',
+            'boss' => true,
         ],
         8 => [
             'monster' => 'Abyssal Sire',
@@ -72,6 +80,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Perfect Sire',
             'description' => 'Kill the Abyssal Sire without taking damage from the external tentacles, miasma pools, explosion or damage from the Abyssal Sire without praying the appropriate protection prayer.',
+            'boss' => true,
         ],
         9 => [
             'monster' => 'Kree\'arra',
@@ -79,6 +88,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Kree\'arra Adept',
             'description' => 'Kill Kree\'arra 50 times.',
+            'boss' => true,
         ],
         10 => [
             'monster' => 'Kree\'arra',
@@ -86,6 +96,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Kree\'arra Veteran',
             'description' => 'Kill Kree\'arra 100 times.',
+            'boss' => true,
         ],
         11 => [
             'monster' => 'Kree\'arra',
@@ -93,6 +104,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Collateral Damage',
             'description' => 'Kill Kree\'arra in a private instance without ever attacking him directly.',
+            'boss' => true,
         ],
         12 => [
             'monster' => 'Kree\'arra',
@@ -100,6 +112,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Airborne Showdown',
             'description' => 'Finish off Kree\'arra whilst all of his bodyguards are dead.',
+            'boss' => true,
         ],
         13 => [
             'monster' => 'Kree\'arra',
@@ -107,6 +120,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Swoop No More',
             'description' => 'Kill Kree\'arra in a private instance without taking any melee damage from the boss or his bodyguards.',
+            'boss' => true,
         ],
         14 => [
             'monster' => 'Kree\'arra',
@@ -114,6 +128,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'The Worst Ranged Weapon',
             'description' => 'Kill Kree\'arra by only dealing damage to him with a salamander.',
+            'boss' => true,
         ],
         15 => [
             'monster' => 'Kree\'arra',
@@ -121,6 +136,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Stamina',
             'name' => 'Feather Hunter',
             'description' => 'Kill Kree\'arra 30 times in a private instance without leaving the room.',
+            'boss' => true,
         ],
         16 => [
             'monster' => 'General Graardor',
@@ -128,6 +144,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'General Graardor Adept',
             'description' => 'Kill General Graardor 50 times.',
+            'boss' => true,
         ],
         17 => [
             'monster' => 'General Graardor',
@@ -135,6 +152,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'General Graardor Veteran',
             'description' => 'Kill General Graardor 100 times.',
+            'boss' => true,
         ],
         18 => [
             'monster' => 'General Graardor',
@@ -142,6 +160,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Ourg Freezer',
             'description' => 'Kill General Graardor whilst he is immobilized.',
+            'boss' => true,
         ],
         19 => [
             'monster' => 'General Graardor',
@@ -149,6 +168,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Ourg Freezer II',
             'description' => 'Kill General Graardor without him attacking any players.',
+            'boss' => true,
         ],
         20 => [
             'monster' => 'General Graardor',
@@ -156,6 +176,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'General Showdown',
             'description' => 'Finish off General Graardor whilst all of his bodyguards are dead.',
+            'boss' => true,
         ],
         21 => [
             'monster' => 'General Graardor',
@@ -163,6 +184,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Defence Matters',
             'description' => 'Kill General Graardor 2 times consecutively in a private instance without taking any damage from his bodyguards.',
+            'boss' => true,
         ],
         22 => [
             'monster' => 'General Graardor',
@@ -170,6 +192,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Keep Away',
             'description' => 'Kill General Graardor in a private instance without taking any damage from the boss or bodyguards.',
+            'boss' => true,
         ],
         23 => [
             'monster' => 'General Graardor',
@@ -177,6 +200,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Stamina',
             'name' => 'Ourg Killer',
             'description' => 'Kill General Graardor 15 times in a private instance without leaving the room.',
+            'boss' => true,
         ],
         24 => [
             'monster' => 'Barrows',
@@ -184,6 +208,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Barrows Novice',
             'description' => 'Open the Barrows chest 10 times.',
+            'boss' => true,
         ],
         25 => [
             'monster' => 'Barrows',
@@ -191,6 +216,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Barrows Champion',
             'description' => 'Open the Barrows chest 25 times.',
+            'boss' => true,
         ],
         26 => [
             'monster' => 'Barrows',
@@ -198,6 +224,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Can\'t Touch Me',
             'description' => 'Kill Dharok, Verac, Torag and Guthan without letting them attack you with melee.',
+            'boss' => true,
         ],
         27 => [
             'monster' => 'Barrows',
@@ -205,6 +232,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Pray for Success',
             'description' => 'Kill all six Barrows Brothers and loot the Barrows chest without taking any damage from any of the brothers.',
+            'boss' => true,
         ],
         28 => [
             'monster' => 'Barrows',
@@ -212,6 +240,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Defence? What Defence?',
             'description' => 'Kill any Barrows Brother using only magical damage.',
+            'boss' => true,
         ],
         29 => [
             'monster' => 'Barrows',
@@ -219,6 +248,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Just Like That',
             'description' => 'Kill Karil using only damage dealt by special attacks.',
+            'boss' => true,
         ],
         30 => [
             'monster' => 'Barrows',
@@ -226,6 +256,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Faithless Crypt Run',
             'description' => 'Kill all six Barrows Brothers and loot the Barrows chest without ever having more than 0 prayer points.',
+            'boss' => true,
         ],
         31 => [
             'monster' => 'Basilisk Knight',
@@ -233,6 +264,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Reflecting on This Encounter',
             'description' => 'Kill a Basilisk Knight.',
+            'boss' => false,
         ],
         32 => [
             'monster' => 'Black Dragon',
@@ -240,6 +272,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Big, Black and Fiery',
             'description' => 'Kill a Black Dragon.',
+            'boss' => false,
         ],
         33 => [
             'monster' => 'Bloodveld',
@@ -247,6 +280,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'The Demonic Punching Bag',
             'description' => 'Kill a Bloodveld.',
+            'boss' => false,
         ],
         34 => [
             'monster' => 'Brutal Black Dragon',
@@ -254,6 +288,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Brutal, Big, Black and Firey',
             'description' => 'Kill a Brutal Black Dragon.',
+            'boss' => false,
         ],
         35 => [
             'monster' => 'Bryophyta',
@@ -261,6 +296,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Bryophyta Novice',
             'description' => 'Kill Bryophyta once.',
+            'boss' => true,
         ],
         36 => [
             'monster' => 'Bryophyta',
@@ -268,6 +304,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Bryophyta Champion',
             'description' => 'Kill Bryophyta 5 times.',
+            'boss' => true,
         ],
         37 => [
             'monster' => 'Bryophyta',
@@ -275,6 +312,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Protection from Moss',
             'description' => 'Kill Bryophyta with the Protect from Magic prayer active.',
+            'boss' => true,
         ],
         38 => [
             'monster' => 'Bryophyta',
@@ -282,6 +320,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Quick Cutter',
             'description' => 'Kill all 3 of Bryophyta\'s growthlings within 3 seconds of the first one dying.',
+            'boss' => true,
         ],
         39 => [
             'monster' => 'Bryophyta',
@@ -289,6 +328,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Preparation Is Key',
             'description' => 'Kill Bryophyta without suffering any poison damage.',
+            'boss' => true,
         ],
         40 => [
             'monster' => 'Bryophyta',
@@ -296,6 +336,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'A Slow Death',
             'description' => 'Kill Bryophyta with either poison or venom being the final source of damage.',
+            'boss' => true,
         ],
         41 => [
             'monster' => 'Bryophyta',
@@ -303,6 +344,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Fighting as Intended II',
             'description' => 'Kill Bryophyta on a free to play world.',
+            'boss' => true,
         ],
         42 => [
             'monster' => 'Callisto',
@@ -310,6 +352,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Callisto Adept',
             'description' => 'Kill Callisto 10 times.',
+            'boss' => true,
         ],
         43 => [
             'monster' => 'Callisto',
@@ -317,6 +360,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Callisto Veteran',
             'description' => 'Kill Callisto 20 times.',
+            'boss' => true,
         ],
         44 => [
             'monster' => 'Skotizo',
@@ -324,6 +368,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Skotizo Champion',
             'description' => 'Kill Skotizo once.',
+            'boss' => true,
         ],
         45 => [
             'monster' => 'Skotizo',
@@ -331,6 +376,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Skotizo Adept',
             'description' => 'Kill Skotizo 5 times.',
+            'boss' => true,
         ],
         46 => [
             'monster' => 'Skotizo',
@@ -338,6 +384,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Demonic Weakening',
             'description' => 'Kill Skotizo with no altars active.',
+            'boss' => true,
         ],
         47 => [
             'monster' => 'Skotizo',
@@ -345,6 +392,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Demon Evasion',
             'description' => 'Kill Skotizo without taking any damage.',
+            'boss' => true,
         ],
         48 => [
             'monster' => 'Skotizo',
@@ -352,6 +400,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Demonbane Weaponry',
             'description' => 'Kill Skotizo with a demonbane weapon equipped.',
+            'boss' => true,
         ],
         49 => [
             'monster' => 'Skotizo',
@@ -359,6 +408,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Up for the Challenge',
             'description' => 'Kill Skotizo without equipping a demonbane weapon.',
+            'boss' => true,
         ],
         50 => [
             'monster' => 'Skotizo',
@@ -366,6 +416,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Precise Positioning',
             'description' => 'Kill Skotizo with the final source of damage being a Chinchompa explosion.',
+            'boss' => true,
         ],
         51 => [
             'monster' => 'Cerberus',
@@ -373,6 +424,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Cerberus Veteran',
             'description' => 'Kill Cerberus 75 times.',
+            'boss' => true,
         ],
         52 => [
             'monster' => 'Cerberus',
@@ -380,6 +432,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Cerberus Master',
             'description' => 'Kill Cerberus 150 times.',
+            'boss' => true,
         ],
         53 => [
             'monster' => 'Cerberus',
@@ -387,6 +440,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Arooo No More',
             'description' => 'Kill Cerberus without any of the Summoned Souls being spawned.',
+            'boss' => true,
         ],
         54 => [
             'monster' => 'Cerberus',
@@ -394,6 +448,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Ghost Buster',
             'description' => 'Kill Cerberus after successfully negating 6 or more attacks from Summoned Souls.',
+            'boss' => true,
         ],
         55 => [
             'monster' => 'Cerberus',
@@ -401,6 +456,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Unrequired Antifire',
             'description' => 'Kill Cerberus without taking damage from any lava pools.',
+            'boss' => true,
         ],
         56 => [
             'monster' => 'Cerberus',
@@ -408,6 +464,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Anti-Bite Mechanics',
             'description' => 'Kill Cerberus without taking any melee damage.',
+            'boss' => true,
         ],
         57 => [
             'monster' => 'Chaos Elemental',
@@ -415,6 +472,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Chaos Elemental Adept',
             'description' => 'Kill the Chaos Elemental 10 times.',
+            'boss' => true,
         ],
         58 => [
             'monster' => 'Chaos Elemental',
@@ -422,6 +480,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Chaos Elemental Veteran',
             'description' => 'Kill the Chaos Elemental 25 times.',
+            'boss' => true,
         ],
         59 => [
             'monster' => 'Chaos Elemental',
@@ -429,6 +488,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Hoarder',
             'description' => 'Kill the Chaos Elemental without it unequipping any of your items.',
+            'boss' => true,
         ],
         60 => [
             'monster' => 'Chaos Elemental',
@@ -436,6 +496,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'The Flincher',
             'description' => 'Kill the Chaos Elemental without taking any damage from it\'s attacks.',
+            'boss' => true,
         ],
         61 => [
             'monster' => 'Chaos Fanatic',
@@ -443,6 +504,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Chaos Fanatic Champion',
             'description' => 'Kill the Chaos Fanatic 10 times.',
+            'boss' => true,
         ],
         62 => [
             'monster' => 'Chaos Fanatic',
@@ -450,6 +512,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Chaos Fanatic Adept',
             'description' => 'Kill the Chaos Fanatic 25 times.',
+            'boss' => true,
         ],
         63 => [
             'monster' => 'Chaos Fanatic',
@@ -457,6 +520,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Sorry, What Was That?',
             'description' => 'Kill the Chaos Fanatic without anyone being hit by his explosion attack.',
+            'boss' => true,
         ],
         64 => [
             'monster' => 'Chaos Fanatic',
@@ -464,6 +528,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Praying to the Gods',
             'description' => 'Kill the Chaos Fanatic 10 times without drinking any potion which restores prayer or leaving the Wilderness.',
+            'boss' => true,
         ],
         65 => [
             'monster' => 'Corporeal Beast',
@@ -471,6 +536,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Corporeal Beast Veteran',
             'description' => 'Kill the Corporeal Beast 25 times.',
+            'boss' => true,
         ],
         66 => [
             'monster' => 'Corporeal Beast',
@@ -478,6 +544,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Corporeal Beast Master',
             'description' => 'Kill the Corporeal Beast 50 times.',
+            'boss' => true,
         ],
         67 => [
             'monster' => 'Corporeal Beast',
@@ -485,6 +552,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Hot on Your Feet',
             'description' => 'Kill the Corporeal Beast without anyone killing the dark core or taking damage from the dark core.',
+            'boss' => true,
         ],
         68 => [
             'monster' => 'Corporeal Beast',
@@ -492,6 +560,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Finding the Weak Spot',
             'description' => 'Finish off the Corporeal Beast with a Crystal Halberd special attack.',
+            'boss' => true,
         ],
         69 => [
             'monster' => 'Corporeal Beast',
@@ -499,6 +568,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Chicken Killer',
             'description' => 'Kill the Corporeal Beast solo.',
+            'boss' => true,
         ],
         70 => [
             'monster' => 'Crazy Archaeologist',
@@ -506,6 +576,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Crazy Archaeologist Champion',
             'description' => 'Kill the Crazy Archaeologist 10 times.',
+            'boss' => true,
         ],
         71 => [
             'monster' => 'Crazy Archaeologist',
@@ -513,6 +584,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Crazy Archaeologist Adept',
             'description' => 'Kill the Crazy Archaeologist 25 times.',
+            'boss' => true,
         ],
         72 => [
             'monster' => 'Crazy Archaeologist',
@@ -520,6 +592,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Mage of the Ruins',
             'description' => 'Kill the Crazy Archaeologist with only magical attacks.',
+            'boss' => true,
         ],
         73 => [
             'monster' => 'Crazy Archaeologist',
@@ -527,6 +600,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'I\'d Rather Not Learn',
             'description' => 'Kill the Crazy Archaeologist without anyone being hit by his "Rain of Knowledge" attack.',
+            'boss' => true,
         ],
         74 => [
             'monster' => 'Demonic Gorilla',
@@ -534,6 +608,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'If Gorillas Could Fly',
             'description' => 'Kill a Demonic Gorilla.',
+            'boss' => false,
         ],
         75 => [
             'monster' => 'Demonic Gorilla',
@@ -541,6 +616,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Hitting Them Where It Hurts',
             'description' => 'Finish off a Demonic Gorilla with a demonbane weapon.',
+            'boss' => false,
         ],
         76 => [
             'monster' => 'Deranged Archaeologist',
@@ -548,6 +624,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Deranged Archaeologist Novice',
             'description' => 'Kill the Deranged Archaeologist 10 times.',
+            'boss' => true,
         ],
         77 => [
             'monster' => 'Deranged Archaeologist',
@@ -555,6 +632,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Deranged Archaeologist Champion',
             'description' => 'Kill the Deranged Archaeologist 25 times.',
+            'boss' => true,
         ],
         78 => [
             'monster' => 'Deranged Archaeologist',
@@ -562,6 +640,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Mage of the Swamp',
             'description' => 'Kill the Deranged Archaeologist with only magical attacks.',
+            'boss' => true,
         ],
         79 => [
             'monster' => 'Deranged Archaeologist',
@@ -569,6 +648,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'I\'d Rather Be Illiterate',
             'description' => 'Kill the Deranged Archaeologist without anyone being hit by his "Learn to Read" attack.',
+            'boss' => true,
         ],
         80 => [
             'monster' => 'Fire Giant',
@@ -576,6 +656,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'The Walking Volcano',
             'description' => 'Kill a Fire Giant.',
+            'boss' => false,
         ],
         81 => [
             'monster' => 'Galvek',
@@ -583,6 +664,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'Galvek Speed-Trialist',
             'description' => 'Kill Galvek in less than 3 minutes.',
+            'boss' => false,
         ],
         82 => [
             'monster' => 'Grotesque Guardians',
@@ -590,6 +672,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Grotesque Guardians Adept',
             'description' => 'Kill the Grotesque Guardians 25 times.',
+            'boss' => true,
         ],
         83 => [
             'monster' => 'Grotesque Guardians',
@@ -597,6 +680,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Grotesque Guardians Veteran',
             'description' => 'Kill the Grotesque Guardians 50 times.',
+            'boss' => true,
         ],
         84 => [
             'monster' => 'Grotesque Guardians',
@@ -604,6 +688,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Don\'t Look at the Eclipse',
             'description' => 'Kill the Grotesque Guardians without taking damage from Dusk\'s blinding attack.',
+            'boss' => true,
         ],
         85 => [
             'monster' => 'Grotesque Guardians',
@@ -611,6 +696,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Prison Break',
             'description' => 'Kill the Grotesque Guardians without taking damage from Dusk\'s prison attack.',
+            'boss' => true,
         ],
         86 => [
             'monster' => 'Grotesque Guardians',
@@ -618,6 +704,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Granite Footwork',
             'description' => 'Kill the Grotesque Guardians without taking damage from Dawn\'s rockfall attack.',
+            'boss' => true,
         ],
         87 => [
             'monster' => 'Grotesque Guardians',
@@ -625,6 +712,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Heal No More',
             'description' => 'Kill the Grotesque Guardians without letting Dawn receive any healing from her orbs.',
+            'boss' => true,
         ],
         88 => [
             'monster' => 'Grotesque Guardians',
@@ -632,6 +720,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Static Awareness',
             'description' => 'Kill the Grotesque Guardians without being hit by any lightning attacks.',
+            'boss' => true,
         ],
         89 => [
             'monster' => 'Grotesque Guardians',
@@ -639,6 +728,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Done before Dusk',
             'description' => 'Kill the Grotesque Guardians before Dusk uses his prison attack for a second time.',
+            'boss' => true,
         ],
         90 => [
             'monster' => 'Grotesque Guardians',
@@ -646,6 +736,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Perfect Grotesque Guardians',
             'description' => 'Kill the Grotesque Guardians whilst completing the "Don\'t look at the eclipse", "Prison Break", "Granite Footwork", "Heal no more", "Static Awareness" and "Done before dusk" tasks.',
+            'boss' => true,
         ],
         91 => [
             'monster' => 'Grotesque Guardians',
@@ -653,6 +744,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Perfect Grotesque Guardians II',
             'description' => 'Kill the Grotesque Guardians 5 times in a row without leaving the instance, whilst completing the Perfect Grotesque Guardians task every time.',
+            'boss' => true,
         ],
         92 => [
             'monster' => 'Grotesque Guardians',
@@ -660,6 +752,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'Grotesque Guardians Speed-Trialist',
             'description' => 'Kill the Grotesque Guardians in less than 2 minutes.',
+            'boss' => true,
         ],
         93 => [
             'monster' => 'Grotesque Guardians',
@@ -667,6 +760,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'Grotesque Guardians Speed-Chaser',
             'description' => 'Kill the Grotesque Guardians in less than 1:40 minutes.',
+            'boss' => true,
         ],
         94 => [
             'monster' => 'Grotesque Guardians',
@@ -674,6 +768,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'Grotesque Guardians Speed-Runner',
             'description' => 'Kill the Grotesque Guardians in less than 1:20 minutes.',
+            'boss' => true,
         ],
         95 => [
             'monster' => 'Grotesque Guardians',
@@ -681,6 +776,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Stamina',
             'name' => 'From Dusk...',
             'description' => 'Kill the Grotesque Guardians 10 times without leaving the instance.',
+            'boss' => true,
         ],
         96 => [
             'monster' => 'Grotesque Guardians',
@@ -688,6 +784,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Stamina',
             'name' => '... \'til Dawn',
             'description' => 'Kill the Grotesque Guardians 20 times without leaving the instance.',
+            'boss' => true,
         ],
         97 => [
             'monster' => 'Gargoyle',
@@ -695,6 +792,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'A Smashing Time',
             'description' => 'Kill a Gargoyle.',
+            'boss' => false,
         ],
         98 => [
             'monster' => 'Corrupted Hunllef',
@@ -702,6 +800,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Corrupted Gauntlet Veteran',
             'description' => 'Complete the Corrupted Gauntlet 5 times.',
+            'boss' => true,
         ],
         99 => [
             'monster' => 'Corrupted Hunllef',
@@ -709,6 +808,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Corrupted Gauntlet Master',
             'description' => 'Complete the Corrupted Gauntlet 10 times.',
+            'boss' => true,
         ],
         100 => [
             'monster' => 'Corrupted Hunllef',
@@ -716,6 +816,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Corrupted Gauntlet Grandmaster',
             'description' => 'Complete the Corrupted Gauntlet 50 times.',
+            'boss' => true,
         ],
         101 => [
             'monster' => 'Corrupted Hunllef',
@@ -723,6 +824,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => '3, 2, 1 - Mage',
             'description' => 'Kill the Corrupted Hunllef without taking damage off prayer.',
+            'boss' => true,
         ],
         102 => [
             'monster' => 'Corrupted Hunllef',
@@ -730,6 +832,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Perfect Corrupted Hunllef',
             'description' => 'Kill the Corrupted Hunllef without taking damage from: Tornadoes, Damaging Floor or Stomp Attacks. Also, do not take damage off prayer and do not attack the Corrupted Hunllef with the wrong weapon.',
+            'boss' => true,
         ],
         103 => [
             'monster' => 'Corrupted Hunllef',
@@ -737,6 +840,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Defence Doesn\'t Matter II',
             'description' => 'Kill the Corrupted Hunllef without making any armour within the Corrupted Gauntlet.',
+            'boss' => true,
         ],
         104 => [
             'monster' => 'Corrupted Hunllef',
@@ -744,6 +848,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Egniol Diet II',
             'description' => 'Kill the Corrupted Hunllef without making an egniol potion within the Corrupted Gauntlet.',
+            'boss' => true,
         ],
         105 => [
             'monster' => 'Corrupted Hunllef',
@@ -751,6 +856,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Corrupted Warrior',
             'description' => 'Kill the Corrupted Hunllef with a full set of perfected corrupted armour equipped.',
+            'boss' => true,
         ],
         106 => [
             'monster' => 'Corrupted Hunllef',
@@ -758,6 +864,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Wolf Puncher II',
             'description' => 'Kill the Corrupted Hunllef without making more than one attuned weapon.',
+            'boss' => true,
         ],
         107 => [
             'monster' => 'Corrupted Hunllef',
@@ -765,6 +872,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'Corrupted Gauntlet Speed-Chaser',
             'description' => 'Complete a Corrupted Gauntlet in less than 7 minutes and 30 seconds.',
+            'boss' => true,
         ],
         108 => [
             'monster' => 'Corrupted Hunllef',
@@ -772,6 +880,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'Corrupted Gauntlet Speed-Runner',
             'description' => 'Complete a Corrupted Gauntlet in less than 6 minutes and 30 seconds.',
+            'boss' => true,
         ],
         109 => [
             'monster' => 'Crystalline Hunllef',
@@ -779,6 +888,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Gauntlet Veteran',
             'description' => 'Complete the Gauntlet 5 times.',
+            'boss' => true,
         ],
         110 => [
             'monster' => 'Crystalline Hunllef',
@@ -786,6 +896,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Gauntlet Master',
             'description' => 'Complete the Gauntlet 20 times.',
+            'boss' => true,
         ],
         111 => [
             'monster' => 'Crystalline Hunllef',
@@ -793,6 +904,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => '3, 2, 1 - Range',
             'description' => 'Kill the Crystalline Hunllef without taking damage off prayer.',
+            'boss' => true,
         ],
         112 => [
             'monster' => 'Crystalline Hunllef',
@@ -800,6 +912,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Perfect Crystalline Hunllef',
             'description' => 'Kill the Crystalline Hunllef without taking damage from: Tornadoes, Damaging Floor or Stomp Attacks. Also, do not take damage off prayer and do not attack the Crystalline Hunllef with the wrong weapon.',
+            'boss' => true,
         ],
         113 => [
             'monster' => 'Crystalline Hunllef',
@@ -807,6 +920,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Defence Doesn\'t Matter',
             'description' => 'Kill the Crystalline Hunllef without making any armour within the Gauntlet.',
+            'boss' => true,
         ],
         114 => [
             'monster' => 'Crystalline Hunllef',
@@ -814,6 +928,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Egniol Diet',
             'description' => 'Kill the Crystalline Hunllef without making an egniol potion within the Gauntlet.',
+            'boss' => true,
         ],
         115 => [
             'monster' => 'Crystalline Hunllef',
@@ -821,6 +936,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Crystalline Warrior',
             'description' => 'Kill the Crystalline Hunllef with a full set of perfected armour equipped.',
+            'boss' => true,
         ],
         116 => [
             'monster' => 'Crystalline Hunllef',
@@ -828,6 +944,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Wolf Puncher',
             'description' => 'Kill the Crystalline Hunllef without making more than one attuned weapon.',
+            'boss' => true,
         ],
         117 => [
             'monster' => 'Crystalline Hunllef',
@@ -835,6 +952,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'Gauntlet Speed-Chaser',
             'description' => 'Complete the Gauntlet in less than 5 minutes.',
+            'boss' => true,
         ],
         118 => [
             'monster' => 'Crystalline Hunllef',
@@ -842,6 +960,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'Gauntlet Speed-Runner',
             'description' => 'Complete the Gauntlet in less than 4 minutes.',
+            'boss' => true,
         ],
         119 => [
             'monster' => 'Glough',
@@ -849,6 +968,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'Glough Speed-Trialist',
             'description' => 'Kill Glough in less than 2 minutes and 30 seconds.',
+            'boss' => false,
         ],
         120 => [
             'monster' => 'Greater Demon',
@@ -856,6 +976,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'A Greater Foe',
             'description' => 'Kill a Greater Demon.',
+            'boss' => false,
         ],
         121 => [
             'monster' => 'Greater Demon',
@@ -863,6 +984,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Not So Great After All',
             'description' => 'Finish off a Greater Demon with a demonbane weapon.',
+            'boss' => false,
         ],
         122 => [
             'monster' => 'Hellhound',
@@ -870,6 +992,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'A Demon\'s Best Friend',
             'description' => 'Kill a Hellhound.',
+            'boss' => false,
         ],
         123 => [
             'monster' => 'Hespori',
@@ -877,6 +1000,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Hespori Adept',
             'description' => 'Kill Hespori 5 times.',
+            'boss' => true,
         ],
         124 => [
             'monster' => 'Hespori',
@@ -884,6 +1008,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Hesporisn\'t',
             'description' => 'Finish off Hespori with a special attack.',
+            'boss' => true,
         ],
         125 => [
             'monster' => 'Hespori',
@@ -891,6 +1016,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Weed Whacker',
             'description' => 'Kill all of Hesporis flowers within 5 seconds.',
+            'boss' => true,
         ],
         126 => [
             'monster' => 'Hespori',
@@ -898,6 +1024,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Plant-Based Diet',
             'description' => 'Kill Hespori without losing any prayer points.',
+            'boss' => true,
         ],
         127 => [
             'monster' => 'Hespori',
@@ -905,6 +1032,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'Hespori Speed-Trialist',
             'description' => 'Kill the Hespori in less than 48 seconds.',
+            'boss' => true,
         ],
         128 => [
             'monster' => 'Hespori',
@@ -912,6 +1040,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'Hespori Speed-Chaser',
             'description' => 'Kill the Hespori in less than 36 seconds.',
+            'boss' => true,
         ],
         129 => [
             'monster' => 'Obor',
@@ -919,6 +1048,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Obor Novice',
             'description' => 'Kill Obor once.',
+            'boss' => true,
         ],
         130 => [
             'monster' => 'Obor',
@@ -926,6 +1056,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Obor Champion',
             'description' => 'Kill Obor 5 times.',
+            'boss' => true,
         ],
         131 => [
             'monster' => 'Obor',
@@ -933,6 +1064,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Sleeping Giant',
             'description' => 'Kill Obor whilst he is immobilized.',
+            'boss' => true,
         ],
         132 => [
             'monster' => 'Obor',
@@ -940,6 +1072,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Back to the Wall',
             'description' => 'Kill Obor without being pushed back more than one square by his knockback attack.',
+            'boss' => true,
         ],
         133 => [
             'monster' => 'Obor',
@@ -947,6 +1080,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Squashing the Giant',
             'description' => 'Kill Obor without taking any damage off prayer.',
+            'boss' => true,
         ],
         134 => [
             'monster' => 'Obor',
@@ -954,6 +1088,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Fighting as Intended',
             'description' => 'Kill Obor on a free to play world.',
+            'boss' => true,
         ],
         135 => [
             'monster' => 'Alchemical Hydra',
@@ -961,6 +1096,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Alchemical Veteran',
             'description' => 'Kill the Alchemical Hydra 75 times.',
+            'boss' => true,
         ],
         136 => [
             'monster' => 'Alchemical Hydra',
@@ -968,6 +1104,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Alchemical Master',
             'description' => 'Kill the Alchemical Hydra 150 times.',
+            'boss' => true,
         ],
         137 => [
             'monster' => 'Alchemical Hydra',
@@ -975,6 +1112,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Unrequired Antipoisons',
             'description' => 'Kill the Alchemical Hydra without being hit by the acid pool attack.',
+            'boss' => true,
         ],
         138 => [
             'monster' => 'Alchemical Hydra',
@@ -982,6 +1120,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Lightning Lure',
             'description' => 'Kill the Alchemical Hydra without being hit by the lightning attack.',
+            'boss' => true,
         ],
         139 => [
             'monster' => 'Alchemical Hydra',
@@ -989,6 +1128,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Don\'t Flame Me',
             'description' => 'Kill the Alchemical Hydra without being hit by the flame wall attack.',
+            'boss' => true,
         ],
         140 => [
             'monster' => 'Alchemical Hydra',
@@ -996,6 +1136,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Mixing Correctly',
             'description' => 'Kill the Alchemical Hydra without empowering it.',
+            'boss' => true,
         ],
         141 => [
             'monster' => 'Alchemical Hydra',
@@ -1003,6 +1144,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'The Flame Skipper',
             'description' => 'Kill the Alchemical Hydra without letting it spawn a flame wall attack.',
+            'boss' => true,
         ],
         142 => [
             'monster' => 'Alchemical Hydra',
@@ -1010,6 +1152,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Alcleanical Hydra',
             'description' => 'Kill the Alchemical Hydra without taking any damage.',
+            'boss' => true,
         ],
         143 => [
             'monster' => 'Alchemical Hydra',
@@ -1017,6 +1160,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'No Pressure',
             'description' => 'Kill the Alchemical Hydra using only Dharok\'s Greataxe as a weapon whilst having no more than 10 Hitpoints throughout the entire fight.',
+            'boss' => true,
         ],
         144 => [
             'monster' => 'Alchemical Hydra',
@@ -1024,6 +1168,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'Alchemical Speed-Chaser',
             'description' => 'Kill the Alchemical Hydra in less than 1 minute 45 seconds.',
+            'boss' => true,
         ],
         145 => [
             'monster' => 'Alchemical Hydra',
@@ -1031,6 +1176,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'Alchemical Speed-Runner',
             'description' => 'Kill the Alchemical Hydra in less than 1 minute 20 seconds.',
+            'boss' => true,
         ],
         146 => [
             'monster' => 'Alchemical Hydra',
@@ -1038,6 +1184,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Stamina',
             'name' => 'Working Overtime',
             'description' => 'Kill the Alchemical Hydra 15 times without leaving the room.',
+            'boss' => true,
         ],
         147 => [
             'monster' => 'TzTok-Jad',
@@ -1045,6 +1192,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Fight Caves Veteran',
             'description' => 'Complete the Fight Caves once.',
+            'boss' => true,
         ],
         148 => [
             'monster' => 'TzTok-Jad',
@@ -1052,6 +1200,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Fight Caves Master',
             'description' => 'Complete the Fight Caves 5 times.',
+            'boss' => true,
         ],
         149 => [
             'monster' => 'TzTok-Jad',
@@ -1059,6 +1208,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'A Near Miss!',
             'description' => 'Complete the Fight Caves after surviving a hit from TzTok-Jad without praying.',
+            'boss' => true,
         ],
         150 => [
             'monster' => 'TzTok-Jad',
@@ -1066,6 +1216,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Denying the Healers',
             'description' => 'Complete the Fight caves without letting any of the Yt-MejKot heal.',
+            'boss' => true,
         ],
         151 => [
             'monster' => 'TzTok-Jad',
@@ -1073,6 +1224,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Denying the Healers II',
             'description' => 'Complete the Fight Caves without TzTok-Jad being healed by a Yt-HurKot.',
+            'boss' => true,
         ],
         152 => [
             'monster' => 'TzTok-Jad',
@@ -1080,6 +1232,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'You Didn\'t Say Anything About a Bat',
             'description' => 'Complete the Fight Caves without being attacked by a Tz-Kih.',
+            'boss' => true,
         ],
         153 => [
             'monster' => 'TzTok-Jad',
@@ -1087,6 +1240,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Facing Jad Head-on',
             'description' => 'Complete the Fight Caves with only melee.',
+            'boss' => true,
         ],
         154 => [
             'monster' => 'TzTok-Jad',
@@ -1094,6 +1248,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'No Time for a Drink',
             'description' => 'Complete the Fight Caves without losing any prayer points.',
+            'boss' => true,
         ],
         155 => [
             'monster' => 'TzTok-Jad',
@@ -1101,6 +1256,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'Fight Caves Speed-Chaser',
             'description' => 'Complete the Fight Caves in less than 30 minutes.',
+            'boss' => true,
         ],
         156 => [
             'monster' => 'TzTok-Jad',
@@ -1108,6 +1264,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'Fight Caves Speed-Runner',
             'description' => 'Complete the Fight Caves in less than 26 minutes and 30 seconds.',
+            'boss' => true,
         ],
         157 => [
             'monster' => 'Kalphite Queen',
@@ -1115,6 +1272,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Kalphite Queen Adept',
             'description' => 'Kill the Kalphite Queen 25 times.',
+            'boss' => true,
         ],
         158 => [
             'monster' => 'Kalphite Queen',
@@ -1122,6 +1280,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Kalphite Queen Veteran',
             'description' => 'Kill the Kalphite Queen 50 times.',
+            'boss' => true,
         ],
         159 => [
             'monster' => 'Kalphite Queen',
@@ -1129,6 +1288,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Chitin Penetrator',
             'description' => 'Kill the Kalphite Queen while her defence was last lowered by you.',
+            'boss' => true,
         ],
         160 => [
             'monster' => 'Kalphite Queen',
@@ -1136,6 +1296,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Insect Deflection',
             'description' => 'Kill the Kalphite Queen by using the Vengeance spell as the finishing blow.',
+            'boss' => true,
         ],
         161 => [
             'monster' => 'Kalphite Queen',
@@ -1143,6 +1304,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Prayer Smasher',
             'description' => 'Kill the Kalphite Queen using only the Verac\'s Flail as a weapon.',
+            'boss' => true,
         ],
         162 => [
             'monster' => 'King Black Dragon',
@@ -1150,6 +1312,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'King Black Dragon Novice',
             'description' => 'Kill the King Black Dragon 10 times.',
+            'boss' => true,
         ],
         163 => [
             'monster' => 'King Black Dragon',
@@ -1157,6 +1320,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'King Black Dragon Champion',
             'description' => 'Kill the King Black Dragon 25 times.',
+            'boss' => true,
         ],
         164 => [
             'monster' => 'King Black Dragon',
@@ -1164,6 +1328,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Claw Clipper',
             'description' => 'Kill the King Black Dragon with the Protect from Melee prayer activated.',
+            'boss' => true,
         ],
         165 => [
             'monster' => 'King Black Dragon',
@@ -1171,6 +1336,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Hide Penetration',
             'description' => 'Kill the King Black Dragon with a stab weapon.',
+            'boss' => true,
         ],
         166 => [
             'monster' => 'King Black Dragon',
@@ -1178,6 +1344,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Antifire Protection',
             'description' => 'Kill the King Black Dragon with an antifire potion active and an antidragon shield equipped.',
+            'boss' => true,
         ],
         167 => [
             'monster' => 'King Black Dragon',
@@ -1185,6 +1352,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Stamina',
             'name' => 'Who Is the King Now?',
             'description' => 'Kill The King Black Dragon 10 times in a private instance without leaving the instance.',
+            'boss' => true,
         ],
         168 => [
             'monster' => 'Kraken',
@@ -1192,6 +1360,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Kraken Adept',
             'description' => 'Kill the Kraken 20 times.',
+            'boss' => true,
         ],
         169 => [
             'monster' => 'Kraken',
@@ -1199,6 +1368,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Unnecessary Optimization',
             'description' => 'Kill the Kraken after killing all four tentacles.',
+            'boss' => true,
         ],
         170 => [
             'monster' => 'Kraken',
@@ -1206,6 +1376,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Stamina',
             'name' => 'Krakan\'t Hurt Me',
             'description' => 'Kill the Kraken 25 times in a private instance without leaving the room.',
+            'boss' => true,
         ],
         171 => [
             'monster' => 'Kraken',
@@ -1213,6 +1384,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Stamina',
             'name' => 'Ten-tacles',
             'description' => 'Kill the Kraken 50 times in a private instance without leaving the room.',
+            'boss' => true,
         ],
         172 => [
             'monster' => 'Kraken',
@@ -1220,6 +1392,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Stamina',
             'name' => 'One Hundred Tentacles',
             'description' => 'Kill the Kraken 100 times in a private instance without leaving the room.',
+            'boss' => true,
         ],
         173 => [
             'monster' => 'Kurask',
@@ -1227,6 +1400,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Master of Broad Weaponry',
             'description' => 'Kill a Kurask.',
+            'boss' => false,
         ],
         174 => [
             'monster' => 'Lizardman Shaman',
@@ -1234,6 +1408,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'A Scaley Encounter',
             'description' => 'Kill a Lizardman Shaman.',
+            'boss' => false,
         ],
         175 => [
             'monster' => 'Lizardman Shaman',
@@ -1241,6 +1416,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Shayzien Protector',
             'description' => 'Kill a Lizardman Shaman in Molch which has not dealt damage to anyone. (excluding its Spawns)',
+            'boss' => false,
         ],
         176 => [
             'monster' => 'The Mimic',
@@ -1248,6 +1424,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Mimic Veteran',
             'description' => 'Kill the Mimic once.',
+            'boss' => false,
         ],
         177 => [
             'monster' => 'Giant Mole',
@@ -1255,6 +1432,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Giant Mole Novice',
             'description' => 'Kill the Giant Mole 10 times.',
+            'boss' => true,
         ],
         178 => [
             'monster' => 'Giant Mole',
@@ -1262,6 +1440,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Giant Mole Champion',
             'description' => 'Kill the Giant mole 25 times.',
+            'boss' => true,
         ],
         179 => [
             'monster' => 'Giant Mole',
@@ -1269,6 +1448,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Why Are You Running?',
             'description' => 'Kill the Giant Mole without her burrowing more than 2 times.',
+            'boss' => true,
         ],
         180 => [
             'monster' => 'Giant Mole',
@@ -1276,6 +1456,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Hard Hitter',
             'description' => 'Kill the Giant Mole with 4 or fewer instances of damage.',
+            'boss' => true,
         ],
         181 => [
             'monster' => 'Giant Mole',
@@ -1283,6 +1464,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Whack-a-Mole',
             'description' => 'Kill the Giant Mole within 10 seconds of her resurfacing.',
+            'boss' => true,
         ],
         182 => [
             'monster' => 'Giant Mole',
@@ -1290,6 +1472,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Avoiding Those Little Arms',
             'description' => 'Kill the Giant Mole without her damaging anyone.',
+            'boss' => true,
         ],
         183 => [
             'monster' => 'The Nightmare',
@@ -1297,6 +1480,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Nightmare Adept',
             'description' => 'Kill The Nightmare once.',
+            'boss' => true,
         ],
         184 => [
             'monster' => 'The Nightmare',
@@ -1304,6 +1488,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Nightmare Veteran',
             'description' => 'Kill The Nightmare 25 times.',
+            'boss' => true,
         ],
         185 => [
             'monster' => 'The Nightmare',
@@ -1311,6 +1496,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Nightmare Master',
             'description' => 'Kill The Nightmare 50 times.',
+            'boss' => true,
         ],
         186 => [
             'monster' => 'The Nightmare',
@@ -1318,6 +1504,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Terrible Parent',
             'description' => 'Kill the Nightmare solo without the Parasites healing the boss for more than 100 health.',
+            'boss' => true,
         ],
         187 => [
             'monster' => 'The Nightmare',
@@ -1325,6 +1512,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Explosion!',
             'description' => 'Kill two Husks at the same time.',
+            'boss' => true,
         ],
         188 => [
             'monster' => 'The Nightmare',
@@ -1332,6 +1520,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Perfect Nightmare',
             'description' => 'Kill the Nightmare without any player taking damage from the following attacks: Nightmare rifts, an un-cured parasite explosion, Corpse flowers or the Nightmare\'s Surge. Also, no player can take damage off prayer or have their attacks slowed by the Nightmare spores.',
+            'boss' => true,
         ],
         189 => [
             'monster' => 'The Nightmare',
@@ -1339,6 +1528,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Sleep Tight',
             'description' => 'Kill the Nightmare solo.',
+            'boss' => true,
         ],
         190 => [
             'monster' => 'The Nightmare',
@@ -1346,6 +1536,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'A Long Trip',
             'description' => 'Kill the Nightmare without any player losing any prayer points.',
+            'boss' => true,
         ],
         191 => [
             'monster' => 'The Nightmare',
@@ -1353,6 +1544,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'Nightmare (Solo) Speed-Trialist',
             'description' => 'Defeat the Nightmare (Solo) in less than 23 minutes.',
+            'boss' => true,
         ],
         192 => [
             'monster' => 'The Nightmare',
@@ -1360,6 +1552,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'Nightmare (Solo) Speed-Chaser',
             'description' => 'Defeat the Nightmare (Solo) in less than 19 minutes.',
+            'boss' => true,
         ],
         193 => [
             'monster' => 'The Nightmare',
@@ -1367,6 +1560,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'Nightmare (Solo) Speed-Runner',
             'description' => 'Defeat the Nightmare (Solo) in less than 16 minutes.',
+            'boss' => true,
         ],
         194 => [
             'monster' => 'The Nightmare',
@@ -1374,6 +1568,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'Nightmare (5-Scale) Speed-Trialist',
             'description' => 'Defeat the Nightmare (5-scale) in less than 5 minutes.',
+            'boss' => true,
         ],
         195 => [
             'monster' => 'The Nightmare',
@@ -1381,6 +1576,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'Nightmare (5-Scale) Speed-Chaser',
             'description' => 'Defeat the Nightmare (5-scale) in less than 4 minutes.',
+            'boss' => true,
         ],
         196 => [
             'monster' => 'The Nightmare',
@@ -1388,6 +1584,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'Nightmare (5-Scale) Speed-Runner',
             'description' => 'Defeat the Nightmare (5-scale) in less than 3:30 minutes.',
+            'boss' => true,
         ],
         197 => [
             'monster' => 'Dagannoth Prime',
@@ -1395,6 +1592,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Dagannoth Prime Champion',
             'description' => 'Kill Dagannoth Prime 10 times.',
+            'boss' => true,
         ],
         198 => [
             'monster' => 'Dagannoth Prime',
@@ -1402,6 +1600,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Dagannoth Prime Adept',
             'description' => 'Kill Dagannoth Prime 25 times.',
+            'boss' => true,
         ],
         199 => [
             'monster' => 'Dagannoth Prime',
@@ -1409,6 +1608,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Death to the Seer King',
             'description' => 'Kill Dagannoth Prime whilst under attack by Dagannoth Supreme and Dagannoth Rex.',
+            'boss' => true,
         ],
         200 => [
             'monster' => 'Dagannoth Prime',
@@ -1416,6 +1616,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'From One King to Another',
             'description' => 'Kill Prime using a Rune Thrownaxe special attack, bounced off Dagannoth Rex.',
+            'boss' => true,
         ],
         201 => [
             'monster' => 'Dagannoth Rex',
@@ -1423,6 +1624,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Dagannoth Rex Champion',
             'description' => 'Kill Dagannoth Rex 10 times.',
+            'boss' => true,
         ],
         202 => [
             'monster' => 'Dagannoth Rex',
@@ -1430,6 +1632,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Dagannoth Rex Adept',
             'description' => 'Kill Dagannoth Rex 25 times.',
+            'boss' => true,
         ],
         203 => [
             'monster' => 'Dagannoth Rex',
@@ -1437,6 +1640,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Death to the Warrior King',
             'description' => 'Kill Dagannoth Rex whilst under attack by Dagannoth Supreme and Dagannoth Prime.',
+            'boss' => true,
         ],
         204 => [
             'monster' => 'Dagannoth Rex',
@@ -1444,6 +1648,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'A Frozen King',
             'description' => 'Kill Dagannoth Rex whilst he is immobilized.',
+            'boss' => true,
         ],
         205 => [
             'monster' => 'Dagannoth Rex',
@@ -1451,6 +1656,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Toppling the Diarchy',
             'description' => 'Kill Dagannoth Rex and one other Dagannoth king at the exact same time.',
+            'boss' => true,
         ],
         206 => [
             'monster' => 'Sarachnis',
@@ -1458,6 +1664,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Sarachnis Novice',
             'description' => 'Kill Sarachnis 10 times.',
+            'boss' => true,
         ],
         207 => [
             'monster' => 'Sarachnis',
@@ -1465,6 +1672,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Sarachnis Champion',
             'description' => 'Kill Sarachnis 25 times.',
+            'boss' => true,
         ],
         208 => [
             'monster' => 'Sarachnis',
@@ -1472,6 +1680,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Ready to Pounce',
             'description' => 'Kill Sarachnis without her using her range attack twice in a row.',
+            'boss' => true,
         ],
         209 => [
             'monster' => 'Sarachnis',
@@ -1479,6 +1688,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Inspect Repellent',
             'description' => 'Kill Sarachnis without her dealing damage to anyone.',
+            'boss' => true,
         ],
         210 => [
             'monster' => 'Sarachnis',
@@ -1486,6 +1696,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Newspaper Enthusiast',
             'description' => 'Kill Sarachnis with a crush weapon.',
+            'boss' => true,
         ],
         211 => [
             'monster' => 'Commander Zilyana',
@@ -1493,6 +1704,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Commander Zilyana Adept',
             'description' => 'Kill Commander Zilyana 50 times.',
+            'boss' => true,
         ],
         212 => [
             'monster' => 'Commander Zilyana',
@@ -1500,6 +1712,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Commander Zilyana Veteran',
             'description' => 'Kill Commander Zilyana 100 times.',
+            'boss' => true,
         ],
         213 => [
             'monster' => 'Commander Zilyana',
@@ -1507,6 +1720,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Commander Showdown',
             'description' => 'Finish off Commander Zilyana while all of her bodyguards are dead.',
+            'boss' => true,
         ],
         214 => [
             'monster' => 'Commander Zilyana',
@@ -1514,6 +1728,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Animal Whisperer',
             'description' => 'Kill Commander Zilyana in a private instance without taking any damage from the boss or bodyguards.',
+            'boss' => true,
         ],
         215 => [
             'monster' => 'Commander Zilyana',
@@ -1521,6 +1736,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Moving Collateral',
             'description' => 'Kill Commander Zilyana in a private instance without attacking her directly.',
+            'boss' => true,
         ],
         216 => [
             'monster' => 'Commander Zilyana',
@@ -1528,6 +1744,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Reminisce',
             'description' => 'Kill Commander Zilyana in a private instance with melee only.',
+            'boss' => true,
         ],
         217 => [
             'monster' => 'Commander Zilyana',
@@ -1535,6 +1752,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Stamina',
             'name' => 'Peach Conjurer',
             'description' => 'Kill Commander Zilyana 50 times in a privately rented instance without leaving the room.',
+            'boss' => true,
         ],
         218 => [
             'monster' => 'Scorpia',
@@ -1542,6 +1760,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Scorpia Adept',
             'description' => 'Kill Scorpia 10 times.',
+            'boss' => true,
         ],
         219 => [
             'monster' => 'Scorpia',
@@ -1549,6 +1768,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Scorpia Veteran',
             'description' => 'Kill Scorpia 25 times.',
+            'boss' => true,
         ],
         220 => [
             'monster' => 'Scorpia',
@@ -1556,6 +1776,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'I Can\'t Reach That',
             'description' => 'Kill Scorpia without taking any damage from her.',
+            'boss' => true,
         ],
         221 => [
             'monster' => 'Scorpia',
@@ -1563,6 +1784,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Guardians No More',
             'description' => 'Kill Scorpia without killing her guardians.',
+            'boss' => true,
         ],
         222 => [
             'monster' => 'Fragment of Seren',
@@ -1570,6 +1792,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'Fragment of Seren Speed-Trialist',
             'description' => 'Kill The Fragment of Seren in less than 4 minutes.',
+            'boss' => false,
         ],
         223 => [
             'monster' => 'Skeletal Wyvern',
@@ -1577,6 +1800,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'A Frozen Foe from the Past',
             'description' => 'Kill a Skeletal Wyvern',
+            'boss' => false,
         ],
         224 => [
             'monster' => 'Zulrah',
@@ -1584,6 +1808,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Zulrah Adept',
             'description' => 'Kill Zulrah 25 times.',
+            'boss' => true,
         ],
         225 => [
             'monster' => 'Zulrah',
@@ -1591,6 +1816,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Zulrah Veteran',
             'description' => 'Kill Zulrah 75 times.',
+            'boss' => true,
         ],
         226 => [
             'monster' => 'Zulrah',
@@ -1598,6 +1824,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Zulrah Master',
             'description' => 'Kill Zulrah 150 times.',
+            'boss' => true,
         ],
         227 => [
             'monster' => 'Zulrah',
@@ -1605,6 +1832,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Snake Rebound',
             'description' => 'Kill Zulrah by using the Vengeance spell as the finishing blow.',
+            'boss' => true,
         ],
         228 => [
             'monster' => 'Zulrah',
@@ -1612,6 +1840,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Snake. Snake!? Snaaaaaake!',
             'description' => 'Kill 3 Snakelings simultaneously.',
+            'boss' => true,
         ],
         229 => [
             'monster' => 'Zulrah',
@@ -1619,6 +1848,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Perfect Zulrah',
             'description' => 'Kill Zulrah whilst taking no damage from the following: Snakelings, Venom Clouds, Zulrah\'s Green or Crimson phase.',
+            'boss' => true,
         ],
         230 => [
             'monster' => 'Zulrah',
@@ -1626,6 +1856,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'Zulrah Speed-Trialist',
             'description' => 'Kill Zulrah in less than 1 minute 20 seconds, without a slayer task.',
+            'boss' => true,
         ],
         231 => [
             'monster' => 'Zulrah',
@@ -1633,6 +1864,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'Zulrah Speed-Chaser',
             'description' => 'Kill Zulrah in less than 1 minute, without a slayer task.',
+            'boss' => true,
         ],
         232 => [
             'monster' => 'Zulrah',
@@ -1640,6 +1872,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'Zulrah Speed-Runner',
             'description' => 'Kill Zulrah in less than 54 seconds, without a slayer task.',
+            'boss' => true,
         ],
         233 => [
             'monster' => 'Dagannoth Supreme',
@@ -1647,6 +1880,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Dagannoth Supreme Champion',
             'description' => 'Kill Dagannoth Supreme 10 times.',
+            'boss' => true,
         ],
         234 => [
             'monster' => 'Dagannoth Supreme',
@@ -1654,6 +1888,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Dagannoth Supreme Adept',
             'description' => 'Kill Dagannoth Supreme 25 times.',
+            'boss' => true,
         ],
         235 => [
             'monster' => 'Dagannoth Supreme',
@@ -1661,6 +1896,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Death to the Archer King',
             'description' => 'Kill Dagannoth Supreme whilst under attack by Dagannoth Prime and Dagannoth Rex.',
+            'boss' => true,
         ],
         236 => [
             'monster' => 'Dagannoth Supreme',
@@ -1668,6 +1904,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Rapid Succession',
             'description' => 'Kill all three Dagannoth Kings within 9 seconds of the first one.',
+            'boss' => true,
         ],
         237 => [
             'monster' => 'Theatre of Blood',
@@ -1675,6 +1912,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Theatre of Blood Veteran',
             'description' => 'Complete the Theatre of Blood 25 times.',
+            'boss' => true,
         ],
         238 => [
             'monster' => 'Theatre of Blood',
@@ -1682,6 +1920,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Theatre of Blood Master',
             'description' => 'Complete the Theatre of Blood 75 times.',
+            'boss' => true,
         ],
         239 => [
             'monster' => 'Theatre of Blood',
@@ -1689,6 +1928,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Theatre of Blood Grandmaster',
             'description' => 'Complete the Theatre of Blood 150 times.',
+            'boss' => true,
         ],
         240 => [
             'monster' => 'Theatre of Blood',
@@ -1696,6 +1936,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Two-Down',
             'description' => 'Kill the Pestilent Bloat before he shuts down for the third time.',
+            'boss' => true,
         ],
         241 => [
             'monster' => 'Theatre of Blood',
@@ -1703,6 +1944,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Pop It',
             'description' => 'Kill Verzik without any Nylocas being frozen and without anyone taking damage from the Nylocas.',
+            'boss' => true,
         ],
         242 => [
             'monster' => 'Theatre of Blood',
@@ -1710,6 +1952,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'A Timely Snack',
             'description' => 'Kill Sotetseg after surviving at least 3 ball attacks without sharing the damage and without anyone dying throughout the fight.',
+            'boss' => true,
         ],
         243 => [
             'monster' => 'Theatre of Blood',
@@ -1717,6 +1960,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Perfect Theatre',
             'description' => 'Complete the Theatre of Blood without anyone dying through any means and whilst everyone in the team completes the following Combat Achievement tasks in a single run: "Perfect Maiden", "Perfect Bloat", "Perfect Nylocas", "Perfect Sotetseg", "Perfect Xarpus" and "Perfect Verzik".',
+            'boss' => true,
         ],
         244 => [
             'monster' => 'Theatre of Blood',
@@ -1724,6 +1968,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Perfect Maiden',
             'description' => 'Kill The Maiden of Sugadinti without anyone in the team taking damage from the following sources: Blood Spawn projectiles and Blood Spawn trails. Also, without taking damage off prayer and without letting any of the Nylocas Matomenos heal The Maiden.',
+            'boss' => true,
         ],
         245 => [
             'monster' => 'Theatre of Blood',
@@ -1731,6 +1976,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Perfect Bloat',
             'description' => 'Kill the Pestilent Bloat without anyone in the team taking damage from the following sources: Pestilent flies, Falling body parts or The Pestilent Bloats stomp attack.',
+            'boss' => true,
         ],
         246 => [
             'monster' => 'Theatre of Blood',
@@ -1738,6 +1984,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Perfect Nylocas',
             'description' => 'Kill the Nylocas Vasilias without anyone in the team attacking any Nylocas with the wrong attack style, without letting a pillar collapse and without getting hit by any of the Nylocas Vasilias attacks whilst off prayer.',
+            'boss' => true,
         ],
         247 => [
             'monster' => 'Theatre of Blood',
@@ -1745,6 +1992,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Perfect Sotesteg',
             'description' => 'Kill Sotetseg without anyone in the team stepping on the wrong tile in the maze, without getting hit by the tornado and without taking any damage from Sotetseg\'s attacks whilst off prayer.',
+            'boss' => true,
         ],
         248 => [
             'monster' => 'Theatre of Blood',
@@ -1752,6 +2000,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Perfect Xarpus',
             'description' => 'Kill Xarpus without anyone in the team taking any damage from Xarpus\' attacks and without letting an exhumed heal Xarpus more than twice.',
+            'boss' => true,
         ],
         249 => [
             'monster' => 'Theatre of Blood',
@@ -1759,6 +2008,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Perfect Verzik',
             'description' => 'Defeat Verzik Vitur without anyone in the team taking damage from Verzik Vitur\'s attacks other than her spider form\'s correctly prayed against regular magical and ranged attacks.',
+            'boss' => true,
         ],
         250 => [
             'monster' => 'Theatre of Blood',
@@ -1766,6 +2016,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Can\'t Drain This',
             'description' => 'Kill The Maiden of Sugadinti without anyone in the team losing any prayer points.',
+            'boss' => true,
         ],
         251 => [
             'monster' => 'Theatre of Blood',
@@ -1773,6 +2024,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Can You Dance?',
             'description' => 'Kill Xarpus without anyone in the team using a ranged or magic weapon.',
+            'boss' => true,
         ],
         252 => [
             'monster' => 'Theatre of Blood',
@@ -1780,6 +2032,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Morytania Only',
             'description' => 'Complete the Theatre of Blood without any member of the team equipping a non-barrows weapon (except Dawnbringer).',
+            'boss' => true,
         ],
         253 => [
             'monster' => 'Theatre of Blood',
@@ -1787,6 +2040,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Back in My Day...',
             'description' => 'Complete the Theatre of Blood without any member of the team equipping a Scythe of Vitur.',
+            'boss' => true,
         ],
         254 => [
             'monster' => 'Theatre of Blood',
@@ -1794,6 +2048,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'Theatre (Duo) Speed-Runner',
             'description' => 'Complete the Theatre of Blood (Duo) in less than 26 minutes.',
+            'boss' => true,
         ],
         255 => [
             'monster' => 'Theatre of Blood',
@@ -1801,6 +2056,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'Theatre (Trio) Speed-Chaser',
             'description' => 'Complete the Theatre of Blood (Trio) in less than 20 minutes.',
+            'boss' => true,
         ],
         256 => [
             'monster' => 'Theatre of Blood',
@@ -1808,6 +2064,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'Theatre (Trio) Speed-Runner',
             'description' => 'Complete the Theatre of Blood (Trio) in less than 17 minutes and 30 seconds.',
+            'boss' => true,
         ],
         257 => [
             'monster' => 'Theatre of Blood',
@@ -1815,6 +2072,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'Theatre (4-Scale) Speed-Chaser',
             'description' => 'Complete the Theatre of Blood (4-scale) in less than 17 minutes.',
+            'boss' => true,
         ],
         258 => [
             'monster' => 'Theatre of Blood',
@@ -1822,6 +2080,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'Theatre (4-Scale) Speed-Runner',
             'description' => 'Complete the Theatre of Blood (4-scale) in less than 15 minutes.',
+            'boss' => true,
         ],
         259 => [
             'monster' => 'Theatre of Blood',
@@ -1829,6 +2088,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'Theatre (5-Scale) Speed-Chaser',
             'description' => 'Complete the Theatre of Blood (5-scale) in less than 16 minutes.',
+            'boss' => true,
         ],
         260 => [
             'monster' => 'Theatre of Blood',
@@ -1836,6 +2096,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'Theatre (5-Scale) Speed-Runner',
             'description' => 'Complete the Theatre of Blood (5-scale) in less than 14 minutes and 15 seconds.',
+            'boss' => true,
         ],
         261 => [
             'monster' => 'Thermonuclear Smoke Devil',
@@ -1843,6 +2104,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Thermonuclear Veteran',
             'description' => 'Kill the Thermonuclear Smoke Devil 20 times.',
+            'boss' => true,
         ],
         262 => [
             'monster' => 'Thermonuclear Smoke Devil',
@@ -1850,6 +2112,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Hazard Prevention',
             'description' => 'Kill the Thermonuclear Smoke Devil without it hitting anyone.',
+            'boss' => true,
         ],
         263 => [
             'monster' => 'Thermonuclear Smoke Devil',
@@ -1857,6 +2120,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Spec\'d Out',
             'description' => 'Kill the Thermonuclear Smoke Devil using only special attacks.',
+            'boss' => true,
         ],
         264 => [
             'monster' => 'Venenatis',
@@ -1864,6 +2128,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Venenatis Adept',
             'description' => 'Kill Venenatis 10 times.',
+            'boss' => true,
         ],
         265 => [
             'monster' => 'Venenatis',
@@ -1871,6 +2136,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Venenatis Veteran',
             'description' => 'Kill Venenatis 20 times.',
+            'boss' => true,
         ],
         266 => [
             'monster' => 'Vet\'ion',
@@ -1878,6 +2144,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Vet\'ion Adept',
             'description' => 'Kill Vet\'ion 10 times.',
+            'boss' => true,
         ],
         267 => [
             'monster' => 'Vet\'ion',
@@ -1885,6 +2152,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Vet\'eran',
             'description' => 'Kill Vet\'ion 20 times.',
+            'boss' => true,
         ],
         268 => [
             'monster' => 'Vorkath',
@@ -1892,6 +2160,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Vorkath Veteran',
             'description' => 'Kill Vorkath 50 times.',
+            'boss' => true,
         ],
         269 => [
             'monster' => 'Vorkath',
@@ -1899,6 +2168,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Vorkath Master',
             'description' => 'Kill Vorkath 100 times.',
+            'boss' => true,
         ],
         270 => [
             'monster' => 'Vorkath',
@@ -1906,6 +2176,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'The Walk',
             'description' => 'Hit Vorkath 12 times during the acid special without getting hit by his rapid fire or the acid pools.',
+            'boss' => true,
         ],
         271 => [
             'monster' => 'Vorkath',
@@ -1913,6 +2184,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Zombie Destroyer',
             'description' => 'Kill Vorkath\'s zombified spawn without using crumble undead.',
+            'boss' => true,
         ],
         272 => [
             'monster' => 'Vorkath',
@@ -1920,6 +2192,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Dodging the Dragon',
             'description' => 'Kill Vorkath 5 times without taking any damage from his special attacks and without leaving his area.',
+            'boss' => true,
         ],
         273 => [
             'monster' => 'Vorkath',
@@ -1927,6 +2200,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Stick \'em With the Pointy End',
             'description' => 'Kill Vorkath using melee weapons only.',
+            'boss' => true,
         ],
         274 => [
             'monster' => 'Vorkath',
@@ -1934,6 +2208,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Faithless Encounter',
             'description' => 'Kill Vorkath without losing any prayer points.',
+            'boss' => true,
         ],
         275 => [
             'monster' => 'Vorkath',
@@ -1941,6 +2216,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'The Fremennik Way',
             'description' => 'Kill Vorkath with only your fists.',
+            'boss' => true,
         ],
         276 => [
             'monster' => 'Vorkath',
@@ -1948,6 +2224,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'Vorkath Speed-Chaser',
             'description' => 'Kill Vorkath in less than 1 minute and 15 seconds.',
+            'boss' => true,
         ],
         277 => [
             'monster' => 'Vorkath',
@@ -1955,6 +2232,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'Vorkath Speed-Runner',
             'description' => 'Kill Vorkath in less than 54 seconds.',
+            'boss' => true,
         ],
         278 => [
             'monster' => 'Vorkath',
@@ -1962,6 +2240,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Stamina',
             'name' => 'Extended Encounter',
             'description' => 'Kill Vorkath 10 times without leaving his area.',
+            'boss' => true,
         ],
         279 => [
             'monster' => 'Wintertodt',
@@ -1969,6 +2248,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Wintertodt Novice',
             'description' => 'Subdue the Wintertodt 5 times.',
+            'boss' => true,
         ],
         280 => [
             'monster' => 'Wintertodt',
@@ -1976,6 +2256,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Wintertodt Champion',
             'description' => 'Subdue the Wintertodt 10 times.',
+            'boss' => true,
         ],
         281 => [
             'monster' => 'Wintertodt',
@@ -1983,6 +2264,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Mummy!',
             'description' => 'Heal a pyromancer after they have fallen.',
+            'boss' => true,
         ],
         282 => [
             'monster' => 'Wintertodt',
@@ -1990,6 +2272,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Handyman',
             'description' => 'Repair a brazier which has been destroyed by the Wintertodt.',
+            'boss' => true,
         ],
         283 => [
             'monster' => 'Wintertodt',
@@ -1997,6 +2280,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Can We Fix It?',
             'description' => 'Subdue the Wintertodt without allowing all 4 braziers to be broken at the same time.',
+            'boss' => true,
         ],
         284 => [
             'monster' => 'Wintertodt',
@@ -2004,6 +2288,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Leaving No One Behind',
             'description' => 'Subdue the Wintertodt without any of the Pyromancers falling.',
+            'boss' => true,
         ],
         285 => [
             'monster' => 'Wintertodt',
@@ -2011,6 +2296,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Cosy',
             'description' => 'Subdue the Wintertodt with four pieces of warm equipment equipped.',
+            'boss' => true,
         ],
         286 => [
             'monster' => 'Wintertodt',
@@ -2018,6 +2304,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Stamina',
             'name' => 'Why Fletch?',
             'description' => 'Subdue the Wintertodt after earning 3000 or more points.',
+            'boss' => true,
         ],
         287 => [
             'monster' => 'Wyrm',
@@ -2025,6 +2312,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'A Slithery Encounter',
             'description' => 'Kill a Wyrm.',
+            'boss' => false,
         ],
         288 => [
             'monster' => 'Chambers of Xeric: Challenge Mode',
@@ -2032,6 +2320,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Chambers of Xeric: CM Master',
             'description' => 'Complete the Chambers of Xeric: Challenge Mode 10 times.',
+            'boss' => true,
         ],
         289 => [
             'monster' => 'Chambers of Xeric: Challenge Mode',
@@ -2039,6 +2328,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Chambers of Xeric: CM Grandmaster',
             'description' => 'Complete the Chambers of Xeric: Challenge Mode 25 times.',
+            'boss' => true,
         ],
         290 => [
             'monster' => 'Chambers of Xeric: Challenge Mode',
@@ -2046,6 +2336,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Immortal Raid Team',
             'description' => 'Complete a Chambers of Xeric: Challenge mode raid without anyone dying.',
+            'boss' => true,
         ],
         291 => [
             'monster' => 'Chambers of Xeric: Challenge Mode',
@@ -2053,6 +2344,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Immortal Raider',
             'description' => 'Complete a Chambers of Xeric Challenge mode (Solo) raid without dying.',
+            'boss' => true,
         ],
         292 => [
             'monster' => 'Chambers of Xeric: Challenge Mode',
@@ -2060,6 +2352,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'Dust Seeker',
             'description' => 'Complete a Chambers of Xeric Challenge mode raid in the target time.',
+            'boss' => true,
         ],
         293 => [
             'monster' => 'Chambers of Xeric: Challenge Mode',
@@ -2067,6 +2360,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'Chambers of Xeric: CM (Solo) Speed-Chaser',
             'description' => 'Complete a Chambers of Xeric: Challenge Mode (Solo) in less than 45 minutes.',
+            'boss' => true,
         ],
         294 => [
             'monster' => 'Chambers of Xeric: Challenge Mode',
@@ -2074,6 +2368,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'Chambers of Xeric: CM (Solo) Speed-Runner',
             'description' => 'Complete a Chambers of Xeric: Challenge Mode (Solo) in less than 38 minutes and 30 seconds.',
+            'boss' => true,
         ],
         295 => [
             'monster' => 'Chambers of Xeric: Challenge Mode',
@@ -2081,6 +2376,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'Chambers of Xeric: CM (5-Scale) Speed-Chaser',
             'description' => 'Complete a Chambers of Xeric: Challenge Mode (5-scale) in less than 30 minutes.',
+            'boss' => true,
         ],
         296 => [
             'monster' => 'Chambers of Xeric: Challenge Mode',
@@ -2088,6 +2384,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'Chambers of Xeric: CM (5-Scale) Speed-Runner',
             'description' => 'Complete a Chambers of Xeric: Challenge Mode (5-scale) in less than 25 minutes.',
+            'boss' => true,
         ],
         297 => [
             'monster' => 'Chambers of Xeric: Challenge Mode',
@@ -2095,6 +2392,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'Chambers of Xeric: CM (Trio) Speed-Chaser',
             'description' => 'Complete a Chambers of Xeric: Challenge Mode (Trio) in less than 35 minutes.',
+            'boss' => true,
         ],
         298 => [
             'monster' => 'Chambers of Xeric: Challenge Mode',
@@ -2102,6 +2400,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'Chambers of Xeric: CM (Trio) Speed-Runner',
             'description' => 'Complete a Chambers of Xeric: Challenge Mode (Trio) in less than 27 minutes.',
+            'boss' => true,
         ],
         299 => [
             'monster' => 'Chambers of Xeric',
@@ -2109,6 +2408,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Chambers of Xeric Veteran',
             'description' => 'Complete the Chambers of Xeric 25 times.',
+            'boss' => true,
         ],
         300 => [
             'monster' => 'Chambers of Xeric',
@@ -2116,6 +2416,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Chambers of Xeric Master',
             'description' => 'Complete the Chambers of Xeric 75 times.',
+            'boss' => true,
         ],
         301 => [
             'monster' => 'Chambers of Xeric',
@@ -2123,6 +2424,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Chambers of Xeric Grandmaster',
             'description' => 'Complete the Chambers of Xeric 150 times.',
+            'boss' => true,
         ],
         302 => [
             'monster' => 'Chambers of Xeric',
@@ -2130,6 +2432,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Perfectly Balanced',
             'description' => 'Kill the Vanguards without them resetting their health.',
+            'boss' => true,
         ],
         303 => [
             'monster' => 'Chambers of Xeric',
@@ -2137,6 +2440,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Together We\'ll Fall',
             'description' => 'Kill the Vanguards within 10 seconds of the first one dying.',
+            'boss' => true,
         ],
         304 => [
             'monster' => 'Chambers of Xeric',
@@ -2144,6 +2448,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'No Time for Death',
             'description' => 'Clear the Tightrope room without Killing any Deathly Mages or Deathly Rangers.',
+            'boss' => true,
         ],
         305 => [
             'monster' => 'Chambers of Xeric',
@@ -2151,6 +2456,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Putting It Olm on the Line',
             'description' => 'Complete a Chambers of Xeric solo raid with more than 40,000 points.',
+            'boss' => true,
         ],
         306 => [
             'monster' => 'Chambers of Xeric',
@@ -2158,6 +2464,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'A Not So Special Lizard',
             'description' => 'Kill the Great Olm in a solo raid without letting him use any of the following special attacks in his second to last phase: Crystal Burst, Lightning Walls, Teleportation Portals or left-hand autohealing.',
+            'boss' => true,
         ],
         307 => [
             'monster' => 'Chambers of Xeric',
@@ -2165,6 +2472,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Mutta-diet',
             'description' => 'Kill the Muttadile without letting her or her baby recover hitpoints from the meat tree.',
+            'boss' => true,
         ],
         308 => [
             'monster' => 'Chambers of Xeric',
@@ -2172,6 +2480,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Redemption Enthusiast',
             'description' => 'Kill the Abyssal Portal without forcing Vespula to land.',
+            'boss' => true,
         ],
         309 => [
             'monster' => 'Chambers of Xeric',
@@ -2179,6 +2488,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Stop Drop and Roll',
             'description' => 'Kill Vasa Nistirio before he performs his teleport attack for the second time.',
+            'boss' => true,
         ],
         310 => [
             'monster' => 'Chambers of Xeric',
@@ -2186,6 +2496,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Anvil No More',
             'description' => 'Kill Tekton before he returns to his anvil for a second time after the fight begins.',
+            'boss' => true,
         ],
         311 => [
             'monster' => 'Chambers of Xeric',
@@ -2193,6 +2504,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Dancing with Statues',
             'description' => 'Receive kill-credit for a Stone Guardian without taking damage from falling rocks.',
+            'boss' => true,
         ],
         312 => [
             'monster' => 'Chambers of Xeric',
@@ -2200,6 +2512,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Undying Raid Team',
             'description' => 'Complete a Chambers of Xeric raid without anyone dying.',
+            'boss' => true,
         ],
         313 => [
             'monster' => 'Chambers of Xeric',
@@ -2207,6 +2520,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Undying Raider',
             'description' => 'Complete a Chambers of Xeric solo raid without dying.',
+            'boss' => true,
         ],
         314 => [
             'monster' => 'Chambers of Xeric',
@@ -2214,6 +2528,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Shayzien Specialist',
             'description' => 'Receive kill-credit for a Lizardman Shaman without taking damage from any shamans in the room.',
+            'boss' => true,
         ],
         315 => [
             'monster' => 'Chambers of Xeric',
@@ -2221,6 +2536,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Playing with Lasers',
             'description' => 'Clear the Crystal Crabs room without wasting an orb after the first crystal has been activated.',
+            'boss' => true,
         ],
         316 => [
             'monster' => 'Chambers of Xeric',
@@ -2228,6 +2544,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Cryo No More',
             'description' => 'Receive kill-credit for the Ice Demon without taking any damage.',
+            'boss' => true,
         ],
         317 => [
             'monster' => 'Chambers of Xeric',
@@ -2235,6 +2552,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Perfect Olm (Solo)',
             'description' => 'Kill the Great Olm in a solo raid without taking damage from any of the following: Teleport portals, Fire Walls, Healing pools, Crystal Bombs, Crystal Burst or Prayer Orbs. You also cannot let his claws regenerate or take damage from the same acid pool back to back.',
+            'boss' => true,
         ],
         318 => [
             'monster' => 'Chambers of Xeric',
@@ -2242,6 +2560,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Perfect Olm (Trio)',
             'description' => 'Kill the Great Olm in a trio raid without any team member taking damage from any of the following: Teleport portals, Fire Walls, Healing pools, Crystal Bombs, Crystal Burst or Prayer Orbs. You also cannot let his claws regenerate or take damage from the same acid pool back to back.',
+            'boss' => true,
         ],
         319 => [
             'monster' => 'Chambers of Xeric',
@@ -2249,6 +2568,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Blind Spot',
             'description' => 'Kill Tekton without taking any damage.',
+            'boss' => true,
         ],
         320 => [
             'monster' => 'Chambers of Xeric',
@@ -2256,6 +2576,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Blizzard Dodger',
             'description' => 'Receive kill-credit for the Ice Demon without activating the Protect from Range prayer.',
+            'boss' => true,
         ],
         321 => [
             'monster' => 'Chambers of Xeric',
@@ -2263,6 +2584,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Kill It with Fire',
             'description' => 'Finish off the Ice Demon with a fire spell.',
+            'boss' => true,
         ],
         322 => [
             'monster' => 'Chambers of Xeric',
@@ -2270,6 +2592,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'Chambers of Xeric (Solo) Speed-Chaser',
             'description' => 'Complete a Chambers of Xeric (Solo) in less than 21 minutes.',
+            'boss' => true,
         ],
         323 => [
             'monster' => 'Chambers of Xeric',
@@ -2277,6 +2600,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'Chambers of Xeric (Solo) Speed-Runner',
             'description' => 'Complete a Chambers of Xeric (Solo) in less than 17 minutes.',
+            'boss' => true,
         ],
         324 => [
             'monster' => 'Chambers of Xeric',
@@ -2284,6 +2608,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'Chambers of Xeric (5-Scale) Speed-Chaser',
             'description' => 'Complete a Chambers of Xeric (5-scale) in less than 15 minutes.',
+            'boss' => true,
         ],
         325 => [
             'monster' => 'Chambers of Xeric',
@@ -2291,6 +2616,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'Chambers of Xeric (5-Scale) Speed-Runner',
             'description' => 'Complete a Chambers of Xeric (5-scale) in less than 12 minutes and 30 seconds.',
+            'boss' => true,
         ],
         326 => [
             'monster' => 'Chambers of Xeric',
@@ -2298,6 +2624,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'Chambers of Xeric (Trio) Speed-Chaser',
             'description' => 'Complete a Chambers of Xeric (Trio) in less than 16 minutes and 30 seconds.',
+            'boss' => true,
         ],
         327 => [
             'monster' => 'Chambers of Xeric',
@@ -2305,6 +2632,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'Chambers of Xeric (Trio) Speed-Runner',
             'description' => 'Complete a Chambers of Xeric (Trio) in less than 14 minutes and 30 seconds.',
+            'boss' => true,
         ],
         328 => [
             'monster' => 'Zalcano',
@@ -2312,6 +2640,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Zalcano Veteran',
             'description' => 'Kill Zalcano 25 times.',
+            'boss' => true,
         ],
         329 => [
             'monster' => 'Zalcano',
@@ -2319,6 +2648,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Perfect Zalcano',
             'description' => 'Kill Zalcano 5 times in a row without leaving or getting hit by the following: Falling rocks, rock explosions, Zalcano powering up, or standing in a red symbol.',
+            'boss' => true,
         ],
         330 => [
             'monster' => 'Zalcano',
@@ -2326,6 +2656,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Team Player',
             'description' => 'Receive imbued tephra from a golem.',
+            'boss' => true,
         ],
         331 => [
             'monster' => 'Zalcano',
@@ -2333,6 +2664,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'The Spurned Hero',
             'description' => 'Kill Zalcano as the player who has dealt the most damage to her.',
+            'boss' => true,
         ],
         332 => [
             'monster' => 'K\'ril Tsutsaroth',
@@ -2340,6 +2672,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'K\'ril Tsutsaroth Adept',
             'description' => 'Kill K\'ril Tsutsaroth 50 times.',
+            'boss' => true,
         ],
         333 => [
             'monster' => 'K\'ril Tsutsaroth',
@@ -2347,6 +2680,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'K\'ril Tsutsaroth Veteran',
             'description' => 'Kill K\'ril Tsutsaroth 100 times.',
+            'boss' => true,
         ],
         334 => [
             'monster' => 'K\'ril Tsutsaroth',
@@ -2354,6 +2688,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Yarr No More',
             'description' => 'Receive kill-credit for K\'ril Tsutsaroth without him using his special attack.',
+            'boss' => true,
         ],
         335 => [
             'monster' => 'K\'ril Tsutsaroth',
@@ -2361,6 +2696,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Demonic Showdown',
             'description' => 'Finish off K\'ril Tsutsaroth whilst all of his bodyguards are dead.',
+            'boss' => true,
         ],
         336 => [
             'monster' => 'K\'ril Tsutsaroth',
@@ -2368,6 +2704,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'The Bane of Demons',
             'description' => 'Defeat K\'ril Tsutsaroth in a private instance using only demonbane spells.',
+            'boss' => true,
         ],
         337 => [
             'monster' => 'K\'ril Tsutsaroth',
@@ -2375,6 +2712,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Demonic Defence',
             'description' => 'Kill K\'ril Tsutsaroth in a private instance without taking any of his melee hits.',
+            'boss' => true,
         ],
         338 => [
             'monster' => 'K\'ril Tsutsaroth',
@@ -2382,6 +2720,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Demon Whisperer',
             'description' => 'Kill K\'ril Tsutsaroth in a private instance without ever being hit by his bodyguards.',
+            'boss' => true,
         ],
         339 => [
             'monster' => 'K\'ril Tsutsaroth',
@@ -2389,6 +2728,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Demonbane Weaponry II',
             'description' => 'Finish off K\'ril Tsutsaroth with a demonbane weapon.',
+            'boss' => true,
         ],
         340 => [
             'monster' => 'K\'ril Tsutsaroth',
@@ -2396,6 +2736,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Stamina',
             'name' => 'Ash Collector',
             'description' => 'Kill K\'ril Tsutsaroth 20 times in a private instance without leaving the room.',
+            'boss' => true,
         ],
         341 => [
             'monster' => 'TzKal-Zuk',
@@ -2403,6 +2744,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Half-Way There',
             'description' => 'Kill a Jal-Zek within the Inferno.',
+            'boss' => true,
         ],
         342 => [
             'monster' => 'TzKal-Zuk',
@@ -2410,6 +2752,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Inferno Grandmaster',
             'description' => 'Complete the Inferno 5 times.',
+            'boss' => true,
         ],
         343 => [
             'monster' => 'TzKal-Zuk',
@@ -2417,6 +2760,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'The Floor Is Lava',
             'description' => 'Kill Tzkal-Zuk without letting Jal-ImKot dig during any wave in the Inferno.',
+            'boss' => true,
         ],
         344 => [
             'monster' => 'TzKal-Zuk',
@@ -2424,6 +2768,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Playing with Jads',
             'description' => 'Complete wave 68 of the Inferno within 30 seconds of the first JalTok-Jad dying.',
+            'boss' => true,
         ],
         345 => [
             'monster' => 'TzKal-Zuk',
@@ -2431,6 +2776,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'No Luck Required',
             'description' => 'Kill Tzkal-Zuk without being attacked by TzKal-Zuk and without taking damage from a JalTok-Jad.',
+            'boss' => true,
         ],
         346 => [
             'monster' => 'TzKal-Zuk',
@@ -2438,6 +2784,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Nibblers, Begone!',
             'description' => 'Kill Tzkal-Zuk without letting a pillar fall before wave 67.',
+            'boss' => true,
         ],
         347 => [
             'monster' => 'TzKal-Zuk',
@@ -2445,6 +2792,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Wasn\'t Even Close',
             'description' => 'Kill Tzkal-Zuk without letting your hitpoints fall below 50 during any wave in the Inferno.',
+            'boss' => true,
         ],
         348 => [
             'monster' => 'TzKal-Zuk',
@@ -2452,6 +2800,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Budget Setup',
             'description' => 'Kill Tzkal-Zuk without equipping a Twisted Bow within the Inferno.',
+            'boss' => true,
         ],
         349 => [
             'monster' => 'TzKal-Zuk',
@@ -2459,6 +2808,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Nibbler Chaser',
             'description' => 'Kill Tzkal-Zuk without using any magic spells during any wave in the Inferno.',
+            'boss' => true,
         ],
         350 => [
             'monster' => 'TzKal-Zuk',
@@ -2466,6 +2816,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Facing Jad Head-on II',
             'description' => 'Kill Tzkal-Zuk without equipping any range or mage weapons before wave 69.',
+            'boss' => true,
         ],
         351 => [
             'monster' => 'TzKal-Zuk',
@@ -2473,6 +2824,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Jad? What Are You Doing Here?',
             'description' => 'Kill Tzkal-Zuk without killing the JalTok-Jad which spawns during wave 69.',
+            'boss' => true,
         ],
         352 => [
             'monster' => 'TzKal-Zuk',
@@ -2480,6 +2832,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'Inferno Speed-Runner',
             'description' => 'Complete the Inferno in less than 65 minutes.',
+            'boss' => true,
         ],
         353 => [
             'monster' => 'Tempoross',
@@ -2487,6 +2840,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Tempoross Novice',
             'description' => 'Subdue Tempoross 5 times.',
+            'boss' => true,
         ],
         354 => [
             'monster' => 'Tempoross',
@@ -2494,6 +2848,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Tempoross Champion',
             'description' => 'Subdue Tempoross 10 times.',
+            'boss' => true,
         ],
         355 => [
             'monster' => 'Tempoross',
@@ -2501,6 +2856,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Dress Like You Mean It',
             'description' => 'Subdue Tempoross while wearing any variation of the angler outfit.',
+            'boss' => true,
         ],
         356 => [
             'monster' => 'Tempoross',
@@ -2508,6 +2864,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Master of Buckets',
             'description' => 'Extinguish at least 5 fires during a single Tempoross fight.',
+            'boss' => true,
         ],
         357 => [
             'monster' => 'Tempoross',
@@ -2515,6 +2872,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Calm Before the Storm',
             'description' => 'Repair either a mast or a totem pole.',
+            'boss' => true,
         ],
         358 => [
             'monster' => 'Tempoross',
@@ -2522,6 +2880,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Why Cook?',
             'description' => 'Subdue Tempoross, getting rewarded with 10 reward permits from a single Tempoross fight.',
+            'boss' => true,
         ],
         359 => [
             'monster' => 'Tempoross',
@@ -2529,6 +2888,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'The Lone Angler',
             'description' => 'Subdue Tempoross alone without getting hit by any fires, torrents or waves.',
+            'boss' => true,
         ],
         360 => [
             'monster' => 'Tempoross',
@@ -2536,6 +2896,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Fire in the Hole!',
             'description' => 'Attack Tempoross from both sides by loading both cannons on both ships.',
+            'boss' => true,
         ],
         361 => [
             'monster' => 'TzHaar-Ket-Rak\'s Challenges',
@@ -2543,6 +2904,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'The II Jad Challenge',
             'description' => 'Complete TzHaar-Ket-Rak\'s second challenge.',
+            'boss' => true,
         ],
         362 => [
             'monster' => 'TzHaar-Ket-Rak\'s Challenges',
@@ -2550,6 +2912,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'The IV Jad Challenge',
             'description' => 'Complete TzHaar-Ket-Rak\'s fourth challenge.',
+            'boss' => true,
         ],
         363 => [
             'monster' => 'TzHaar-Ket-Rak\'s Challenges',
@@ -2557,6 +2920,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'The VI Jad Challenge',
             'description' => 'Complete TzHaar-Ket-Rak\'s sixth challenge.',
+            'boss' => true,
         ],
         364 => [
             'monster' => 'TzHaar-Ket-Rak\'s Challenges',
@@ -2564,6 +2928,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'TzHaar-Ket-Rak\'s Speed-Trialist',
             'description' => 'Complete TzHaar-Ket-Rak\'s first challenge in less than 45 seconds.',
+            'boss' => true,
         ],
         365 => [
             'monster' => 'TzHaar-Ket-Rak\'s Challenges',
@@ -2571,6 +2936,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'TzHaar-Ket-Rak\'s Speed-Chaser',
             'description' => 'Complete TzHaar-Ket-Rak\'s third challenge in less than 3 minutes.',
+            'boss' => true,
         ],
         366 => [
             'monster' => 'TzHaar-Ket-Rak\'s Challenges',
@@ -2578,6 +2944,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'TzHaar-Ket-Rak\'s Speed-Runner',
             'description' => 'Complete TzHaar-Ket-Rak\'s fifth challenge in less than 5 minutes.',
+            'boss' => true,
         ],
         367 => [
             'monster' => 'TzHaar-Ket-Rak\'s Challenges',
@@ -2585,6 +2952,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Facing Jad Head-on III',
             'description' => 'Complete TzHaar-Ket-Rak\'s second challenge with only melee.',
+            'boss' => true,
         ],
         368 => [
             'monster' => 'TzHaar-Ket-Rak\'s Challenges',
@@ -2592,6 +2960,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Facing Jad Head-on IV',
             'description' => 'Complete TzHaar-Ket-Rak\'s fourth challenge with only melee.',
+            'boss' => true,
         ],
         369 => [
             'monster' => 'TzHaar-Ket-Rak\'s Challenges',
@@ -2599,6 +2968,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Supplies? Who Needs \'em?',
             'description' => 'Complete TzHaar-Ket-Rak\'s third challenge without having anything in your inventory.',
+            'boss' => true,
         ],
         370 => [
             'monster' => 'TzHaar-Ket-Rak\'s Challenges',
@@ -2606,6 +2976,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'It Wasn\'t a Fluke',
             'description' => 'Complete TzHaar-Ket-Rak\'s fifth and sixth challenges back to back without failing.',
+            'boss' => true,
         ],
         371 => [
             'monster' => 'TzHaar-Ket-Rak\'s Challenges',
@@ -2613,6 +2984,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Multi-Style Specialist',
             'description' => 'Complete TzHaar-Ket-Rak\'s third challenge while using a different attack style for each JalTok-Jad.',
+            'boss' => true,
         ],
         372 => [
             'monster' => 'Theatre of Blood: Hard Mode',
@@ -2620,6 +2992,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Stop Right There!',
             'description' => 'Defeat the Maiden of Sugadinti in the Theatre of Blood: Hard Mode without letting blood spawns create more than 15 blood trails.',
+            'boss' => true,
         ],
         373 => [
             'monster' => 'Theatre of Blood: Hard Mode',
@@ -2627,6 +3000,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Personal Space',
             'description' => 'Defeat the Pestilent Bloat in the Theatre of Blood: Hard Mode with a least 3 people in the room, without anyone in your team standing on top of each other.',
+            'boss' => true,
         ],
         374 => [
             'monster' => 'Theatre of Blood: Hard Mode',
@@ -2634,6 +3008,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Royal Affairs',
             'description' => 'In the Theatre of Blood: Hard Mode, complete the Nylocas room without ever letting the Nylocas Prinkipas change styles.',
+            'boss' => true,
         ],
         375 => [
             'monster' => 'Theatre of Blood: Hard Mode',
@@ -2641,6 +3016,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Harder Mode I',
             'description' => 'Defeat Sotetseg in the Theatre of Blood: Hard Mode without anyone sharing the ball with anyone, without anyone dying, and without anyone taking damage from any of its other attacks or stepping on the wrong tile in the maze.',
+            'boss' => true,
         ],
         376 => [
             'monster' => 'Theatre of Blood: Hard Mode',
@@ -2648,6 +3024,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Harder Mode II',
             'description' => 'Defeat Xarpus in the Theatre of Blood: Hard Mode after letting the exhumeds heal him to full health and without anyone in the team taking any damage.',
+            'boss' => true,
         ],
         377 => [
             'monster' => 'Theatre of Blood: Hard Mode',
@@ -2655,6 +3032,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Nylo Sniper',
             'description' => 'Defeat Verzik Vitur\'s in the Theatre of Blood: Hard Mode without anyone in your team causing a Nylocas to explode by getting too close.',
+            'boss' => true,
         ],
         378 => [
             'monster' => 'Theatre of Blood: Hard Mode',
@@ -2662,6 +3040,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Team Work Makes the Dream Work',
             'description' => 'When Verzik Vitur in the Theatre of Blood: Hard Mode uses her yellow power blast attack while the tornadoes are active, have everyone get through the attack without taking damage. This cannot be completed with one player alive',
+            'boss' => true,
         ],
         379 => [
             'monster' => 'Theatre of Blood: Hard Mode',
@@ -2669,6 +3048,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Harder Mode III',
             'description' => 'Defeat Verzik Vitur in the Theatre of Blood: Hard Mode without anyone attacking her with a melee weapon during her third phase.',
+            'boss' => true,
         ],
         380 => [
             'monster' => 'Theatre of Blood: Hard Mode',
@@ -2676,6 +3056,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Pack Like a Yak',
             'description' => 'Complete the Theatre of Blood: Hard Mode within the challenge time, with no deaths and without anyone buying anything from a supply chest.',
+            'boss' => true,
         ],
         381 => [
             'monster' => 'Theatre of Blood: Hard Mode',
@@ -2683,6 +3064,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'Hard Mode? Completed It',
             'description' => 'Complete the Theatre of Blood: Hard Mode within the challenge time.',
+            'boss' => true,
         ],
         382 => [
             'monster' => 'Theatre of Blood: Hard Mode',
@@ -2690,6 +3072,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'Theatre: HM (Trio) Speed-Runner',
             'description' => 'Complete the Theatre of Blood: Hard Mode (Trio) with an overall time of less than 23 minutes.',
+            'boss' => true,
         ],
         383 => [
             'monster' => 'Theatre of Blood: Hard Mode',
@@ -2697,6 +3080,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'Theatre: HM (4-Scale) Speed-Runner',
             'description' => 'Complete the Theatre of Blood: Hard Mode (4-scale) with an overall time of less than 21 minutes.',
+            'boss' => true,
         ],
         384 => [
             'monster' => 'Theatre of Blood: Hard Mode',
@@ -2704,6 +3088,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'Theatre: HM (5-Scale) Speed-Runner',
             'description' => 'Complete the Theatre of Blood: Hard Mode (5-scale) with an overall time of less than 19 minutes.',
+            'boss' => true,
         ],
         385 => [
             'monster' => 'Theatre of Blood: Hard Mode',
@@ -2711,6 +3096,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Theatre of Blood: HM Grandmaster',
             'description' => 'Complete the Theatre of Blood: Hard Mode 50 times.',
+            'boss' => true,
         ],
         386 => [
             'monster' => 'Theatre of Blood: Entry Mode',
@@ -2718,6 +3104,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Anticoagulants',
             'description' => 'Defeat the Maiden of Sugadinti in the Theatre of Blood: Entry Mode without letting any bloodspawn live for longer than 10 seconds.',
+            'boss' => true,
         ],
         387 => [
             'monster' => 'Theatre of Blood: Entry Mode',
@@ -2725,6 +3112,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Appropriate Tools',
             'description' => 'Defeat the Pestilent Bloat in the Theatre of Blood: Entry Mode with everyone having a salve amulet equipped.',
+            'boss' => true,
         ],
         388 => [
             'monster' => 'Theatre of Blood: Entry Mode',
@@ -2732,6 +3120,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'They Won\'t Expect This',
             'description' => 'In the Theatre of Blood: Entry Mode, enter the Pestilent Bloat room from the opposite side.',
+            'boss' => true,
         ],
         389 => [
             'monster' => 'Theatre of Blood: Entry Mode',
@@ -2739,6 +3128,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Chally Time',
             'description' => 'Defeat the Pestilent Bloat in the Theatre of Blood: Entry Mode by using a crystal halberd special attack as your final attack.',
+            'boss' => true,
         ],
         390 => [
             'monster' => 'Theatre of Blood: Entry Mode',
@@ -2746,6 +3136,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Nylocas, On the Rocks',
             'description' => 'In the Theatre of Blood: Entry Mode, freeze any 4 Nylocas with a single Ice Barrage spell.',
+            'boss' => true,
         ],
         391 => [
             'monster' => 'Theatre of Blood: Entry Mode',
@@ -2753,6 +3144,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Just To Be Safe',
             'description' => 'Defeat Sotetseg in the Theatre of Blood: Entry Mode after having split the big ball with your entire team. This must be done with a group size of at least 2.',
+            'boss' => true,
         ],
         392 => [
             'monster' => 'Theatre of Blood: Entry Mode',
@@ -2760,6 +3152,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Don\'t Look at Me!',
             'description' => 'Kill Xarpus in the Theatre of Blood: Entry Mode without him reflecting any damage to anyone.',
+            'boss' => true,
         ],
         393 => [
             'monster' => 'Theatre of Blood: Entry Mode',
@@ -2767,6 +3160,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'No-Pillar',
             'description' => 'Survive Verzik Vitur\'s pillar phase in the Theatre of Blood: Entry Mode without losing a single pillar.',
+            'boss' => true,
         ],
         394 => [
             'monster' => 'Theatre of Blood: Entry Mode',
@@ -2774,6 +3168,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Attack, Step, Wait',
             'description' => 'Survive Verzik Vitur\'s second phase in the Theatre of Blood: Entry Mode without anyone getting bounced by Verzik.',
+            'boss' => true,
         ],
         395 => [
             'monster' => 'Theatre of Blood: Entry Mode',
@@ -2781,6 +3176,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Pass It On',
             'description' => 'In the Theatre of Blood: Entry Mode, successfully pass on the green ball to a team mate.',
+            'boss' => true,
         ],
         396 => [
             'monster' => 'Theatre of Blood: Entry Mode',
@@ -2788,6 +3184,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'Theatre of Blood: SM Speed-Chaser',
             'description' => 'Complete the Theatre of Blood: Entry Mode in less than 17 minutes.',
+            'boss' => true,
         ],
         397 => [
             'monster' => 'Theatre of Blood: Entry Mode',
@@ -2795,6 +3192,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Theatre of Blood: SM Adept',
             'description' => 'Complete the Theatre of Blood: Entry Mode 1 time.',
+            'boss' => true,
         ],
         398 => [
             'monster' => 'None',
@@ -2802,6 +3200,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Into the Den of Giants',
             'description' => 'Kill a Hill Giant, Moss Giant and Fire Giant in the Giant Cave within the Shayzien region.',
+            'boss' => false,
         ],
         399 => [
             'monster' => 'None',
@@ -2809,6 +3208,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Sit Back and Relax',
             'description' => 'Deal 100 damage to creatures using undead thralls.',
+            'boss' => false,
         ],
         400 => [
             'monster' => 'Phosani\'s Nightmare',
@@ -2816,6 +3216,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Phosani\'s Veteran',
             'description' => 'Kill Phosani\'s Nightmare once.',
+            'boss' => true,
         ],
         401 => [
             'monster' => 'Phosani\'s Nightmare',
@@ -2823,6 +3224,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Phosani\'s Master',
             'description' => 'Kill Phosani\'s Nightmare 5 times.',
+            'boss' => true,
         ],
         402 => [
             'monster' => 'Phosani\'s Nightmare',
@@ -2830,6 +3232,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Phosani\'s Grandmaster',
             'description' => 'Kill Phosani\'s Nightmare 25 times.',
+            'boss' => true,
         ],
         403 => [
             'monster' => 'Phosani\'s Nightmare',
@@ -2837,6 +3240,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Perfect Phosani\'s Nightmare',
             'description' => 'Kill Phosani\'s Nightmare while only taking damage from husks, power blasts and weakened Parasites. Also, without having your attacks slowed by the Nightmare Spores or letting a Sleepwalker reach Phosani\'s Nightmare.',
+            'boss' => true,
         ],
         404 => [
             'monster' => 'Phosani\'s Nightmare',
@@ -2844,6 +3248,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'Phosani\'s Speedchaser',
             'description' => 'Defeat Phosani\'s Nightmare within 9 minutes.',
+            'boss' => true,
         ],
         405 => [
             'monster' => 'Phosani\'s Nightmare',
@@ -2851,6 +3256,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'Phosani\'s Speedrunner',
             'description' => 'Defeat Phosani\'s Nightmare within 7:30 minutes.',
+            'boss' => true,
         ],
         406 => [
             'monster' => 'Phosani\'s Nightmare',
@@ -2858,6 +3264,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Crush Hour',
             'description' => 'Kill Phosani\'s Nightmare while killing every parasite and husk in one hit.',
+            'boss' => true,
         ],
         407 => [
             'monster' => 'Phosani\'s Nightmare',
@@ -2865,6 +3272,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'I Would Simply React',
             'description' => 'Kill Phosani\'s Nightmare without allowing your prayer to be disabled.',
+            'boss' => true,
         ],
         408 => [
             'monster' => 'Phosani\'s Nightmare',
@@ -2872,6 +3280,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Dreamland Express',
             'description' => 'Kill Phosani\'s Nightmare without a sleepwalker reaching her during her desperation phase.',
+            'boss' => true,
         ],
         409 => [
             'monster' => 'Phosani\'s Nightmare',
@@ -2879,6 +3288,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Stamina',
             'name' => 'Can\'t Wake Up',
             'description' => 'Kill Phosani\'s Nightmare 5 times in a row without leaving Phosani\'s Dream.',
+            'boss' => true,
         ],
         410 => [
             'monster' => 'Nex',
@@ -2886,6 +3296,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Nex Veteran',
             'description' => 'Kill Nex once.',
+            'boss' => true,
         ],
         411 => [
             'monster' => 'Nex',
@@ -2893,6 +3304,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Nex Master',
             'description' => 'Kill Nex 25 times.',
+            'boss' => true,
         ],
         412 => [
             'monster' => 'Nex',
@@ -2900,6 +3312,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Nex Survivors',
             'description' => 'Kill Nex without anyone dying.',
+            'boss' => true,
         ],
         413 => [
             'monster' => 'Nex',
@@ -2907,6 +3320,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'A siphon will solve this',
             'description' => 'Kill Nex without letting her heal from her Blood Siphon special attack.',
+            'boss' => true,
         ],
         414 => [
             'monster' => 'Nex',
@@ -2914,6 +3328,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Contain this!',
             'description' => 'Kill Nex without anyone taking damage from any Ice special attack.',
+            'boss' => true,
         ],
         415 => [
             'monster' => 'Nex',
@@ -2921,6 +3336,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'There is no escape!',
             'description' => 'Kill Nex without anyone being hit by the Smoke Dash special attack.',
+            'boss' => true,
         ],
         416 => [
             'monster' => 'Nex',
@@ -2928,6 +3344,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Nex Trio',
             'description' => 'Kill Nex with three or less players at the start of the fight.',
+            'boss' => true,
         ],
         417 => [
             'monster' => 'Nex',
@@ -2935,6 +3352,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Nex Duo',
             'description' => 'Kill Nex with two or less players at the start of the fight.',
+            'boss' => true,
         ],
         418 => [
             'monster' => 'Nex',
@@ -2942,6 +3360,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'I should see a doctor',
             'description' => 'Kill Nex whilst a player is coughing.',
+            'boss' => true,
         ],
         419 => [
             'monster' => 'Nex',
@@ -2949,6 +3368,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Perfect Nex',
             'description' => 'Kill Nex whilst completing the requirements for "There is no escape", "Shadows move", "A siphon will solve this", and "Contain this!"',
+            'boss' => true,
         ],
         420 => [
             'monster' => 'Nex',
@@ -2956,6 +3376,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Shadows Move...',
             'description' => 'Kill Nex without anyone being hit by the Shadow Smash attack.',
+            'boss' => true,
         ],
         421 => [
             'monster' => 'Tombs of Amascut',
@@ -2963,6 +3384,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'Tombs Speed Runner',
             'description' => 'Complete the Tombs of Amascut (normal) within 18 mins at any group size.',
+            'boss' => true,
         ],
         422 => [
             'monster' => 'Tombs of Amascut: Expert Mode',
@@ -2970,6 +3392,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'Tombs Speed Runner II',
             'description' => 'Complete the Tombs of Amascut (expert) within 20 mins at any group size.',
+            'boss' => true,
         ],
         423 => [
             'monster' => 'Tombs of Amascut: Expert Mode',
@@ -2977,6 +3400,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'Tombs Speed Runner III',
             'description' => 'Complete the Tombs of Amascut (expert) within 18 mins in a group of 8.',
+            'boss' => true,
         ],
         424 => [
             'monster' => 'Tombs of Amascut',
@@ -2984,6 +3408,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'You are not prepared',
             'description' => 'Complete a full Tombs of Amascut raid only using supplies given inside the tomb and without anyone dying.',
+            'boss' => true,
         ],
         425 => [
             'monster' => 'Tombs of Amascut',
@@ -2991,6 +3416,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Helpful spirit who?',
             'description' => 'Complete the Tombs of Amascut without using any supplies from the Helpful Spirit and without anyone dying. Honey locusts are included in this restriction.',
+            'boss' => true,
         ],
         426 => [
             'monster' => 'Tombs of Amascut: Expert Mode',
@@ -2998,6 +3424,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Resourceful Raider',
             'description' => 'Complete the Tombs of Amascut with the "On a diet" and "Dehydration" invocations activated and without anyone dying.',
+            'boss' => true,
         ],
         427 => [
             'monster' => 'Tombs of Amascut: Expert Mode',
@@ -3005,6 +3432,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'But... Damage',
             'description' => 'Complete the Tombs of Amascut without anyone in your party wearing or holding any equipment at tier 75 or above.',
+            'boss' => true,
         ],
         428 => [
             'monster' => 'Tombs of Amascut',
@@ -3012,6 +3440,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Chompington',
             'description' => 'Defeat Zebak using only melee attacks and without dying yourself.',
+            'boss' => true,
         ],
         429 => [
             'monster' => 'Tombs of Amascut: Expert Mode',
@@ -3019,6 +3448,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Fancy feet',
             'description' => 'Complete phase three of The Wardens in a group of two or more, using only melee attacks and without dying yourself. The \'Insanity\' invocation must be activated.',
+            'boss' => true,
         ],
         430 => [
             'monster' => 'Tombs of Amascut',
@@ -3026,6 +3456,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Hardcore Raiders',
             'description' => 'Complete the Tombs of Amascut in a group of two or more without anyone dying.',
+            'boss' => true,
         ],
         431 => [
             'monster' => 'Tombs of Amascut',
@@ -3033,6 +3464,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Hardcore Tombs',
             'description' => 'Complete the Tombs of Amascut solo without dying.',
+            'boss' => true,
         ],
         432 => [
             'monster' => 'Tombs of Amascut',
@@ -3040,6 +3472,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Perfect Het',
             'description' => 'Complete the Het room without taking any damage from the light beam and orbs. You must destroy the core after one exposure.',
+            'boss' => true,
         ],
         433 => [
             'monster' => 'Tombs of Amascut',
@@ -3047,6 +3480,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Perfect Akkha',
             'description' => 'Complete Akkha in a group of two or more, without anyone taking any damage from the following: Akkha\'s attacks off-prayer, Akkha\'s special attacks (orbs, memory, detonate], exploding shadow timers, orbs in the enrage phase or attacking Akkha with the wrong style. You must have all Akkha invocations activated.',
+            'boss' => true,
         ],
         434 => [
             'monster' => 'Tombs of Amascut: Expert Mode',
@@ -3054,6 +3488,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Perfection of Het',
             'description' => 'Complete \'Perfect Het\' and \'Perfect Akkha\' in a single run of the Tombs of Amascut.',
+            'boss' => true,
         ],
         435 => [
             'monster' => 'Tombs of Amascut',
@@ -3061,6 +3496,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Perfect Apmeken',
             'description' => 'Complete the Apmeken room in a group of two or more, without anyone allowing any dangers to trigger, standing in venom or being hit by a volatile baboon. You must complete this room in less than three minutes.',
+            'boss' => true,
         ],
         436 => [
             'monster' => 'Tombs of Amascut',
@@ -3068,6 +3504,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Perfect Ba-Ba',
             'description' => 'Defeat Ba-Ba in a group of two or more, without anyone taking any damage from the following: Ba-Ba\'s Attacks off-prayer, Ba-Ba\'s slam, rolling boulders, rubble attack or falling rocks. No sarcophagi may be opened. You must have all Ba-Ba invocations activated.',
+            'boss' => true,
         ],
         437 => [
             'monster' => 'Tombs of Amascut: Expert Mode',
@@ -3075,6 +3512,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Perfection of Apmeken',
             'description' => 'Complete \'Perfect Apmeken\' and \'Perfect Ba-Ba\' in a single run of the Tombs of Amascut.',
+            'boss' => true,
         ],
         438 => [
             'monster' => 'Tombs of Amascut',
@@ -3082,6 +3520,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Perfect Crondis',
             'description' => 'Complete the Crondis room without letting a crocodile get to the tree, without anyone losing water from their container and in under one minute.',
+            'boss' => true,
         ],
         439 => [
             'monster' => 'Tombs of Amascut',
@@ -3089,6 +3528,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Perfect Zebak',
             'description' => 'Defeat Zebak without anyone taking any damage from: poison, Zebak\'s basic attacks off-prayer, blood spawns and waves. You also must not push more than two jugs on the roar attack during the fight (you may destroy stationary ones). You must have all Zebak invocations activated.',
+            'boss' => true,
         ],
         440 => [
             'monster' => 'Tombs of Amascut: Expert Mode',
@@ -3096,6 +3536,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Perfection of Crondis',
             'description' => 'Complete \'Perfect Crondis\' and \'Perfect Zebak\' in a single run of the Tombs of Amascut.',
+            'boss' => true,
         ],
         441 => [
             'monster' => 'Tombs of Amascut',
@@ -3103,6 +3544,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Perfect Scabaras',
             'description' => 'Complete the Scabaras room in less than a minute without anyone taking any damage from puzzles.',
+            'boss' => true,
         ],
         442 => [
             'monster' => 'Tombs of Amascut',
@@ -3110,6 +3552,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Perfect Kephri',
             'description' => 'Defeat Kephri in a group of two or more, without anyone taking any damage from the following: egg explosions, Kephri\'s attacks, Exploding Scarabs, Bodyguards, dung attacks. No eggs may hatch throughout the fight.',
+            'boss' => true,
         ],
         443 => [
             'monster' => 'Tombs of Amascut: Expert Mode',
@@ -3117,6 +3560,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Perfection of Scabaras',
             'description' => 'Complete \'Perfect Scabaras\' and \'Perfect Kephri\' in a single run of Tombs of Amascut.',
+            'boss' => true,
         ],
         444 => [
             'monster' => 'Tombs of Amascut',
@@ -3124,6 +3568,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Perfect Wardens',
             'description' => 'Defeat The Wardens in a group of two or more, without anyone taking avoidable damage from the following: Warden attacks, obelisk attacks, lightning attacks in phase three, skull attack in phase three, Demi god attacks in phase three. You must have all Wardens invocations activated.',
+            'boss' => true,
         ],
         445 => [
             'monster' => 'Tombs of Amascut: Expert Mode',
@@ -3131,6 +3576,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Insanity',
             'description' => 'Complete \'Perfect Wardens\' at expert or above.',
+            'boss' => true,
         ],
         446 => [
             'monster' => 'Tombs of Amascut: Expert Mode',
@@ -3138,6 +3584,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Amascut\'s Remnant',
             'description' => 'Complete the Tombs of Amascut at raid level 500 or above without anyone dying.',
+            'boss' => true,
         ],
         447 => [
             'monster' => 'Tombs of Amascut: Expert Mode',
@@ -3145,6 +3592,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Something of an expert myself',
             'description' => 'Complete the Tombs of Amascut raid at level 350 or above without anyone dying.',
+            'boss' => true,
         ],
         448 => [
             'monster' => 'Tombs of Amascut: Expert Mode',
@@ -3152,6 +3600,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Maybe I\'m the boss.',
             'description' => 'Complete a Tombs of Amascut raid with every single boss invocation activated and without anyone dying.',
+            'boss' => true,
         ],
         449 => [
             'monster' => 'Tombs of Amascut',
@@ -3159,6 +3608,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Dropped the ball',
             'description' => 'Defeat Akkha without dropping any materialising orbs and without dying yourself.',
+            'boss' => true,
         ],
         450 => [
             'monster' => 'Tombs of Amascut: Expert Mode',
@@ -3166,6 +3616,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Akkhan\'t Do it',
             'description' => 'Defeat Akkha with all Akkha invocations activated and the path levelled up to at least four, without dying yourself.',
+            'boss' => true,
         ],
         451 => [
             'monster' => 'Tombs of Amascut',
@@ -3173,6 +3624,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'No skipping allowed',
             'description' => 'Defeat Ba-Ba after only attacking the non-weakened boulders in the rolling boulder phase, without dying yourself. The Boulderdash invocation must be activated.',
+            'boss' => true,
         ],
         452 => [
             'monster' => 'Tombs of Amascut',
@@ -3180,6 +3632,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'I\'m in a rush',
             'description' => 'Defeat Ba-Ba after destroying four or fewer rolling boulders in total without dying yourself.',
+            'boss' => true,
         ],
         453 => [
             'monster' => 'Tombs of Amascut: Expert Mode',
@@ -3187,6 +3640,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Ba-Bananza',
             'description' => 'Defeat Ba-Ba with all Ba-Ba invocations activated and the path levelled up to at least four, without dying yourself.',
+            'boss' => true,
         ],
         454 => [
             'monster' => 'Tombs of Amascut: Expert Mode',
@@ -3194,6 +3648,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'All Praise Zebak',
             'description' => 'Defeat Zebak without losing a single prayer point. You must also meet the conditions of the \'Rockin\' Around The Croc\' achievement.',
+            'boss' => true,
         ],
         455 => [
             'monster' => 'Tombs of Amascut: Expert Mode',
@@ -3201,6 +3656,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Rockin\' around the croc',
             'description' => 'Defeat Zebak with all Zebak invocations activated and the path levelled up to at least four, without dying yourself.',
+            'boss' => true,
         ],
         456 => [
             'monster' => 'Tombs of Amascut: Expert Mode',
@@ -3208,6 +3664,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Doesn\'t bug me',
             'description' => 'Defeat Kephri with all Kephri invocations activated and the path levelled up to at least four, without dying yourself.',
+            'boss' => true,
         ],
         457 => [
             'monster' => 'Tombs of Amascut: Expert Mode',
@@ -3215,6 +3672,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'All out of medics',
             'description' => 'Defeat Kephri without letting her heal above 25% after the first down. The \'Medic\' invocation must be activated. You must do this without dying yourself.',
+            'boss' => true,
         ],
         458 => [
             'monster' => 'Tombs of Amascut',
@@ -3222,6 +3680,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Down Do Specs',
             'description' => 'Defeat the Wardens after staggering the boss a maximum of twice during phase two, without dying yourself.',
+            'boss' => true,
         ],
         459 => [
             'monster' => 'Tombs of Amascut',
@@ -3229,6 +3688,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Better get movin\'',
             'description' => 'Defeat Elidinis\' Warden in phase three of the Wardens fight with \'Aerial Assault\', \'Stay vigilant\' and \'Insanity\' invocations activated and without dying yourself.',
+            'boss' => true,
         ],
         460 => [
             'monster' => 'Tombs of Amascut: Expert Mode',
@@ -3236,6 +3696,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Warden\'t you believe it',
             'description' => 'Defeat the Wardens with all Wardens invocations activated, at expert level and without dying yourself.',
+            'boss' => true,
         ],
         461 => [
             'monster' => 'Tombs of Amascut: Entry Mode',
@@ -3243,6 +3704,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Novice Tomb Explorer',
             'description' => 'Complete the Tombs of Amascut in Entry mode (or above) once.',
+            'boss' => true,
         ],
         462 => [
             'monster' => 'Tombs of Amascut: Entry Mode',
@@ -3250,6 +3712,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Novice Tomb Looter',
             'description' => 'Complete the Tombs of Amascut in Entry mode (or above) 25 times.',
+            'boss' => true,
         ],
         463 => [
             'monster' => 'Tombs of Amascut: Entry Mode',
@@ -3257,6 +3720,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Novice Tomb Raider',
             'description' => 'Complete the Tombs of Amascut in Entry mode (or above) 50 times.',
+            'boss' => true,
         ],
         464 => [
             'monster' => 'Tombs of Amascut: Entry Mode',
@@ -3264,6 +3728,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Movin\' on up',
             'description' => 'Complete a Tombs of Amascut raid at level 50 or above.',
+            'boss' => true,
         ],
         465 => [
             'monster' => 'Tombs of Amascut: Entry Mode',
@@ -3271,6 +3736,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Confident Raider',
             'description' => 'Complete a Tombs of Amascut raid at level 100 or above.',
+            'boss' => true,
         ],
         466 => [
             'monster' => 'Tombs of Amascut',
@@ -3278,6 +3744,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Tomb Looter',
             'description' => 'Complete the Tombs of Amascut 25 times.',
+            'boss' => true,
         ],
         467 => [
             'monster' => 'Tombs of Amascut',
@@ -3285,6 +3752,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Tomb Raider',
             'description' => 'Complete the Tombs of Amascut 50 times.',
+            'boss' => true,
         ],
         468 => [
             'monster' => 'Tombs of Amascut',
@@ -3292,6 +3760,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Tomb Explorer',
             'description' => 'Complete the Tombs of Amascut once.',
+            'boss' => true,
         ],
         469 => [
             'monster' => 'Tombs of Amascut: Expert Mode',
@@ -3299,6 +3768,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Expert Tomb Explorer',
             'description' => 'Complete the Tombs of Amascut (Expert mode) once.',
+            'boss' => true,
         ],
         470 => [
             'monster' => 'Tombs of Amascut: Expert Mode',
@@ -3306,6 +3776,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Expert Tomb Looter',
             'description' => 'Complete the Tombs of Amascut (Expert mode) 25 times.',
+            'boss' => true,
         ],
         471 => [
             'monster' => 'Tombs of Amascut: Expert Mode',
@@ -3313,6 +3784,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Expert Tomb Raider',
             'description' => 'Complete the Tombs of Amascut (Expert mode) 50 times.',
+            'boss' => true,
         ],
         472 => [
             'monster' => 'Phantom Muspah',
@@ -3320,6 +3792,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'More than just a ranged weapon',
             'description' => 'Kill the Phantom Muspah by only dealing damage to it with a salamander.',
+            'boss' => true,
         ],
         473 => [
             'monster' => 'Phantom Muspah',
@@ -3327,6 +3800,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Restriction',
             'name' => 'Can\'t Escape',
             'description' => 'Kill the Phantom Muspah without running.',
+            'boss' => true,
         ],
         474 => [
             'monster' => 'Phantom Muspah',
@@ -3334,6 +3808,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Stamina',
             'name' => 'Essence Farmer',
             'description' => 'Kill the Phantom Muspah 10 times in one trip.',
+            'boss' => true,
         ],
         475 => [
             'monster' => 'Phantom Muspah',
@@ -3341,6 +3816,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'Phantom Muspah Speed-Trialist',
             'description' => 'Kill the Phantom Muspah in less than 3 minutes without a slayer task.',
+            'boss' => true,
         ],
         476 => [
             'monster' => 'Phantom Muspah',
@@ -3348,6 +3824,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'Phantom Muspah Speed-Chaser',
             'description' => 'Kill the Phantom Muspah in less than 2 minutes without a slayer task.',
+            'boss' => true,
         ],
         477 => [
             'monster' => 'Phantom Muspah',
@@ -3355,6 +3832,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Speed',
             'name' => 'Phantom Muspah Speed-Runner',
             'description' => 'Kill the Phantom Muspah in less than 1 minute and 30 seconds without a slayer task.',
+            'boss' => true,
         ],
         478 => [
             'monster' => 'Phantom Muspah',
@@ -3362,6 +3840,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Phantom Muspah Adept',
             'description' => 'Kill the Phantom Muspah.',
+            'boss' => true,
         ],
         479 => [
             'monster' => 'Phantom Muspah',
@@ -3369,6 +3848,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Phantom Muspah Veteran',
             'description' => 'Kill the Phantom Muspah 25 times.',
+            'boss' => true,
         ],
         480 => [
             'monster' => 'Phantom Muspah',
@@ -3376,6 +3856,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Kill Count',
             'name' => 'Phantom Muspah Master',
             'description' => 'Kill the Phantom Muspah 50 times.',
+            'boss' => true,
         ],
         481 => [
             'monster' => 'Phantom Muspah',
@@ -3383,6 +3864,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Space is Tight',
             'description' => 'Kill the Phantom Muspah whilst it is surrounded by spikes.',
+            'boss' => true,
         ],
         482 => [
             'monster' => 'Phantom Muspah',
@@ -3390,6 +3872,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Mechanical',
             'name' => 'Versatile Drainer',
             'description' => 'Drain the Phantom Muspah\'s Prayer with three different sources in one kill.',
+            'boss' => true,
         ],
         483 => [
             'monster' => 'Phantom Muspah',
@@ -3397,6 +3880,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Walk Straight Pray True',
             'description' => 'Kill the Phantom Muspah without taking any avoidable damage.',
+            'boss' => true,
         ],
         484 => [
             'monster' => 'Phantom Muspah',
@@ -3404,6 +3888,7 @@ class CombatAchievementService implements OsrsService
             'type' => 'Perfection',
             'name' => 'Phantom Muspah Manipulator',
             'description' => 'Kill the Phantom Muspah whilst completing Walk Straight Pray True, Space is Tight & Can\'t Escape.',
+            'boss' => true,
         ],
     ];
 
@@ -3437,6 +3922,8 @@ class CombatAchievementService implements OsrsService
             unset($item);
             unset($data[$CATag]);
         }
+
+        usort($data['tasks'], fn ($a, $b) => strcmp($a['monster'], $b['monster']));
     }
 
     public function getValuesToTrack(): array

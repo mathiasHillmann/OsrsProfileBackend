@@ -8,7 +8,7 @@ use App\Http\Requests\RuneliteSubmitRequest;
 use App\Models\Player;
 use App\Services\AchievementDiaryService;
 use App\Services\BossService;
-use App\Services\CombatAchievementService;
+use App\Services\CombatTaskService;
 use App\Services\MinigameService;
 use App\Services\QuestService;
 use App\Services\SkillService;
@@ -25,7 +25,7 @@ class RuneliteController extends Controller
         private AchievementDiaryService $achievementDiaryService,
         private BossService $bossService,
         private MinigameService $minigameService,
-        private CombatAchievementService $combatAchievementService,
+        private CombatTaskService $combatTaskService,
     ) {
     }
 
@@ -97,7 +97,7 @@ class RuneliteController extends Controller
         }
 
         if ($request->boolean('combat')) {
-            $values = array_merge($values, $this->combatAchievementService->getValuesToTrack());
+            $values = array_merge($values, $this->combatTaskService->getValuesToTrack());
         }
 
         if (count($values) > 0) {

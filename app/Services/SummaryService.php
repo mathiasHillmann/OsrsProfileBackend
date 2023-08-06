@@ -43,8 +43,8 @@ class SummaryService implements OsrsService
             'total' => $diaryTotal,
         ];
         $data['summary']['combatTasks'] = [
-            'complete' => 0,
-            'total' => 485,
+            'complete' => Collection::wrap($data['tasks'])->filter(fn ($task) => $task['completed'])->count(),
+            'total' => Collection::wrap($data['tasks'])->count(),
         ];
         $data['summary']['collection'] = [
             'complete' => 0,

@@ -8,7 +8,7 @@ use App\Jobs\IncrementViewJob;
 use App\Models\Player;
 use App\Services\AchievementDiaryService;
 use App\Services\BossService;
-use App\Services\CombatAchievementService;
+use App\Services\CombatTaskService;
 use App\Services\HiscoreService;
 use App\Services\MinigameService;
 use App\Services\QuestService;
@@ -32,7 +32,7 @@ class ApiController extends Controller
         private AchievementDiaryService $achievementDiaryService,
         private BossService $bossService,
         private MinigameService $minigameService,
-        private CombatAchievementService $combatAchievementService,
+        private CombatTaskService $combatTaskService,
     ) {
     }
 
@@ -51,7 +51,7 @@ class ApiController extends Controller
                 $this->achievementDiaryService->translate($data);
                 $this->bossService->translate($data, $hiscoreData);
                 $this->minigameService->translate($data, $hiscoreData);
-                $this->combatAchievementService->translate($data);
+                $this->combatTaskService->translate($data);
                 $this->summaryService->translate($data, $player, $hiscoreData);
 
                 return $this->response($data);
