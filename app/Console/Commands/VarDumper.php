@@ -44,11 +44,12 @@ class VarDumper extends Command
      */
     public function handle()
     {
-        $this->createTemporaryFiles();
+        //$this->createTemporaryFiles();
 
-        $this->downloadLatestCacheDump();
+        //$this->downloadLatestCacheDump();
 
         $this->getQuestVariables();
+        $this->getCombatAchievementVariables();
     }
 
     private function createTemporaryFiles(): void
@@ -140,5 +141,25 @@ class VarDumper extends Command
         );
 
         File::put(storage_path("app/vars/quests.json"), json_encode($variables,  JSON_PRETTY_PRINT));
+    }
+
+    private function getCombatAchievementVariables(): void
+    {
+        $variables = [];
+
+        $this->readAsmFile(
+            self::VARIABLES_SOURCES['combat_achievements'],
+            function (string $line, string $lastLine) use (&$variables) {
+
+                // Example: "   get_varp               32"
+                if (str_contains($line, 'get_var')) {
+                    $data = preg_split('/\s+/', $line); // [get_varp, 32]
+
+                    $variables[] = $data[1] ?? 0;
+                }
+            }
+        );
+
+        File::put(storage_path("app/vars/combatAchievements.json"), json_encode($variables,  JSON_PRETTY_PRINT));
     }
 }

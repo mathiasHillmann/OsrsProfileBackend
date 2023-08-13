@@ -132,6 +132,31 @@ class MinigameService implements OsrsService
                 'pvp arena',
                 13,
             ),
+            'hosidius_favour' => $this->makeObject(
+                "Hosidius Favour",
+                RunescapeTypes::VarBit,
+                '4895',
+            ),
+            'shayzien_favour' => $this->makeObject(
+                "Shayzien Favour",
+                RunescapeTypes::VarBit,
+                '4894',
+            ),
+            'arceuus_favour' => $this->makeObject(
+                "Arceuus Favour",
+                RunescapeTypes::VarBit,
+                '4896',
+            ),
+            'lovakengj_favour' => $this->makeObject(
+                "Lovakengj Favour",
+                RunescapeTypes::VarBit,
+                '4898',
+            ),
+            'piscarilius_favour' => $this->makeObject(
+                "Piscarilius Favour",
+                RunescapeTypes::VarBit,
+                '4899',
+            ),
         ];
     }
 
