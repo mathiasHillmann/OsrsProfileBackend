@@ -99,7 +99,7 @@ class RuneliteController extends Controller
         if ($request->boolean('combat')) {
             $values = array_merge($values, $this->combatTaskService->getValuesToTrack());
         }
-
+ 
         if (count($values) > 0) {
             // Filter all keys of a value to track to only index, type and value
             array_walk($values, function (&$value) {

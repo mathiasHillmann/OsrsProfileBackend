@@ -43,7 +43,12 @@ class ApiController extends Controller
             if ($player = Player::where('username', $username)->first()) {
                 dispatch(new IncrementViewJob($username));
 
-                $hiscoreData = $this->hiscoreService->fetchPlayer($player);
+                try {
+                    $hiscoreData = $this->hiscoreService->fetchPlayer($player);
+                } catch (\Throwable $th) {
+                    $hiscoreData = [];
+                }
+
                 $data = $player->data;
 
                 $this->questService->translate($data);
