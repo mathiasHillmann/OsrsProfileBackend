@@ -42,7 +42,7 @@ class MinigameService implements OsrsService
 
             $data['minigames'][$minigameName] = [
                 'text' => $minigame['text'],
-                'score' => $score,
+                'score' => $this->formattedValue($minigameName, $score),
                 'rank' => $rank,
             ];
 
@@ -172,5 +172,13 @@ class MinigameService implements OsrsService
             'type' => $type,
             'hiscore_id' => $hiscoreId ?? $text,
         ];
+    }
+
+    private function formattedValue(string $key, int $value)
+    {
+        return match ($key) {
+            'hosidius_favour', 'shayzien_favour', 'arceuus_favour', 'lovakengj_favour', 'piscarilius_favour' => $value / 10,
+            default => $value,
+        };
     }
 }

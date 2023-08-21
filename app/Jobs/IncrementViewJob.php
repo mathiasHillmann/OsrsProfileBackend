@@ -29,6 +29,7 @@ class IncrementViewJob implements ShouldQueue
         try {
             DB::transaction(function () {
                 $select = Player::where('username', $this->username)->first();
+                $select->timestamps = false;
                 $select->views = $select->views + 1;
                 $select->save();
             });
