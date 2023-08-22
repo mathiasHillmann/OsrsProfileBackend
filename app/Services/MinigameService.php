@@ -174,11 +174,15 @@ class MinigameService implements OsrsService
         ];
     }
 
-    private function formattedValue(string $key, int $value)
+    private function formattedValue(string $key, ?int $value = null)
     {
-        return match ($key) {
-            'hosidius_favour', 'shayzien_favour', 'arceuus_favour', 'lovakengj_favour', 'piscarilius_favour' => $value / 10,
-            default => $value,
-        };
+        if ($value) {
+            return match ($key) {
+                'hosidius_favour', 'shayzien_favour', 'arceuus_favour', 'lovakengj_favour', 'piscarilius_favour' => $value / 10,
+                default => $value,
+            };
+        } else {
+            return null;
+        }
     }
 }
