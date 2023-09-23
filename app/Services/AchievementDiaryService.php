@@ -10,22 +10,20 @@ use App\Enums\RunescapeTypes;
 
 class AchievementDiaryService implements OsrsService
 {
-    public function translate(array &$data): void
+    public function translate(array $data): array
     {
         $diaries = $this->getValuesToTrack();
+        $return = [];
 
         foreach ($diaries as $diaryName => $diary) {
-            $item = &$data[$diaryName];
-
-            if (!$item) {
-                $data['diaries'][$diary['region']->value][$diary['tier']->value] = null;
+            if (array_key_exists($diaryName, $data)) {
+                $return[$diary['region']->value][$diary['tier']->value] = (bool) $data[$diaryName];
             } else {
-                $data['diaries'][$diary['region']->value][$diary['tier']->value] = (bool) $item['value'];
+                $return[$diary['region']->value][$diary['tier']->value] = null;
             }
-
-            unset($item);
-            unset($data[$diaryName]);
         }
+
+        return $return;
     }
 
     public function getValuesToTrack(): array

@@ -3892,26 +3892,25 @@ class CombatTaskService implements OsrsService
         ],
     ];
 
-    public function translate(array &$data): void
+    public function translate(array $data): array
     {
         $achieviements = $this->getValuesToTrack();
+        $return = [];
 
         $index = 0;
 
         foreach ($achieviements as $CATag => $achievement) {
-            $item = &$data[$CATag];
-
             for ($i = 0; $i < 32; $i++) {
                 $completed = null;
 
-                if ($item) {
-                    $completed = $this->isBitSet((string) $item['value'], $i);
+                if (array_key_exists($CATag, $data)) {
+                    $completed = $this->isBitSet((string) $data[$CATag], $i);
                 }
 
                 $task = self::TASKS[32 * $index + $i] ?? null;
 
                 if ($task) {
-                    $data['tasks'][] = [
+                    $return[] = [
                         ...$task,
                         'completed' => $completed,
                     ];
@@ -3919,11 +3918,11 @@ class CombatTaskService implements OsrsService
             }
 
             $index++;
-            unset($item);
-            unset($data[$CATag]);
         }
 
-        usort($data['tasks'], fn ($a, $b) => strcmp($a['monster'], $b['monster']));
+        usort($return, fn ($a, $b) => strcmp($a['monster'], $b['monster']));
+
+        return $return;
     }
 
     public function getValuesToTrack(): array

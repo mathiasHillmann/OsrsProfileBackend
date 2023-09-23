@@ -37,42 +37,40 @@ class SkillService implements OsrsService
         ];
     }
 
-    public function translate(array &$data, array $hiscoreData = []): void
+    public function translate(array $data, array $hiscoreData = []): array
     {
         $skills = $this->getValuesToTrack();
+        $return = [];
 
         foreach ($skills as $skillName => $skill) {
-            $item = &$data[$skillName];
-
-            if (!$item) {
-                $item = $data['skills'][$skillName] = [
-                    'realLevel' => null,
-                    'virtualLevel' => null,
-                    'experience' => 0,
-                    'rank' => null,
-                ];
-            } else {
-                $data['skills'][$skillName] = [
-                    'realLevel' => $this->experienceToLevel($item['value']),
-                    'virtualLevel' => $this->experienceToLevel($item['value'], true),
-                    'experience' => $item['value'],
+            if (array_key_exists($skillName, $data)) {
+                $savedValue = $data[$skillName];
+                $return[$skillName] = [
+                    'realLevel' => $this->experienceToLevel($savedValue ?? 0),
+                    'virtualLevel' => $this->experienceToLevel($savedValue ?? 0, true),
+                    'experience' => $savedValue ?? 0,
                 ];
 
                 if ($hiscoreData && $skill['hiscore_id']) {
-                    $key = array_search($skill['hiscore_id'], array_column($hiscoreData['skills'], 'id'));
-                    $rank = $hiscoreData['skills'][$key]['rank'] ?? null;
+                    $rank = $hiscoreData['skills'][$skill['hiscore_id']]['rank'] ?? null;
 
                     if ($rank === -1) {
                         $rank = null;
                     }
 
-                    $data['skills'][$skillName]['rank'] = $rank;
+                    $return[$skillName]['rank'] = $rank;
                 }
+            } else {
+                $return[$skillName] = [
+                    'realLevel' => $skillName === 'hitpoints' ? 10 : 1,
+                    'virtualLevel' => $skillName === 'hitpoints' ? 10 : 1,
+                    'experience' => $skillName === 'hitpoints' ? 1154 : 0,
+                    'rank' => null,
+                ];
             }
-
-            unset($data[$skillName]);
-            unset($item);
         }
+
+        return $return;
     }
 
     private function experienceToLevel(int $experience, bool $virtual = false): int

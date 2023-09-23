@@ -35,19 +35,6 @@ class RuneliteController extends Controller
         try {
             $default = $this->getDefaultValues($request);
 
-            if ($player = Player::find($accountHash)) {
-                $data = $player->data;
-
-                // Include new objects to track that are not in the player data
-                $data = array_merge($data, array_diff_key($default, $data));
-
-                // Remove all keys from data which are not present on the default values
-                // Used when someone changes the config of the plugin to not track X
-                $data = array_intersect_key($data, $default);
-
-                return Response::json($data);
-            }
-
             return Response::json($default);
         } catch (\Throwable $th) {
             return $this->response($th);
@@ -58,18 +45,54 @@ class RuneliteController extends Controller
     public function submit(RuneliteSubmitRequest $request, string $accountHash): JsonResponse
     {
         try {
-            $player = Player::updateOrCreate([
-                'account_hash' => $accountHash
-            ], [
-                'data' => $request->input('data'),
-                'username' => $request->input('username'),
-                'account_type' => $request->input('accountType'),
-            ]);
+            $player = Player::find($accountHash);
+
+            $data = $this->formatPlayerData($request->input('data'), $player);
+
+            if ($player) {
+                $player->update([
+                    'data' => $data,
+                    'username' => $request->input('username'),
+                    'account_type' => $request->input('accountType'),
+                ]);
+            } else {
+                $player = Player::create([
+                    'account_hash' => $accountHash,
+                    'data' => $data,
+                    'username' => $request->input('username'),
+                    'account_type' => $request->input('accountType'),
+                ]);
+            }
 
             return $this->response($player);
         } catch (\Throwable $th) {
             return $this->response($th);
         }
+    }
+
+    private function formatPlayerData(array $data, Player $player = null): array
+    {
+        $return = [];
+
+        $playerData = [];
+        if ($player) {
+            $playerData = $player->data;
+        }
+
+        foreach ($data as $key => $value) {
+            // We want to check if the value exists in the player data and use it in case the supplied value is null
+            // This is because a player could reinstall runelite and lose the stored in memory value of their kcs and personal bests
+            // Which would wipe when sent to the server
+            if ($value['value'] == null && array_key_exists($key, $playerData)) {
+                if ($playerData[$key] != $value['value']) {
+                    $value['value'] = $playerData[$key];
+                }
+            }
+
+            $return[$key] = $value['value'];
+        }
+
+        return $return;
     }
 
     private function getDefaultValues(Request $request): array
@@ -99,7 +122,7 @@ class RuneliteController extends Controller
         if ($request->boolean('combat')) {
             $values = array_merge($values, $this->combatTaskService->getValuesToTrack());
         }
- 
+
         if (count($values) > 0) {
             // Filter all keys of a value to track to only index, type and value
             array_walk($values, function (&$value) {

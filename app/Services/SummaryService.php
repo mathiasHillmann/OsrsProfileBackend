@@ -10,63 +10,70 @@ use Illuminate\Support\Collection;
 
 class SummaryService implements OsrsService
 {
-    public function translate(array &$data, Player $player = null, array $hiscoreData = []): void
+    public function translate(array $data, array $hiscoreData = [], Player $player = null): array
     {
         $overallRank = $hiscoreData['skills'][0]['rank'] ?? null;
         if ($overallRank === -1) {
             $overallRank = null;
         }
 
-        $data['summary']['total'] = [
+        $return = [];
+
+        $return['total'] = [
             'realLevel' => array_sum(array_column($data['skills'], 'realLevel')),
             'virtualLevel' => array_sum(array_column($data['skills'], 'virtualLevel')),
             'experience' => array_sum(array_column($data['skills'], 'experience')),
             'rank' => $overallRank,
         ];
 
-        $data['summary']['combat'] = $this->calculateCombatLevel($data);
+        $return['combat'] = $this->calculateCombatLevel($data);
 
-        $data['summary']['updatedAt'] = $player->updated_at;
-        $data['summary']['accountType'] = $player->account_type;
-        $data['summary']['username'] = $player->username;
-        $data['summary']['quest'] = [
+        $return['updatedAt'] = $player->updated_at;
+        $return['accountType'] = $player->account_type;
+        $return['username'] = $player->username;
+        $return['quest'] = [
             RunescapeQuestStatus::Complete->value => Collection::wrap($data['quest'])->filter(fn ($quest) => $quest['status'] === RunescapeQuestStatus::Complete)->count(),
             'total' => Collection::wrap($data['quest'])->count(),
         ];
-        $data['summary']['miniquest'] = [
+        $return['miniquest'] = [
             RunescapeQuestStatus::Complete->value => Collection::wrap($data['miniquest'])->filter(fn ($quest) => $quest['status'] === RunescapeQuestStatus::Complete)->count(),
             'total' => Collection::wrap($data['miniquest'])->count(),
         ];
         [$diaryCompleted, $diaryTotal] = $this->countCompletedDiaries($data['diaries']);
-        $data['summary']['diary'] = [
+        $return['diary'] = [
             'complete' => $diaryCompleted,
             'total' => $diaryTotal,
         ];
-        $data['summary']['combatTasks'] = [
+        $return['combatTasks'] = [
             'complete' => Collection::wrap($data['tasks'])->filter(fn ($task) => $task['completed'])->count(),
             'total' => Collection::wrap($data['tasks'])->count(),
         ];
-        $data['summary']['collection'] = [
+        $return['collection'] = [
             'complete' => 0,
             'total' => 1443,
         ];
+
+        return $return;
     }
 
     private function calculateCombatLevel(array $data): ?int
     {
         $skills = $data['skills'];
 
-        // Check if skills have been tracked or not based if attack has any value
-        if ($skills['attack']['realLevel']) {
-            $base = 0.25 * ($skills['defence']['realLevel'] + $skills['hitpoints']['realLevel'] + ($skills['prayer']['realLevel'] * 0.5));
-            $melee = 0.325 * ($skills['attack']['realLevel'] + $skills['strength']['realLevel']);
-            $range = 0.325 * ($skills['ranged']['realLevel'] * 1.5);
-            $mage = 0.325 * ($skills['magic']['realLevel'] * 1.5);
+        $attack = $skills['attack']['realLevel'] ?? 1;
+        $strength = $skills['strength']['realLevel'] ?? 1;
+        $defence = $skills['defence']['realLevel'] ?? 1;
+        $hitpoints = $skills['hitpoints']['realLevel'] ?? 10;
+        $prayer = $skills['prayer']['realLevel'] ?? 1;
+        $ranged = $skills['ranged']['realLevel'] ?? 1;
+        $magic = $skills['magic']['realLevel'] ?? 1;
 
-            return (int) floor($base + max($melee, $range, $mage));
-        } else {
-            return null;
-        }
+        $base = 0.25 * ($defence + $hitpoints + ($prayer * 0.5));
+        $melee = 0.325 * ($attack + $strength);
+        $range = 0.325 * ($ranged * 1.5);
+        $mage = 0.325 * ($magic * 1.5);
+
+        return (int) floor($base + max($melee, $range, $mage));
     }
 
     private function countCompletedDiaries(array $diaries): array

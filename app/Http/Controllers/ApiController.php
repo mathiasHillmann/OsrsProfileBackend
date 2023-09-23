@@ -49,15 +49,18 @@ class ApiController extends Controller
                     $hiscoreData = [];
                 }
 
-                $data = $player->data;
+                $data = [];
 
-                $this->questService->translate($data);
-                $this->skillService->translate($data, $hiscoreData);
-                $this->achievementDiaryService->translate($data);
-                $this->bossService->translate($data, $hiscoreData);
-                $this->minigameService->translate($data, $hiscoreData);
-                $this->combatTaskService->translate($data);
-                $this->summaryService->translate($data, $player, $hiscoreData);
+                $quests = $this->questService->translate($player->data);
+
+                $data['quest'] = $quests['quest'];
+                $data['miniquest'] = $quests['miniquest'];
+                $data['skills'] = $this->skillService->translate($player->data, $hiscoreData);
+                $data['diaries'] = $this->achievementDiaryService->translate($player->data);
+                $data['bosses'] = $this->bossService->translate($player->data, $hiscoreData);
+                $data['minigames'] = $this->minigameService->translate($player->data, $hiscoreData);
+                $data['tasks'] = $this->combatTaskService->translate($player->data);
+                $data['summary'] = $this->summaryService->translate($data, $hiscoreData, $player);
 
                 return $this->response($data);
             } else {
