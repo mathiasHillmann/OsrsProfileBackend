@@ -10,33 +10,32 @@ use App\Enums\RunescapeTypes;
 
 class QuestService implements OsrsService
 {
-    public function translate(array &$data): void
+    public function translate(array $data): array
     {
         $quests = $this->getValuesToTrack();
+        $return = [];
 
         foreach ($quests as $questName => $quest) {
-            $item = &$data[$questName];
-
-            if (!$item) {
-                $status = RunescapeQuestStatus::Unknown;
-            } else {
-                if (!$item['value'] || $item['value'] <= $quest['startValue']) {
+            if (array_key_exists($questName, $data)) {
+                $savedValue = $data[$questName];
+                if (!$savedValue || $savedValue <= $quest['startValue']) {
                     $status = RunescapeQuestStatus::NotStarted;
-                } elseif ($item['value'] >= $quest['endValue']) {
+                } elseif ($savedValue >= $quest['endValue']) {
                     $status = RunescapeQuestStatus::Complete;
                 } else {
                     $status = RunescapeQuestStatus::InProgress;
                 }
+            } else {
+                $status = RunescapeQuestStatus::Unknown;
             }
 
-            $data[$quest['questType']->value][$questName] = [
+            $return[$quest['questType']->value][$questName] = [
                 'text' => $quest['text'],
                 'status' => $status,
             ];
-
-            unset($item);
-            unset($data[$questName]);
         }
+
+        return $return;
     }
 
     public function getValuesToTrack(): array

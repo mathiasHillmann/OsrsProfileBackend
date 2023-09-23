@@ -6,7 +6,7 @@ namespace App\Services;
 
 interface OsrsService
 {
-    public function translate(array &$data): void;
+    public function translate(array $data): array;
 
     public function getValuesToTrack(): array;
 }
