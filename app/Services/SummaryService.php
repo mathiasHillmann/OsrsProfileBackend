@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Services;
 
 use App\Enums\RunescapeQuestStatus;
+use App\Enums\RunescapeTypes;
 use App\Models\Player;
 use Illuminate\Support\Collection;
 
@@ -29,8 +30,6 @@ class SummaryService implements OsrsService
         $return['combat'] = $this->calculateCombatLevel($data);
 
         $return['updatedAt'] = $player->updated_at;
-        $return['accountType'] = $player->account_type;
-        $return['username'] = $player->username;
         $return['quest'] = [
             RunescapeQuestStatus::Complete->value => Collection::wrap($data['quest'])->filter(fn ($quest) => $quest['status'] === RunescapeQuestStatus::Complete)->count(),
             'total' => Collection::wrap($data['quest'])->count(),
@@ -49,8 +48,8 @@ class SummaryService implements OsrsService
             'total' => Collection::wrap($data['tasks'])->count(),
         ];
         $return['collection'] = [
-            'complete' => 0,
-            'total' => 1443,
+            'complete' => $data['collection_log_total'] ?? 0,
+            'total' => 1477,
         ];
 
         return $return;
@@ -96,6 +95,21 @@ class SummaryService implements OsrsService
 
     public function getValuesToTrack(): array
     {
-        return [];
+        return [
+            'collection_log_total' => $this->makeObject(
+                2943,
+                RunescapeTypes::VarPlayer,
+            ),
+        ];
+    }
+
+    private function makeObject(
+        int $index,
+        RunescapeTypes $type,
+    ): array {
+        return [
+            'index' => $index,
+            'type' => $type,
+        ];
     }
 }

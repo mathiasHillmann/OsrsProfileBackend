@@ -61,6 +61,9 @@ class ApiController extends Controller
                 $data['minigames'] = $this->minigameService->translate($player->data, $hiscoreData);
                 $data['tasks'] = $this->combatTaskService->translate($player->data);
                 $data['summary'] = $this->summaryService->translate($data, $hiscoreData, $player);
+                $data['model'] = $player->model;
+                $data['username'] = $player->username;
+                $data['accountType'] = $player->account_type;
 
                 return $this->response($data);
             } else {
