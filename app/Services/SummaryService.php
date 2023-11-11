@@ -5,12 +5,13 @@ declare(strict_types=1);
 namespace App\Services;
 
 use App\Enums\RunescapeQuestStatus;
+use App\Enums\RunescapeTypes;
 use App\Models\Player;
 use Illuminate\Support\Collection;
 
 class SummaryService implements OsrsService
 {
-    public function translate(array $data, array $hiscoreData = [], Player $player = null): array
+    public function translate(array $data, array $transformedData = [], array $hiscoreData = [], Player $player = null): array
     {
         $overallRank = $hiscoreData['skills'][0]['rank'] ?? null;
         if ($overallRank === -1) {
@@ -20,37 +21,35 @@ class SummaryService implements OsrsService
         $return = [];
 
         $return['total'] = [
-            'realLevel' => array_sum(array_column($data['skills'], 'realLevel')),
-            'virtualLevel' => array_sum(array_column($data['skills'], 'virtualLevel')),
-            'experience' => array_sum(array_column($data['skills'], 'experience')),
+            'realLevel' => array_sum(array_column($transformedData['skills'], 'realLevel')),
+            'virtualLevel' => array_sum(array_column($transformedData['skills'], 'virtualLevel')),
+            'experience' => array_sum(array_column($transformedData['skills'], 'experience')),
             'rank' => $overallRank,
         ];
 
-        $return['combat'] = $this->calculateCombatLevel($data);
+        $return['combat'] = $this->calculateCombatLevel($transformedData);
 
         $return['updatedAt'] = $player->updated_at;
-        $return['accountType'] = $player->account_type;
-        $return['username'] = $player->username;
         $return['quest'] = [
-            RunescapeQuestStatus::Complete->value => Collection::wrap($data['quest'])->filter(fn ($quest) => $quest['status'] === RunescapeQuestStatus::Complete)->count(),
-            'total' => Collection::wrap($data['quest'])->count(),
+            RunescapeQuestStatus::Complete->value => Collection::wrap($transformedData['quest'])->filter(fn ($quest) => $quest['status'] === RunescapeQuestStatus::Complete)->count(),
+            'total' => Collection::wrap($transformedData['quest'])->count(),
         ];
         $return['miniquest'] = [
-            RunescapeQuestStatus::Complete->value => Collection::wrap($data['miniquest'])->filter(fn ($quest) => $quest['status'] === RunescapeQuestStatus::Complete)->count(),
-            'total' => Collection::wrap($data['miniquest'])->count(),
+            RunescapeQuestStatus::Complete->value => Collection::wrap($transformedData['miniquest'])->filter(fn ($quest) => $quest['status'] === RunescapeQuestStatus::Complete)->count(),
+            'total' => Collection::wrap($transformedData['miniquest'])->count(),
         ];
-        [$diaryCompleted, $diaryTotal] = $this->countCompletedDiaries($data['diaries']);
+        [$diaryCompleted, $diaryTotal] = $this->countCompletedDiaries($transformedData['diaries']);
         $return['diary'] = [
             'complete' => $diaryCompleted,
             'total' => $diaryTotal,
         ];
         $return['combatTasks'] = [
-            'complete' => Collection::wrap($data['tasks'])->filter(fn ($task) => $task['completed'])->count(),
-            'total' => Collection::wrap($data['tasks'])->count(),
+            'complete' => Collection::wrap($transformedData['tasks'])->filter(fn ($task) => $task['completed'])->count(),
+            'total' => Collection::wrap($transformedData['tasks'])->count(),
         ];
         $return['collection'] = [
-            'complete' => 0,
-            'total' => 1443,
+            'complete' => $data['collection_log_total'] ?? 0,
+            'total' => 1477,
         ];
 
         return $return;
@@ -96,6 +95,21 @@ class SummaryService implements OsrsService
 
     public function getValuesToTrack(): array
     {
-        return [];
+        return [
+            'collection_log_total' => $this->makeObject(
+                2943,
+                RunescapeTypes::VarPlayer,
+            ),
+        ];
+    }
+
+    private function makeObject(
+        int $index,
+        RunescapeTypes $type,
+    ): array {
+        return [
+            'index' => $index,
+            'type' => $type,
+        ];
     }
 }

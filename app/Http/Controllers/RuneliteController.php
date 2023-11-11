@@ -12,9 +12,13 @@ use App\Services\CombatTaskService;
 use App\Services\MinigameService;
 use App\Services\QuestService;
 use App\Services\SkillService;
+use App\Services\SummaryService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Illuminate\Http\UploadedFile;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Response;
+use Storage;
 use Symfony\Component\Routing\Annotation\Route;
 
 class RuneliteController extends Controller
@@ -26,6 +30,7 @@ class RuneliteController extends Controller
         private BossService $bossService,
         private MinigameService $minigameService,
         private CombatTaskService $combatTaskService,
+        private SummaryService $summaryService,
     ) {
     }
 
@@ -65,6 +70,26 @@ class RuneliteController extends Controller
             }
 
             return $this->response($player);
+        } catch (\Throwable $th) {
+            return $this->response($th);
+        }
+    }
+
+    #[Route('/runelite/player/{accountHash}/model', methods: ['POST'])]
+    public function model(Request $request, string $accountHash): JsonResponse
+    {
+        try {
+            /** @var UploadedFile $file */
+            $file = $request->file('model');
+            $path = 'models' . DIRECTORY_SEPARATOR . $file->getClientOriginalName();
+
+            if (Storage::exists($path)) {
+                Storage::delete($path);
+            }
+
+            Storage::put($path, $file->getContent());
+
+            return $this->response(['success' => true]);
         } catch (\Throwable $th) {
             return $this->response($th);
         }
@@ -121,6 +146,10 @@ class RuneliteController extends Controller
 
         if ($request->boolean('combat')) {
             $values = array_merge($values, $this->combatTaskService->getValuesToTrack());
+        }
+
+        if ($request->boolean('collectionlog')) {
+            $values = array_merge($values, $this->summaryService->getValuesToTrack());
         }
 
         if (count($values) > 0) {
