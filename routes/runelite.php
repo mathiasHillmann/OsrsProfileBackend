@@ -15,8 +15,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::controller(RuneliteController::class)->middleware(RuneliteMiddleware::class)->group(function () {
-    Route::get('/player/{accountHash}', 'load');
-    Route::post('/player/{accountHash}', 'submit');
-    Route::post('/player/{accountHash}/model', 'model');
-});
+Route::controller(RuneliteController::class)
+    ->prefix('player')
+    ->middleware(RuneliteMiddleware::class)
+    ->group(function () {
+        Route::get('/vars', 'load');
+        Route::post('/{accountHash}', 'submit');
+        Route::post('/{accountHash}/model', 'model');
+    });
