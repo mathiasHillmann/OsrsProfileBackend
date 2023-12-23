@@ -34,13 +34,11 @@ class RuneliteController extends Controller
     ) {
     }
 
-    #[Route('/runelite/player/{accountHash}', methods: ['GET'])]
-    public function load(Request $request, string $accountHash): JsonResponse
+    #[Route('/runelite/player/vars', methods: ['GET'])]
+    public function load(Request $request): JsonResponse
     {
         try {
-            $default = $this->getDefaultValues($request);
-
-            return Response::json($default);
+            return Response::json($this->getDefaultValues($request));
         } catch (\Throwable $th) {
             return $this->response($th);
         }
@@ -124,31 +122,31 @@ class RuneliteController extends Controller
     {
         $values = [];
 
-        if ($request->boolean('skills')) {
+        if (!$request->has('skills') || $request->boolean('skills')) {
             $values = array_merge($values, $this->skillService->getValuesToTrack());
         }
 
-        if ($request->boolean('quests')) {
+        if (!$request->has('quests') || $request->boolean('quests')) {
             $values = array_merge($values, $this->questService->getValuesToTrack());
         }
 
-        if ($request->boolean('diaries')) {
+        if (!$request->has('diaries') || $request->boolean('diaries')) {
             $values = array_merge($values, $this->achievementDiaryService->getValuesToTrack());
         }
 
-        if ($request->boolean('bosskills')) {
+        if (!$request->has('bosskills') || $request->boolean('bosskills')) {
             $values = array_merge($values, $this->bossService->getValuesToTrack());
         }
 
-        if ($request->boolean('minigames')) {
+        if (!$request->has('minigames') || $request->boolean('minigames')) {
             $values = array_merge($values, $this->minigameService->getValuesToTrack());
         }
 
-        if ($request->boolean('combat')) {
+        if (!$request->has('combat') || $request->boolean('combat')) {
             $values = array_merge($values, $this->combatTaskService->getValuesToTrack());
         }
 
-        if ($request->boolean('collectionlog')) {
+        if (!$request->has('collectionlog') || $request->boolean('collectionlog')) {
             $values = array_merge($values, $this->summaryService->getValuesToTrack());
         }
 
