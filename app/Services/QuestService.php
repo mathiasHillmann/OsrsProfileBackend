@@ -149,6 +149,13 @@ class QuestService implements OsrsService
                 0,
                 50,
             ),
+            'children_of_the_sun' => $this->makeObject(
+                'Children of the Sun',
+                9632,
+                RunescapeTypes::VarBit,
+                0,
+                24,
+            ),
             'client_of_kourend' => $this->makeObject(
                 'Client of Kourend',
                 5619,

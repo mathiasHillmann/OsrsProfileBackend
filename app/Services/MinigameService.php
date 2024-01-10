@@ -44,7 +44,7 @@ class MinigameService implements OsrsService
 
             $return[$minigameName] = [
                 'text' => $minigame['text'],
-                'score' => $this->formattedValue($minigameName, $score),
+                'score' => $score,
                 'rank' => $rank,
             ];
         }
@@ -133,31 +133,6 @@ class MinigameService implements OsrsService
                 'pvp arena',
                 14,
             ),
-            'hosidius_favour' => $this->makeObject(
-                "Hosidius Favour",
-                RunescapeTypes::VarBit,
-                '4895',
-            ),
-            'shayzien_favour' => $this->makeObject(
-                "Shayzien Favour",
-                RunescapeTypes::VarBit,
-                '4894',
-            ),
-            'arceuus_favour' => $this->makeObject(
-                "Arceuus Favour",
-                RunescapeTypes::VarBit,
-                '4896',
-            ),
-            'lovakengj_favour' => $this->makeObject(
-                "Lovakengj Favour",
-                RunescapeTypes::VarBit,
-                '4898',
-            ),
-            'piscarilius_favour' => $this->makeObject(
-                "Piscarilius Favour",
-                RunescapeTypes::VarBit,
-                '4899',
-            ),
         ];
     }
 
@@ -173,17 +148,5 @@ class MinigameService implements OsrsService
             'type' => $type,
             'hiscore_id' => $hiscoreId ?? $text,
         ];
-    }
-
-    private function formattedValue(string $key, ?int $value = null)
-    {
-        if ($value) {
-            return match ($key) {
-                'hosidius_favour', 'shayzien_favour', 'arceuus_favour', 'lovakengj_favour', 'piscarilius_favour' => $value / 10,
-                default => $value,
-            };
-        } else {
-            return null;
-        }
     }
 }
