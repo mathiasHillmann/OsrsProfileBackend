@@ -44,9 +44,9 @@ class VarDumper extends Command
      */
     public function handle()
     {
-        //$this->createTemporaryFiles();
+        $this->createTemporaryFiles();
 
-        //$this->downloadLatestCacheDump();
+        $this->downloadLatestCacheDump();
 
         $this->getQuestVariables();
         $this->getCombatAchievementVariables();

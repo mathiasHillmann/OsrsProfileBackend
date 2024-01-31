@@ -28,7 +28,7 @@ class ConvertCombatAchievementJson extends Command
     {
         $return = [];
 
-        $data = File::json(storage_path('app/CombatAchievements.json'));
+        $data = File::json(base_path('data/combat-achievements.json'));
 
         foreach ($data as $task) {
             $return[$task['id']] = [
@@ -42,6 +42,6 @@ class ConvertCombatAchievementJson extends Command
 
         ksort($return);
 
-        File::put(storage_path('app/CombatAchievements.php'), var_export($return, true));
+        File::put(base_path('data/combat-achievements.json'), json_encode($return, JSON_PRETTY_PRINT));
     }
 }

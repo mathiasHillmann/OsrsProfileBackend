@@ -1,5 +1,7 @@
 <IfModule mod_rewrite.c>
-    Header always set Access-Control-Allow-Origin "*"
+    <If "%{THE_REQUEST} =~ m#\s/+storage[/?\s]#">
+        Header always set Access-Control-Allow-Origin "*"
+    </If>
     
     <IfModule mod_negotiation.c>
         Options -MultiViews -Indexes
