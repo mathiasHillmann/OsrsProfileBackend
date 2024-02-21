@@ -113,6 +113,14 @@ class QuestService implements OsrsService
                 3,
                 RunescapeQuestTypes::Miniquest,
             ),
+            'barbarian_training' => $this->makeObject(
+                'Barbarian Training',
+                9613,
+                RunescapeTypes::VarBit,
+                0,
+                0,
+                RunescapeQuestTypes::Miniquest,
+            ),
             'bear_your_soul' => $this->makeObject(
                 'Bear Your Soul',
                 5078,
@@ -213,6 +221,13 @@ class QuestService implements OsrsService
                 RunescapeTypes::VarBit,
                 0,
                 13,
+            ),
+            'defender_of_varrock' => $this->makeObject(
+                'Defender of Barrock',
+                9655,
+                RunescapeTypes::VarBit,
+                899,
+                2,
             ),
             'demon_slayer' => $this->makeObject(
                 'Demon Slayer',
