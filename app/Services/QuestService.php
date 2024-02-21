@@ -223,7 +223,7 @@ class QuestService implements OsrsService
                 13,
             ),
             'defender_of_varrock' => $this->makeObject(
-                'Defender of Barrock',
+                'Defender of Varrock',
                 9655,
                 RunescapeTypes::VarBit,
                 899,
@@ -1075,7 +1075,7 @@ class QuestService implements OsrsService
                 4,
             ),
             'rag_and_bone_man_2' => $this->makeObject(
-                "Rag and Bone Man II",
+                'Rag and Bone Man II',
                 714,
                 RunescapeTypes::VarPlayer,
                 3,
@@ -1312,7 +1312,7 @@ class QuestService implements OsrsService
             'questType' => $questType,
             'startValue' => $startValue,
             'endValue' => $endValue,
-            'text' => $text
+            'text' => $text,
         ];
     }
 }
