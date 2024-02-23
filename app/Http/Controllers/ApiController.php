@@ -82,6 +82,7 @@ class ApiController extends Controller
                 $m->subject('Profile removal request');
                 $m->to('osrs.profile.dev@gmail.com');
             });
+
             return $this->response(message: 'OK');
         } catch (\Throwable $th) {
             return $this->response($th);
@@ -127,6 +128,7 @@ class ApiController extends Controller
                 ->orderBy('views', 'DESC')
                 ->select([DB::raw('ROW_NUMBER() OVER () AS `rank`'), 'username', 'views', 'account_type'])
                 ->where('views', '>', 0)
+                ->whereRaw('updated_at >= DATE_SUB(CURDATE(), INTERVAL 30 DAY)')
                 ->limit(100)
                 ->get();
 
