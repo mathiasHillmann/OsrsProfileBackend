@@ -1,0 +1,1514 @@
+{
+    "Black Knights' Fortress": {
+        "index": "130",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 4,
+        "text": "Black Knights' Fortress"
+    },
+    "Cook's Assistant": {
+        "index": "29",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 2,
+        "text": "Cook's Assistant"
+    },
+    "Demon Slayer": {
+        "index": "2561",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 3,
+        "text": "Demon Slayer"
+    },
+    "Doric's Quest": {
+        "index": "31",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 100,
+        "text": "Doric's Quest"
+    },
+    "Dragon Slayer I": {
+        "index": "176",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 10,
+        "text": "Dragon Slayer I"
+    },
+    "Ernest the Chicken": {
+        "index": "32",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 3,
+        "text": "Ernest the Chicken"
+    },
+    "Goblin Diplomacy": {
+        "index": "2378",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 6,
+        "text": "Goblin Diplomacy"
+    },
+    "Imp Catcher": {
+        "index": "160",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 2,
+        "text": "Imp Catcher"
+    },
+    "The Knight's Sword": {
+        "index": "122",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 7,
+        "text": "The Knight's Sword"
+    },
+    "Pirate's Treasure": {
+        "index": "71",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 4,
+        "text": "Pirate's Treasure"
+    },
+    "Prince Ali Rescue": {
+        "index": "273",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 110,
+        "text": "Prince Ali Rescue"
+    },
+    "The Restless Ghost": {
+        "index": "107",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 5,
+        "text": "The Restless Ghost"
+    },
+    "Romeo & Juliet": {
+        "index": "144",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 100,
+        "text": "Romeo & Juliet"
+    },
+    "Rune Mysteries": {
+        "index": "63",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 6,
+        "text": "Rune Mysteries"
+    },
+    "Sheep Shearer": {
+        "index": "179",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 21,
+        "text": "Sheep Shearer"
+    },
+    "Shield of Arrav": {
+        "index": "13716",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 2,
+        "text": "Shield of Arrav"
+    },
+    "Vampyre Slayer": {
+        "index": "178",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 3,
+        "text": "Vampyre Slayer"
+    },
+    "Witch's Potion": {
+        "index": "67",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 3,
+        "text": "Witch's Potion"
+    },
+    "Misthalin Mystery": {
+        "index": "3468",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 135,
+        "text": "Misthalin Mystery"
+    },
+    "The Corsair Curse": {
+        "index": "6071",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 60,
+        "text": "The Corsair Curse"
+    },
+    "Animal Magnetism": {
+        "index": "3185",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 240,
+        "text": "Animal Magnetism"
+    },
+    "Between a Rock...": {
+        "index": "299",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 110,
+        "text": "Between a Rock..."
+    },
+    "Big Chompy Bird Hunting": {
+        "index": "293",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 65,
+        "text": "Big Chompy Bird Hunting"
+    },
+    "Biohazard": {
+        "index": "68",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 16,
+        "text": "Biohazard"
+    },
+    "Cabin Fever": {
+        "index": "655",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 140,
+        "text": "Cabin Fever"
+    },
+    "Clock Tower": {
+        "index": "10",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 8,
+        "text": "Clock Tower"
+    },
+    "Contact!": {
+        "index": "3274",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 130,
+        "text": "Contact!"
+    },
+    "Zogre Flesh Eaters": {
+        "index": "487",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 14,
+        "text": "Zogre Flesh Eaters"
+    },
+    "Creature of Fenkenstrain": {
+        "index": "13715",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 9,
+        "text": "Creature of Fenkenstrain"
+    },
+    "Darkness of Hallowvale": {
+        "index": "2573",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 320,
+        "text": "Darkness of Hallowvale"
+    },
+    "Death to the Dorgeshuun": {
+        "index": "2258",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 13,
+        "text": "Death to the Dorgeshuun"
+    },
+    "Death Plateau": {
+        "index": "314",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 80,
+        "text": "Death Plateau"
+    },
+    "Desert Treasure I": {
+        "index": "358",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 15,
+        "text": "Desert Treasure I"
+    },
+    "Devious Minds": {
+        "index": "1465",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 80,
+        "text": "Devious Minds"
+    },
+    "The Dig Site": {
+        "index": "131",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 9,
+        "text": "The Dig Site"
+    },
+    "Druidic Ritual": {
+        "index": "80",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 4,
+        "text": "Druidic Ritual"
+    },
+    "Dwarf Cannon": {
+        "index": 0,
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 11,
+        "text": "Dwarf Cannon"
+    },
+    "Eadgar's Ruse": {
+        "index": "335",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 110,
+        "text": "Eadgar's Ruse"
+    },
+    "Eagles' Peak": {
+        "index": "2780",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 40,
+        "text": "Eagles' Peak"
+    },
+    "Elemental Workshop I": {
+        "index": "13718",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 2,
+        "text": "Elemental Workshop I"
+    },
+    "Elemental Workshop II": {
+        "index": "2639",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 11,
+        "text": "Elemental Workshop II"
+    },
+    "Enakhra's Lament": {
+        "index": "1560",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 70,
+        "text": "Enakhra's Lament"
+    },
+    "Enlightened Journey": {
+        "index": "2866",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 200,
+        "text": "Enlightened Journey"
+    },
+    "The Eyes of Glouphrie": {
+        "index": "2497",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 60,
+        "text": "The Eyes of Glouphrie"
+    },
+    "Fairytale I - Growing Pains": {
+        "index": "1803",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 90,
+        "text": "Fairytale I - Growing Pains"
+    },
+    "Fairytale II - Cure a Queen": {
+        "index": "2326",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 10,
+        "endValue": 90,
+        "text": "Fairytale II - Cure a Queen"
+    },
+    "Family Crest": {
+        "index": "148",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 11,
+        "text": "Family Crest"
+    },
+    "The Feud": {
+        "index": "334",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 28,
+        "text": "The Feud"
+    },
+    "Fight Arena": {
+        "index": "17",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 14,
+        "text": "Fight Arena"
+    },
+    "Fishing Contest": {
+        "index": "11",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 5,
+        "text": "Fishing Contest"
+    },
+    "Forgettable Tale...": {
+        "index": "822",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 140,
+        "text": "Forgettable Tale..."
+    },
+    "The Fremennik Trials": {
+        "index": "347",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 10,
+        "text": "The Fremennik Trials"
+    },
+    "Waterfall Quest": {
+        "index": "65",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 10,
+        "text": "Waterfall Quest"
+    },
+    "Garden of Tranquillity": {
+        "index": "961",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 60,
+        "text": "Garden of Tranquillity"
+    },
+    "Gertrude's Cat": {
+        "index": "180",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 6,
+        "text": "Gertrude's Cat"
+    },
+    "Ghosts Ahoy": {
+        "index": "217",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 8,
+        "text": "Ghosts Ahoy"
+    },
+    "The Giant Dwarf": {
+        "index": "571",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 50,
+        "text": "The Giant Dwarf"
+    },
+    "The Golem": {
+        "index": "346",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 10,
+        "text": "The Golem"
+    },
+    "The Grand Tree": {
+        "index": "150",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 160,
+        "text": "The Grand Tree"
+    },
+    "The Hand in the Sand": {
+        "index": "1527",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 160,
+        "text": "The Hand in the Sand"
+    },
+    "Haunted Mine": {
+        "index": "382",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 11,
+        "text": "Haunted Mine"
+    },
+    "Hazeel Cult": {
+        "index": "223",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 9,
+        "text": "Hazeel Cult"
+    },
+    "Heroes' Quest": {
+        "index": "188",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 15,
+        "text": "Heroes' Quest"
+    },
+    "Holy Grail": {
+        "index": "5",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 10,
+        "text": "Holy Grail"
+    },
+    "Horror from the Deep": {
+        "index": "34",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 10,
+        "text": "Horror from the Deep"
+    },
+    "Icthlarin's Little Helper": {
+        "index": "418",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 26,
+        "text": "Icthlarin's Little Helper"
+    },
+    "In Aid of the Myreque": {
+        "index": "1990",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 430,
+        "text": "In Aid of the Myreque"
+    },
+    "In Search of the Myreque": {
+        "index": "387",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 105,
+        "text": "In Search of the Myreque"
+    },
+    "Jungle Potion": {
+        "index": "175",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 12,
+        "text": "Jungle Potion"
+    },
+    "Legends' Quest": {
+        "index": "139",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 75,
+        "text": "Legends' Quest"
+    },
+    "Lost City": {
+        "index": "147",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 6,
+        "text": "Lost City"
+    },
+    "The Lost Tribe": {
+        "index": "532",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 11,
+        "text": "The Lost Tribe"
+    },
+    "Lunar Diplomacy": {
+        "index": "2448",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 190,
+        "text": "Lunar Diplomacy"
+    },
+    "Making History": {
+        "index": "1383",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 4,
+        "text": "Making History"
+    },
+    "Merlin's Crystal": {
+        "index": "14",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 7,
+        "text": "Merlin's Crystal"
+    },
+    "Monkey Madness I": {
+        "index": "365",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 9,
+        "text": "Monkey Madness I"
+    },
+    "Monk's Friend": {
+        "index": "30",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 80,
+        "text": "Monk's Friend"
+    },
+    "Mountain Daughter": {
+        "index": "260",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 70,
+        "text": "Mountain Daughter"
+    },
+    "Mourning's End Part I": {
+        "index": "517",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 9,
+        "text": "Mourning's End Part I"
+    },
+    "Mourning's End Part II": {
+        "index": "1103",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 60,
+        "text": "Mourning's End Part II"
+    },
+    "Murder Mystery": {
+        "index": "192",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 2,
+        "text": "Murder Mystery"
+    },
+    "My Arm's Big Adventure": {
+        "index": "2790",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 320,
+        "text": "My Arm's Big Adventure"
+    },
+    "Nature Spirit": {
+        "index": "307",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 110,
+        "text": "Nature Spirit"
+    },
+    "Observatory Quest": {
+        "index": "112",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 7,
+        "text": "Observatory Quest"
+    },
+    "One Small Favour": {
+        "index": "416",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 285,
+        "text": "One Small Favour"
+    },
+    "Plague City": {
+        "index": "165",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 29,
+        "text": "Plague City"
+    },
+    "Priest in Peril": {
+        "index": "302",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 60,
+        "text": "Priest in Peril"
+    },
+    "Rag and Bone Man I": {
+        "index": "714",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 4,
+        "text": "Rag and Bone Man I"
+    },
+    "Ratcatchers": {
+        "index": "1404",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 127,
+        "text": "Ratcatchers"
+    },
+    "Recipe for Disaster": {
+        "index": "1850",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 5,
+        "text": "Recipe for Disaster"
+    },
+    "Recipe for Disaster - Another Cook's Quest": {
+        "index": "1850",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 2,
+        "text": "Recipe for Disaster - Another Cook's Quest"
+    },
+    "Recipe for Disaster - Culinaromancer": {
+        "index": "1850",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 3,
+        "endValue": 5,
+        "text": "Recipe for Disaster - Culinaromancer"
+    },
+    "Recipe for Disaster - Mountain Dwarf": {
+        "index": "1892",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 60,
+        "text": "Recipe for Disaster - Mountain Dwarf"
+    },
+    "Recipe for Disaster - Wartface & Bentnoze": {
+        "index": "1867",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 40,
+        "text": "Recipe for Disaster - Wartface & Bentnoze"
+    },
+    "Recipe for Disaster - Pirate Pete": {
+        "index": "1895",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 110,
+        "text": "Recipe for Disaster - Pirate Pete"
+    },
+    "Recipe for Disaster - Lumbridge Guide": {
+        "index": "1896",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 5,
+        "text": "Recipe for Disaster - Lumbridge Guide"
+    },
+    "Recipe for Disaster - Evil Dave": {
+        "index": "1878",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 5,
+        "text": "Recipe for Disaster - Evil Dave"
+    },
+    "Recipe for Disaster - Skrach Uglogwee": {
+        "index": "1904",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 170,
+        "text": "Recipe for Disaster - Skrach Uglogwee"
+    },
+    "Recipe for Disaster - Sir Amik Varze": {
+        "index": "1910",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 20,
+        "text": "Recipe for Disaster - Sir Amik Varze"
+    },
+    "Recipe for Disaster - King Awowogei": {
+        "index": "1914",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 50,
+        "text": "Recipe for Disaster - King Awowogei"
+    },
+    "Recruitment Drive": {
+        "index": "657",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 2,
+        "text": "Recruitment Drive"
+    },
+    "Regicide": {
+        "index": "328",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 15,
+        "text": "Regicide"
+    },
+    "Roving Elves": {
+        "index": "402",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 6,
+        "text": "Roving Elves"
+    },
+    "Royal Trouble": {
+        "index": "2140",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 30,
+        "text": "Royal Trouble"
+    },
+    "Rum Deal": {
+        "index": "600",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 19,
+        "text": "Rum Deal"
+    },
+    "Scorpion Catcher": {
+        "index": "76",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 6,
+        "text": "Scorpion Catcher"
+    },
+    "Sea Slug": {
+        "index": "159",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 12,
+        "text": "Sea Slug"
+    },
+    "The Slug Menace": {
+        "index": "2610",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 14,
+        "text": "The Slug Menace"
+    },
+    "Shades of Mort'ton": {
+        "index": "339",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 85,
+        "text": "Shades of Mort'ton"
+    },
+    "Shadow of the Storm": {
+        "index": "1372",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 125,
+        "text": "Shadow of the Storm"
+    },
+    "Sheep Herder": {
+        "index": "60",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 3,
+        "text": "Sheep Herder"
+    },
+    "Shilo Village": {
+        "index": "116",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 15,
+        "text": "Shilo Village"
+    },
+    "A Soul's Bane": {
+        "index": "2011",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 13,
+        "text": "A Soul's Bane"
+    },
+    "Spirits of the Elid": {
+        "index": "1444",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 60,
+        "text": "Spirits of the Elid"
+    },
+    "Swan Song": {
+        "index": "2098",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 200,
+        "text": "Swan Song"
+    },
+    "Tai Bwo Wannai Trio": {
+        "index": "320",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 2,
+        "endValue": 6,
+        "text": "Tai Bwo Wannai Trio"
+    },
+    "A Tail of Two Cats": {
+        "index": "1028",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 70,
+        "text": "A Tail of Two Cats"
+    },
+    "Tears of Guthix": {
+        "index": "451",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 2,
+        "text": "Tears of Guthix"
+    },
+    "Temple of Ikov": {
+        "index": "26",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 80,
+        "text": "Temple of Ikov"
+    },
+    "Throne of Miscellania": {
+        "index": "359",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 100,
+        "text": "Throne of Miscellania"
+    },
+    "The Tourist Trap": {
+        "index": "197",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 30,
+        "text": "The Tourist Trap"
+    },
+    "Witch's House": {
+        "index": "226",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 7,
+        "text": "Witch's House"
+    },
+    "Tree Gnome Village": {
+        "index": "111",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 9,
+        "text": "Tree Gnome Village"
+    },
+    "Tribal Totem": {
+        "index": "200",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 5,
+        "text": "Tribal Totem"
+    },
+    "Troll Romance": {
+        "index": "385",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 45,
+        "text": "Troll Romance"
+    },
+    "Troll Stronghold": {
+        "index": "317",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 50,
+        "text": "Troll Stronghold"
+    },
+    "Underground Pass": {
+        "index": "161",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 11,
+        "text": "Underground Pass"
+    },
+    "Wanted!": {
+        "index": "1051",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 11,
+        "text": "Wanted!"
+    },
+    "Watchtower": {
+        "index": "212",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 13,
+        "text": "Watchtower"
+    },
+    "Cold War": {
+        "index": "3293",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 135,
+        "text": "Cold War"
+    },
+    "The Fremennik Isles": {
+        "index": "3311",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 340,
+        "text": "The Fremennik Isles"
+    },
+    "Tower of Life": {
+        "index": "3337",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 18,
+        "text": "Tower of Life"
+    },
+    "The Great Brain Robbery": {
+        "index": "980",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 130,
+        "text": "The Great Brain Robbery"
+    },
+    "What Lies Below": {
+        "index": "3523",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 150,
+        "text": "What Lies Below"
+    },
+    "Olaf's Quest": {
+        "index": "3534",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 80,
+        "text": "Olaf's Quest"
+    },
+    "Another Slice of H.A.M.": {
+        "index": "3550",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 11,
+        "text": "Another Slice of H.A.M."
+    },
+    "Dream Mentor": {
+        "index": "3618",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 28,
+        "text": "Dream Mentor"
+    },
+    "Grim Tales": {
+        "index": "2783",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 60,
+        "text": "Grim Tales"
+    },
+    "King's Ransom": {
+        "index": "3888",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 90,
+        "text": "King's Ransom"
+    },
+    "Monkey Madness II": {
+        "index": "5027",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 195,
+        "text": "Monkey Madness II"
+    },
+    "Client of Kourend": {
+        "index": "5619",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 7,
+        "text": "Client of Kourend"
+    },
+    "Rag and Bone Man II": {
+        "index": "714",
+        "type": "varp",
+        "questType": "quest",
+        "startValue": 3,
+        "endValue": 6,
+        "text": "Rag and Bone Man II"
+    },
+    "Bone Voyage": {
+        "index": "5795",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 50,
+        "text": "Bone Voyage"
+    },
+    "The Queen of Thieves": {
+        "index": "6037",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 13,
+        "text": "The Queen of Thieves"
+    },
+    "The Depths of Despair": {
+        "index": "6027",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 11,
+        "text": "The Depths of Despair"
+    },
+    "Dragon Slayer II": {
+        "index": "6104",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 215,
+        "text": "Dragon Slayer II"
+    },
+    "Tale of the Righteous": {
+        "index": "6358",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 17,
+        "text": "Tale of the Righteous"
+    },
+    "A Taste of Hope": {
+        "index": "6396",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 165,
+        "text": "A Taste of Hope"
+    },
+    "Making Friends with My Arm": {
+        "index": "6528",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 200,
+        "text": "Making Friends with My Arm"
+    },
+    "The Forsaken Tower": {
+        "index": "7796",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 11,
+        "text": "The Forsaken Tower"
+    },
+    "The Ascent of Arceuus": {
+        "index": "7856",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 14,
+        "text": "The Ascent of Arceuus"
+    },
+    "Curse of the Empty Lord": {
+        "index": "13713",
+        "type": "varb",
+        "questType": "miniquest",
+        "startValue": 0,
+        "endValue": 6,
+        "text": "Curse of the Empty Lord"
+    },
+    "The Enchanted Key": {
+        "index": "13717",
+        "type": "varb",
+        "questType": "miniquest",
+        "startValue": 0,
+        "endValue": 2,
+        "text": "The Enchanted Key"
+    },
+    "Enter the Abyss": {
+        "index": "492",
+        "type": "varp",
+        "questType": "miniquest",
+        "startValue": 0,
+        "endValue": 4,
+        "text": "Enter the Abyss"
+    },
+    "Bear Your Soul": {
+        "index": "5078",
+        "type": "varb",
+        "questType": "miniquest",
+        "startValue": 0,
+        "endValue": 3,
+        "text": "Bear Your Soul"
+    },
+    "Alfred Grimhand's Barcrawl": {
+        "index": "13714",
+        "type": "varb",
+        "questType": "miniquest",
+        "startValue": 0,
+        "endValue": 2,
+        "text": "Alfred Grimhand's Barcrawl"
+    },
+    "The General's Shadow": {
+        "index": "3330",
+        "type": "varb",
+        "questType": "miniquest",
+        "startValue": 0,
+        "endValue": 30,
+        "text": "The General's Shadow"
+    },
+    "In Search of Knowledge": {
+        "index": "8403",
+        "type": "varb",
+        "questType": "miniquest",
+        "startValue": 0,
+        "endValue": 3,
+        "text": "In Search of Knowledge"
+    },
+    "Skippy and the Mogres": {
+        "index": "1344",
+        "type": "varb",
+        "questType": "miniquest",
+        "startValue": 0,
+        "endValue": 3,
+        "text": "Skippy and the Mogres"
+    },
+    "Mage Arena I": {
+        "index": "267",
+        "type": "varp",
+        "questType": "miniquest",
+        "startValue": 0,
+        "endValue": 8,
+        "text": "Mage Arena I"
+    },
+    "Lair of Tarn Razorlor": {
+        "index": "3290",
+        "type": "varb",
+        "questType": "miniquest",
+        "startValue": 0,
+        "endValue": 3,
+        "text": "Lair of Tarn Razorlor"
+    },
+    "Family Pest": {
+        "index": "5347",
+        "type": "varb",
+        "questType": "miniquest",
+        "startValue": 0,
+        "endValue": 3,
+        "text": "Family Pest"
+    },
+    "Mage Arena II": {
+        "index": "6067",
+        "type": "varb",
+        "questType": "miniquest",
+        "startValue": 0,
+        "endValue": 4,
+        "text": "Mage Arena II"
+    },
+    "Daddy's Home": {
+        "index": "10570",
+        "type": "varb",
+        "questType": "miniquest",
+        "startValue": 0,
+        "endValue": 13,
+        "text": "Daddy's Home"
+    },
+    "X Marks the Spot": {
+        "index": "8063",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 8,
+        "text": "X Marks the Spot"
+    },
+    "Song of the Elves": {
+        "index": "9016",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 200,
+        "text": "Song of the Elves"
+    },
+    "The Fremennik Exiles": {
+        "index": "9459",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 130,
+        "text": "The Fremennik Exiles"
+    },
+    "Sins of the Father": {
+        "index": "7255",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 138,
+        "text": "Sins of the Father"
+    },
+    "A Porcine of Interest": {
+        "index": "10582",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 40,
+        "text": "A Porcine of Interest"
+    },
+    "Getting Ahead": {
+        "index": "693",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 34,
+        "text": "Getting Ahead"
+    },
+    "Below Ice Mountain": {
+        "index": "12063",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 120,
+        "text": "Below Ice Mountain"
+    },
+    "A Night at the Theatre": {
+        "index": "12276",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 86,
+        "text": "A Night at the Theatre"
+    },
+    "A Kingdom Divided": {
+        "index": "12296",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 150,
+        "text": "A Kingdom Divided"
+    },
+    "The Frozen Door": {
+        "index": "13175",
+        "type": "varb",
+        "questType": "miniquest",
+        "startValue": 0,
+        "endValue": 10,
+        "text": "The Frozen Door"
+    },
+    "Land of the Goblins": {
+        "index": "13599",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 56,
+        "text": "Land of the Goblins"
+    },
+    "Hopespear's Will": {
+        "index": "13619",
+        "type": "varb",
+        "questType": "miniquest",
+        "startValue": 0,
+        "endValue": 2,
+        "text": "Hopespear's Will"
+    },
+    "Temple of the Eye": {
+        "index": "13738",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 130,
+        "text": "Temple of the Eye"
+    },
+    "Beneath Cursed Sands": {
+        "index": "13841",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 108,
+        "text": "Beneath Cursed Sands"
+    },
+    "Sleeping Giants": {
+        "index": "13902",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 30,
+        "text": "Sleeping Giants"
+    },
+    "Into the Tombs": {
+        "index": "13836",
+        "type": "varb",
+        "questType": "miniquest",
+        "startValue": 0,
+        "endValue": 24,
+        "text": "Into the Tombs"
+    },
+    "The Garden of Death": {
+        "index": "14609",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 56,
+        "text": "The Garden of Death"
+    },
+    "Secrets of the North": {
+        "index": "14722",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 90,
+        "text": "Secrets of the North"
+    },
+    "His Faithful Servants": {
+        "index": "14973",
+        "type": "varb",
+        "questType": "miniquest",
+        "startValue": 0,
+        "endValue": 10,
+        "text": "His Faithful Servants"
+    },
+    "Desert Treasure II - The Fallen Empire": {
+        "index": "14862",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 118,
+        "text": "Desert Treasure II - The Fallen Empire"
+    },
+    "The Path of Glouphrie": {
+        "index": "15288",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 50,
+        "text": "The Path of Glouphrie"
+    },
+    "Children of the Sun": {
+        "index": "9632",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 24,
+        "text": "Children of the Sun"
+    },
+    "Barbarian Training": {
+        "index": "9613",
+        "type": "varb",
+        "questType": "miniquest",
+        "startValue": 0,
+        "endValue": 10,
+        "text": "Barbarian Training"
+    },
+    "Defender of Varrock": {
+        "index": "9655",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 56,
+        "text": "Defender of Varrock"
+    },
+    "While Guthix Sleeps": {
+        "index": "9653",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 150,
+        "text": "While Guthix Sleeps"
+    }
+}
