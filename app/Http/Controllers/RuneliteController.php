@@ -16,9 +16,7 @@ use App\Services\SummaryService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\UploadedFile;
-use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Response;
-use Storage;
 use Symfony\Component\Routing\Annotation\Route;
 
 class RuneliteController extends Controller
@@ -50,7 +48,7 @@ class RuneliteController extends Controller
         try {
             $player = Player::find($accountHash);
 
-            $data = $this->formatPlayerData($request->input('data'), $player);
+            $data = $this->formatPlayerData($request->input('data'));
 
             if ($player) {
                 $player->update([
@@ -79,13 +77,13 @@ class RuneliteController extends Controller
         try {
             /** @var UploadedFile $file */
             $file = $request->file('model');
-            $path = 'models' . DIRECTORY_SEPARATOR . $file->getClientOriginalName();
+            $path = 'models'.DIRECTORY_SEPARATOR.$file->getClientOriginalName();
 
-            if (Storage::exists($path)) {
-                Storage::delete($path);
+            if (\Storage::exists($path)) {
+                \Storage::delete($path);
             }
 
-            Storage::put($path, $file->getContent());
+            \Storage::put($path, $file->getContent());
 
             return $this->response(['success' => true]);
         } catch (\Throwable $th) {
@@ -93,25 +91,9 @@ class RuneliteController extends Controller
         }
     }
 
-    private function formatPlayerData(array $data, Player $player = null): array
+    private function formatPlayerData(array $data): array
     {
-        $return = [];
-
-        $playerData = [];
-        if ($player) {
-            $playerData = $player->data;
-        }
-
         foreach ($data as $key => $value) {
-            // We want to check if the value exists in the player data and use it in case the supplied value is null
-            // This is because a player could reinstall runelite and lose the stored in memory value of their kcs and personal bests
-            // Which would wipe when sent to the server
-            if ($value['value'] == null && array_key_exists($key, $playerData)) {
-                if ($playerData[$key] != $value['value']) {
-                    $value['value'] = $playerData[$key];
-                }
-            }
-
             $return[$key] = $value['value'];
         }
 

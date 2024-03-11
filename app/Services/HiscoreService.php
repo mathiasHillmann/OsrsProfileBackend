@@ -10,9 +10,9 @@ use Illuminate\Support\Facades\Http;
 
 class HiscoreService
 {
-    private function getHiscoresEndpoint(Player $player): string
+    private function getHiscoresEndpoint(RunescapeAccountTypes $accountType): string
     {
-        $type = match ($player->account_type) {
+        $type = match ($accountType) {
             RunescapeAccountTypes::Ironman => 'hiscore_oldschool_ironman',
             RunescapeAccountTypes::HardcoreIronman => 'hiscore_oldschool_hardcore_ironman',
             RunescapeAccountTypes::UltimateIronman => 'hiscore_oldschool_ultimate',
@@ -24,7 +24,7 @@ class HiscoreService
 
     public function fetchPlayer(Player $player): array
     {
-        $response = Http::get($this->getHiscoresEndpoint($player), ['player' => $player->username]);
+        $response = Http::get($this->getHiscoresEndpoint($player->account_type), ['player' => $player->username]);
 
         if ($response->successful()) {
             return $response->json();
