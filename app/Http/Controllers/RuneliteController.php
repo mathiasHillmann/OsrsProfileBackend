@@ -93,6 +93,8 @@ class RuneliteController extends Controller
 
     private function formatPlayerData(array $data): array
     {
+        $return = [];
+
         foreach ($data as $key => $value) {
             $return[$key] = $value['value'];
         }
