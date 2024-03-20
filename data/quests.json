@@ -1503,12 +1503,36 @@
         "endValue": 56,
         "text": "Defender of Varrock"
     },
-    "While Guthix Sleeps": {
-        "index": "9653",
+    "Twilight's Promise": {
+        "index": "9649",
         "type": "varb",
         "questType": "quest",
         "startValue": 0,
-        "endValue": 150,
-        "text": "While Guthix Sleeps"
+        "endValue": 50,
+        "text": "Twilight's Promise"
+    },
+    "At First Light": {
+        "index": "9835",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 12,
+        "text": "At First Light"
+    },
+    "Perilous Moons": {
+        "index": "9819",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 36,
+        "text": "Perilous Moons"
+    },
+    "The Ribbiting Tale of a Lily Pad Labour Dispute": {
+        "index": "9844",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 32,
+        "text": "The Ribbiting Tale of a Lily Pad Labour Dispute"
     }
 }

@@ -3,19 +3,19 @@
         "text": "Chambers of Xeric",
         "type": "varp",
         "index": "1532",
-        "hiscoreId": 25
+        "hiscoreId": 26
     },
     "Theatre of Blood": {
         "text": "Theatre of Blood",
         "type": "varp",
         "index": "1748",
-        "hiscoreId": 62
+        "hiscoreId": 65
     },
     "Theatre of Blood: Hard Mode": {
         "text": "Theatre of Blood: Hard Mode",
         "type": "varp",
         "index": "3057",
-        "hiscoreId": 63
+        "hiscoreId": 66
     },
     "Theatre of Blood: Entry Mode": {
         "text": "Theatre of Blood: Entry Mode",
@@ -27,265 +27,265 @@
         "text": "Chambers of Xeric: Challenge Mode",
         "type": "varp",
         "index": "1735",
-        "hiscoreId": 26
+        "hiscoreId": 27
     },
     "Barrows Chests": {
         "text": "Barrows Chests",
         "type": "varp",
         "index": "1502",
-        "hiscoreId": 20
+        "hiscoreId": 21
     },
     "Kree'Arra": {
         "text": "Kree'Arra",
         "type": "varp",
         "index": "1503",
-        "hiscoreId": 44
+        "hiscoreId": 45
     },
     "General Graardor": {
         "text": "General Graardor",
         "type": "varp",
         "index": "1504",
-        "hiscoreId": 37
+        "hiscoreId": 38
     },
     "Commander Zilyana": {
         "text": "Commander Zilyana",
         "type": "varp",
         "index": "1505",
-        "hiscoreId": 29
+        "hiscoreId": 30
     },
     "K'ril Tsutsaroth": {
         "text": "K'ril Tsutsaroth",
         "type": "varp",
         "index": "1506",
-        "hiscoreId": 45
+        "hiscoreId": 46
     },
     "Dagannoth Prime": {
         "text": "Dagannoth Prime",
         "type": "varp",
         "index": "1507",
-        "hiscoreId": 32
+        "hiscoreId": 33
     },
     "Dagannoth Rex": {
         "text": "Dagannoth Rex",
         "type": "varp",
         "index": "1508",
-        "hiscoreId": 33
+        "hiscoreId": 34
     },
     "Dagannoth Supreme": {
         "text": "Dagannoth Supreme",
         "type": "varp",
         "index": "1509",
-        "hiscoreId": 34
+        "hiscoreId": 35
     },
     "Callisto": {
         "text": "Callisto",
         "type": "varp",
         "index": "1510",
-        "hiscoreId": 22
+        "hiscoreId": 23
     },
     "Venenatis": {
         "text": "Venenatis",
         "type": "varp",
         "index": "1511",
-        "hiscoreId": 70
+        "hiscoreId": 73
     },
     "Vet'ion": {
         "text": "Vet'ion",
         "type": "varp",
         "index": "1512",
-        "hiscoreId": 71
+        "hiscoreId": 74
     },
     "Chaos Elemental": {
         "text": "Chaos Elemental",
         "type": "varp",
         "index": "1513",
-        "hiscoreId": 27
+        "hiscoreId": 28
     },
     "King Black Dragon": {
         "text": "King Black Dragon",
         "type": "varp",
         "index": "1514",
-        "hiscoreId": 42
+        "hiscoreId": 43
     },
     "Giant Mole": {
         "text": "Giant Mole",
         "type": "varp",
         "index": "1515",
-        "hiscoreId": 38
+        "hiscoreId": 39
     },
     "Kalphite Queen": {
         "text": "Kalphite Queen",
         "type": "varp",
         "index": "1516",
-        "hiscoreId": 41
+        "hiscoreId": 42
     },
     "Corporeal Beast": {
         "text": "Corporeal Beast",
         "type": "varp",
         "index": "1517",
-        "hiscoreId": 30
+        "hiscoreId": 31
     },
     "Zulrah": {
         "text": "Zulrah",
         "type": "varp",
         "index": "1518",
-        "hiscoreId": 75
+        "hiscoreId": 78
     },
     "Chaos Fanatic": {
         "text": "Chaos Fanatic",
         "type": "varp",
         "index": "1519",
-        "hiscoreId": 28
+        "hiscoreId": 29
     },
     "Scorpia": {
         "text": "Scorpia",
         "type": "varp",
         "index": "1520",
-        "hiscoreId": 53
+        "hiscoreId": 55
     },
     "Crazy Archaeologist": {
         "text": "Crazy Archaeologist",
         "type": "varp",
         "index": "1521",
-        "hiscoreId": 31
+        "hiscoreId": 32
     },
     "TzTok-Jad": {
         "text": "TzTok-Jad",
         "type": "varp",
         "index": "1522",
-        "hiscoreId": 68
+        "hiscoreId": 71
     },
     "Kraken": {
         "text": "Kraken",
         "type": "varp",
         "index": "1523",
-        "hiscoreId": 43
+        "hiscoreId": 44
     },
     "Thermonuclear Smoke Devil": {
         "text": "Thermonuclear Smoke Devil",
         "type": "varp",
         "index": "1524",
-        "hiscoreId": 64
+        "hiscoreId": 67
     },
     "Cerberus": {
         "text": "Cerberus",
         "type": "varp",
         "index": "1525",
-        "hiscoreId": 24
+        "hiscoreId": 25
     },
     "Abyssal Sire": {
         "text": "Abyssal Sire",
         "type": "varp",
         "index": "1526",
-        "hiscoreId": 17
+        "hiscoreId": 18
     },
     "Skotizo": {
         "text": "Skotizo",
         "type": "varp",
         "index": "1527",
-        "hiscoreId": 55
+        "hiscoreId": 57
     },
     "Wintertodt": {
         "text": "Wintertodt",
         "type": "varp",
         "index": "1528",
-        "hiscoreId": 73
+        "hiscoreId": 76
     },
     "Obor": {
         "text": "Obor",
         "type": "varp",
         "index": "1529",
-        "hiscoreId": 50
+        "hiscoreId": 52
     },
     "TzKal-Zuk": {
         "text": "TzKal-Zuk",
         "type": "varp",
         "index": "1585",
-        "hiscoreId": 67
+        "hiscoreId": 70
     },
     "Deranged Archaeologist": {
         "text": "Deranged Archaeologist",
         "type": "varp",
         "index": "1661",
-        "hiscoreId": 35
+        "hiscoreId": 36
     },
     "Grotesque Guardians": {
         "text": "Grotesque Guardians",
         "type": "varp",
         "index": "1669",
-        "hiscoreId": 39
+        "hiscoreId": 40
     },
     "Vorkath": {
         "text": "Vorkath",
         "type": "varp",
         "index": "1691",
-        "hiscoreId": 72
+        "hiscoreId": 75
     },
     "Bryophyta": {
         "text": "Bryophyta",
         "type": "varp",
         "index": "1733",
-        "hiscoreId": 21
+        "hiscoreId": 22
     },
     "Alchemical Hydra": {
         "text": "Alchemical Hydra",
         "type": "varp",
         "index": "2074",
-        "hiscoreId": 18
+        "hiscoreId": 19
     },
     "Hespori": {
         "text": "Hespori",
         "type": "varp",
         "index": "2075",
-        "hiscoreId": 40
+        "hiscoreId": 41
     },
     "Mimic": {
         "text": "Mimic",
         "type": "varp",
         "index": "2221",
-        "hiscoreId": 46
+        "hiscoreId": 48
     },
     "Sarachnis": {
         "text": "Sarachnis",
         "type": "varp",
         "index": "2233",
-        "hiscoreId": 52
+        "hiscoreId": 54
     },
     "Zalcano": {
         "text": "Zalcano",
         "type": "varp",
         "index": "2352",
-        "hiscoreId": 74
+        "hiscoreId": 77
     },
     "The Gauntlet": {
         "text": "The Gauntlet",
         "type": "varp",
         "index": "2353",
-        "hiscoreId": 58
+        "hiscoreId": 61
     },
     "The Corrupted Gauntlet": {
         "text": "The Corrupted Gauntlet",
         "type": "varp",
         "index": "2354",
-        "hiscoreId": 59
+        "hiscoreId": 62
     },
     "Nightmare": {
         "text": "Nightmare",
         "type": "varp",
         "index": "2664",
-        "hiscoreId": 48
+        "hiscoreId": 50
     },
     "Phosani's Nightmare": {
         "text": "Phosani's Nightmare",
         "type": "varp",
         "index": "2671",
-        "hiscoreId": 49
+        "hiscoreId": 51
     },
     "Tempoross": {
         "text": "Tempoross",
         "type": "varp",
         "index": "2934",
-        "hiscoreId": 57
+        "hiscoreId": 60
     },
     "TzHaar-Ket-Rak's Challenges": {
         "text": "TzHaar-Ket-Rak's Challenges",
@@ -297,7 +297,7 @@
         "text": "Nex",
         "type": "varp",
         "index": "3269",
-        "hiscoreId": 47
+        "hiscoreId": 49
     },
     "Tombs of Amascut: Entry Mode": {
         "text": "Tombs of Amascut: Entry Mode",
@@ -309,48 +309,60 @@
         "text": "Tombs of Amascut",
         "type": "varp",
         "index": "3646",
-        "hiscoreId": 65
+        "hiscoreId": 68
     },
     "Tombs of Amascut: Expert Mode": {
         "text": "Tombs of Amascut: Expert Mode",
         "type": "varp",
         "index": "3647",
-        "hiscoreId": 66
+        "hiscoreId": 69
     },
     "Phantom Muspah": {
         "text": "Phantom Muspah",
         "type": "varp",
         "index": "3752",
-        "hiscoreId": 51
+        "hiscoreId": 53
     },
     "Duke Sucellus": {
         "text": "Duke Sucellus",
         "type": "varp",
         "index": "3967",
-        "hiscoreId": 36
+        "hiscoreId": 37
     },
     "The Whisperer": {
         "text": "The Whisperer",
         "type": "varp",
         "index": "3969",
-        "hiscoreId": 61
+        "hiscoreId": 64
     },
     "Vardorvis": {
         "text": "Vardorvis",
         "type": "varp",
         "index": "3970",
-        "hiscoreId": 69
+        "hiscoreId": 72
     },
     "The Leviathan": {
         "text": "The Leviathan",
         "type": "varp",
         "index": "3968",
-        "hiscoreId": 60
+        "hiscoreId": 63
     },
     "Scurrius": {
         "text": "Scurrius",
         "type": "varp",
         "index": "4079",
-        "hiscoreId": 54
+        "hiscoreId": 56
+    },
+    "Moons of Peril": {
+        "text": "Moons of Peril",
+        "type": "varp",
+        "index": "4186",
+        "hiscoreId": null
+    },
+    "Sol Heredit": {
+        "text": "Sol Heredit",
+        "type": "varp",
+        "index": "4187",
+        "hiscoreId": 58
     }
 }
