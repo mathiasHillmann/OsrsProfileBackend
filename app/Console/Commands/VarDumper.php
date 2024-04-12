@@ -17,7 +17,7 @@ class VarDumper extends Command
      *
      * @var string
      */
-    protected $signature = 'var-dumper {--download=}';
+    protected $signature = 'var-dumper';
 
     /**
      * The console command description.
@@ -31,10 +31,10 @@ class VarDumper extends Command
     private const DUMP_PATH = 'app/tmp';
 
     private const VARIABLES_SOURCES = [
-        'quests' => 'rs2asm/4024.rs2asm',
-        'combat_achievements' => 'rs2asm/4834.rs2asm',
-        'achievement_diaries' => 'rs2asm/56.rs2asm',
-        'boss_kc' => 'rs2asm/4778.rs2asm',
+        'quests' => '4024.rs2asm',
+        'combat_achievements' => '4834.rs2asm',
+        'achievement_diaries' => '56.rs2asm',
+        'boss_kc' => '4778.rs2asm',
     ];
 
     private const ENUMS = [
@@ -42,7 +42,7 @@ class VarDumper extends Command
     ];
 
     // I need someone that is ranked on every boss to be able to get the hiscore id for an activity
-    private string $hiscoreUser = 'Marni';
+    private const HISCORE_USER = 'Marni';
 
     private Collection $hiscoreData;
 
@@ -53,27 +53,34 @@ class VarDumper extends Command
     {
         $this->fetchHiscoreData();
 
-        if (filter_var($this->option('download'), FILTER_VALIDATE_BOOL) === true) {
+        if ($this->confirm('Download latest cache?')) {
             $this->createTemporaryFiles();
 
             $this->downloadLatestCacheDump();
         }
 
         $this->getQuestVariables();
+        $monsterMap = $this->getBossKcVariables();
         $this->getCombatAchievementVariables();
-        $this->getBossKcVariables();
+        $this->getCombatAchievementTasks($monsterMap);
     }
 
     private function fetchHiscoreData()
     {
+        $this->line(__FUNCTION__);
+
         $service = new HiscoreService();
 
         $player = new Player([
-            'username' => $this->hiscoreUser,
+            'username' => self::HISCORE_USER,
             'account_type' => RunescapeAccountTypes::Normal,
         ]);
 
-        $this->hiscoreData = collect($service->fetchPlayer($player)['activities'] ?? []);
+        try {
+            $this->hiscoreData = collect($service->fetchPlayer($player)['activities'] ?? []);
+        } catch (\Throwable $th) {
+            $this->hiscoreData = collect([]);
+        }
     }
 
     private function createTemporaryFiles(): void
@@ -130,7 +137,7 @@ class VarDumper extends Command
                     $data = preg_split('/\s+/', $line); // [get_varp, 32]
                     $label = explode(':', $previousLine)[0]; // [LABEL3]
                     $varType = explode('_', $data[0]); // [get, varp]
-                    $info = $this->readDbrow($labelIdMap[$label])['columnValues'];
+                    $info = $this->readJson('dbrow', $labelIdMap[$label])['columnValues'];
                     $questName = $info[2][0] ?? 'Unknown';
 
                     $variables[$questName] = [
@@ -169,6 +176,64 @@ class VarDumper extends Command
         File::put(base_path('data/combat-achievements-vars.json'), json_encode($variables, JSON_PRETTY_PRINT));
     }
 
+    private function getCombatAchievementTasks(array $monsterMap): void
+    {
+        $this->line(__FUNCTION__);
+
+        $tasks = [];
+        $exampleTaskStructKeys = [
+            '1312',
+            '1306',
+            '1307',
+            '1308',
+            '1309',
+            '1310',
+            '1311',
+        ];
+
+        // Get all filenames in a directory without the extension
+        $files = collect(scandir(storage_path(self::DUMP_PATH.'/dump/structs')))
+            ->transform(fn ($file) => pathinfo($file, PATHINFO_FILENAME))
+            ->diff(['..', '.', '']);
+
+        foreach ($files as $file) {
+            $struct = $this->readJson('struct', $file);
+
+            if (
+                array_key_exists('id', $struct)
+                && array_key_exists('params', $struct)
+                && array_keys($struct['params']) == $exampleTaskStructKeys
+            ) {
+                $tasks[$struct['params'][1306]] = [
+                    'monster' => $this->getBossName($monsterMap[$struct['params'][1312]] ?? 'Other'),
+                    'tier' => match ($struct['params'][1310]) {
+                        1 => 'Easy',
+                        2 => 'Medium',
+                        3 => 'Hard',
+                        4 => 'Elite',
+                        5 => 'Master',
+                        6 => 'Grandmaster',
+                    },
+                    'type' => match ($struct['params'][1311]) {
+                        1 => 'Stamina',
+                        2 => 'Perfection',
+                        3 => 'Kill Count',
+                        4 => 'Mechanical',
+                        5 => 'Restriction',
+                        6 => 'Speed',
+                    },
+                    'name' => $struct['params'][1308],
+                    'description' => $struct['params'][1309],
+                    'boss' => true,
+                ];
+            }
+        }
+
+        ksort($tasks);
+
+        File::put(base_path('data/combat-achievements-tasks.json'), json_encode($tasks, JSON_PRETTY_PRINT));
+    }
+
     private function getBossName(string $original): string
     {
         return match ($original) {
@@ -185,19 +250,19 @@ class VarDumper extends Command
         };
     }
 
-    private function getBossKcVariables(): void
+    private function getBossKcVariables(): array
     {
         $this->line(__FUNCTION__);
 
         $variables = [];
         $labelIdMap = [];
 
-        $enum = $this->readEnum(self::ENUMS['bosses']);
-        $bossMap = array_combine($enum['keys'], $enum['stringVals']);
+        $enum = $this->readJson('enum', self::ENUMS['bosses']);
+        $monsterMap = array_combine($enum['keys'], $enum['stringVals']);
 
         $this->readAsmFile(
             self::VARIABLES_SOURCES['boss_kc'],
-            function (string $line, string $previousLine) use (&$variables, &$labelIdMap, $bossMap) {
+            function (string $line, string $previousLine) use (&$variables, &$labelIdMap, $monsterMap) {
                 // Example: "      10: LABEL3"
                 if (preg_match('/\d+: LABEL\d+/', $line)) {
                     $data = explode(': ', $line); // [10, LABEL3]
@@ -210,9 +275,9 @@ class VarDumper extends Command
                     $label = explode(':', $previousLine)[0]; // [LABEL3]
                     $varType = explode('_', $data[0]); // [get, varp]
 
-                    // dd($labelIdMap, $bossMap, $label);
                     if (str_contains($label, 'LABEL')) {
-                        $name = $this->getBossName($bossMap[$labelIdMap[$label]]);
+                        $id = $labelIdMap[$label];
+                        $name = $this->getBossName($monsterMap[$id]);
                         $hiscore = $this->hiscoreData->where(fn ($activity) => $activity['name'] == $name)->first();
 
                         $variables[$name] = [
@@ -227,11 +292,13 @@ class VarDumper extends Command
         );
 
         File::put(base_path('data/boss-kc-vars.json'), json_encode($variables, JSON_PRETTY_PRINT));
+
+        return $monsterMap;
     }
 
-    private function readAsmFile(string $path, \Closure $callback): void
+    private function readAsmFile(string $file, \Closure $callback): void
     {
-        $asmFile = File::lines(storage_path(self::DUMP_PATH."/dump/{$path}"));
+        $asmFile = File::lines(storage_path(self::DUMP_PATH."/dump/rs2asm/{$file}"));
         $previousLine = '';
 
         foreach ($asmFile as $line) {
@@ -243,21 +310,18 @@ class VarDumper extends Command
         }
     }
 
-    private function readDbrow(string $id): array
+    private function readJson(string $type, string $id): array
     {
-        return json_decode(
-            file_get_contents(
-                storage_path(self::DUMP_PATH."/dump/dbrow/{$id}.json")
-            ),
-            true
-        );
-    }
+        $path = match ($type) {
+            'dbrow' => "/dump/dbrow/{$id}.json",
+            'enum' => "/dump/enums/{$id}",
+            'struct' => "/dump/structs/{$id}.json",
+            'default' => throw new \UnexpectedValueException("Invalid json type: {$type}"),
+        };
 
-    private function readEnum(string $file): array
-    {
         return json_decode(
             file_get_contents(
-                storage_path(self::DUMP_PATH."/dump/enums/{$file}")
+                storage_path(self::DUMP_PATH.$path)
             ),
             true
         );
