@@ -38,7 +38,14 @@ class VarDumper extends Command
     ];
 
     private const ENUMS = [
-        'bosses' => '3971.json',
+        'bosses' => '3971',
+    ];
+
+    private const NON_BOSSES = [
+        'Aberrant Spectre', 'Basilisk Knight', 'Black Dragon', 'Bloodveld',
+        'Brutal Black Dragon', 'Demonic Gorilla', 'Fire Giant', 'Greater Demon',
+        'Kurask', 'Lizardman Shaman', 'The Mimic', 'Fragment of Seren',
+        'Skeletal Wyvern', 'Wyrm', "TzHaar-Ket-Rak's Challenges", 'None',
     ];
 
     // I need someone that is ranked on every boss to be able to get the hiscore id for an activity
@@ -155,85 +162,6 @@ class VarDumper extends Command
         File::put(base_path('data/quests.json'), json_encode($variables, JSON_PRETTY_PRINT));
     }
 
-    private function getCombatAchievementVariables(): void
-    {
-        $this->line(__FUNCTION__);
-
-        $variables = [];
-
-        $this->readAsmFile(
-            self::VARIABLES_SOURCES['combat_achievements'],
-            function (string $line, string $previousLine) use (&$variables) {
-                // Example: "   get_varp               32"
-                if (str_contains($line, 'get_var')) {
-                    $data = preg_split('/\s+/', $line); // [get_varp, 32]
-
-                    $variables[] = $data[1] ?? 0;
-                }
-            }
-        );
-
-        File::put(base_path('data/combat-achievements-vars.json'), json_encode($variables, JSON_PRETTY_PRINT));
-    }
-
-    private function getCombatAchievementTasks(array $monsterMap): void
-    {
-        $this->line(__FUNCTION__);
-
-        $tasks = [];
-        $exampleTaskStructKeys = [
-            '1312',
-            '1306',
-            '1307',
-            '1308',
-            '1309',
-            '1310',
-            '1311',
-        ];
-
-        // Get all filenames in a directory without the extension
-        $files = collect(scandir(storage_path(self::DUMP_PATH.'/dump/structs')))
-            ->transform(fn ($file) => pathinfo($file, PATHINFO_FILENAME))
-            ->diff(['..', '.', '']);
-
-        foreach ($files as $file) {
-            $struct = $this->readJson('struct', $file);
-
-            if (
-                array_key_exists('id', $struct)
-                && array_key_exists('params', $struct)
-                && array_keys($struct['params']) == $exampleTaskStructKeys
-            ) {
-                $tasks[$struct['params'][1306]] = [
-                    'monster' => $this->getBossName($monsterMap[$struct['params'][1312]] ?? 'Other'),
-                    'tier' => match ($struct['params'][1310]) {
-                        1 => 'Easy',
-                        2 => 'Medium',
-                        3 => 'Hard',
-                        4 => 'Elite',
-                        5 => 'Master',
-                        6 => 'Grandmaster',
-                    },
-                    'type' => match ($struct['params'][1311]) {
-                        1 => 'Stamina',
-                        2 => 'Perfection',
-                        3 => 'Kill Count',
-                        4 => 'Mechanical',
-                        5 => 'Restriction',
-                        6 => 'Speed',
-                    },
-                    'name' => $struct['params'][1308],
-                    'description' => $struct['params'][1309],
-                    'boss' => true,
-                ];
-            }
-        }
-
-        ksort($tasks);
-
-        File::put(base_path('data/combat-achievements-tasks.json'), json_encode($tasks, JSON_PRETTY_PRINT));
-    }
-
     private function getBossName(string $original): string
     {
         return match ($original) {
@@ -296,6 +224,87 @@ class VarDumper extends Command
         return $monsterMap;
     }
 
+    private function getCombatAchievementVariables(): void
+    {
+        $this->line(__FUNCTION__);
+
+        $variables = [];
+
+        $this->readAsmFile(
+            self::VARIABLES_SOURCES['combat_achievements'],
+            function (string $line, string $previousLine) use (&$variables) {
+                // Example: "   get_varp               32"
+                if (str_contains($line, 'get_var')) {
+                    $data = preg_split('/\s+/', $line); // [get_varp, 32]
+
+                    $variables[] = $data[1] ?? 0;
+                }
+            }
+        );
+
+        File::put(base_path('data/combat-achievements-vars.json'), json_encode($variables, JSON_PRETTY_PRINT));
+    }
+
+    private function getCombatAchievementTasks(array $monsterMap): void
+    {
+        $this->line(__FUNCTION__);
+
+        $tasks = [];
+        $exampleTaskStructKeys = [
+            '1312',
+            '1306',
+            '1307',
+            '1308',
+            '1309',
+            '1310',
+            '1311',
+        ];
+
+        // Get all filenames in a directory without the extension
+        $files = collect(scandir(storage_path(self::DUMP_PATH.'/dump/structs')))
+            ->transform(fn ($file) => pathinfo($file, PATHINFO_FILENAME))
+            ->diff(['..', '.', '']);
+
+        foreach ($files as $file) {
+            $struct = $this->readJson('struct', $file);
+
+            if (
+                array_key_exists('id', $struct)
+                && array_key_exists('params', $struct)
+                && array_keys($struct['params']) == $exampleTaskStructKeys
+            ) {
+                $monsterName = $this->getBossName($monsterMap[$struct['params'][1312]] ?? 'None');
+
+                $tasks[$struct['params'][1306]] = [
+                    'monster' => $monsterName,
+                    'tier' => match ($struct['params'][1310]) {
+                        1 => 'Easy',
+                        2 => 'Medium',
+                        3 => 'Hard',
+                        4 => 'Elite',
+                        5 => 'Master',
+                        6 => 'Grandmaster',
+                    },
+                    'type' => match ($struct['params'][1311]) {
+                        1 => 'Stamina',
+                        2 => 'Perfection',
+                        3 => 'Kill Count',
+                        4 => 'Mechanical',
+                        5 => 'Restriction',
+                        6 => 'Speed',
+                    },
+                    'name' => $struct['params'][1308],
+                    'description' => $struct['params'][1309],
+                    'boss' => in_array($monsterName, self::NON_BOSSES) ? false : true,
+                ];
+            }
+        }
+
+        ksort($tasks);
+
+        File::put(base_path('data/combat-achievements-tasks.json'), json_encode($tasks, JSON_PRETTY_PRINT));
+    }
+
     private function readAsmFile(string $file, \Closure $callback): void
     {
         $asmFile = File::lines(storage_path(self::DUMP_PATH."/dump/rs2asm/{$file}"));
@@ -313,15 +322,15 @@ class VarDumper extends Command
     private function readJson(string $type, string $id): array
     {
         $path = match ($type) {
-            'dbrow' => "/dump/dbrow/{$id}.json",
-            'enum' => "/dump/enums/{$id}",
-            'struct' => "/dump/structs/{$id}.json",
+            'dbrow' => '/dump/dbrow/',
+            'enum' => '/dump/enums/',
+            'struct' => '/dump/structs/',
             'default' => throw new \UnexpectedValueException("Invalid json type: {$type}"),
         };
 
         return json_decode(
             file_get_contents(
-                storage_path(self::DUMP_PATH.$path)
+                storage_path(self::DUMP_PATH.$path."{$id}.json")
             ),
             true
         );

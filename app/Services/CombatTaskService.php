@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace App\Services;
 
 use App\Enums\RunescapeTypes;
-use File;
 
 class CombatTaskService implements OsrsService
 {
@@ -14,12 +13,12 @@ class CombatTaskService implements OsrsService
         $achieviements = $this->getValuesToTrack();
         $return = [];
 
-        $tasks = File::json(base_path('data/combat-achievements.json'));
+        $tasks = \File::json(base_path('data/combat-achievements-tasks.json'));
 
         $index = 0;
 
         foreach ($achieviements as $CATag => $achievement) {
-            for ($i = 0; $i < 32; $i++) {
+            for ($i = 0; $i < 32; ++$i) {
                 $completed = null;
 
                 if (array_key_exists($CATag, $data)) {
@@ -36,7 +35,7 @@ class CombatTaskService implements OsrsService
                 }
             }
 
-            $index++;
+            ++$index;
         }
 
         usort($return, fn ($a, $b) => strcmp($a['monster'], $b['monster']));
@@ -113,6 +112,10 @@ class CombatTaskService implements OsrsService
             ),
             'combat_achivement_17' => $this->makeObject(
                 3774,
+                RunescapeTypes::VarPlayer,
+            ),
+            'combat_achivement_18' => $this->makeObject(
+                4204,
                 RunescapeTypes::VarPlayer,
             ),
         ];

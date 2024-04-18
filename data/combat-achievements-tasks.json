@@ -5,7 +5,7 @@
         "type": "Kill Count",
         "name": "Noxious Foe",
         "description": "Kill an Aberrant Spectre.",
-        "boss": true
+        "boss": false
     },
     "1": {
         "monster": "Abyssal Sire",
@@ -229,7 +229,7 @@
         "type": "Kill Count",
         "name": "Reflecting on This Encounter",
         "description": "Kill a Basilisk Knight.",
-        "boss": true
+        "boss": false
     },
     "32": {
         "monster": "Black Dragon",
@@ -237,7 +237,7 @@
         "type": "Kill Count",
         "name": "Big, Black and Fiery",
         "description": "Kill a Black Dragon.",
-        "boss": true
+        "boss": false
     },
     "33": {
         "monster": "Bloodveld",
@@ -245,7 +245,7 @@
         "type": "Kill Count",
         "name": "The Demonic Punching Bag",
         "description": "Kill a Bloodveld.",
-        "boss": true
+        "boss": false
     },
     "34": {
         "monster": "Brutal Black Dragon",
@@ -253,7 +253,7 @@
         "type": "Kill Count",
         "name": "Brutal, Big, Black and Firey",
         "description": "Kill a Brutal Black Dragon.",
-        "boss": true
+        "boss": false
     },
     "35": {
         "monster": "Bryophyta",
@@ -557,7 +557,7 @@
         "type": "Kill Count",
         "name": "If Gorillas Could Fly",
         "description": "Kill a Demonic Gorilla.",
-        "boss": true
+        "boss": false
     },
     "76": {
         "monster": "Deranged Archaeologist",
@@ -597,7 +597,7 @@
         "type": "Kill Count",
         "name": "The Walking Volcano",
         "description": "Kill a Fire Giant.",
-        "boss": true
+        "boss": false
     },
     "81": {
         "monster": "Galvek",
@@ -917,7 +917,7 @@
         "type": "Kill Count",
         "name": "A Greater Foe",
         "description": "Kill a Greater Demon.",
-        "boss": true
+        "boss": false
     },
     "121": {
         "monster": "Greater Demon",
@@ -925,7 +925,7 @@
         "type": "Restriction",
         "name": "Not So Great After All",
         "description": "Finish off a Greater Demon with a demonbane weapon.",
-        "boss": true
+        "boss": false
     },
     "122": {
         "monster": "Hellhound",
@@ -1309,7 +1309,7 @@
         "type": "Kill Count",
         "name": "Master of Broad Weaponry",
         "description": "Kill a Kurask.",
-        "boss": true
+        "boss": false
     },
     "174": {
         "monster": "Lizardman Shaman",
@@ -1317,7 +1317,7 @@
         "type": "Kill Count",
         "name": "A Scaley Encounter",
         "description": "Kill a Lizardman Shaman.",
-        "boss": true
+        "boss": false
     },
     "175": {
         "monster": "Lizardman Shaman",
@@ -1325,7 +1325,7 @@
         "type": "Perfection",
         "name": "Shayzien Protector",
         "description": "Kill a Lizardman Shaman in Molch which has not dealt damage to anyone (excluding its Spawns).",
-        "boss": true
+        "boss": false
     },
     "176": {
         "monster": "Mimic",
@@ -1677,7 +1677,7 @@
         "type": "Speed",
         "name": "Fragment of Seren Speed-Trialist",
         "description": "Kill The Fragment of Seren in less than 4 minutes.",
-        "boss": true
+        "boss": false
     },
     "223": {
         "monster": "Skeletal Wyvern",
@@ -1685,7 +1685,7 @@
         "type": "Kill Count",
         "name": "A Frozen Foe from the Past",
         "description": "Kill a Skeletal Wyvern",
-        "boss": true
+        "boss": false
     },
     "224": {
         "monster": "Zulrah",
@@ -2141,7 +2141,7 @@
         "type": "Kill Count",
         "name": "A Slithery Encounter",
         "description": "Kill a Wyrm.",
-        "boss": true
+        "boss": false
     },
     "288": {
         "monster": "Chambers of Xeric: Challenge Mode",
@@ -2645,7 +2645,7 @@
         "type": "Kill Count",
         "name": "The II Jad Challenge",
         "description": "Complete TzHaar-Ket-Rak's second challenge.",
-        "boss": true
+        "boss": false
     },
     "362": {
         "monster": "TzHaar-Ket-Rak's Challenges",
@@ -2653,7 +2653,7 @@
         "type": "Kill Count",
         "name": "The IV Jad Challenge",
         "description": "Complete TzHaar-Ket-Rak's fourth challenge.",
-        "boss": true
+        "boss": false
     },
     "363": {
         "monster": "TzHaar-Ket-Rak's Challenges",
@@ -2661,7 +2661,7 @@
         "type": "Kill Count",
         "name": "The VI Jad Challenge",
         "description": "Complete TzHaar-Ket-Rak's sixth challenge.",
-        "boss": true
+        "boss": false
     },
     "364": {
         "monster": "TzHaar-Ket-Rak's Challenges",
@@ -2669,7 +2669,7 @@
         "type": "Speed",
         "name": "TzHaar-Ket-Rak's Speed-Trialist",
         "description": "Complete TzHaar-Ket-Rak's first challenge in less than 45 seconds.",
-        "boss": true
+        "boss": false
     },
     "365": {
         "monster": "TzHaar-Ket-Rak's Challenges",
@@ -2677,7 +2677,7 @@
         "type": "Speed",
         "name": "TzHaar-Ket-Rak's Speed-Chaser",
         "description": "Complete TzHaar-Ket-Rak's third challenge in less than 3 minutes.",
-        "boss": true
+        "boss": false
     },
     "366": {
         "monster": "TzHaar-Ket-Rak's Challenges",
@@ -2685,7 +2685,7 @@
         "type": "Speed",
         "name": "TzHaar-Ket-Rak's Speed-Runner",
         "description": "Complete TzHaar-Ket-Rak's fifth challenge in less than 5 minutes.",
-        "boss": true
+        "boss": false
     },
     "367": {
         "monster": "TzHaar-Ket-Rak's Challenges",
@@ -2693,7 +2693,7 @@
         "type": "Restriction",
         "name": "Facing Jad Head-on III",
         "description": "Complete TzHaar-Ket-Rak's second challenge with only melee.",
-        "boss": true
+        "boss": false
     },
     "368": {
         "monster": "TzHaar-Ket-Rak's Challenges",
@@ -2701,7 +2701,7 @@
         "type": "Restriction",
         "name": "Facing Jad Head-on IV",
         "description": "Complete TzHaar-Ket-Rak's fourth challenge with only melee.",
-        "boss": true
+        "boss": false
     },
     "369": {
         "monster": "TzHaar-Ket-Rak's Challenges",
@@ -2709,7 +2709,7 @@
         "type": "Perfection",
         "name": "Supplies? Who Needs 'em?",
         "description": "Complete TzHaar-Ket-Rak's third challenge without having anything in your inventory.",
-        "boss": true
+        "boss": false
     },
     "370": {
         "monster": "TzHaar-Ket-Rak's Challenges",
@@ -2717,7 +2717,7 @@
         "type": "Perfection",
         "name": "It Wasn't a Fluke",
         "description": "Complete TzHaar-Ket-Rak's fifth and sixth challenges back to back without failing.",
-        "boss": true
+        "boss": false
     },
     "371": {
         "monster": "TzHaar-Ket-Rak's Challenges",
@@ -2725,7 +2725,7 @@
         "type": "Mechanical",
         "name": "Multi-Style Specialist",
         "description": "Complete TzHaar-Ket-Rak's third challenge while using a different attack style for each JalTok-Jad.",
-        "boss": true
+        "boss": false
     },
     "372": {
         "monster": "Theatre of Blood: Hard Mode",
@@ -2888,12 +2888,12 @@
         "boss": true
     },
     "398": {
-        "monster": "Other",
+        "monster": "None",
         "tier": "Easy",
         "type": "Kill Count",
         "name": "Into the Den of Giants",
         "description": "Kill a Hill Giant, Moss Giant and Fire Giant in the Giant Cave within the Shayzien region.",
-        "boss": true
+        "boss": false
     },
     "399": {
         "monster": "Other",
@@ -3885,6 +3885,206 @@
         "type": "Mechanical",
         "name": "Efficient Pest Control",
         "description": "Kill 6 Giant Rats within Scurrius' lair in 3 seconds.",
+        "boss": true
+    },
+    "526": {
+        "monster": "Moons of Peril",
+        "tier": "Hard",
+        "type": "Mechanical",
+        "name": "The Clone Zone",
+        "description": "Defeat the Eclipse moon by only attacking its clones.",
+        "boss": true
+    },
+    "527": {
+        "monster": "Moons of Peril",
+        "tier": "Elite",
+        "type": "Mechanical",
+        "name": "High Hitter",
+        "description": "Defeat a Moon before they start their second special attack.",
+        "boss": true
+    },
+    "528": {
+        "monster": "Moons of Peril",
+        "tier": "Medium",
+        "type": "Kill Count",
+        "name": "Lunar Triplet",
+        "description": "Open the Reward Chest after defeating all three Moons.",
+        "boss": true
+    },
+    "529": {
+        "monster": "Moons of Peril",
+        "tier": "Medium",
+        "type": "Kill Count",
+        "name": "Perilous Novice",
+        "description": "Open the Reward Chest 5 times.",
+        "boss": true
+    },
+    "530": {
+        "monster": "Moons of Peril",
+        "tier": "Hard",
+        "type": "Kill Count",
+        "name": "Perilous Champion",
+        "description": "Open the Reward Chest 25 times.",
+        "boss": true
+    },
+    "531": {
+        "monster": "Moons of Peril",
+        "tier": "Hard",
+        "type": "Perfection",
+        "name": "Perilous Dancer",
+        "description": "Defeat all the Moons in one run while only taking damage from regular attacks.",
+        "boss": true
+    },
+    "532": {
+        "monster": "Moons of Peril",
+        "tier": "Hard",
+        "type": "Restriction",
+        "name": "Fortified",
+        "description": "Defeat a Moon without consuming any supplies.",
+        "boss": true
+    },
+    "533": {
+        "monster": "Moons of Peril",
+        "tier": "Hard",
+        "type": "Restriction",
+        "name": "Betrayal",
+        "description": "Defeat a Moon while wearing a full set (head, chest, legs) of its associated armour set.",
+        "boss": true
+    },
+    "534": {
+        "monster": "Moons of Peril",
+        "tier": "Medium",
+        "type": "Restriction",
+        "name": "Back to Our Roots",
+        "description": "Defeat all three Moons in one run using only a Dragon Scimitar.",
+        "boss": true
+    },
+    "535": {
+        "monster": "Moons of Peril",
+        "tier": "Medium",
+        "type": "Speed",
+        "name": "Moons of Peril Speed-Trialist",
+        "description": "Defeat all three Moons in one run in under 8 minutes.",
+        "boss": true
+    },
+    "536": {
+        "monster": "Moons of Peril",
+        "tier": "Hard",
+        "type": "Speed",
+        "name": "Moons of Peril Speed-Chaser",
+        "description": "Defeat all three Moons in one run in under 6 minutes.",
+        "boss": true
+    },
+    "537": {
+        "monster": "Moons of Peril",
+        "tier": "Hard",
+        "type": "Stamina",
+        "name": "Fat of the Land",
+        "description": "Defeat 30 Moons of Peril without leaving the dungeon.",
+        "boss": true
+    },
+    "538": {
+        "monster": "Fortis Colosseum",
+        "tier": "Master",
+        "type": "Kill Count",
+        "name": "Sportsmanship",
+        "description": "Defeat Sol Heredit once.",
+        "boss": true
+    },
+    "539": {
+        "monster": "Fortis Colosseum",
+        "tier": "Grandmaster",
+        "type": "Kill Count",
+        "name": "Colosseum Grand Champion",
+        "description": "Defeat Sol Heredit 10 times.",
+        "boss": true
+    },
+    "540": {
+        "monster": "Fortis Colosseum",
+        "tier": "Master",
+        "type": "Restriction",
+        "name": "I Brought Mine Too",
+        "description": "Defeat Sol Heredit using only Zamorakian hasta or spear.",
+        "boss": true
+    },
+    "541": {
+        "monster": "Fortis Colosseum",
+        "tier": "Grandmaster",
+        "type": "Restriction",
+        "name": "Slow Dancing in the Sand",
+        "description": "Defeat Sol Heredit without running during the fight with him.",
+        "boss": true
+    },
+    "542": {
+        "monster": "Fortis Colosseum",
+        "tier": "Elite",
+        "type": "Perfection",
+        "name": "Furball",
+        "description": "Complete Wave 4 without taking avoidable damage from a Manticore.",
+        "boss": true
+    },
+    "543": {
+        "monster": "Fortis Colosseum",
+        "tier": "Grandmaster",
+        "type": "Perfection",
+        "name": "Perfect Footwork",
+        "description": "Defeat Sol Heredit without taking any damage from his Spear, Shield, Grapple or Triple Attack.",
+        "boss": true
+    },
+    "544": {
+        "monster": "Fortis Colosseum",
+        "tier": "Master",
+        "type": "Mechanical",
+        "name": "Showboating",
+        "description": "Defeat Sol Heredit after Fortis Saluting to the North, East, South and West of the arena while he's below 10% Hitpoints.",
+        "boss": true
+    },
+    "545": {
+        "monster": "Fortis Colosseum",
+        "tier": "Elite",
+        "type": "Mechanical",
+        "name": "Denied",
+        "description": "Complete Wave 7 without the Minotaur ever healing other enemies.",
+        "boss": true
+    },
+    "546": {
+        "monster": "Fortis Colosseum",
+        "tier": "Master",
+        "type": "Mechanical",
+        "name": "One-off",
+        "description": "Complete Wave 11 with either \"Red Flag\", \"Dynamic Duo\", or \"Doom II\" active.",
+        "boss": true
+    },
+    "547": {
+        "monster": "Fortis Colosseum",
+        "tier": "Grandmaster",
+        "type": "Mechanical",
+        "name": "Reinforcements",
+        "description": "Defeat Sol Heredit with the \"Bees! II\", \"Quartet\", and \"Solarflare II\" modifiers active.",
+        "boss": true
+    },
+    "548": {
+        "monster": "Fortis Colosseum",
+        "tier": "Elite",
+        "type": "Mechanical",
+        "name": "I was here first!",
+        "description": "Kill a Jaguar Warrior using a Claw-type weapon special attack.",
+        "boss": true
+    },
+    "549": {
+        "monster": "Fortis Colosseum",
+        "tier": "Master",
+        "type": "Speed",
+        "name": "Colosseum Speed-Trialist",
+        "description": "Complete the Colosseum with a total time of 28:00 or less.",
+        "boss": true
+    },
+    "550": {
+        "monster": "Fortis Colosseum",
+        "tier": "Grandmaster",
+        "type": "Speed",
+        "name": "Colosseum Speed-Chaser",
+        "description": "Complete the Colosseum with a total time of 24:00 or less.",
         "boss": true
     }
 }
