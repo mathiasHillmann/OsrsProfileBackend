@@ -1275,7 +1275,7 @@
         "monster": "Kraken",
         "tier": "Hard",
         "type": "Mechanical",
-        "name": "Unnecessary Optimization",
+        "name": "Unnecessary Optimisation",
         "description": "Kill the Kraken after killing all four tentacles.",
         "boss": true
     },
@@ -3948,7 +3948,7 @@
         "tier": "Hard",
         "type": "Restriction",
         "name": "Betrayal",
-        "description": "Defeat a Moon while wearing a full set (head, chest, legs) of its associated armour set.",
+        "description": "Defeat a Moon using its associated weapon drop.",
         "boss": true
     },
     "534": {
@@ -3956,7 +3956,7 @@
         "tier": "Medium",
         "type": "Restriction",
         "name": "Back to Our Roots",
-        "description": "Defeat all three Moons in one run using only a Dragon Scimitar.",
+        "description": "Defeat all three Moons in one run by only attacking with a Dragon Scimitar.",
         "boss": true
     },
     "535": {
@@ -3980,7 +3980,7 @@
         "tier": "Hard",
         "type": "Stamina",
         "name": "Fat of the Land",
-        "description": "Defeat 30 Moons of Peril without leaving the dungeon.",
+        "description": "Defeat 30 Moons of Peril bosses without leaving the dungeon.",
         "boss": true
     },
     "538": {
@@ -4004,7 +4004,7 @@
         "tier": "Master",
         "type": "Restriction",
         "name": "I Brought Mine Too",
-        "description": "Defeat Sol Heredit using only Zamorakian hasta or spear.",
+        "description": "Defeat Sol Heredit using only a Spear, Hasta or Halberd.",
         "boss": true
     },
     "541": {
@@ -4075,7 +4075,7 @@
         "monster": "Fortis Colosseum",
         "tier": "Master",
         "type": "Speed",
-        "name": "Colosseum Speed-Trialist",
+        "name": "Colosseum Speed-Chaser",
         "description": "Complete the Colosseum with a total time of 28:00 or less.",
         "boss": true
     },
@@ -4083,8 +4083,48 @@
         "monster": "Fortis Colosseum",
         "tier": "Grandmaster",
         "type": "Speed",
-        "name": "Colosseum Speed-Chaser",
+        "name": "Colosseum Speed-Runner",
         "description": "Complete the Colosseum with a total time of 24:00 or less.",
         "boss": true
+    },
+    "551": {
+        "monster": "Tormented Demon",
+        "tier": "Elite",
+        "type": "Kill Count",
+        "name": "Unending Torment",
+        "description": "Kill a Tormented Demon.",
+        "boss": false
+    },
+    "552": {
+        "monster": "Tormented Demon",
+        "tier": "Elite",
+        "type": "Restriction",
+        "name": "Through Fire and Flames",
+        "description": "Kill a Tormented Demon whilst their shield is inactive.",
+        "boss": false
+    },
+    "553": {
+        "monster": "Tormented Demon",
+        "tier": "Elite",
+        "type": "Restriction",
+        "name": "Two Times the Torment",
+        "description": "Kill two Tormented Demons within 2 seconds.",
+        "boss": false
+    },
+    "554": {
+        "monster": "Tormented Demon",
+        "tier": "Master",
+        "type": "Restriction",
+        "name": "Three Times the Thrashing",
+        "description": "Kill three Tormented Demons within 3 seconds.",
+        "boss": false
+    },
+    "555": {
+        "monster": "Tormented Demon",
+        "tier": "Elite",
+        "type": "Mechanical",
+        "name": "Rapid Reload",
+        "description": "Hit three Tormented Demons within 3 seconds using a ballista or a crossbow.",
+        "boss": false
     }
 }

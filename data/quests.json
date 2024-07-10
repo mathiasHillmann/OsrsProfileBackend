@@ -1503,6 +1503,14 @@
         "endValue": 56,
         "text": "Defender of Varrock"
     },
+    "While Guthix Sleeps": {
+        "index": "9653",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 900,
+        "text": "While Guthix Sleeps"
+    },
     "Twilight's Promise": {
         "index": "9649",
         "type": "varb",

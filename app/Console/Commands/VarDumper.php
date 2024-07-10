@@ -45,7 +45,7 @@ class VarDumper extends Command
         'Aberrant Spectre', 'Basilisk Knight', 'Black Dragon', 'Bloodveld',
         'Brutal Black Dragon', 'Demonic Gorilla', 'Fire Giant', 'Greater Demon',
         'Kurask', 'Lizardman Shaman', 'The Mimic', 'Fragment of Seren',
-        'Skeletal Wyvern', 'Wyrm', "TzHaar-Ket-Rak's Challenges", 'None',
+        'Skeletal Wyvern', 'Wyrm', "TzHaar-Ket-Rak's Challenges", 'None', 'Tormented Demon',
     ];
 
     // I need someone that is ranked on every boss to be able to get the hiscore id for an activity
