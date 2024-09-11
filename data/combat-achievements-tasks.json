@@ -4126,5 +4126,101 @@
         "name": "Rapid Reload",
         "description": "Hit three Tormented Demons within 3 seconds using a ballista or a crossbow.",
         "boss": false
+    },
+    "556": {
+        "monster": "Araxxor",
+        "tier": "Elite",
+        "type": "Kill Count",
+        "name": "Araxxor Veteran",
+        "description": "Kill Araxxor 25 times.",
+        "boss": true
+    },
+    "557": {
+        "monster": "Araxxor",
+        "tier": "Master",
+        "type": "Kill Count",
+        "name": "Araxxor Master",
+        "description": "Kill Araxxor 75 times.",
+        "boss": true
+    },
+    "558": {
+        "monster": "Araxxor",
+        "tier": "Elite",
+        "type": "Speed",
+        "name": "Araxxor Speed-Trialist",
+        "description": "Kill Araxxor 4 times in 10:00.",
+        "boss": true
+    },
+    "559": {
+        "monster": "Araxxor",
+        "tier": "Master",
+        "type": "Speed",
+        "name": "Araxxor Speed-Chaser",
+        "description": "Kill Araxxor 5 times in 10:00.",
+        "boss": true
+    },
+    "560": {
+        "monster": "Araxxor",
+        "tier": "Grandmaster",
+        "type": "Speed",
+        "name": "Araxxor Speed-Runner",
+        "description": "Kill Araxxor 6 times in 10:00.",
+        "boss": true
+    },
+    "561": {
+        "monster": "Araxxor",
+        "tier": "Master",
+        "type": "Perfection",
+        "name": "Perfect Araxxor",
+        "description": "Kill Araxxor perfectly.",
+        "boss": true
+    },
+    "562": {
+        "monster": "Araxxor",
+        "tier": "Grandmaster",
+        "type": "Perfection",
+        "name": "Perfect Araxxor 2",
+        "description": "Kill Araxxor perfectly, without hitting it during the enrage phase.",
+        "boss": true
+    },
+    "563": {
+        "monster": "Araxxor",
+        "tier": "Master",
+        "type": "Restriction",
+        "name": "Let it seep in",
+        "description": "Kill Araxxor without ever having venom or poison immunity.",
+        "boss": true
+    },
+    "564": {
+        "monster": "Araxxor",
+        "tier": "Elite",
+        "type": "Restriction",
+        "name": "Relaxed Gamer",
+        "description": "Kill Araxxor after destroying six eggs.",
+        "boss": true
+    },
+    "565": {
+        "monster": "Araxxor",
+        "tier": "Grandmaster",
+        "type": "Restriction",
+        "name": "Swimming in Venom",
+        "description": "Kill Araxxor without the boss ever moving.",
+        "boss": true
+    },
+    "566": {
+        "monster": "Araxxor",
+        "tier": "Master",
+        "type": "Mechanical",
+        "name": "Araxyte Betrayal",
+        "description": "Have an Araxyte kill three other Araxytes.",
+        "boss": true
+    },
+    "567": {
+        "monster": "Araxxor",
+        "tier": "Master",
+        "type": "Stamina",
+        "name": "Arachnid Lover",
+        "description": "Kill Araxxor 10 times without leaving.",
+        "boss": true
     }
 }
