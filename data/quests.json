@@ -1542,5 +1542,37 @@
         "startValue": 0,
         "endValue": 32,
         "text": "The Ribbiting Tale of a Lily Pad Labour Dispute"
+    },
+    "The Heart of Darkness": {
+        "index": "11117",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 76,
+        "text": "The Heart of Darkness"
+    },
+    "Death on the Isle": {
+        "index": "11210",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 50,
+        "text": "Death on the Isle"
+    },
+    "Meat and Greet": {
+        "index": "11182",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 26,
+        "text": "Meat and Greet"
+    },
+    "Ethically Acquired Antiquities": {
+        "index": "11193",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 38,
+        "text": "Ethically Acquired Antiquities"
     }
 }

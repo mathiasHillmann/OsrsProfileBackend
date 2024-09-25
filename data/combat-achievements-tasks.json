@@ -4172,7 +4172,7 @@
         "tier": "Master",
         "type": "Perfection",
         "name": "Perfect Araxxor",
-        "description": "Kill Araxxor perfectly.",
+        "description": "Kill Araxxor perfectly, without taking damage from Araxxor's Mage & Range attacks, melee attack off prayer, araxyte minions damage, or damage from acid pools.",
         "boss": true
     },
     "562": {
@@ -4195,7 +4195,7 @@
         "monster": "Araxxor",
         "tier": "Elite",
         "type": "Restriction",
-        "name": "Relaxed Gamer",
+        "name": "Relaxxor",
         "description": "Kill Araxxor after destroying six eggs.",
         "boss": true
     },
