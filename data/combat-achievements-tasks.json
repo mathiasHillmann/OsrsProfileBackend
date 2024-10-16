@@ -4222,5 +4222,165 @@
         "name": "Arachnid Lover",
         "description": "Kill Araxxor 10 times without leaving.",
         "boss": true
+    },
+    "568": {
+        "monster": "The Hueycoatl",
+        "tier": "Medium",
+        "type": "Kill Count",
+        "name": "Hueycoatl Champion",
+        "description": "Kill the Hueycoatl once.",
+        "boss": true
+    },
+    "569": {
+        "monster": "The Hueycoatl",
+        "tier": "Hard",
+        "type": "Kill Count",
+        "name": "Hueycoatl Adept",
+        "description": "Kill the Hueycoatl 10 times.",
+        "boss": true
+    },
+    "570": {
+        "monster": "The Hueycoatl",
+        "tier": "Elite",
+        "type": "Kill Count",
+        "name": "Hueycoatl Veteran",
+        "description": "Kill the Hueycoatl 25 times.",
+        "boss": true
+    },
+    "571": {
+        "monster": "The Hueycoatl",
+        "tier": "Elite",
+        "type": "Perfection",
+        "name": "Perfect Hueycoatl",
+        "description": "Kill the Hueycoatl perfectly 5 times without leaving.",
+        "boss": true
+    },
+    "572": {
+        "monster": "The Hueycoatl",
+        "tier": "Hard",
+        "type": "Mechanical",
+        "name": "Pillar Lover",
+        "description": "Kill the Hueycoatl whilst it is vulnerable.",
+        "boss": true
+    },
+    "573": {
+        "monster": "The Hueycoatl",
+        "tier": "Master",
+        "type": "Restriction",
+        "name": "Is it a bird?",
+        "description": "Kill the Hueycoatl using only dragonbane weaponry.",
+        "boss": true
+    },
+    "574": {
+        "monster": "The Hueycoatl",
+        "tier": "Medium",
+        "type": "Restriction",
+        "name": "You're a wizard",
+        "description": "Kill the Hueycoatl using only earth spells.",
+        "boss": true
+    },
+    "575": {
+        "monster": "The Hueycoatl",
+        "tier": "Hard",
+        "type": "Restriction",
+        "name": "I'm your son",
+        "description": "Kill the Hueycoatl whilst wearing two pieces of Hueycoatl armour.",
+        "boss": true
+    },
+    "576": {
+        "monster": "The Hueycoatl",
+        "tier": "Elite",
+        "type": "Speed",
+        "name": "Hueycoatl Speed-Trialist",
+        "description": "Kill the Hueycoatl in 2:30",
+        "boss": true
+    },
+    "577": {
+        "monster": "The Hueycoatl",
+        "tier": "Master",
+        "type": "Speed",
+        "name": "Hueycoatl Speed-Chaser",
+        "description": "Kill the Hueycoatl in 2:30 with five or fewer players.",
+        "boss": true
+    },
+    "578": {
+        "monster": "The Hueycoatl",
+        "tier": "Grandmaster",
+        "type": "Speed",
+        "name": "Hueycoatl Speed-Runner",
+        "description": "Kill the Hueycoatl in 2:30 with three or fewer players.",
+        "boss": true
+    },
+    "579": {
+        "monster": "Amoxliatl",
+        "tier": "Medium",
+        "type": "Kill Count",
+        "name": "Amoxliatl Champion",
+        "description": "Kill Amoxliatl once.",
+        "boss": true
+    },
+    "580": {
+        "monster": "Amoxliatl",
+        "tier": "Hard",
+        "type": "Kill Count",
+        "name": "Amoxliatl Adept",
+        "description": "Kill Amoxliatl 20 times.",
+        "boss": true
+    },
+    "581": {
+        "monster": "Amoxliatl",
+        "tier": "Hard",
+        "type": "Speed",
+        "name": "Amoxliatl Speed-Trialist",
+        "description": "Kill Amoxliatl in less than 1 minute.",
+        "boss": true
+    },
+    "582": {
+        "monster": "Amoxliatl",
+        "tier": "Elite",
+        "type": "Speed",
+        "name": "Amoxliatl Speed-Chaser",
+        "description": "Kill Amoxliatl in less than 30 seconds.",
+        "boss": true
+    },
+    "583": {
+        "monster": "Amoxliatl",
+        "tier": "Hard",
+        "type": "Perfection",
+        "name": "Nagua Negation",
+        "description": "Kill Amoxliatl without taking any damage.",
+        "boss": true
+    },
+    "584": {
+        "monster": "Amoxliatl",
+        "tier": "Medium",
+        "type": "Restriction",
+        "name": "Temotli Triumph",
+        "description": "Kill Amoxliatl using only glacial temotli as a weapon.",
+        "boss": true
+    },
+    "585": {
+        "monster": "Amoxliatl",
+        "tier": "Elite",
+        "type": "Restriction",
+        "name": "Without Ralos' Light",
+        "description": "Kill Amoxliatl without losing any prayer points.",
+        "boss": true
+    },
+    "586": {
+        "monster": "Amoxliatl",
+        "tier": "Hard",
+        "type": "Stamina",
+        "name": "Kemo Makti",
+        "description": "Kill Amoxliatl 10 times without leaving her chamber.",
+        "boss": true
+    },
+    "587": {
+        "monster": "Amoxliatl",
+        "tier": "Hard",
+        "type": "Mechanical",
+        "name": "Totally Shattered",
+        "description": "Kill Amoxliatl without any of her unstable ice shattering.",
+        "boss": true
     }
 }
