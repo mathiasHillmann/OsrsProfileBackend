@@ -4252,7 +4252,7 @@
         "tier": "Elite",
         "type": "Perfection",
         "name": "Perfect Hueycoatl",
-        "description": "Kill the Hueycoatl perfectly 5 times without leaving.",
+        "description": "Kill the Hueycoatl perfectly 5 times without leaving. To get a perfect kill, you must not take any avoidable damage from the Hueycoatl's lightning attack, tail slam attack or off-prayer projectile attacks.",
         "boss": true
     },
     "572": {
