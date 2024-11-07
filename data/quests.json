@@ -1574,5 +1574,13 @@
         "startValue": 0,
         "endValue": 38,
         "text": "Ethically Acquired Antiquities"
+    },
+    "The Curse of Arrav": {
+        "index": "11479",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 60,
+        "text": "The Curse of Arrav"
     }
 }
