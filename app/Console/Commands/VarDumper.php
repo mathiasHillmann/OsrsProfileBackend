@@ -46,6 +46,11 @@ class VarDumper extends Command
         'Brutal Black Dragon', 'Demonic Gorilla', 'Fire Giant', 'Greater Demon',
         'Kurask', 'Lizardman Shaman', 'The Mimic', 'Fragment of Seren',
         'Skeletal Wyvern', 'Wyrm', "TzHaar-Ket-Rak's Challenges", 'None', 'Tormented Demon',
+        'Other',
+    ];
+
+    private const COMBAT_ACHIEVEMENT_TIERS = [
+        'Easy', 'Medium', 'Hard', 'Elite', 'Master', 'Grandmaster',
     ];
 
     // I need someone that is ranked on every boss to be able to get the hiscore id for an activity
@@ -70,6 +75,7 @@ class VarDumper extends Command
         $monsterMap = $this->getBossKcVariables();
         $this->getCombatAchievementVariables();
         $this->getCombatAchievementTasks($monsterMap);
+        $this->calculateCombatAchievementTiers();
     }
 
     private function fetchHiscoreData()
@@ -250,8 +256,28 @@ class VarDumper extends Command
         $this->line(__FUNCTION__);
 
         $tasks = [];
-        $exampleTaskStructKeys = [
+        $exampleTaskStructKeysOne = [
             '1312',
+            '1306',
+            '1307',
+            '1308',
+            '1309',
+            '1310',
+            '1311',
+        ];
+        $exampleTaskStructKeysTwo = [
+            '1312',
+            '1306',
+            '1866',
+            '1307',
+            '1308',
+            '1309',
+            '1310',
+            '1311',
+        ];
+        $exampleTaskStructKeysThree = [
+            '1312',
+            '1425',
             '1306',
             '1307',
             '1308',
@@ -271,7 +297,11 @@ class VarDumper extends Command
             if (
                 array_key_exists('id', $struct)
                 && array_key_exists('params', $struct)
-                && array_keys($struct['params']) == $exampleTaskStructKeys
+                && (
+                    array_keys($struct['params']) == $exampleTaskStructKeysOne
+                    || array_keys($struct['params']) == $exampleTaskStructKeysTwo
+                    || array_keys($struct['params']) == $exampleTaskStructKeysThree
+                )
             ) {
                 $monsterName = $this->getBossName($monsterMap[$struct['params'][1312]] ?? 'None');
 
@@ -295,6 +325,7 @@ class VarDumper extends Command
                     },
                     'name' => $struct['params'][1308],
                     'description' => $struct['params'][1309],
+                    'points' => $struct['params'][1310],
                     'boss' => in_array($monsterName, self::NON_BOSSES) ? false : true,
                 ];
             }
@@ -302,7 +333,30 @@ class VarDumper extends Command
 
         ksort($tasks);
 
-        File::put(base_path('data/combat-achievements-tasks.json'), json_encode($tasks, JSON_PRETTY_PRINT));
+        File::put(base_path('data/combat-achievements-tasks.json'), json_encode((object) $tasks, JSON_PRETTY_PRINT));
+    }
+
+    private function calculateCombatAchievementTiers(): void
+    {
+        $this->line(__FUNCTION__);
+
+        $currentTotal = 0;
+        $tiers = [];
+
+        $tasks = Collection::wrap(File::json(base_path('data/combat-achievements-tasks.json')));
+
+        foreach (self::COMBAT_ACHIEVEMENT_TIERS as $tierIndex => $tier) {
+            $tierValue = $tierIndex + 1;
+
+            $currentTotal += $tasks->where('tier', $tier)->sum('points');
+
+            $tiers[] = [
+                'points' => $currentTotal,
+                'name' => "Ghommal's hilt {$tierValue}",
+            ];
+        }
+
+        File::put(base_path('data/combat-achievements-tiers.json'), json_encode($tiers, JSON_PRETTY_PRINT));
     }
 
     private function readAsmFile(string $file, \Closure $callback): void

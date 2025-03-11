@@ -40,35 +40,37 @@ class ApiController extends Controller
     public function load(Request $request, string $username): JsonResponse
     {
         try {
-            if ($player = Player::where('username', $username)->first()) {
-                dispatch(new IncrementViewJob($username));
+            $player = Player::where('username', $username)->first();
 
-                try {
-                    $hiscoreData = $this->hiscoreService->fetchPlayer($player);
-                } catch (\Throwable $th) {
-                    $hiscoreData = [];
-                }
-
-                $data = [];
-
-                $quests = $this->questService->translate($player->data);
-
-                $data['quest'] = $quests['quest'];
-                $data['miniquest'] = $quests['miniquest'];
-                $data['skills'] = $this->skillService->translate($player->data, $hiscoreData);
-                $data['diaries'] = $this->achievementDiaryService->translate($player->data);
-                $data['bosses'] = $this->bossService->translate($player->data, $hiscoreData);
-                $data['minigames'] = $this->minigameService->translate($player->data, $hiscoreData);
-                $data['tasks'] = $this->combatTaskService->translate($player->data);
-                $data['summary'] = $this->summaryService->translate($player->data, $data, $hiscoreData, $player);
-                $data['model'] = $player->model;
-                $data['username'] = $player->username;
-                $data['accountType'] = $player->account_type;
-
-                return $this->response($data);
-            } else {
+            if (!$player) {
                 return $this->response(null, HttpFoundationResponse::HTTP_BAD_REQUEST, 'Player not found');
             }
+
+            dispatch(new IncrementViewJob($username));
+
+            try {
+                $hiscoreData = $this->hiscoreService->fetchPlayer($player);
+            } catch (\Throwable $th) {
+                $hiscoreData = [];
+            }
+
+            $data = [];
+
+            $quests = $this->questService->translate($player->data);
+
+            $data['quest'] = $quests['quest'];
+            $data['miniquest'] = $quests['miniquest'];
+            $data['skills'] = $this->skillService->translate($player->data, $hiscoreData);
+            $data['diaries'] = $this->achievementDiaryService->translate($player->data);
+            $data['bosses'] = $this->bossService->translate($player->data, $hiscoreData);
+            $data['minigames'] = $this->minigameService->translate($player->data, $hiscoreData);
+            $data['tasks'] = $this->combatTaskService->translate($player->data);
+            $data['summary'] = $this->summaryService->translate($player->data, $data, $hiscoreData, $player);
+            $data['model'] = $player->model;
+            $data['username'] = $player->username;
+            $data['accountType'] = $player->account_type;
+
+            return $this->response($data);
         } catch (\Throwable $th) {
             return $this->response($th);
         }

@@ -8,10 +8,11 @@ use App\Enums\RunescapeQuestStatus;
 use App\Enums\RunescapeTypes;
 use App\Models\Player;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\File;
 
 class SummaryService implements OsrsService
 {
-    public function translate(array $data, array $transformedData = [], array $hiscoreData = [], Player $player = null): array
+    public function translate(array $data, array $transformedData = [], array $hiscoreData = [], ?Player $player = null): array
     {
         $overallRank = $hiscoreData['skills'][0]['rank'] ?? null;
         if ($overallRank === -1) {
@@ -44,9 +45,12 @@ class SummaryService implements OsrsService
             'total' => $diaryTotal,
         ];
         $return['combatTasks'] = [
-            'complete' => Collection::wrap($transformedData['tasks'])->filter(fn ($task) => $task['completed'])->count(),
+            'completed' => Collection::wrap($transformedData['tasks'])->filter(fn ($task) => $task['completed'])->count(),
+            'completedPoints' => Collection::wrap($transformedData['tasks'])->where('completed', true)->sum('points') ?? 0,
             'total' => Collection::wrap($transformedData['tasks'])->count(),
+            'totalPoints' => Collection::wrap($transformedData['tasks'])->sum('points'),
         ];
+        $return['combatTasks']['tier'] = $this->getCombatAchievementTier($transformedData['tasks'], $return['combatTasks']['completedPoints']);
         $return['collection'] = [
             'complete' => $data['collection_log_total'] ?? 0,
             'total' => 1477,
@@ -83,14 +87,24 @@ class SummaryService implements OsrsService
         foreach ($diaries as $diary) {
             foreach ($diary as $tier) {
                 if ($tier === true) {
-                    $completed++;
+                    ++$completed;
                 }
 
-                $total++;
+                ++$total;
             }
         }
 
         return [$completed, $total];
+    }
+
+    private function getCombatAchievementTier(array $tasks, ?int $totalPoints): string
+    {
+        $currentTier = Collection::wrap(File::json(base_path('data/combat-achievements-tiers.json')))
+            ->where('points', '<=', $totalPoints)
+            ->sortByDesc('points')
+            ->first();
+
+        return $currentTier['name'];
     }
 
     public function getValuesToTrack(): array

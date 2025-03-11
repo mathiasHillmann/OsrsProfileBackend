@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Services;
 
 use App\Enums\RunescapeTypes;
+use Illuminate\Support\Facades\File;
 
 class CombatTaskService implements OsrsService
 {
@@ -45,90 +46,20 @@ class CombatTaskService implements OsrsService
 
     public function getValuesToTrack(): array
     {
-        return [
-            'combat_achivement_1' => $this->makeObject(
-                3116,
-                RunescapeTypes::VarPlayer,
-            ),
-            'combat_achivement_2' => $this->makeObject(
-                3117,
-                RunescapeTypes::VarPlayer,
-            ),
-            'combat_achivement_3' => $this->makeObject(
-                3118,
-                RunescapeTypes::VarPlayer,
-            ),
-            'combat_achivement_4' => $this->makeObject(
-                3119,
-                RunescapeTypes::VarPlayer,
-            ),
-            'combat_achivement_5' => $this->makeObject(
-                3120,
-                RunescapeTypes::VarPlayer,
-            ),
-            'combat_achivement_6' => $this->makeObject(
-                3121,
-                RunescapeTypes::VarPlayer,
-            ),
-            'combat_achivement_7' => $this->makeObject(
-                3122,
-                RunescapeTypes::VarPlayer,
-            ),
-            'combat_achivement_8' => $this->makeObject(
-                3123,
-                RunescapeTypes::VarPlayer,
-            ),
-            'combat_achivement_9' => $this->makeObject(
-                3124,
-                RunescapeTypes::VarPlayer,
-            ),
-            'combat_achivement_10' => $this->makeObject(
-                3125,
-                RunescapeTypes::VarPlayer,
-            ),
-            'combat_achivement_11' => $this->makeObject(
-                3126,
-                RunescapeTypes::VarPlayer,
-            ),
-            'combat_achivement_12' => $this->makeObject(
-                3127,
-                RunescapeTypes::VarPlayer,
-            ),
-            'combat_achivement_13' => $this->makeObject(
-                3128,
-                RunescapeTypes::VarPlayer,
-            ),
-            'combat_achivement_14' => $this->makeObject(
-                3387,
-                RunescapeTypes::VarPlayer,
-            ),
-            'combat_achivement_15' => $this->makeObject(
-                3718,
-                RunescapeTypes::VarPlayer,
-            ),
-            'combat_achivement_16' => $this->makeObject(
-                3773,
-                RunescapeTypes::VarPlayer,
-            ),
-            'combat_achivement_17' => $this->makeObject(
-                3774,
-                RunescapeTypes::VarPlayer,
-            ),
-            'combat_achivement_18' => $this->makeObject(
-                4204,
-                RunescapeTypes::VarPlayer,
-            ),
-        ];
-    }
+        $vars = File::json(base_path('data/combat-achievements-vars.json'));
 
-    private function makeObject(
-        int $index,
-        RunescapeTypes $type,
-    ): array {
-        return [
-            'index' => $index,
-            'type' => $type,
-        ];
+        $varsToTrack = [];
+
+        for ($i = 0; $i < count($vars); ++$i) {
+            $index = $i + 1;
+
+            $varsToTrack["combat_achivement_{$index}"] = [
+                'index' => $vars[$i],
+                'type' => RunescapeTypes::VarPlayer,
+            ];
+        }
+
+        return $varsToTrack;
     }
 
     private function isBitSet(string $bitmap, int $index): ?bool

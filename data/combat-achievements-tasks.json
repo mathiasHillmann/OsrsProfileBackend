@@ -5,6 +5,7 @@
     "type": "Kill Count",
     "name": "Noxious Foe",
     "description": "Kill an Aberrant Spectre.",
+    "points": 1,
     "boss": false
   },
   "1": {
@@ -13,6 +14,7 @@
     "type": "Kill Count",
     "name": "Abyssal Adept",
     "description": "Kill the Abyssal Sire 20 times.",
+    "points": 3,
     "boss": true
   },
   "2": {
@@ -21,6 +23,7 @@
     "type": "Kill Count",
     "name": "Abyssal Veteran",
     "description": "Kill the Abyssal Sire 50 times.",
+    "points": 4,
     "boss": true
   },
   "3": {
@@ -29,6 +32,7 @@
     "type": "Mechanical",
     "name": "They Grow Up Too Fast",
     "description": "Kill the Abyssal Sire without letting any Scion mature.",
+    "points": 3,
     "boss": true
   },
   "4": {
@@ -37,6 +41,7 @@
     "type": "Mechanical",
     "name": "Respiratory Runner",
     "description": "Kill the Abyssal Sire after only stunning him once.",
+    "points": 4,
     "boss": true
   },
   "5": {
@@ -45,6 +50,16 @@
     "type": "Mechanical",
     "name": "Don't Whip Me",
     "description": "Kill the Abyssal Sire without being hit by any external tentacles.",
+    "points": 3,
+    "boss": true
+  },
+  "6": {
+    "monster": "Abyssal Sire",
+    "tier": "Elite",
+    "type": "Mechanical",
+    "name": "Demonic Rebound",
+    "description": "Use the Vengeance spell to reflect the damage from the Abyssal Sire's explosion back to him.",
+    "points": 4,
     "boss": true
   },
   "7": {
@@ -53,6 +68,7 @@
     "type": "Perfection",
     "name": "Don't Stop Moving",
     "description": "Kill the Abyssal Sire without taking damage from any miasma pools.",
+    "points": 3,
     "boss": true
   },
   "8": {
@@ -61,6 +77,7 @@
     "type": "Perfection",
     "name": "Perfect Sire",
     "description": "Kill the Abyssal Sire without taking damage from the external tentacles, miasma pools, explosion or damage from the Abyssal Sire without praying the appropriate protection prayer.",
+    "points": 4,
     "boss": true
   },
   "9": {
@@ -69,6 +86,7 @@
     "type": "Kill Count",
     "name": "Kree'arra Adept",
     "description": "Kill Kree'arra 50 times.",
+    "points": 3,
     "boss": true
   },
   "10": {
@@ -77,6 +95,7 @@
     "type": "Kill Count",
     "name": "Kree'arra Veteran",
     "description": "Kill Kree'arra 100 times.",
+    "points": 4,
     "boss": true
   },
   "11": {
@@ -85,6 +104,7 @@
     "type": "Mechanical",
     "name": "Collateral Damage",
     "description": "Kill Kree'arra in a privately rented instance without ever attacking him directly.",
+    "points": 5,
     "boss": true
   },
   "12": {
@@ -93,6 +113,7 @@
     "type": "Mechanical",
     "name": "Airborne Showdown",
     "description": "Finish off Kree'arra whilst all of his bodyguards are dead.",
+    "points": 3,
     "boss": true
   },
   "13": {
@@ -101,6 +122,16 @@
     "type": "Perfection",
     "name": "Swoop No More",
     "description": "Kill Kree'arra in a privately rented instance without taking any melee damage from the boss or his bodyguards.",
+    "points": 5,
+    "boss": true
+  },
+  "14": {
+    "monster": "Kree'Arra",
+    "tier": "Grandmaster",
+    "type": "Restriction",
+    "name": "The Worst Ranged Weapon",
+    "description": "Kill Kree'arra by only dealing damage to him with a salamander.",
+    "points": 6,
     "boss": true
   },
   "15": {
@@ -109,6 +140,7 @@
     "type": "Stamina",
     "name": "Feather Hunter",
     "description": "Kill Kree'arra 30 times in a privately rented instance without leaving the room.",
+    "points": 6,
     "boss": true
   },
   "16": {
@@ -117,6 +149,7 @@
     "type": "Kill Count",
     "name": "General Graardor Adept",
     "description": "Kill General Graardor 50 times.",
+    "points": 3,
     "boss": true
   },
   "17": {
@@ -125,6 +158,7 @@
     "type": "Kill Count",
     "name": "General Graardor Veteran",
     "description": "Kill General Graardor 100 times.",
+    "points": 4,
     "boss": true
   },
   "18": {
@@ -133,6 +167,7 @@
     "type": "Mechanical",
     "name": "Ourg Freezer",
     "description": "Kill General Graardor whilst he is immobilized.",
+    "points": 3,
     "boss": true
   },
   "19": {
@@ -141,6 +176,7 @@
     "type": "Mechanical",
     "name": "Ourg Freezer II",
     "description": "Kill General Graardor without him attacking any players.",
+    "points": 4,
     "boss": true
   },
   "20": {
@@ -149,6 +185,7 @@
     "type": "Mechanical",
     "name": "General Showdown",
     "description": "Finish off General Graardor whilst all of his bodyguards are dead.",
+    "points": 3,
     "boss": true
   },
   "21": {
@@ -157,6 +194,7 @@
     "type": "Perfection",
     "name": "Defence Matters",
     "description": "Kill General Graardor 2 times consecutively in a privately rented instance without taking any damage from his bodyguards.",
+    "points": 6,
     "boss": true
   },
   "22": {
@@ -165,6 +203,7 @@
     "type": "Perfection",
     "name": "Keep Away",
     "description": "Kill General Graardor in a privately rented instance without taking any damage from the boss or bodyguards.",
+    "points": 6,
     "boss": true
   },
   "23": {
@@ -173,6 +212,7 @@
     "type": "Stamina",
     "name": "Ourg Killer",
     "description": "Kill General Graardor 15 times in a privately rented instance without leaving the room.",
+    "points": 6,
     "boss": true
   },
   "24": {
@@ -181,6 +221,7 @@
     "type": "Kill Count",
     "name": "Barrows Novice",
     "description": "Open the Barrows chest 10 times.",
+    "points": 1,
     "boss": true
   },
   "25": {
@@ -189,6 +230,7 @@
     "type": "Kill Count",
     "name": "Barrows Champion",
     "description": "Open the Barrows chest 25 times.",
+    "points": 2,
     "boss": true
   },
   "26": {
@@ -197,6 +239,7 @@
     "type": "Mechanical",
     "name": "Can't Touch Me",
     "description": "Kill Dharok, Verac, Torag and Guthan without letting them attack you with melee.",
+    "points": 2,
     "boss": true
   },
   "27": {
@@ -205,6 +248,7 @@
     "type": "Perfection",
     "name": "Pray for Success",
     "description": "Kill all six Barrows Brothers and loot the Barrows chest without taking any damage from any of the brothers.",
+    "points": 2,
     "boss": true
   },
   "28": {
@@ -213,6 +257,7 @@
     "type": "Restriction",
     "name": "Defence? What Defence?",
     "description": "Kill any Barrows Brother using only magical damage.",
+    "points": 1,
     "boss": true
   },
   "29": {
@@ -221,6 +266,16 @@
     "type": "Restriction",
     "name": "Just Like That",
     "description": "Kill Karil using only damage dealt by special attacks.",
+    "points": 3,
+    "boss": true
+  },
+  "30": {
+    "monster": "Barrows Chests",
+    "tier": "Hard",
+    "type": "Restriction",
+    "name": "Faithless Crypt Run",
+    "description": "Kill all six Barrows Brothers and loot the Barrows chest without ever having more than 0 prayer points.",
+    "points": 3,
     "boss": true
   },
   "31": {
@@ -229,6 +284,7 @@
     "type": "Kill Count",
     "name": "Reflecting on This Encounter",
     "description": "Kill a Basilisk Knight.",
+    "points": 4,
     "boss": false
   },
   "32": {
@@ -237,6 +293,7 @@
     "type": "Kill Count",
     "name": "Big, Black and Fiery",
     "description": "Kill a Black Dragon.",
+    "points": 1,
     "boss": false
   },
   "33": {
@@ -245,6 +302,7 @@
     "type": "Kill Count",
     "name": "The Demonic Punching Bag",
     "description": "Kill a Bloodveld.",
+    "points": 1,
     "boss": false
   },
   "34": {
@@ -253,6 +311,7 @@
     "type": "Kill Count",
     "name": "Brutal, Big, Black and Firey",
     "description": "Kill a Brutal Black Dragon.",
+    "points": 2,
     "boss": false
   },
   "35": {
@@ -261,6 +320,7 @@
     "type": "Kill Count",
     "name": "Bryophyta Novice",
     "description": "Kill Bryophyta once.",
+    "points": 1,
     "boss": true
   },
   "36": {
@@ -269,6 +329,7 @@
     "type": "Kill Count",
     "name": "Bryophyta Champion",
     "description": "Kill Bryophyta 5 times.",
+    "points": 2,
     "boss": true
   },
   "37": {
@@ -277,6 +338,7 @@
     "type": "Mechanical",
     "name": "Protection from Moss",
     "description": "Kill Bryophyta with the Protect from Magic prayer active.",
+    "points": 1,
     "boss": true
   },
   "38": {
@@ -285,6 +347,7 @@
     "type": "Mechanical",
     "name": "Quick Cutter",
     "description": "Kill all 3 of Bryophyta's growthlings within 3 seconds of the first one dying.",
+    "points": 2,
     "boss": true
   },
   "39": {
@@ -293,6 +356,7 @@
     "type": "Perfection",
     "name": "Preparation Is Key",
     "description": "Kill Bryophyta without suffering any poison damage.",
+    "points": 1,
     "boss": true
   },
   "40": {
@@ -301,6 +365,7 @@
     "type": "Restriction",
     "name": "A Slow Death",
     "description": "Kill Bryophyta with either poison or venom being the final source of damage.",
+    "points": 1,
     "boss": true
   },
   "41": {
@@ -309,6 +374,7 @@
     "type": "Restriction",
     "name": "Fighting as Intended II",
     "description": "Kill Bryophyta on a free to play world.",
+    "points": 1,
     "boss": true
   },
   "42": {
@@ -317,6 +383,7 @@
     "type": "Kill Count",
     "name": "Callisto Adept",
     "description": "Kill Callisto 10 times.",
+    "points": 3,
     "boss": true
   },
   "43": {
@@ -325,6 +392,7 @@
     "type": "Kill Count",
     "name": "Callisto Veteran",
     "description": "Kill Callisto 20 times.",
+    "points": 4,
     "boss": true
   },
   "44": {
@@ -333,6 +401,7 @@
     "type": "Kill Count",
     "name": "Skotizo Champion",
     "description": "Kill Skotizo once.",
+    "points": 2,
     "boss": true
   },
   "45": {
@@ -341,6 +410,7 @@
     "type": "Kill Count",
     "name": "Skotizo Adept",
     "description": "Kill Skotizo 5 times.",
+    "points": 3,
     "boss": true
   },
   "46": {
@@ -349,6 +419,7 @@
     "type": "Mechanical",
     "name": "Demonic Weakening",
     "description": "Kill Skotizo with no altars active.",
+    "points": 2,
     "boss": true
   },
   "47": {
@@ -357,6 +428,16 @@
     "type": "Perfection",
     "name": "Demon Evasion",
     "description": "Kill Skotizo without taking any damage.",
+    "points": 4,
+    "boss": true
+  },
+  "48": {
+    "monster": "Skotizo",
+    "tier": "Medium",
+    "type": "Restriction",
+    "name": "Demonbane Weaponry",
+    "description": "Kill Skotizo with a demonbane weapon equipped.",
+    "points": 2,
     "boss": true
   },
   "49": {
@@ -365,6 +446,7 @@
     "type": "Restriction",
     "name": "Up for the Challenge",
     "description": "Kill Skotizo without equipping a demonbane weapon.",
+    "points": 4,
     "boss": true
   },
   "50": {
@@ -373,6 +455,7 @@
     "type": "Restriction",
     "name": "Precise Positioning",
     "description": "Kill Skotizo with the final source of damage being a Chinchompa explosion.",
+    "points": 5,
     "boss": true
   },
   "51": {
@@ -381,6 +464,7 @@
     "type": "Kill Count",
     "name": "Cerberus Veteran",
     "description": "Kill Cerberus 75 times.",
+    "points": 4,
     "boss": true
   },
   "52": {
@@ -389,6 +473,7 @@
     "type": "Kill Count",
     "name": "Cerberus Master",
     "description": "Kill Cerberus 150 times.",
+    "points": 5,
     "boss": true
   },
   "53": {
@@ -397,6 +482,7 @@
     "type": "Mechanical",
     "name": "Arooo No More",
     "description": "Kill Cerberus without any of the Summoned Souls being spawned.",
+    "points": 5,
     "boss": true
   },
   "54": {
@@ -405,6 +491,7 @@
     "type": "Mechanical",
     "name": "Ghost Buster",
     "description": "Kill Cerberus after successfully negating 6 or more attacks from Summoned Souls.",
+    "points": 4,
     "boss": true
   },
   "55": {
@@ -413,6 +500,7 @@
     "type": "Perfection",
     "name": "Unrequired Antifire",
     "description": "Kill Cerberus without taking damage from any lava pools.",
+    "points": 4,
     "boss": true
   },
   "56": {
@@ -421,6 +509,7 @@
     "type": "Perfection",
     "name": "Anti-Bite Mechanics",
     "description": "Kill Cerberus without taking any melee damage.",
+    "points": 4,
     "boss": true
   },
   "57": {
@@ -429,6 +518,7 @@
     "type": "Kill Count",
     "name": "Chaos Elemental Adept",
     "description": "Kill the Chaos Elemental 10 times.",
+    "points": 3,
     "boss": true
   },
   "58": {
@@ -437,6 +527,7 @@
     "type": "Kill Count",
     "name": "Chaos Elemental Veteran",
     "description": "Kill the Chaos Elemental 25 times.",
+    "points": 4,
     "boss": true
   },
   "59": {
@@ -445,6 +536,7 @@
     "type": "Mechanical",
     "name": "Hoarder",
     "description": "Kill the Chaos Elemental without it unequipping any of your items.",
+    "points": 3,
     "boss": true
   },
   "60": {
@@ -453,6 +545,7 @@
     "type": "Perfection",
     "name": "The Flincher",
     "description": "Kill the Chaos Elemental without taking any damage from its attacks.",
+    "points": 3,
     "boss": true
   },
   "61": {
@@ -461,6 +554,7 @@
     "type": "Kill Count",
     "name": "Chaos Fanatic Champion",
     "description": "Kill the Chaos Fanatic 10 times.",
+    "points": 2,
     "boss": true
   },
   "62": {
@@ -469,6 +563,7 @@
     "type": "Kill Count",
     "name": "Chaos Fanatic Adept",
     "description": "Kill the Chaos Fanatic 25 times.",
+    "points": 3,
     "boss": true
   },
   "63": {
@@ -477,6 +572,7 @@
     "type": "Perfection",
     "name": "Sorry, What Was That?",
     "description": "Kill the Chaos Fanatic without anyone being hit by his explosion attack.",
+    "points": 2,
     "boss": true
   },
   "64": {
@@ -485,6 +581,7 @@
     "type": "Restriction",
     "name": "Praying to the Gods",
     "description": "Kill the Chaos Fanatic 10 times without drinking any potion which restores prayer or leaving the Wilderness.",
+    "points": 3,
     "boss": true
   },
   "65": {
@@ -493,6 +590,7 @@
     "type": "Kill Count",
     "name": "Corporeal Beast Veteran",
     "description": "Kill the Corporeal Beast 25 times.",
+    "points": 4,
     "boss": true
   },
   "66": {
@@ -501,6 +599,7 @@
     "type": "Kill Count",
     "name": "Corporeal Beast Master",
     "description": "Kill the Corporeal Beast 50 times.",
+    "points": 5,
     "boss": true
   },
   "67": {
@@ -509,6 +608,16 @@
     "type": "Perfection",
     "name": "Hot on Your Feet",
     "description": "Kill the Corporeal Beast without anyone killing the dark core or taking damage from the dark core.",
+    "points": 4,
+    "boss": true
+  },
+  "68": {
+    "monster": "Corporeal Beast",
+    "tier": "Elite",
+    "type": "Restriction",
+    "name": "Finding the Weak Spot",
+    "description": "Finish off the Corporeal Beast with a Crystal Halberd special attack.",
+    "points": 4,
     "boss": true
   },
   "69": {
@@ -517,6 +626,7 @@
     "type": "Restriction",
     "name": "Chicken Killer",
     "description": "Kill the Corporeal Beast solo.",
+    "points": 4,
     "boss": true
   },
   "70": {
@@ -525,6 +635,7 @@
     "type": "Kill Count",
     "name": "Crazy Archaeologist Champion",
     "description": "Kill the Crazy Archaeologist 10 times.",
+    "points": 2,
     "boss": true
   },
   "71": {
@@ -533,6 +644,7 @@
     "type": "Kill Count",
     "name": "Crazy Archaeologist Adept",
     "description": "Kill the Crazy Archaeologist 25 times.",
+    "points": 3,
     "boss": true
   },
   "72": {
@@ -541,6 +653,7 @@
     "type": "Mechanical",
     "name": "Mage of the Ruins",
     "description": "Kill the Crazy Archaeologist with only magical attacks.",
+    "points": 2,
     "boss": true
   },
   "73": {
@@ -549,6 +662,7 @@
     "type": "Perfection",
     "name": "I'd Rather Not Learn",
     "description": "Kill the Crazy Archaeologist without anyone being hit by his \"Rain of Knowledge\" attack.",
+    "points": 2,
     "boss": true
   },
   "74": {
@@ -557,6 +671,16 @@
     "type": "Kill Count",
     "name": "If Gorillas Could Fly",
     "description": "Kill a Demonic Gorilla.",
+    "points": 4,
+    "boss": false
+  },
+  "75": {
+    "monster": "Demonic Gorilla",
+    "tier": "Elite",
+    "type": "Restriction",
+    "name": "Hitting Them Where It Hurts",
+    "description": "Finish off a Demonic Gorilla with a demonbane weapon.",
+    "points": 4,
     "boss": false
   },
   "76": {
@@ -565,6 +689,7 @@
     "type": "Kill Count",
     "name": "Deranged Archaeologist Novice",
     "description": "Kill the Deranged Archaeologist 10 times.",
+    "points": 1,
     "boss": true
   },
   "77": {
@@ -573,6 +698,7 @@
     "type": "Kill Count",
     "name": "Deranged Archaeologist Champion",
     "description": "Kill the Deranged Archaeologist 25 times.",
+    "points": 2,
     "boss": true
   },
   "78": {
@@ -581,6 +707,7 @@
     "type": "Mechanical",
     "name": "Mage of the Swamp",
     "description": "Kill the Deranged Archaeologist with only magical attacks.",
+    "points": 2,
     "boss": true
   },
   "79": {
@@ -589,6 +716,7 @@
     "type": "Perfection",
     "name": "I'd Rather Be Illiterate",
     "description": "Kill the Deranged Archaeologist without anyone being hit by his \"Learn to Read\" attack.",
+    "points": 2,
     "boss": true
   },
   "80": {
@@ -597,6 +725,7 @@
     "type": "Kill Count",
     "name": "The Walking Volcano",
     "description": "Kill a Fire Giant.",
+    "points": 1,
     "boss": false
   },
   "81": {
@@ -605,6 +734,7 @@
     "type": "Speed",
     "name": "Galvek Speed-Trialist",
     "description": "Kill Galvek in less than 3 minutes.",
+    "points": 4,
     "boss": true
   },
   "82": {
@@ -613,6 +743,7 @@
     "type": "Kill Count",
     "name": "Grotesque Guardians Adept",
     "description": "Kill the Grotesque Guardians 25 times.",
+    "points": 3,
     "boss": true
   },
   "83": {
@@ -621,6 +752,7 @@
     "type": "Kill Count",
     "name": "Grotesque Guardians Veteran",
     "description": "Kill the Grotesque Guardians 50 times.",
+    "points": 4,
     "boss": true
   },
   "84": {
@@ -629,6 +761,7 @@
     "type": "Mechanical",
     "name": "Don't Look at the Eclipse",
     "description": "Kill the Grotesque Guardians without taking damage from Dusk's blinding attack.",
+    "points": 3,
     "boss": true
   },
   "85": {
@@ -637,6 +770,7 @@
     "type": "Mechanical",
     "name": "Prison Break",
     "description": "Kill the Grotesque Guardians without taking damage from Dusk's prison attack.",
+    "points": 3,
     "boss": true
   },
   "86": {
@@ -645,6 +779,7 @@
     "type": "Mechanical",
     "name": "Granite Footwork",
     "description": "Kill the Grotesque Guardians without taking damage from Dawn's rockfall attack.",
+    "points": 3,
     "boss": true
   },
   "87": {
@@ -653,6 +788,7 @@
     "type": "Mechanical",
     "name": "Heal No More",
     "description": "Kill the Grotesque Guardians without letting Dawn receive any healing from her orbs.",
+    "points": 3,
     "boss": true
   },
   "88": {
@@ -661,6 +797,7 @@
     "type": "Mechanical",
     "name": "Static Awareness",
     "description": "Kill the Grotesque Guardians without being hit by any lightning attacks.",
+    "points": 3,
     "boss": true
   },
   "89": {
@@ -669,6 +806,7 @@
     "type": "Mechanical",
     "name": "Done before Dusk",
     "description": "Kill the Grotesque Guardians before Dusk uses his prison attack for a second time.",
+    "points": 4,
     "boss": true
   },
   "90": {
@@ -677,6 +815,7 @@
     "type": "Perfection",
     "name": "Perfect Grotesque Guardians",
     "description": "Kill the Grotesque Guardians whilst completing the \"Don't look at the eclipse\", \"Prison Break\", \"Granite footwork\", \"Heal no more\", \"Static Awareness\" and \"Done before dusk\" tasks.",
+    "points": 4,
     "boss": true
   },
   "91": {
@@ -685,6 +824,7 @@
     "type": "Perfection",
     "name": "Perfect Grotesque Guardians II",
     "description": "Kill the Grotesque Guardians 5 times in a row without leaving the instance, whilst completing the Perfect Grotesque Guardians task every time.",
+    "points": 5,
     "boss": true
   },
   "92": {
@@ -693,6 +833,7 @@
     "type": "Speed",
     "name": "Grotesque Guardians Speed-Trialist",
     "description": "Kill the Grotesque Guardians in less than 2 minutes.",
+    "points": 4,
     "boss": true
   },
   "93": {
@@ -701,6 +842,7 @@
     "type": "Speed",
     "name": "Grotesque Guardians Speed-Chaser",
     "description": "Kill the Grotesque Guardians in less than 1:40 minutes.",
+    "points": 5,
     "boss": true
   },
   "94": {
@@ -709,6 +851,7 @@
     "type": "Speed",
     "name": "Grotesque Guardians Speed-Runner",
     "description": "Kill the Grotesque Guardians in less than 1:20 minutes.",
+    "points": 6,
     "boss": true
   },
   "95": {
@@ -717,6 +860,7 @@
     "type": "Stamina",
     "name": "From Dusk...",
     "description": "Kill the Grotesque Guardians 10 times without leaving the instance.",
+    "points": 4,
     "boss": true
   },
   "96": {
@@ -725,6 +869,7 @@
     "type": "Stamina",
     "name": "... 'til Dawn",
     "description": "Kill the Grotesque Guardians 20 times without leaving the instance.",
+    "points": 5,
     "boss": true
   },
   "97": {
@@ -733,6 +878,7 @@
     "type": "Kill Count",
     "name": "A Smashing Time",
     "description": "Kill a Gargoyle.",
+    "points": 2,
     "boss": true
   },
   "98": {
@@ -741,6 +887,7 @@
     "type": "Kill Count",
     "name": "Corrupted Gauntlet Veteran",
     "description": "Complete the Corrupted Gauntlet 5 times.",
+    "points": 4,
     "boss": true
   },
   "99": {
@@ -749,6 +896,7 @@
     "type": "Kill Count",
     "name": "Corrupted Gauntlet Master",
     "description": "Complete the Corrupted Gauntlet 10 times.",
+    "points": 5,
     "boss": true
   },
   "100": {
@@ -757,6 +905,7 @@
     "type": "Kill Count",
     "name": "Corrupted Gauntlet Grandmaster",
     "description": "Complete the Corrupted Gauntlet 50 times.",
+    "points": 6,
     "boss": true
   },
   "101": {
@@ -765,6 +914,7 @@
     "type": "Perfection",
     "name": "3, 2, 1 - Mage",
     "description": "Kill the Corrupted Hunllef without taking damage off prayer.",
+    "points": 4,
     "boss": true
   },
   "102": {
@@ -773,6 +923,7 @@
     "type": "Perfection",
     "name": "Perfect Corrupted Hunllef",
     "description": "Kill the Corrupted Hunllef without taking damage from: Tornadoes, Damaging Floor or Stomp Attacks. Also, do not take damage off prayer and do not attack the Corrupted Hunllef with the wrong weapon.",
+    "points": 5,
     "boss": true
   },
   "103": {
@@ -781,6 +932,7 @@
     "type": "Restriction",
     "name": "Defence Doesn't Matter II",
     "description": "Kill the Corrupted Hunllef without making any armour within the Corrupted Gauntlet.",
+    "points": 5,
     "boss": true
   },
   "104": {
@@ -789,6 +941,7 @@
     "type": "Restriction",
     "name": "Egniol Diet II",
     "description": "Kill the Corrupted Hunllef without making an egniol potion within the Corrupted Gauntlet.",
+    "points": 6,
     "boss": true
   },
   "105": {
@@ -797,6 +950,7 @@
     "type": "Restriction",
     "name": "Corrupted Warrior",
     "description": "Kill the Corrupted Hunllef with a full set of perfected corrupted armour equipped.",
+    "points": 5,
     "boss": true
   },
   "106": {
@@ -805,6 +959,7 @@
     "type": "Restriction",
     "name": "Wolf Puncher II",
     "description": "Kill the Corrupted Hunllef without making more than one attuned weapon.",
+    "points": 6,
     "boss": true
   },
   "107": {
@@ -813,6 +968,7 @@
     "type": "Speed",
     "name": "Corrupted Gauntlet Speed-Chaser",
     "description": "Complete a Corrupted Gauntlet in less than 7 minutes and 30 seconds.",
+    "points": 5,
     "boss": true
   },
   "108": {
@@ -821,6 +977,7 @@
     "type": "Speed",
     "name": "Corrupted Gauntlet Speed-Runner",
     "description": "Complete a Corrupted Gauntlet in less than 6 minutes and 30 seconds.",
+    "points": 6,
     "boss": true
   },
   "109": {
@@ -829,6 +986,7 @@
     "type": "Kill Count",
     "name": "Gauntlet Veteran",
     "description": "Complete the Gauntlet 5 times.",
+    "points": 4,
     "boss": true
   },
   "110": {
@@ -837,6 +995,7 @@
     "type": "Kill Count",
     "name": "Gauntlet Master",
     "description": "Complete the Gauntlet 20 times.",
+    "points": 5,
     "boss": true
   },
   "111": {
@@ -845,6 +1004,7 @@
     "type": "Perfection",
     "name": "3, 2, 1 - Range",
     "description": "Kill the Crystalline Hunllef without taking damage off prayer.",
+    "points": 4,
     "boss": true
   },
   "112": {
@@ -853,6 +1013,7 @@
     "type": "Perfection",
     "name": "Perfect Crystalline Hunllef",
     "description": "Kill the Crystalline Hunllef without taking damage from: Tornadoes, Damaging Floor or Stomp Attacks. Also, do not take damage off prayer and do not attack the Crystalline Hunllef with the wrong weapon.",
+    "points": 5,
     "boss": true
   },
   "113": {
@@ -861,6 +1022,7 @@
     "type": "Restriction",
     "name": "Defence Doesn't Matter",
     "description": "Kill the Crystalline Hunllef without making any armour within the Gauntlet.",
+    "points": 5,
     "boss": true
   },
   "114": {
@@ -869,6 +1031,7 @@
     "type": "Restriction",
     "name": "Egniol Diet",
     "description": "Kill the Crystalline Hunllef without making an egniol potion within the Gauntlet.",
+    "points": 4,
     "boss": true
   },
   "115": {
@@ -877,6 +1040,7 @@
     "type": "Restriction",
     "name": "Crystalline Warrior",
     "description": "Kill the Crystalline Hunllef with a full set of perfected armour equipped.",
+    "points": 4,
     "boss": true
   },
   "116": {
@@ -885,6 +1049,7 @@
     "type": "Restriction",
     "name": "Wolf Puncher",
     "description": "Kill the Crystalline Hunllef without making more than one attuned weapon.",
+    "points": 4,
     "boss": true
   },
   "117": {
@@ -893,6 +1058,7 @@
     "type": "Speed",
     "name": "Gauntlet Speed-Chaser",
     "description": "Complete the Gauntlet in less than 5 minutes.",
+    "points": 5,
     "boss": true
   },
   "118": {
@@ -901,6 +1067,7 @@
     "type": "Speed",
     "name": "Gauntlet Speed-Runner",
     "description": "Complete the Gauntlet in less than 4 minutes.",
+    "points": 6,
     "boss": true
   },
   "119": {
@@ -909,6 +1076,7 @@
     "type": "Speed",
     "name": "Glough Speed-Trialist",
     "description": "Kill Glough in less than 2 minutes and 30 seconds.",
+    "points": 4,
     "boss": true
   },
   "120": {
@@ -917,6 +1085,7 @@
     "type": "Kill Count",
     "name": "A Greater Foe",
     "description": "Kill a Greater Demon.",
+    "points": 1,
     "boss": false
   },
   "121": {
@@ -925,6 +1094,7 @@
     "type": "Restriction",
     "name": "Not So Great After All",
     "description": "Finish off a Greater Demon with a demonbane weapon.",
+    "points": 1,
     "boss": false
   },
   "122": {
@@ -933,6 +1103,7 @@
     "type": "Kill Count",
     "name": "A Demon's Best Friend",
     "description": "Kill a Hellhound.",
+    "points": 1,
     "boss": true
   },
   "123": {
@@ -941,6 +1112,7 @@
     "type": "Kill Count",
     "name": "Hespori Adept",
     "description": "Kill Hespori 5 times.",
+    "points": 3,
     "boss": true
   },
   "124": {
@@ -949,6 +1121,7 @@
     "type": "Mechanical",
     "name": "Hesporisn't",
     "description": "Finish off Hespori with a special attack.",
+    "points": 3,
     "boss": true
   },
   "125": {
@@ -957,6 +1130,7 @@
     "type": "Mechanical",
     "name": "Weed Whacker",
     "description": "Kill all of Hesporis flowers within 5 seconds.",
+    "points": 3,
     "boss": true
   },
   "126": {
@@ -965,6 +1139,7 @@
     "type": "Restriction",
     "name": "Plant-Based Diet",
     "description": "Kill Hespori without losing any prayer points.",
+    "points": 4,
     "boss": true
   },
   "127": {
@@ -973,6 +1148,7 @@
     "type": "Speed",
     "name": "Hespori Speed-Trialist",
     "description": "Kill the Hespori in less than 48 seconds.",
+    "points": 4,
     "boss": true
   },
   "128": {
@@ -981,6 +1157,7 @@
     "type": "Speed",
     "name": "Hespori Speed-Chaser",
     "description": "Kill the Hespori in less than 36 seconds.",
+    "points": 5,
     "boss": true
   },
   "129": {
@@ -989,6 +1166,7 @@
     "type": "Kill Count",
     "name": "Obor Novice",
     "description": "Kill Obor once.",
+    "points": 1,
     "boss": true
   },
   "130": {
@@ -997,6 +1175,7 @@
     "type": "Kill Count",
     "name": "Obor Champion",
     "description": "Kill Obor 5 times.",
+    "points": 2,
     "boss": true
   },
   "131": {
@@ -1005,6 +1184,7 @@
     "type": "Mechanical",
     "name": "Sleeping Giant",
     "description": "Kill Obor whilst he is immobilized.",
+    "points": 1,
     "boss": true
   },
   "132": {
@@ -1013,6 +1193,7 @@
     "type": "Mechanical",
     "name": "Back to the Wall",
     "description": "Kill Obor without being pushed back more than one square by his knockback attack.",
+    "points": 2,
     "boss": true
   },
   "133": {
@@ -1021,6 +1202,7 @@
     "type": "Perfection",
     "name": "Squashing the Giant",
     "description": "Kill Obor without taking any damage off prayer.",
+    "points": 2,
     "boss": true
   },
   "134": {
@@ -1029,6 +1211,7 @@
     "type": "Restriction",
     "name": "Fighting as Intended",
     "description": "Kill Obor on a free to play world.",
+    "points": 1,
     "boss": true
   },
   "135": {
@@ -1037,6 +1220,7 @@
     "type": "Kill Count",
     "name": "Alchemical Veteran",
     "description": "Kill the Alchemical Hydra 75 times.",
+    "points": 4,
     "boss": true
   },
   "136": {
@@ -1045,6 +1229,7 @@
     "type": "Kill Count",
     "name": "Alchemical Master",
     "description": "Kill the Alchemical Hydra 150 times.",
+    "points": 5,
     "boss": true
   },
   "137": {
@@ -1053,6 +1238,7 @@
     "type": "Mechanical",
     "name": "Unrequired Antipoisons",
     "description": "Kill the Alchemical Hydra without being hit by the acid pool attack.",
+    "points": 5,
     "boss": true
   },
   "138": {
@@ -1061,6 +1247,7 @@
     "type": "Mechanical",
     "name": "Lightning Lure",
     "description": "Kill the Alchemical Hydra without being hit by the lightning attack.",
+    "points": 5,
     "boss": true
   },
   "139": {
@@ -1069,6 +1256,7 @@
     "type": "Mechanical",
     "name": "Don't Flame Me",
     "description": "Kill the Alchemical Hydra without being hit by the flame wall attack.",
+    "points": 5,
     "boss": true
   },
   "140": {
@@ -1077,6 +1265,7 @@
     "type": "Mechanical",
     "name": "Mixing Correctly",
     "description": "Kill the Alchemical Hydra without empowering it.",
+    "points": 5,
     "boss": true
   },
   "141": {
@@ -1085,6 +1274,7 @@
     "type": "Mechanical",
     "name": "The Flame Skipper",
     "description": "Kill the Alchemical Hydra without letting it spawn a flame wall attack.",
+    "points": 5,
     "boss": true
   },
   "142": {
@@ -1093,6 +1283,16 @@
     "type": "Perfection",
     "name": "Alcleanical Hydra",
     "description": "Kill the Alchemical Hydra without taking any damage.",
+    "points": 5,
+    "boss": true
+  },
+  "143": {
+    "monster": "Alchemical Hydra",
+    "tier": "Grandmaster",
+    "type": "Restriction",
+    "name": "No Pressure",
+    "description": "Kill the Alchemical Hydra using only Dharok's Greataxe as a weapon whilst having no more than 10 Hitpoints throughout the entire fight.",
+    "points": 6,
     "boss": true
   },
   "144": {
@@ -1101,6 +1301,7 @@
     "type": "Speed",
     "name": "Alchemical Speed-Chaser",
     "description": "Kill the Alchemical Hydra in less than 1 minute 45 seconds.",
+    "points": 5,
     "boss": true
   },
   "145": {
@@ -1109,6 +1310,7 @@
     "type": "Speed",
     "name": "Alchemical Speed-Runner",
     "description": "Kill the Alchemical Hydra in less than 1 minute 20 seconds.",
+    "points": 6,
     "boss": true
   },
   "146": {
@@ -1117,6 +1319,7 @@
     "type": "Stamina",
     "name": "Working Overtime",
     "description": "Kill the Alchemical Hydra 15 times without leaving the room.",
+    "points": 5,
     "boss": true
   },
   "147": {
@@ -1125,6 +1328,7 @@
     "type": "Kill Count",
     "name": "Fight Caves Veteran",
     "description": "Complete the Fight Caves once.",
+    "points": 4,
     "boss": true
   },
   "148": {
@@ -1133,6 +1337,7 @@
     "type": "Kill Count",
     "name": "Fight Caves Master",
     "description": "Complete the Fight Caves 5 times.",
+    "points": 5,
     "boss": true
   },
   "149": {
@@ -1141,6 +1346,7 @@
     "type": "Mechanical",
     "name": "A Near Miss!",
     "description": "Complete the Fight Caves after surviving a hit from TzTok-Jad without praying.",
+    "points": 4,
     "boss": true
   },
   "150": {
@@ -1149,6 +1355,7 @@
     "type": "Mechanical",
     "name": "Denying the Healers",
     "description": "Complete the Fight caves without letting any of the Yt-MejKot heal.",
+    "points": 5,
     "boss": true
   },
   "151": {
@@ -1157,6 +1364,7 @@
     "type": "Mechanical",
     "name": "Denying the Healers II",
     "description": "Complete the Fight Caves without TzTok-Jad being healed by a Yt-HurKot.",
+    "points": 6,
     "boss": true
   },
   "152": {
@@ -1165,6 +1373,7 @@
     "type": "Mechanical",
     "name": "You Didn't Say Anything About a Bat",
     "description": "Complete the Fight Caves without being attacked by a Tz-Kih.",
+    "points": 5,
     "boss": true
   },
   "153": {
@@ -1173,6 +1382,7 @@
     "type": "Restriction",
     "name": "Facing Jad Head-on",
     "description": "Complete the Fight Caves with only melee.",
+    "points": 4,
     "boss": true
   },
   "154": {
@@ -1181,6 +1391,7 @@
     "type": "Restriction",
     "name": "No Time for a Drink",
     "description": "Complete the Fight Caves without losing any prayer points.",
+    "points": 6,
     "boss": true
   },
   "155": {
@@ -1189,6 +1400,7 @@
     "type": "Speed",
     "name": "Fight Caves Speed-Chaser",
     "description": "Complete the Fight Caves in less than 30 minutes.",
+    "points": 5,
     "boss": true
   },
   "156": {
@@ -1197,6 +1409,7 @@
     "type": "Speed",
     "name": "Fight Caves Speed-Runner",
     "description": "Complete the Fight Caves in less than 26 minutes and 30 seconds.",
+    "points": 6,
     "boss": true
   },
   "157": {
@@ -1205,6 +1418,7 @@
     "type": "Kill Count",
     "name": "Kalphite Queen Adept",
     "description": "Kill the Kalphite Queen 25 times.",
+    "points": 3,
     "boss": true
   },
   "158": {
@@ -1213,6 +1427,34 @@
     "type": "Kill Count",
     "name": "Kalphite Queen Veteran",
     "description": "Kill the Kalphite Queen 50 times.",
+    "points": 4,
+    "boss": true
+  },
+  "159": {
+    "monster": "Kalphite Queen",
+    "tier": "Hard",
+    "type": "Mechanical",
+    "name": "Chitin Penetrator",
+    "description": "Kill the Kalphite Queen while her defence was last lowered by you.",
+    "points": 3,
+    "boss": true
+  },
+  "160": {
+    "monster": "Kalphite Queen",
+    "tier": "Elite",
+    "type": "Mechanical",
+    "name": "Insect Deflection",
+    "description": "Kill the Kalphite Queen by using the Vengeance spell as the finishing blow.",
+    "points": 4,
+    "boss": true
+  },
+  "161": {
+    "monster": "Kalphite Queen",
+    "tier": "Elite",
+    "type": "Restriction",
+    "name": "Prayer Smasher",
+    "description": "Kill the Kalphite Queen using only the Verac's Flail as a weapon.",
+    "points": 4,
     "boss": true
   },
   "162": {
@@ -1221,6 +1463,7 @@
     "type": "Kill Count",
     "name": "King Black Dragon Novice",
     "description": "Kill the King Black Dragon 10 times.",
+    "points": 1,
     "boss": true
   },
   "163": {
@@ -1229,6 +1472,7 @@
     "type": "Kill Count",
     "name": "King Black Dragon Champion",
     "description": "Kill the King Black Dragon 25 times.",
+    "points": 2,
     "boss": true
   },
   "164": {
@@ -1237,6 +1481,7 @@
     "type": "Mechanical",
     "name": "Claw Clipper",
     "description": "Kill the King Black Dragon with the Protect from Melee prayer activated.",
+    "points": 2,
     "boss": true
   },
   "165": {
@@ -1245,6 +1490,7 @@
     "type": "Restriction",
     "name": "Hide Penetration",
     "description": "Kill the King Black Dragon with a stab weapon.",
+    "points": 2,
     "boss": true
   },
   "166": {
@@ -1253,6 +1499,7 @@
     "type": "Restriction",
     "name": "Antifire Protection",
     "description": "Kill the King Black Dragon with an antifire potion active and an antidragon shield equipped.",
+    "points": 2,
     "boss": true
   },
   "167": {
@@ -1261,6 +1508,7 @@
     "type": "Stamina",
     "name": "Who Is the King Now?",
     "description": "Kill The King Black Dragon 10 times in a privately rented instance without leaving the instance.",
+    "points": 3,
     "boss": true
   },
   "168": {
@@ -1269,6 +1517,7 @@
     "type": "Kill Count",
     "name": "Kraken Adept",
     "description": "Kill the Kraken 20 times.",
+    "points": 3,
     "boss": true
   },
   "169": {
@@ -1277,6 +1526,7 @@
     "type": "Mechanical",
     "name": "Unnecessary Optimisation",
     "description": "Kill the Kraken after killing all four tentacles.",
+    "points": 3,
     "boss": true
   },
   "170": {
@@ -1285,6 +1535,7 @@
     "type": "Stamina",
     "name": "Krakan't Hurt Me",
     "description": "Kill the Kraken 25 times in a privately rented instance without leaving the room.",
+    "points": 3,
     "boss": true
   },
   "171": {
@@ -1293,6 +1544,7 @@
     "type": "Stamina",
     "name": "Ten-tacles",
     "description": "Kill the Kraken 50 times in a privately rented instance without leaving the room.",
+    "points": 4,
     "boss": true
   },
   "172": {
@@ -1301,6 +1553,7 @@
     "type": "Stamina",
     "name": "One Hundred Tentacles",
     "description": "Kill the Kraken 100 times in a privately rented instance without leaving the room.",
+    "points": 5,
     "boss": true
   },
   "173": {
@@ -1309,6 +1562,7 @@
     "type": "Kill Count",
     "name": "Master of Broad Weaponry",
     "description": "Kill a Kurask.",
+    "points": 2,
     "boss": false
   },
   "174": {
@@ -1317,6 +1571,7 @@
     "type": "Kill Count",
     "name": "A Scaley Encounter",
     "description": "Kill a Lizardman Shaman.",
+    "points": 1,
     "boss": false
   },
   "175": {
@@ -1325,6 +1580,7 @@
     "type": "Perfection",
     "name": "Shayzien Protector",
     "description": "Kill a Lizardman Shaman in Molch which has not dealt damage to anyone (excluding its Spawns).",
+    "points": 1,
     "boss": false
   },
   "176": {
@@ -1333,6 +1589,7 @@
     "type": "Kill Count",
     "name": "Mimic Veteran",
     "description": "Kill the Mimic once.",
+    "points": 4,
     "boss": true
   },
   "177": {
@@ -1341,6 +1598,7 @@
     "type": "Kill Count",
     "name": "Giant Mole Novice",
     "description": "Kill the Giant Mole 10 times.",
+    "points": 1,
     "boss": true
   },
   "178": {
@@ -1349,6 +1607,7 @@
     "type": "Kill Count",
     "name": "Giant Mole Champion",
     "description": "Kill the Giant mole 25 times.",
+    "points": 2,
     "boss": true
   },
   "179": {
@@ -1357,6 +1616,7 @@
     "type": "Mechanical",
     "name": "Why Are You Running?",
     "description": "Kill the Giant Mole without her burrowing more than 2 times.",
+    "points": 3,
     "boss": true
   },
   "180": {
@@ -1365,6 +1625,7 @@
     "type": "Mechanical",
     "name": "Hard Hitter",
     "description": "Kill the Giant Mole with 4 or fewer instances of damage.",
+    "points": 4,
     "boss": true
   },
   "181": {
@@ -1373,6 +1634,7 @@
     "type": "Mechanical",
     "name": "Whack-a-Mole",
     "description": "Kill the Giant Mole within 10 seconds of her resurfacing.",
+    "points": 3,
     "boss": true
   },
   "182": {
@@ -1381,6 +1643,7 @@
     "type": "Perfection",
     "name": "Avoiding Those Little Arms",
     "description": "Kill the Giant Mole without her damaging anyone.",
+    "points": 2,
     "boss": true
   },
   "183": {
@@ -1389,6 +1652,7 @@
     "type": "Kill Count",
     "name": "Nightmare Adept",
     "description": "Kill The Nightmare once.",
+    "points": 3,
     "boss": true
   },
   "184": {
@@ -1397,6 +1661,7 @@
     "type": "Kill Count",
     "name": "Nightmare Veteran",
     "description": "Kill The Nightmare 25 times.",
+    "points": 4,
     "boss": true
   },
   "185": {
@@ -1405,6 +1670,7 @@
     "type": "Kill Count",
     "name": "Nightmare Master",
     "description": "Kill The Nightmare 50 times.",
+    "points": 5,
     "boss": true
   },
   "186": {
@@ -1413,6 +1679,7 @@
     "type": "Mechanical",
     "name": "Terrible Parent",
     "description": "Kill the Nightmare solo without the Parasites healing the boss for more than 100 health.",
+    "points": 6,
     "boss": true
   },
   "187": {
@@ -1421,6 +1688,7 @@
     "type": "Mechanical",
     "name": "Explosion!",
     "description": "Kill two Husks at the same time.",
+    "points": 4,
     "boss": true
   },
   "188": {
@@ -1429,6 +1697,7 @@
     "type": "Perfection",
     "name": "Perfect Nightmare",
     "description": "Kill the Nightmare without any player taking damage from the following attacks: Nightmare rifts, an un-cured parasite explosion, Corpse flowers or the Nightmare's Surge. Also, no player can take damage off prayer or have their attacks slowed by the Nightmare spores.",
+    "points": 5,
     "boss": true
   },
   "189": {
@@ -1437,6 +1706,7 @@
     "type": "Restriction",
     "name": "Sleep Tight",
     "description": "Kill the Nightmare solo.",
+    "points": 4,
     "boss": true
   },
   "190": {
@@ -1445,6 +1715,7 @@
     "type": "Restriction",
     "name": "A Long Trip",
     "description": "Kill the Nightmare without any player losing any prayer points.",
+    "points": 6,
     "boss": true
   },
   "191": {
@@ -1453,6 +1724,7 @@
     "type": "Speed",
     "name": "Nightmare (Solo) Speed-Trialist",
     "description": "Defeat the Nightmare (Solo) in less than 23 minutes.",
+    "points": 4,
     "boss": true
   },
   "192": {
@@ -1461,6 +1733,7 @@
     "type": "Speed",
     "name": "Nightmare (Solo) Speed-Chaser",
     "description": "Defeat the Nightmare (Solo) in less than 19 minutes.",
+    "points": 5,
     "boss": true
   },
   "193": {
@@ -1469,6 +1742,34 @@
     "type": "Speed",
     "name": "Nightmare (Solo) Speed-Runner",
     "description": "Defeat the Nightmare (Solo) in less than 16 minutes.",
+    "points": 6,
+    "boss": true
+  },
+  "194": {
+    "monster": "Nightmare",
+    "tier": "Elite",
+    "type": "Speed",
+    "name": "Nightmare (5-Scale) Speed-Trialist",
+    "description": "Defeat the Nightmare (5-scale) in less than 5 minutes.",
+    "points": 4,
+    "boss": true
+  },
+  "195": {
+    "monster": "Nightmare",
+    "tier": "Master",
+    "type": "Speed",
+    "name": "Nightmare (5-Scale) Speed-Chaser",
+    "description": "Defeat the Nightmare (5-scale) in less than 4 minutes.",
+    "points": 5,
+    "boss": true
+  },
+  "196": {
+    "monster": "Nightmare",
+    "tier": "Grandmaster",
+    "type": "Speed",
+    "name": "Nightmare (5-Scale) Speed-Runner",
+    "description": "Defeat the Nightmare (5-scale) in less than 3:30 minutes.",
+    "points": 6,
     "boss": true
   },
   "197": {
@@ -1477,6 +1778,7 @@
     "type": "Kill Count",
     "name": "Dagannoth Prime Champion",
     "description": "Kill Dagannoth Prime 10 times.",
+    "points": 2,
     "boss": true
   },
   "198": {
@@ -1485,6 +1787,7 @@
     "type": "Kill Count",
     "name": "Dagannoth Prime Adept",
     "description": "Kill Dagannoth Prime 25 times.",
+    "points": 3,
     "boss": true
   },
   "199": {
@@ -1493,6 +1796,7 @@
     "type": "Mechanical",
     "name": "Death to the Seer King",
     "description": "Kill Dagannoth Prime whilst under attack by Dagannoth Supreme and Dagannoth Rex.",
+    "points": 4,
     "boss": true
   },
   "200": {
@@ -1501,6 +1805,7 @@
     "type": "Mechanical",
     "name": "From One King to Another",
     "description": "Kill Prime using a Rune Thrownaxe special attack, bounced off Dagannoth Rex.",
+    "points": 4,
     "boss": true
   },
   "201": {
@@ -1509,6 +1814,7 @@
     "type": "Kill Count",
     "name": "Dagannoth Rex Champion",
     "description": "Kill Dagannoth Rex 10 times.",
+    "points": 2,
     "boss": true
   },
   "202": {
@@ -1517,6 +1823,7 @@
     "type": "Kill Count",
     "name": "Dagannoth Rex Adept",
     "description": "Kill Dagannoth Rex 25 times.",
+    "points": 3,
     "boss": true
   },
   "203": {
@@ -1525,6 +1832,7 @@
     "type": "Mechanical",
     "name": "Death to the Warrior King",
     "description": "Kill Dagannoth Rex whilst under attack by Dagannoth Supreme and Dagannoth Prime.",
+    "points": 4,
     "boss": true
   },
   "204": {
@@ -1533,6 +1841,7 @@
     "type": "Mechanical",
     "name": "A Frozen King",
     "description": "Kill Dagannoth Rex whilst he is immobilised.",
+    "points": 2,
     "boss": true
   },
   "205": {
@@ -1541,6 +1850,7 @@
     "type": "Mechanical",
     "name": "Toppling the Diarchy",
     "description": "Kill Dagannoth Rex and one other Dagannoth king at the exact same time.",
+    "points": 4,
     "boss": true
   },
   "206": {
@@ -1549,6 +1859,7 @@
     "type": "Kill Count",
     "name": "Sarachnis Novice",
     "description": "Kill Sarachnis 10 times.",
+    "points": 1,
     "boss": true
   },
   "207": {
@@ -1557,6 +1868,7 @@
     "type": "Kill Count",
     "name": "Sarachnis Champion",
     "description": "Kill Sarachnis 25 times.",
+    "points": 2,
     "boss": true
   },
   "208": {
@@ -1565,6 +1877,7 @@
     "type": "Mechanical",
     "name": "Ready to Pounce",
     "description": "Kill Sarachnis without her using her range attack twice in a row.",
+    "points": 3,
     "boss": true
   },
   "209": {
@@ -1573,6 +1886,7 @@
     "type": "Perfection",
     "name": "Inspect Repellent",
     "description": "Kill Sarachnis without her dealing damage to anyone.",
+    "points": 3,
     "boss": true
   },
   "210": {
@@ -1581,6 +1895,7 @@
     "type": "Restriction",
     "name": "Newspaper Enthusiast",
     "description": "Kill Sarachnis with a crush weapon.",
+    "points": 2,
     "boss": true
   },
   "211": {
@@ -1589,6 +1904,7 @@
     "type": "Kill Count",
     "name": "Commander Zilyana Adept",
     "description": "Kill Commander Zilyana 50 times.",
+    "points": 3,
     "boss": true
   },
   "212": {
@@ -1597,6 +1913,7 @@
     "type": "Kill Count",
     "name": "Commander Zilyana Veteran",
     "description": "Kill Commander Zilyana 100 times.",
+    "points": 4,
     "boss": true
   },
   "213": {
@@ -1605,6 +1922,7 @@
     "type": "Mechanical",
     "name": "Commander Showdown",
     "description": "Finish off Commander Zilyana while all of her bodyguards are dead.",
+    "points": 3,
     "boss": true
   },
   "214": {
@@ -1613,6 +1931,7 @@
     "type": "Perfection",
     "name": "Animal Whisperer",
     "description": "Kill Commander Zilyana in a privately rented instance without taking any damage from the boss or bodyguards.",
+    "points": 6,
     "boss": true
   },
   "215": {
@@ -1621,6 +1940,7 @@
     "type": "Restriction",
     "name": "Moving Collateral",
     "description": "Kill Commander Zilyana in a privately rented instance without attacking her directly.",
+    "points": 5,
     "boss": true
   },
   "216": {
@@ -1629,6 +1949,7 @@
     "type": "Restriction",
     "name": "Reminisce",
     "description": "Kill Commander Zilyana in a privately rented instance with melee only.",
+    "points": 4,
     "boss": true
   },
   "217": {
@@ -1637,6 +1958,7 @@
     "type": "Stamina",
     "name": "Peach Conjurer",
     "description": "Kill Commander Zilyana 50 times in a privately rented instance without leaving the room.",
+    "points": 6,
     "boss": true
   },
   "218": {
@@ -1645,6 +1967,7 @@
     "type": "Kill Count",
     "name": "Scorpia Adept",
     "description": "Kill Scorpia 10 times.",
+    "points": 3,
     "boss": true
   },
   "219": {
@@ -1653,6 +1976,7 @@
     "type": "Kill Count",
     "name": "Scorpia Veteran",
     "description": "Kill Scorpia 25 times.",
+    "points": 4,
     "boss": true
   },
   "220": {
@@ -1661,6 +1985,7 @@
     "type": "Perfection",
     "name": "I Can't Reach That",
     "description": "Kill Scorpia without taking any damage from her.",
+    "points": 3,
     "boss": true
   },
   "221": {
@@ -1669,6 +1994,7 @@
     "type": "Restriction",
     "name": "Guardians No More",
     "description": "Kill Scorpia without killing her guardians.",
+    "points": 3,
     "boss": true
   },
   "222": {
@@ -1677,6 +2003,7 @@
     "type": "Speed",
     "name": "Fragment of Seren Speed-Trialist",
     "description": "Kill The Fragment of Seren in less than 4 minutes.",
+    "points": 4,
     "boss": false
   },
   "223": {
@@ -1685,6 +2012,7 @@
     "type": "Kill Count",
     "name": "A Frozen Foe from the Past",
     "description": "Kill a Skeletal Wyvern",
+    "points": 2,
     "boss": false
   },
   "224": {
@@ -1693,6 +2021,7 @@
     "type": "Kill Count",
     "name": "Zulrah Adept",
     "description": "Kill Zulrah 25 times.",
+    "points": 3,
     "boss": true
   },
   "225": {
@@ -1701,6 +2030,7 @@
     "type": "Kill Count",
     "name": "Zulrah Veteran",
     "description": "Kill Zulrah 75 times.",
+    "points": 4,
     "boss": true
   },
   "226": {
@@ -1709,6 +2039,16 @@
     "type": "Kill Count",
     "name": "Zulrah Master",
     "description": "Kill Zulrah 150 times.",
+    "points": 5,
+    "boss": true
+  },
+  "227": {
+    "monster": "Zulrah",
+    "tier": "Elite",
+    "type": "Mechanical",
+    "name": "Snake Rebound",
+    "description": "Kill Zulrah by using the Vengeance spell as the finishing blow.",
+    "points": 4,
     "boss": true
   },
   "228": {
@@ -1717,6 +2057,7 @@
     "type": "Mechanical",
     "name": "Snake. Snake!? Snaaaaaake!",
     "description": "Kill 3 Snakelings simultaneously.",
+    "points": 4,
     "boss": true
   },
   "229": {
@@ -1725,6 +2066,7 @@
     "type": "Perfection",
     "name": "Perfect Zulrah",
     "description": "Kill Zulrah whilst taking no damage from the following: Snakelings, Venom Clouds, Zulrah's Green or Crimson phase.",
+    "points": 5,
     "boss": true
   },
   "230": {
@@ -1733,6 +2075,7 @@
     "type": "Speed",
     "name": "Zulrah Speed-Trialist",
     "description": "Kill Zulrah in less than 1 minute 20 seconds, without a slayer task.",
+    "points": 4,
     "boss": true
   },
   "231": {
@@ -1741,6 +2084,7 @@
     "type": "Speed",
     "name": "Zulrah Speed-Chaser",
     "description": "Kill Zulrah in less than 1 minute, without a slayer task.",
+    "points": 5,
     "boss": true
   },
   "232": {
@@ -1749,6 +2093,7 @@
     "type": "Speed",
     "name": "Zulrah Speed-Runner",
     "description": "Kill Zulrah in less than 54 seconds, without a slayer task.",
+    "points": 6,
     "boss": true
   },
   "233": {
@@ -1757,6 +2102,7 @@
     "type": "Kill Count",
     "name": "Dagannoth Supreme Champion",
     "description": "Kill Dagannoth Supreme 10 times.",
+    "points": 2,
     "boss": true
   },
   "234": {
@@ -1765,6 +2111,7 @@
     "type": "Kill Count",
     "name": "Dagannoth Supreme Adept",
     "description": "Kill Dagannoth Supreme 25 times.",
+    "points": 3,
     "boss": true
   },
   "235": {
@@ -1773,6 +2120,7 @@
     "type": "Mechanical",
     "name": "Death to the Archer King",
     "description": "Kill Dagannoth Supreme whilst under attack by Dagannoth Prime and Dagannoth Rex.",
+    "points": 4,
     "boss": true
   },
   "236": {
@@ -1781,6 +2129,7 @@
     "type": "Mechanical",
     "name": "Rapid Succession",
     "description": "Kill all three Dagannoth Kings within 9 seconds of the first one.",
+    "points": 4,
     "boss": true
   },
   "237": {
@@ -1789,6 +2138,7 @@
     "type": "Kill Count",
     "name": "Theatre of Blood Veteran",
     "description": "Complete the Theatre of Blood 25 times.",
+    "points": 4,
     "boss": true
   },
   "238": {
@@ -1797,6 +2147,7 @@
     "type": "Kill Count",
     "name": "Theatre of Blood Master",
     "description": "Complete the Theatre of Blood 75 times.",
+    "points": 5,
     "boss": true
   },
   "239": {
@@ -1805,6 +2156,7 @@
     "type": "Kill Count",
     "name": "Theatre of Blood Grandmaster",
     "description": "Complete the Theatre of Blood 150 times.",
+    "points": 6,
     "boss": true
   },
   "240": {
@@ -1813,6 +2165,7 @@
     "type": "Mechanical",
     "name": "Two-Down",
     "description": "Kill the Pestilent Bloat before he shuts down for the third time.",
+    "points": 5,
     "boss": true
   },
   "241": {
@@ -1821,6 +2174,7 @@
     "type": "Mechanical",
     "name": "Pop It",
     "description": "Kill Verzik without any Nylocas being frozen and without anyone taking damage from the Nylocas.",
+    "points": 5,
     "boss": true
   },
   "242": {
@@ -1829,6 +2183,7 @@
     "type": "Mechanical",
     "name": "A Timely Snack",
     "description": "Kill Sotetseg after surviving at least 3 ball attacks without sharing the damage and without anyone dying throughout the fight.",
+    "points": 5,
     "boss": true
   },
   "243": {
@@ -1837,6 +2192,7 @@
     "type": "Perfection",
     "name": "Perfect Theatre",
     "description": "Complete the Theatre of Blood without anyone dying through any means and whilst everyone in the team completes the following Combat Achievement tasks in a single run: \"Perfect Maiden\", \"Perfect Bloat\", \"Perfect Nylocas\", \"Perfect Sotetseg\", \"Perfect Xarpus\" and \"Perfect Verzik\".",
+    "points": 6,
     "boss": true
   },
   "244": {
@@ -1845,6 +2201,7 @@
     "type": "Perfection",
     "name": "Perfect Maiden",
     "description": "Kill The Maiden of Sugadinti without anyone in the team taking damage from the following sources: Blood Spawn projectiles and Blood Spawn trails. Also, without taking damage off prayer and without letting any of the Nylocas Matomenos heal The Maiden.",
+    "points": 5,
     "boss": true
   },
   "245": {
@@ -1853,6 +2210,7 @@
     "type": "Perfection",
     "name": "Perfect Bloat",
     "description": "Kill the Pestilent Bloat without anyone in the team taking damage from the following sources: Pestilent flies, Falling body parts or The Pestilent Bloats stomp attack.",
+    "points": 5,
     "boss": true
   },
   "246": {
@@ -1861,6 +2219,7 @@
     "type": "Perfection",
     "name": "Perfect Nylocas",
     "description": "Kill the Nylocas Vasilias without anyone in the team attacking any Nylocas with the wrong attack style, without letting a pillar collapse and without getting hit by any of the Nylocas Vasilias attacks whilst off prayer.",
+    "points": 5,
     "boss": true
   },
   "247": {
@@ -1869,6 +2228,7 @@
     "type": "Perfection",
     "name": "Perfect Sotetseg",
     "description": "Kill Sotetseg without anyone in the team stepping on the wrong tile in the maze, without getting hit by the tornado and without taking any damage from Sotetseg's attacks whilst off prayer.",
+    "points": 5,
     "boss": true
   },
   "248": {
@@ -1877,6 +2237,7 @@
     "type": "Perfection",
     "name": "Perfect Xarpus",
     "description": "Kill Xarpus without anyone in the team taking any damage from Xarpus' attacks and without letting an exhumed heal Xarpus more than twice.",
+    "points": 5,
     "boss": true
   },
   "249": {
@@ -1885,6 +2246,7 @@
     "type": "Perfection",
     "name": "Perfect Verzik",
     "description": "Defeat Verzik Vitur without anyone in the team taking damage from Verzik Vitur's attacks other than her spider form's correctly prayed against regular magical and ranged attacks.",
+    "points": 5,
     "boss": true
   },
   "250": {
@@ -1893,6 +2255,7 @@
     "type": "Restriction",
     "name": "Can't Drain This",
     "description": "Kill The Maiden of Sugadinti without anyone in the team losing any prayer points.",
+    "points": 5,
     "boss": true
   },
   "251": {
@@ -1901,6 +2264,7 @@
     "type": "Restriction",
     "name": "Can You Dance?",
     "description": "Kill Xarpus without anyone in the team using a ranged or magic weapon.",
+    "points": 5,
     "boss": true
   },
   "252": {
@@ -1909,6 +2273,7 @@
     "type": "Restriction",
     "name": "Morytania Only",
     "description": "Complete the Theatre of Blood without any member of the team equipping a non-barrows weapon (except Dawnbringer).",
+    "points": 6,
     "boss": true
   },
   "253": {
@@ -1917,6 +2282,7 @@
     "type": "Restriction",
     "name": "Back in My Day...",
     "description": "Complete the Theatre of Blood without any member of the team equipping a Scythe of Vitur.",
+    "points": 5,
     "boss": true
   },
   "254": {
@@ -1925,6 +2291,61 @@
     "type": "Speed",
     "name": "Theatre (Duo) Speed-Runner",
     "description": "Complete the Theatre of Blood (Duo) in less than 26 minutes.",
+    "points": 6,
+    "boss": true
+  },
+  "255": {
+    "monster": "Theatre of Blood",
+    "tier": "Master",
+    "type": "Speed",
+    "name": "Theatre (Trio) Speed-Chaser",
+    "description": "Complete the Theatre of Blood (Trio) in less than 20 minutes.",
+    "points": 5,
+    "boss": true
+  },
+  "256": {
+    "monster": "Theatre of Blood",
+    "tier": "Grandmaster",
+    "type": "Speed",
+    "name": "Theatre (Trio) Speed-Runner",
+    "description": "Complete the Theatre of Blood (Trio) in less than 17 minutes and 30 seconds.",
+    "points": 6,
+    "boss": true
+  },
+  "257": {
+    "monster": "Theatre of Blood",
+    "tier": "Master",
+    "type": "Speed",
+    "name": "Theatre (4-Scale) Speed-Chaser",
+    "description": "Complete the Theatre of Blood (4-scale) in less than 17 minutes.",
+    "points": 5,
+    "boss": true
+  },
+  "258": {
+    "monster": "Theatre of Blood",
+    "tier": "Grandmaster",
+    "type": "Speed",
+    "name": "Theatre (4-Scale) Speed-Runner",
+    "description": "Complete the Theatre of Blood (4-scale) in less than 15 minutes.",
+    "points": 6,
+    "boss": true
+  },
+  "259": {
+    "monster": "Theatre of Blood",
+    "tier": "Master",
+    "type": "Speed",
+    "name": "Theatre (5-Scale) Speed-Chaser",
+    "description": "Complete the Theatre of Blood (5-scale) in less than 16 minutes.",
+    "points": 5,
+    "boss": true
+  },
+  "260": {
+    "monster": "Theatre of Blood",
+    "tier": "Grandmaster",
+    "type": "Speed",
+    "name": "Theatre (5-Scale) Speed-Runner",
+    "description": "Complete the Theatre of Blood (5-scale) in less than 14 minutes and 15 seconds.",
+    "points": 6,
     "boss": true
   },
   "261": {
@@ -1933,6 +2354,7 @@
     "type": "Kill Count",
     "name": "Thermonuclear Veteran",
     "description": "Kill the Thermonuclear Smoke Devil 20 times.",
+    "points": 4,
     "boss": true
   },
   "262": {
@@ -1941,6 +2363,7 @@
     "type": "Perfection",
     "name": "Hazard Prevention",
     "description": "Kill the Thermonuclear Smoke Devil without it hitting anyone.",
+    "points": 4,
     "boss": true
   },
   "263": {
@@ -1949,6 +2372,7 @@
     "type": "Restriction",
     "name": "Spec'd Out",
     "description": "Kill the Thermonuclear Smoke Devil using only special attacks.",
+    "points": 4,
     "boss": true
   },
   "264": {
@@ -1957,6 +2381,7 @@
     "type": "Kill Count",
     "name": "Venenatis Adept",
     "description": "Kill Venenatis 10 times.",
+    "points": 3,
     "boss": true
   },
   "265": {
@@ -1965,6 +2390,7 @@
     "type": "Kill Count",
     "name": "Venenatis Veteran",
     "description": "Kill Venenatis 20 times.",
+    "points": 4,
     "boss": true
   },
   "266": {
@@ -1973,6 +2399,7 @@
     "type": "Kill Count",
     "name": "Vet'ion Adept",
     "description": "Kill Vet'ion 10 times.",
+    "points": 3,
     "boss": true
   },
   "267": {
@@ -1981,6 +2408,7 @@
     "type": "Kill Count",
     "name": "Vet'eran",
     "description": "Kill Vet'ion 20 times.",
+    "points": 4,
     "boss": true
   },
   "268": {
@@ -1989,6 +2417,7 @@
     "type": "Kill Count",
     "name": "Vorkath Veteran",
     "description": "Kill Vorkath 50 times.",
+    "points": 4,
     "boss": true
   },
   "269": {
@@ -1997,6 +2426,7 @@
     "type": "Kill Count",
     "name": "Vorkath Master",
     "description": "Kill Vorkath 100 times.",
+    "points": 5,
     "boss": true
   },
   "270": {
@@ -2005,6 +2435,7 @@
     "type": "Mechanical",
     "name": "The Walk",
     "description": "Hit Vorkath 12 times during the acid special without getting hit by his rapid fire or the acid pools.",
+    "points": 5,
     "boss": true
   },
   "271": {
@@ -2013,6 +2444,7 @@
     "type": "Restriction",
     "name": "Zombie Destroyer",
     "description": "Kill Vorkath's zombified spawn without using crumble undead.",
+    "points": 4,
     "boss": true
   },
   "272": {
@@ -2021,6 +2453,7 @@
     "type": "Perfection",
     "name": "Dodging the Dragon",
     "description": "Kill Vorkath 5 times without taking any damage from his special attacks and without leaving his area.",
+    "points": 5,
     "boss": true
   },
   "273": {
@@ -2029,6 +2462,7 @@
     "type": "Restriction",
     "name": "Stick 'em With the Pointy End",
     "description": "Kill Vorkath using melee weapons only.",
+    "points": 4,
     "boss": true
   },
   "274": {
@@ -2037,6 +2471,7 @@
     "type": "Restriction",
     "name": "Faithless Encounter",
     "description": "Kill Vorkath without losing any prayer points.",
+    "points": 6,
     "boss": true
   },
   "275": {
@@ -2045,6 +2480,7 @@
     "type": "Restriction",
     "name": "The Fremennik Way",
     "description": "Kill Vorkath with only your fists.",
+    "points": 6,
     "boss": true
   },
   "276": {
@@ -2053,6 +2489,7 @@
     "type": "Speed",
     "name": "Vorkath Speed-Chaser",
     "description": "Kill Vorkath in less than 1 minute and 15 seconds.",
+    "points": 5,
     "boss": true
   },
   "277": {
@@ -2061,6 +2498,7 @@
     "type": "Speed",
     "name": "Vorkath Speed-Runner",
     "description": "Kill Vorkath in less than 54 seconds.",
+    "points": 6,
     "boss": true
   },
   "278": {
@@ -2069,6 +2507,7 @@
     "type": "Stamina",
     "name": "Extended Encounter",
     "description": "Kill Vorkath 10 times without leaving his area.",
+    "points": 5,
     "boss": true
   },
   "279": {
@@ -2077,6 +2516,7 @@
     "type": "Kill Count",
     "name": "Wintertodt Novice",
     "description": "Subdue the Wintertodt 5 times.",
+    "points": 1,
     "boss": true
   },
   "280": {
@@ -2085,6 +2525,7 @@
     "type": "Kill Count",
     "name": "Wintertodt Champion",
     "description": "Subdue the Wintertodt 10 times.",
+    "points": 2,
     "boss": true
   },
   "281": {
@@ -2093,6 +2534,7 @@
     "type": "Mechanical",
     "name": "Mummy!",
     "description": "Heal a pyromancer after they have fallen.",
+    "points": 1,
     "boss": true
   },
   "282": {
@@ -2101,6 +2543,7 @@
     "type": "Mechanical",
     "name": "Handyman",
     "description": "Repair a brazier which has been destroyed by the Wintertodt.",
+    "points": 1,
     "boss": true
   },
   "283": {
@@ -2109,6 +2552,7 @@
     "type": "Perfection",
     "name": "Can We Fix It?",
     "description": "Subdue the Wintertodt without allowing all 4 braziers to be broken at the same time.",
+    "points": 2,
     "boss": true
   },
   "284": {
@@ -2117,6 +2561,7 @@
     "type": "Restriction",
     "name": "Leaving No One Behind",
     "description": "Subdue the Wintertodt without any of the Pyromancers falling.",
+    "points": 2,
     "boss": true
   },
   "285": {
@@ -2125,6 +2570,7 @@
     "type": "Restriction",
     "name": "Cosy",
     "description": "Subdue the Wintertodt with four pieces of warm equipment equipped.",
+    "points": 1,
     "boss": true
   },
   "286": {
@@ -2133,6 +2579,7 @@
     "type": "Stamina",
     "name": "Why Fletch?",
     "description": "Subdue the Wintertodt after earning 3000 or more points.",
+    "points": 3,
     "boss": true
   },
   "287": {
@@ -2141,6 +2588,7 @@
     "type": "Kill Count",
     "name": "A Slithery Encounter",
     "description": "Kill a Wyrm.",
+    "points": 1,
     "boss": false
   },
   "288": {
@@ -2149,6 +2597,7 @@
     "type": "Kill Count",
     "name": "Chambers of Xeric: CM Master",
     "description": "Complete the Chambers of Xeric: Challenge Mode 10 times.",
+    "points": 5,
     "boss": true
   },
   "289": {
@@ -2157,6 +2606,7 @@
     "type": "Kill Count",
     "name": "Chambers of Xeric: CM Grandmaster",
     "description": "Complete the Chambers of Xeric: Challenge Mode 25 times.",
+    "points": 6,
     "boss": true
   },
   "290": {
@@ -2165,6 +2615,7 @@
     "type": "Perfection",
     "name": "Immortal Raid Team",
     "description": "Complete a Chambers of Xeric: Challenge mode raid without anyone dying.",
+    "points": 5,
     "boss": true
   },
   "291": {
@@ -2173,6 +2624,7 @@
     "type": "Perfection",
     "name": "Immortal Raider",
     "description": "Complete a Chambers of Xeric Challenge mode (Solo) raid without dying.",
+    "points": 5,
     "boss": true
   },
   "292": {
@@ -2181,6 +2633,7 @@
     "type": "Speed",
     "name": "Dust Seeker",
     "description": "Complete a Chambers of Xeric Challenge mode raid in the target time.",
+    "points": 4,
     "boss": true
   },
   "293": {
@@ -2189,6 +2642,7 @@
     "type": "Speed",
     "name": "Chambers of Xeric: CM (Solo) Speed-Chaser",
     "description": "Complete a Chambers of Xeric: Challenge Mode (Solo) in less than 45 minutes.",
+    "points": 5,
     "boss": true
   },
   "294": {
@@ -2197,6 +2651,43 @@
     "type": "Speed",
     "name": "Chambers of Xeric: CM (Solo) Speed-Runner",
     "description": "Complete a Chambers of Xeric: Challenge Mode (Solo) in less than 38 minutes and 30 seconds.",
+    "points": 6,
+    "boss": true
+  },
+  "295": {
+    "monster": "Chambers of Xeric: Challenge Mode",
+    "tier": "Master",
+    "type": "Speed",
+    "name": "Chambers of Xeric: CM (5-Scale) Speed-Chaser",
+    "description": "Complete a Chambers of Xeric: Challenge Mode (5-scale) in less than 30 minutes.",
+    "points": 5,
+    "boss": true
+  },
+  "296": {
+    "monster": "Chambers of Xeric: Challenge Mode",
+    "tier": "Grandmaster",
+    "type": "Speed",
+    "name": "Chambers of Xeric: CM (5-Scale) Speed-Runner",
+    "description": "Complete a Chambers of Xeric: Challenge Mode (5-scale) in less than 25 minutes.",
+    "points": 6,
+    "boss": true
+  },
+  "297": {
+    "monster": "Chambers of Xeric: Challenge Mode",
+    "tier": "Master",
+    "type": "Speed",
+    "name": "Chambers of Xeric: CM (Trio) Speed-Chaser",
+    "description": "Complete a Chambers of Xeric: Challenge Mode (Trio) in less than 35 minutes.",
+    "points": 5,
+    "boss": true
+  },
+  "298": {
+    "monster": "Chambers of Xeric: Challenge Mode",
+    "tier": "Grandmaster",
+    "type": "Speed",
+    "name": "Chambers of Xeric: CM (Trio) Speed-Runner",
+    "description": "Complete a Chambers of Xeric: Challenge Mode (Trio) in less than 27 minutes.",
+    "points": 6,
     "boss": true
   },
   "299": {
@@ -2205,6 +2696,7 @@
     "type": "Kill Count",
     "name": "Chambers of Xeric Veteran",
     "description": "Complete the Chambers of Xeric 25 times.",
+    "points": 4,
     "boss": true
   },
   "300": {
@@ -2213,6 +2705,7 @@
     "type": "Kill Count",
     "name": "Chambers of Xeric Master",
     "description": "Complete the Chambers of Xeric 75 times.",
+    "points": 5,
     "boss": true
   },
   "301": {
@@ -2221,6 +2714,7 @@
     "type": "Kill Count",
     "name": "Chambers of Xeric Grandmaster",
     "description": "Complete the Chambers of Xeric 150 times.",
+    "points": 6,
     "boss": true
   },
   "302": {
@@ -2229,6 +2723,7 @@
     "type": "Mechanical",
     "name": "Perfectly Balanced",
     "description": "Kill the Vanguards without them resetting their health.",
+    "points": 4,
     "boss": true
   },
   "303": {
@@ -2237,6 +2732,7 @@
     "type": "Mechanical",
     "name": "Together We'll Fall",
     "description": "Kill the Vanguards within 10 seconds of the first one dying.",
+    "points": 4,
     "boss": true
   },
   "304": {
@@ -2245,6 +2741,7 @@
     "type": "Mechanical",
     "name": "No Time for Death",
     "description": "Clear the Tightrope room without Killing any Deathly Mages or Deathly Rangers.",
+    "points": 5,
     "boss": true
   },
   "305": {
@@ -2253,6 +2750,7 @@
     "type": "Mechanical",
     "name": "Putting It Olm on the Line",
     "description": "Complete a Chambers of Xeric solo raid with more than 40,000 points.",
+    "points": 5,
     "boss": true
   },
   "306": {
@@ -2261,6 +2759,7 @@
     "type": "Mechanical",
     "name": "A Not So Special Lizard",
     "description": "Kill the Great Olm in a solo raid without letting him use any of the following special attacks in his second to last phase: Crystal Burst, Lightning Walls, Teleportation Portals or left-hand autohealing.",
+    "points": 5,
     "boss": true
   },
   "307": {
@@ -2269,6 +2768,7 @@
     "type": "Mechanical",
     "name": "Mutta-diet",
     "description": "Kill the Muttadile without letting her or her baby recover hitpoints from the meat tree.",
+    "points": 4,
     "boss": true
   },
   "308": {
@@ -2277,6 +2777,7 @@
     "type": "Mechanical",
     "name": "Redemption Enthusiast",
     "description": "Kill the Abyssal Portal without forcing Vespula to land.",
+    "points": 4,
     "boss": true
   },
   "309": {
@@ -2285,6 +2786,7 @@
     "type": "Mechanical",
     "name": "Stop Drop and Roll",
     "description": "Kill Vasa Nistirio before he performs his teleport attack for the second time.",
+    "points": 5,
     "boss": true
   },
   "310": {
@@ -2293,6 +2795,7 @@
     "type": "Mechanical",
     "name": "Anvil No More",
     "description": "Kill Tekton before he returns to his anvil for a second time after the fight begins.",
+    "points": 5,
     "boss": true
   },
   "311": {
@@ -2301,6 +2804,7 @@
     "type": "Perfection",
     "name": "Dancing with Statues",
     "description": "Receive kill-credit for a Stone Guardian without taking damage from falling rocks.",
+    "points": 4,
     "boss": true
   },
   "312": {
@@ -2309,6 +2813,7 @@
     "type": "Perfection",
     "name": "Undying Raid Team",
     "description": "Complete a Chambers of Xeric raid without anyone dying.",
+    "points": 4,
     "boss": true
   },
   "313": {
@@ -2317,6 +2822,7 @@
     "type": "Perfection",
     "name": "Undying Raider",
     "description": "Complete a Chambers of Xeric solo raid without dying.",
+    "points": 5,
     "boss": true
   },
   "314": {
@@ -2325,6 +2831,7 @@
     "type": "Perfection",
     "name": "Shayzien Specialist",
     "description": "Receive kill-credit for a Lizardman Shaman without taking damage from any shamans in the room.",
+    "points": 4,
     "boss": true
   },
   "315": {
@@ -2333,6 +2840,7 @@
     "type": "Perfection",
     "name": "Playing with Lasers",
     "description": "Clear the Crystal Crabs room without wasting an orb after the first crystal has been activated.",
+    "points": 5,
     "boss": true
   },
   "316": {
@@ -2341,6 +2849,7 @@
     "type": "Perfection",
     "name": "Cryo No More",
     "description": "Receive kill-credit for the Ice Demon without taking any damage.",
+    "points": 4,
     "boss": true
   },
   "317": {
@@ -2349,6 +2858,16 @@
     "type": "Perfection",
     "name": "Perfect Olm (Solo)",
     "description": "Kill the Great Olm in a solo raid without taking damage from any of the following: Teleport portals, Fire Walls, Healing pools, Crystal Bombs, Crystal Burst or Prayer Orbs. You also cannot let his claws regenerate or take damage from the same acid pool back to back.",
+    "points": 5,
+    "boss": true
+  },
+  "318": {
+    "monster": "Chambers of Xeric",
+    "tier": "Master",
+    "type": "Perfection",
+    "name": "Perfect Olm (Trio)",
+    "description": "Kill the Great Olm in a trio raid without any team member taking damage from any of the following: Teleport portals, Fire Walls, Healing pools, Crystal Bombs, Crystal Burst or Prayer Orbs. You also cannot let his claws regenerate or take damage from the same acid pool back to back.",
+    "points": 5,
     "boss": true
   },
   "319": {
@@ -2357,6 +2876,7 @@
     "type": "Perfection",
     "name": "Blind Spot",
     "description": "Kill Tekton without taking any damage.",
+    "points": 5,
     "boss": true
   },
   "320": {
@@ -2365,6 +2885,7 @@
     "type": "Restriction",
     "name": "Blizzard Dodger",
     "description": "Receive kill-credit for the Ice Demon without activating the Protect from Range prayer.",
+    "points": 4,
     "boss": true
   },
   "321": {
@@ -2373,6 +2894,7 @@
     "type": "Restriction",
     "name": "Kill It with Fire",
     "description": "Finish off the Ice Demon with a fire spell.",
+    "points": 4,
     "boss": true
   },
   "322": {
@@ -2381,6 +2903,7 @@
     "type": "Speed",
     "name": "Chambers of Xeric (Solo) Speed-Chaser",
     "description": "Complete a Chambers of Xeric (Solo) in less than 21 minutes.",
+    "points": 5,
     "boss": true
   },
   "323": {
@@ -2389,6 +2912,43 @@
     "type": "Speed",
     "name": "Chambers of Xeric (Solo) Speed-Runner",
     "description": "Complete a Chambers of Xeric (Solo) in less than 17 minutes.",
+    "points": 6,
+    "boss": true
+  },
+  "324": {
+    "monster": "Chambers of Xeric",
+    "tier": "Master",
+    "type": "Speed",
+    "name": "Chambers of Xeric (5-Scale) Speed-Chaser",
+    "description": "Complete a Chambers of Xeric (5-scale) in less than 15 minutes.",
+    "points": 5,
+    "boss": true
+  },
+  "325": {
+    "monster": "Chambers of Xeric",
+    "tier": "Grandmaster",
+    "type": "Speed",
+    "name": "Chambers of Xeric (5-Scale) Speed-Runner",
+    "description": "Complete a Chambers of Xeric (5-scale) in less than 12 minutes and 30 seconds.",
+    "points": 6,
+    "boss": true
+  },
+  "326": {
+    "monster": "Chambers of Xeric",
+    "tier": "Master",
+    "type": "Speed",
+    "name": "Chambers of Xeric (Trio) Speed-Chaser",
+    "description": "Complete a Chambers of Xeric (Trio) in less than 16 minutes and 30 seconds.",
+    "points": 5,
+    "boss": true
+  },
+  "327": {
+    "monster": "Chambers of Xeric",
+    "tier": "Grandmaster",
+    "type": "Speed",
+    "name": "Chambers of Xeric (Trio) Speed-Runner",
+    "description": "Complete a Chambers of Xeric (Trio) in less than 14 minutes and 30 seconds.",
+    "points": 6,
     "boss": true
   },
   "328": {
@@ -2397,6 +2957,7 @@
     "type": "Kill Count",
     "name": "Zalcano Veteran",
     "description": "Kill Zalcano 25 times.",
+    "points": 4,
     "boss": true
   },
   "329": {
@@ -2405,6 +2966,7 @@
     "type": "Perfection",
     "name": "Perfect Zalcano",
     "description": "Kill Zalcano 5 times in a row without leaving or getting hit by the following: Falling rocks, rock explosions, Zalcano powering up, or standing in a red symbol.",
+    "points": 4,
     "boss": true
   },
   "330": {
@@ -2413,6 +2975,7 @@
     "type": "Mechanical",
     "name": "Team Player",
     "description": "Receive imbued tephra from a golem.",
+    "points": 4,
     "boss": true
   },
   "331": {
@@ -2421,6 +2984,7 @@
     "type": "Mechanical",
     "name": "The Spurned Hero",
     "description": "Kill Zalcano as the player who has dealt the most damage to her.",
+    "points": 4,
     "boss": true
   },
   "332": {
@@ -2429,6 +2993,7 @@
     "type": "Kill Count",
     "name": "K'ril Tsutsaroth Adept",
     "description": "Kill K'ril Tsutsaroth 50 times.",
+    "points": 3,
     "boss": true
   },
   "333": {
@@ -2437,6 +3002,7 @@
     "type": "Kill Count",
     "name": "K'ril Tsutsaroth Veteran",
     "description": "Kill K'ril Tsutsaroth 100 times.",
+    "points": 4,
     "boss": true
   },
   "334": {
@@ -2445,6 +3011,7 @@
     "type": "Mechanical",
     "name": "Yarr No More",
     "description": "Receive kill-credit for K'ril Tsutsaroth without him using his special attack.",
+    "points": 3,
     "boss": true
   },
   "335": {
@@ -2453,6 +3020,16 @@
     "type": "Mechanical",
     "name": "Demonic Showdown",
     "description": "Finish off K'ril Tsutsaroth whilst all of his bodyguards are dead.",
+    "points": 3,
+    "boss": true
+  },
+  "336": {
+    "monster": "K'ril Tsutsaroth",
+    "tier": "Elite",
+    "type": "Mechanical",
+    "name": "The Bane of Demons",
+    "description": "Defeat K'ril Tsutsaroth in a privately rented instance using only demonbane spells.",
+    "points": 4,
     "boss": true
   },
   "337": {
@@ -2461,6 +3038,7 @@
     "type": "Perfection",
     "name": "Demonic Defence",
     "description": "Kill K'ril Tsutsaroth in a privately rented instance without taking any of his melee hits.",
+    "points": 4,
     "boss": true
   },
   "338": {
@@ -2469,6 +3047,7 @@
     "type": "Perfection",
     "name": "Demon Whisperer",
     "description": "Kill K'ril Tsutsaroth in a privately rented instance without ever being hit by his bodyguards.",
+    "points": 6,
     "boss": true
   },
   "339": {
@@ -2477,6 +3056,7 @@
     "type": "Restriction",
     "name": "Demonbane Weaponry II",
     "description": "Finish off K'ril Tsutsaroth with a demonbane weapon.",
+    "points": 3,
     "boss": true
   },
   "340": {
@@ -2485,6 +3065,7 @@
     "type": "Stamina",
     "name": "Ash Collector",
     "description": "Kill K'ril Tsutsaroth 20 times in a privately rented instance without leaving the room.",
+    "points": 6,
     "boss": true
   },
   "341": {
@@ -2493,6 +3074,7 @@
     "type": "Kill Count",
     "name": "Half-Way There",
     "description": "Kill a Jal-Zek within the Inferno.",
+    "points": 4,
     "boss": true
   },
   "342": {
@@ -2501,6 +3083,7 @@
     "type": "Kill Count",
     "name": "Inferno Grandmaster",
     "description": "Complete the Inferno 5 times.",
+    "points": 6,
     "boss": true
   },
   "343": {
@@ -2509,6 +3092,7 @@
     "type": "Mechanical",
     "name": "The Floor Is Lava",
     "description": "Kill TzKal-Zuk without letting Jal-ImKot dig during any wave in the Inferno.",
+    "points": 6,
     "boss": true
   },
   "344": {
@@ -2517,6 +3101,7 @@
     "type": "Mechanical",
     "name": "Playing with Jads",
     "description": "Complete wave 68 of the Inferno within 30 seconds of the first JalTok-Jad dying.",
+    "points": 6,
     "boss": true
   },
   "345": {
@@ -2525,6 +3110,7 @@
     "type": "Perfection",
     "name": "No Luck Required",
     "description": "Kill TzKal-Zuk without being attacked by TzKal-Zuk and without taking damage from a JalTok-Jad.",
+    "points": 6,
     "boss": true
   },
   "346": {
@@ -2533,6 +3119,7 @@
     "type": "Perfection",
     "name": "Nibblers, Begone!",
     "description": "Kill TzKal-Zuk without letting a pillar fall before wave 67.",
+    "points": 5,
     "boss": true
   },
   "347": {
@@ -2541,6 +3128,7 @@
     "type": "Restriction",
     "name": "Wasn't Even Close",
     "description": "Kill TzKal-Zuk without letting your hitpoints fall below 50 during any wave in the Inferno.",
+    "points": 6,
     "boss": true
   },
   "348": {
@@ -2549,6 +3137,7 @@
     "type": "Restriction",
     "name": "Budget Setup",
     "description": "Kill TzKal-Zuk without equipping a Twisted Bow within the Inferno.",
+    "points": 6,
     "boss": true
   },
   "349": {
@@ -2557,6 +3146,7 @@
     "type": "Restriction",
     "name": "Nibbler Chaser",
     "description": "Kill TzKal-Zuk without using any magic spells during any wave in the Inferno.",
+    "points": 6,
     "boss": true
   },
   "350": {
@@ -2565,6 +3155,7 @@
     "type": "Restriction",
     "name": "Facing Jad Head-on II",
     "description": "Kill TzKal-Zuk without equipping any range or mage weapons before wave 69.",
+    "points": 6,
     "boss": true
   },
   "351": {
@@ -2573,6 +3164,7 @@
     "type": "Restriction",
     "name": "Jad? What Are You Doing Here?",
     "description": "Kill TzKal-Zuk without killing the JalTok-Jad which spawns during wave 69.",
+    "points": 6,
     "boss": true
   },
   "352": {
@@ -2581,6 +3173,7 @@
     "type": "Speed",
     "name": "Inferno Speed-Runner",
     "description": "Complete the Inferno in less than 65 minutes.",
+    "points": 6,
     "boss": true
   },
   "353": {
@@ -2589,6 +3182,7 @@
     "type": "Kill Count",
     "name": "Tempoross Novice",
     "description": "Subdue Tempoross 5 times.",
+    "points": 1,
     "boss": true
   },
   "354": {
@@ -2597,6 +3191,16 @@
     "type": "Kill Count",
     "name": "Tempoross Champion",
     "description": "Subdue Tempoross 10 times.",
+    "points": 2,
+    "boss": true
+  },
+  "355": {
+    "monster": "Tempoross",
+    "tier": "Hard",
+    "type": "Restriction",
+    "name": "Dress Like You Mean It",
+    "description": "Subdue Tempoross while wearing any variation of the angler outfit.",
+    "points": 3,
     "boss": true
   },
   "356": {
@@ -2605,6 +3209,7 @@
     "type": "Mechanical",
     "name": "Master of Buckets",
     "description": "Extinguish at least 5 fires during a single Tempoross fight.",
+    "points": 1,
     "boss": true
   },
   "357": {
@@ -2613,6 +3218,7 @@
     "type": "Mechanical",
     "name": "Calm Before the Storm",
     "description": "Repair either a mast or a totem pole.",
+    "points": 1,
     "boss": true
   },
   "358": {
@@ -2621,6 +3227,7 @@
     "type": "Mechanical",
     "name": "Why Cook?",
     "description": "Subdue Tempoross, getting rewarded with 10 reward permits from a single Tempoross fight.",
+    "points": 3,
     "boss": true
   },
   "359": {
@@ -2629,6 +3236,7 @@
     "type": "Perfection",
     "name": "The Lone Angler",
     "description": "Subdue Tempoross alone without getting hit by any fires, torrents or waves.",
+    "points": 2,
     "boss": true
   },
   "360": {
@@ -2637,6 +3245,7 @@
     "type": "Mechanical",
     "name": "Fire in the Hole!",
     "description": "Attack Tempoross from both sides by loading both cannons on both ships.",
+    "points": 1,
     "boss": true
   },
   "361": {
@@ -2645,6 +3254,7 @@
     "type": "Kill Count",
     "name": "The II Jad Challenge",
     "description": "Complete TzHaar-Ket-Rak's second challenge.",
+    "points": 4,
     "boss": false
   },
   "362": {
@@ -2653,6 +3263,7 @@
     "type": "Kill Count",
     "name": "The IV Jad Challenge",
     "description": "Complete TzHaar-Ket-Rak's fourth challenge.",
+    "points": 5,
     "boss": false
   },
   "363": {
@@ -2661,6 +3272,7 @@
     "type": "Kill Count",
     "name": "The VI Jad Challenge",
     "description": "Complete TzHaar-Ket-Rak's sixth challenge.",
+    "points": 6,
     "boss": false
   },
   "364": {
@@ -2669,6 +3281,7 @@
     "type": "Speed",
     "name": "TzHaar-Ket-Rak's Speed-Trialist",
     "description": "Complete TzHaar-Ket-Rak's first challenge in less than 45 seconds.",
+    "points": 4,
     "boss": false
   },
   "365": {
@@ -2677,6 +3290,7 @@
     "type": "Speed",
     "name": "TzHaar-Ket-Rak's Speed-Chaser",
     "description": "Complete TzHaar-Ket-Rak's third challenge in less than 3 minutes.",
+    "points": 5,
     "boss": false
   },
   "366": {
@@ -2685,6 +3299,7 @@
     "type": "Speed",
     "name": "TzHaar-Ket-Rak's Speed-Runner",
     "description": "Complete TzHaar-Ket-Rak's fifth challenge in less than 5 minutes.",
+    "points": 6,
     "boss": false
   },
   "367": {
@@ -2693,6 +3308,7 @@
     "type": "Restriction",
     "name": "Facing Jad Head-on III",
     "description": "Complete TzHaar-Ket-Rak's second challenge with only melee.",
+    "points": 4,
     "boss": false
   },
   "368": {
@@ -2701,6 +3317,7 @@
     "type": "Restriction",
     "name": "Facing Jad Head-on IV",
     "description": "Complete TzHaar-Ket-Rak's fourth challenge with only melee.",
+    "points": 5,
     "boss": false
   },
   "369": {
@@ -2709,6 +3326,7 @@
     "type": "Perfection",
     "name": "Supplies? Who Needs 'em?",
     "description": "Complete TzHaar-Ket-Rak's third challenge without having anything in your inventory.",
+    "points": 5,
     "boss": false
   },
   "370": {
@@ -2717,6 +3335,7 @@
     "type": "Perfection",
     "name": "It Wasn't a Fluke",
     "description": "Complete TzHaar-Ket-Rak's fifth and sixth challenges back to back without failing.",
+    "points": 6,
     "boss": false
   },
   "371": {
@@ -2725,6 +3344,7 @@
     "type": "Mechanical",
     "name": "Multi-Style Specialist",
     "description": "Complete TzHaar-Ket-Rak's third challenge while using a different attack style for each JalTok-Jad.",
+    "points": 5,
     "boss": false
   },
   "372": {
@@ -2733,6 +3353,16 @@
     "type": "Mechanical",
     "name": "Stop Right There!",
     "description": "Defeat the Maiden of Sugadinti in the Theatre of Blood: Hard Mode without letting blood spawns create more than 15 blood trails.",
+    "points": 6,
+    "boss": true
+  },
+  "373": {
+    "monster": "Theatre of Blood: Hard Mode",
+    "tier": "Grandmaster",
+    "type": "Mechanical",
+    "name": "Personal Space",
+    "description": "Defeat the Pestilent Bloat in the Theatre of Blood: Hard Mode with at least 3 people in the room, without anyone in your team standing on top of each other.",
+    "points": 6,
     "boss": true
   },
   "374": {
@@ -2741,6 +3371,7 @@
     "type": "Mechanical",
     "name": "Royal Affairs",
     "description": "In the Theatre of Blood: Hard Mode, complete the Nylocas room without ever letting the Nylocas Prinkipas change styles.",
+    "points": 6,
     "boss": true
   },
   "375": {
@@ -2749,6 +3380,7 @@
     "type": "Perfection",
     "name": "Harder Mode I",
     "description": "Defeat Sotetseg in the Theatre of Blood: Hard Mode without anyone sharing the ball with anyone, without anyone dying, and without anyone taking damage from any of its other attacks or stepping on the wrong tile in the maze.",
+    "points": 6,
     "boss": true
   },
   "376": {
@@ -2757,6 +3389,7 @@
     "type": "Perfection",
     "name": "Harder Mode II",
     "description": "Defeat Xarpus in the Theatre of Blood: Hard Mode after letting the exhumeds heal him to full health and without anyone in the team taking any damage.",
+    "points": 6,
     "boss": true
   },
   "377": {
@@ -2765,6 +3398,7 @@
     "type": "Mechanical",
     "name": "Nylo Sniper",
     "description": "Defeat Verzik Vitur in the Theatre of Blood: Hard Mode without anyone in your team causing a Nylocas to explode by getting too close.",
+    "points": 6,
     "boss": true
   },
   "378": {
@@ -2773,6 +3407,7 @@
     "type": "Mechanical",
     "name": "Team Work Makes the Dream Work",
     "description": "When Verzik Vitur in the Theatre of Blood: Hard Mode uses her yellow power blast attack while the tornadoes are active, have everyone get through the attack without taking damage. This cannot be completed with one player alive",
+    "points": 6,
     "boss": true
   },
   "379": {
@@ -2781,6 +3416,7 @@
     "type": "Restriction",
     "name": "Harder Mode III",
     "description": "Defeat Verzik Vitur in the Theatre of Blood: Hard Mode without anyone attacking her with a melee weapon during her third phase.",
+    "points": 6,
     "boss": true
   },
   "380": {
@@ -2789,6 +3425,7 @@
     "type": "Restriction",
     "name": "Pack Like a Yak",
     "description": "Complete the Theatre of Blood: Hard Mode within the challenge time, with no deaths and without anyone buying anything from a supply chest.",
+    "points": 6,
     "boss": true
   },
   "381": {
@@ -2797,6 +3434,34 @@
     "type": "Speed",
     "name": "Hard Mode? Completed It",
     "description": "Complete the Theatre of Blood: Hard Mode within the challenge time.",
+    "points": 5,
+    "boss": true
+  },
+  "382": {
+    "monster": "Theatre of Blood: Hard Mode",
+    "tier": "Grandmaster",
+    "type": "Speed",
+    "name": "Theatre: HM (Trio) Speed-Runner",
+    "description": "Complete the Theatre of Blood: Hard Mode (Trio) with an overall time of less than 23 minutes.",
+    "points": 6,
+    "boss": true
+  },
+  "383": {
+    "monster": "Theatre of Blood: Hard Mode",
+    "tier": "Grandmaster",
+    "type": "Speed",
+    "name": "Theatre: HM (4-Scale) Speed-Runner",
+    "description": "\tComplete the Theatre of Blood: Hard Mode (4-scale) with an overall time of less than 21 minutes.",
+    "points": 6,
+    "boss": true
+  },
+  "384": {
+    "monster": "Theatre of Blood: Hard Mode",
+    "tier": "Grandmaster",
+    "type": "Speed",
+    "name": "Theatre: HM (5-Scale) Speed-Runner",
+    "description": "Complete the Theatre of Blood: Hard Mode (5-scale) with an overall time of less than 19 minutes.",
+    "points": 6,
     "boss": true
   },
   "385": {
@@ -2805,6 +3470,7 @@
     "type": "Kill Count",
     "name": "Theatre of Blood: HM Grandmaster",
     "description": "Complete the Theatre of Blood: Hard Mode 50 times.",
+    "points": 6,
     "boss": true
   },
   "386": {
@@ -2813,6 +3479,7 @@
     "type": "Mechanical",
     "name": "Anticoagulants",
     "description": "Defeat the Maiden of Sugadinti in the Theatre of Blood: Entry Mode without letting any bloodspawn live for longer than 10 seconds.",
+    "points": 4,
     "boss": true
   },
   "387": {
@@ -2821,6 +3488,7 @@
     "type": "Mechanical",
     "name": "Appropriate Tools",
     "description": "Defeat the Pestilent Bloat in the Theatre of Blood: Entry Mode with everyone having a salve amulet equipped.",
+    "points": 4,
     "boss": true
   },
   "388": {
@@ -2829,6 +3497,25 @@
     "type": "Mechanical",
     "name": "They Won't Expect This",
     "description": "In the Theatre of Blood: Entry Mode, enter the Pestilent Bloat room from the opposite side.",
+    "points": 4,
+    "boss": true
+  },
+  "389": {
+    "monster": "Theatre of Blood: Entry Mode",
+    "tier": "Elite",
+    "type": "Mechanical",
+    "name": "Chally Time",
+    "description": "Defeat the Pestilent Bloat in the Theatre of Blood: Entry Mode by using a crystal halberd special attack as your final attack.",
+    "points": 4,
+    "boss": true
+  },
+  "390": {
+    "monster": "Theatre of Blood: Entry Mode",
+    "tier": "Elite",
+    "type": "Mechanical",
+    "name": "Nylocas, On the Rocks",
+    "description": "In the Theatre of Blood: Entry Mode, freeze any 4 Nylocas with a single Ice Barrage spell.",
+    "points": 4,
     "boss": true
   },
   "391": {
@@ -2837,6 +3524,7 @@
     "type": "Mechanical",
     "name": "Just To Be Safe",
     "description": "Defeat Sotetseg in the Theatre of Blood: Entry Mode after having split the big ball with your entire team. This must be done with a group size of at least 2.",
+    "points": 4,
     "boss": true
   },
   "392": {
@@ -2845,6 +3533,7 @@
     "type": "Mechanical",
     "name": "Don't Look at Me!",
     "description": "Kill Xarpus in the Theatre of Blood: Entry Mode without him reflecting any damage to anyone.",
+    "points": 4,
     "boss": true
   },
   "393": {
@@ -2853,6 +3542,7 @@
     "type": "Mechanical",
     "name": "No-Pillar",
     "description": "Survive Verzik Vitur's pillar phase in the Theatre of Blood: Entry Mode without losing a single pillar.",
+    "points": 4,
     "boss": true
   },
   "394": {
@@ -2861,6 +3551,7 @@
     "type": "Mechanical",
     "name": "Attack, Step, Wait",
     "description": "Survive Verzik Vitur's second phase in the Theatre of Blood: Entry Mode without anyone getting bounced by Verzik.",
+    "points": 4,
     "boss": true
   },
   "395": {
@@ -2869,6 +3560,7 @@
     "type": "Mechanical",
     "name": "Pass It On",
     "description": "In the Theatre of Blood: Entry Mode, successfully pass on the green ball to a team mate.",
+    "points": 4,
     "boss": true
   },
   "396": {
@@ -2877,6 +3569,7 @@
     "type": "Speed",
     "name": "Theatre of Blood: SM Speed-Chaser",
     "description": "Complete the Theatre of Blood: Entry Mode in less than 17 minutes.",
+    "points": 5,
     "boss": true
   },
   "397": {
@@ -2885,6 +3578,7 @@
     "type": "Kill Count",
     "name": "Theatre of Blood: SM Adept",
     "description": "Complete the Theatre of Blood: Entry Mode 1 time.",
+    "points": 3,
     "boss": true
   },
   "398": {
@@ -2893,6 +3587,7 @@
     "type": "Kill Count",
     "name": "Into the Den of Giants",
     "description": "Kill a Hill Giant, Moss Giant and Fire Giant in the Giant Cave within the Shayzien region.",
+    "points": 1,
     "boss": false
   },
   "399": {
@@ -2901,7 +3596,8 @@
     "type": "Mechanical",
     "name": "Sit Back and Relax",
     "description": "Deal 100 damage to creatures using undead thralls.",
-    "boss": true
+    "points": 2,
+    "boss": false
   },
   "400": {
     "monster": "Phosani's Nightmare",
@@ -2909,6 +3605,7 @@
     "type": "Kill Count",
     "name": "Phosani's Veteran",
     "description": "Kill Phosani's Nightmare once.",
+    "points": 4,
     "boss": true
   },
   "401": {
@@ -2917,6 +3614,7 @@
     "type": "Kill Count",
     "name": "Phosani's Master",
     "description": "Kill Phosani's Nightmare 5 times.",
+    "points": 5,
     "boss": true
   },
   "402": {
@@ -2925,6 +3623,7 @@
     "type": "Kill Count",
     "name": "Phosani's Grandmaster",
     "description": "Kill Phosani's Nightmare 25 times.",
+    "points": 6,
     "boss": true
   },
   "403": {
@@ -2933,6 +3632,7 @@
     "type": "Perfection",
     "name": "Perfect Phosani's Nightmare",
     "description": "Kill Phosani's Nightmare while only taking damage from husks, power blasts and weakened parasites. Also, without becoming infected by spores or letting a sleepwalker reach Phosani's Nightmare.",
+    "points": 6,
     "boss": true
   },
   "404": {
@@ -2941,6 +3641,7 @@
     "type": "Speed",
     "name": "Phosani's Speedchaser",
     "description": "Kill Phosani's Nightmare within 9 minutes.",
+    "points": 5,
     "boss": true
   },
   "405": {
@@ -2949,6 +3650,7 @@
     "type": "Speed",
     "name": "Phosani's Speedrunner",
     "description": "Kill Phosani's Nightmare within 7 minutes and 30 seconds.",
+    "points": 6,
     "boss": true
   },
   "406": {
@@ -2957,6 +3659,7 @@
     "type": "Mechanical",
     "name": "Crush Hour",
     "description": "Kill Phosani's Nightmare while killing every husk and parasite in one hit.",
+    "points": 5,
     "boss": true
   },
   "407": {
@@ -2965,6 +3668,7 @@
     "type": "Mechanical",
     "name": "I Would Simply React",
     "description": "Kill Phosani's Nightmare without her disabling your prayer.",
+    "points": 5,
     "boss": true
   },
   "408": {
@@ -2973,6 +3677,7 @@
     "type": "Mechanical",
     "name": "Dreamland Express",
     "description": "Kill Phosani's Nightmare without letting a sleepwalker reach her during the desperation phase.",
+    "points": 5,
     "boss": true
   },
   "409": {
@@ -2981,6 +3686,7 @@
     "type": "Stamina",
     "name": "Can't Wake Up",
     "description": "Kill Phosani's Nightmare 5 times in a row without leaving Phosani's Dream.",
+    "points": 6,
     "boss": true
   },
   "410": {
@@ -2989,6 +3695,7 @@
     "type": "Kill Count",
     "name": "Nex Veteran",
     "description": "Kill Nex once.",
+    "points": 4,
     "boss": true
   },
   "411": {
@@ -2997,6 +3704,7 @@
     "type": "Kill Count",
     "name": "Nex Master",
     "description": "Kill Nex 25 times.",
+    "points": 5,
     "boss": true
   },
   "412": {
@@ -3005,6 +3713,7 @@
     "type": "Restriction",
     "name": "Nex Survivors",
     "description": "Kill Nex without anyone dying.",
+    "points": 4,
     "boss": true
   },
   "413": {
@@ -3013,6 +3722,7 @@
     "type": "Mechanical",
     "name": "A siphon will solve this",
     "description": "Kill Nex without letting her heal from her Blood Siphon special attack.",
+    "points": 5,
     "boss": true
   },
   "414": {
@@ -3021,6 +3731,7 @@
     "type": "Mechanical",
     "name": "Contain this!",
     "description": "Kill Nex without anyone taking damage from any Ice special attack.",
+    "points": 5,
     "boss": true
   },
   "415": {
@@ -3029,6 +3740,7 @@
     "type": "Mechanical",
     "name": "There is no escape!",
     "description": "Kill Nex without anyone being hit by the Smoke Dash special attack",
+    "points": 5,
     "boss": true
   },
   "416": {
@@ -3037,6 +3749,7 @@
     "type": "Restriction",
     "name": "Nex Trio",
     "description": "Kill Nex with three or less players inside the arena at the start of the fight.",
+    "points": 5,
     "boss": true
   },
   "417": {
@@ -3045,6 +3758,7 @@
     "type": "Restriction",
     "name": "Nex Duo",
     "description": "Kill Nex with two or less players inside the arena at the start of the fight.",
+    "points": 6,
     "boss": true
   },
   "418": {
@@ -3053,6 +3767,7 @@
     "type": "Restriction",
     "name": "I should see a doctor",
     "description": "Kill Nex whilst a player is coughing.",
+    "points": 6,
     "boss": true
   },
   "419": {
@@ -3061,6 +3776,7 @@
     "type": "Perfection",
     "name": "Perfect Nex",
     "description": "Kill Nex whilst completing the requirements for There is no escape, Shadows move, A siphon will solve this, and Contain this!",
+    "points": 6,
     "boss": true
   },
   "420": {
@@ -3069,6 +3785,7 @@
     "type": "Mechanical",
     "name": "Shadows Move...",
     "description": "Kill Nex without anyone being hit by the Shadow Smash attack.",
+    "points": 5,
     "boss": true
   },
   "421": {
@@ -3077,6 +3794,7 @@
     "type": "Speed",
     "name": "Tombs Speed Runner",
     "description": "Complete the Tombs of Amascut (normal) within 18 mins at any group size.",
+    "points": 5,
     "boss": true
   },
   "422": {
@@ -3085,6 +3803,16 @@
     "type": "Speed",
     "name": "Tombs Speed Runner II",
     "description": "Complete the Tombs of Amascut (expert) within 20 mins at any group size.",
+    "points": 6,
+    "boss": true
+  },
+  "423": {
+    "monster": "Tombs of Amascut: Expert Mode",
+    "tier": "Grandmaster",
+    "type": "Speed",
+    "name": "Tombs Speed Runner III",
+    "description": "Complete the Tombs of Amascut (expert) within 18 mins in a group of 8.",
+    "points": 6,
     "boss": true
   },
   "424": {
@@ -3093,6 +3821,7 @@
     "type": "Restriction",
     "name": "You are not prepared",
     "description": "Complete a full Tombs of Amascut raid only using supplies given inside the tomb and without anyone dying.",
+    "points": 5,
     "boss": true
   },
   "425": {
@@ -3101,6 +3830,7 @@
     "type": "Restriction",
     "name": "Helpful spirit who?",
     "description": "Complete the Tombs of Amascut without using any supplies from the Helpful Spirit and without anyone dying. Honey locusts are included in this restriction.",
+    "points": 4,
     "boss": true
   },
   "426": {
@@ -3109,6 +3839,7 @@
     "type": "Restriction",
     "name": "Resourceful Raider",
     "description": "Complete the Tombs of Amascut with the \"On a diet\" and \"Dehydration\" invocations activated and without anyone dying.",
+    "points": 5,
     "boss": true
   },
   "427": {
@@ -3117,6 +3848,7 @@
     "type": "Restriction",
     "name": "But... Damage",
     "description": "Complete the Tombs of Amascut without anyone in your party wearing or holding any equipment at tier 75 or above.",
+    "points": 5,
     "boss": true
   },
   "428": {
@@ -3125,6 +3857,7 @@
     "type": "Restriction",
     "name": "Chompington",
     "description": "Defeat Zebak using only melee attacks and without dying yourself.",
+    "points": 5,
     "boss": true
   },
   "429": {
@@ -3133,6 +3866,7 @@
     "type": "Restriction",
     "name": "Fancy feet",
     "description": "Complete phase three of The Wardens in a group of two or more, using only melee attacks and without dying yourself. The 'Insanity' invocation must be activated.",
+    "points": 5,
     "boss": true
   },
   "430": {
@@ -3141,6 +3875,7 @@
     "type": "Perfection",
     "name": "Hardcore Raiders",
     "description": "Complete the Tombs of Amascut in a group of two or more without anyone dying.",
+    "points": 4,
     "boss": true
   },
   "431": {
@@ -3149,6 +3884,7 @@
     "type": "Perfection",
     "name": "Hardcore Tombs",
     "description": "Complete the Tombs of Amascut solo without dying.",
+    "points": 4,
     "boss": true
   },
   "432": {
@@ -3157,6 +3893,7 @@
     "type": "Perfection",
     "name": "Perfect Het",
     "description": "Complete the Het room without taking any hits from the light beam or orbs. You must destroy the core after one exposure.",
+    "points": 4,
     "boss": true
   },
   "433": {
@@ -3165,6 +3902,7 @@
     "type": "Perfection",
     "name": "Perfect Akkha",
     "description": "Complete Akkha in a group of two or more, without anyone taking any hits from the following: Akkha's attacks off-prayer, Akkha's special attacks (orbs, memory, detonate), exploding shadow timers, orbs in the enrage phase or attacking Akkha with the wrong style. Hits for zero damage still count. You must have all Akkha invocations activated.",
+    "points": 5,
     "boss": true
   },
   "434": {
@@ -3173,6 +3911,7 @@
     "type": "Perfection",
     "name": "Perfection of Het",
     "description": "Complete 'Perfect Het' and 'Perfect Akkha' in a single run of the Tombs of Amascut.",
+    "points": 6,
     "boss": true
   },
   "435": {
@@ -3181,6 +3920,7 @@
     "type": "Perfection",
     "name": "Perfect Apmeken",
     "description": "Complete the Apmeken room in a group of two or more, without anyone allowing any dangers to trigger, standing in venom or being hit by a volatile baboon. You must complete this room in less than three minutes.",
+    "points": 4,
     "boss": true
   },
   "436": {
@@ -3189,6 +3929,7 @@
     "type": "Perfection",
     "name": "Perfect Ba-Ba",
     "description": "Defeat Ba-Ba in a group of two or more, without anyone taking any hits from the following: Ba-Ba's Attacks off-prayer, Ba-Ba's slam, rolling boulders, rubble attack or falling rocks. Hits for zero damage still count. No sarcophagi may be opened. You must have all Ba-Ba invocations activated.",
+    "points": 5,
     "boss": true
   },
   "437": {
@@ -3197,6 +3938,7 @@
     "type": "Perfection",
     "name": "Perfection of Apmeken",
     "description": "Complete 'Perfect Apmeken' and 'Perfect Ba-Ba' in a single run of the Tombs of Amascut.",
+    "points": 6,
     "boss": true
   },
   "438": {
@@ -3205,6 +3947,7 @@
     "type": "Perfection",
     "name": "Perfect Crondis",
     "description": "Complete the Crondis room without letting a crocodile get to the tree, without anyone losing water from their container and in under one minute.",
+    "points": 4,
     "boss": true
   },
   "439": {
@@ -3213,6 +3956,7 @@
     "type": "Perfection",
     "name": "Perfect Zebak",
     "description": "Defeat Zebak without anyone taking any hits from: poison, Zebak's basic attacks off-prayer, blood spawns and waves. You also must not push more than two jugs on the roar attack during the fight (you may destroy stationary ones). Hits for zero damage still count. You must have all Zebak invocations activated.",
+    "points": 5,
     "boss": true
   },
   "440": {
@@ -3221,6 +3965,7 @@
     "type": "Perfection",
     "name": "Perfection of Crondis",
     "description": "Complete 'Perfect Crondis' and 'Perfect Zebak' in a single run of the Tombs of Amascut.",
+    "points": 6,
     "boss": true
   },
   "441": {
@@ -3229,6 +3974,7 @@
     "type": "Perfection",
     "name": "Perfect Scabaras",
     "description": "Complete the Scabaras room in less than a minute without anyone taking any damage from puzzles.",
+    "points": 5,
     "boss": true
   },
   "442": {
@@ -3237,6 +3983,7 @@
     "type": "Perfection",
     "name": "Perfect Kephri",
     "description": "Defeat Kephri in a group of two or more, without anyone taking any hits from the following: egg explosions, Kephri's attacks, Exploding Scarabs, Bodyguards, dung attacks. Hits for zero damage still count. No eggs may hatch throughout the fight.",
+    "points": 5,
     "boss": true
   },
   "443": {
@@ -3245,6 +3992,7 @@
     "type": "Perfection",
     "name": "Perfection of Scabaras",
     "description": "Complete 'Perfect Scabaras' and 'Perfect Kephri' in a single run of Tombs of Amascut.",
+    "points": 6,
     "boss": true
   },
   "444": {
@@ -3253,6 +4001,7 @@
     "type": "Perfection",
     "name": "Perfect Wardens",
     "description": "Defeat The Wardens in a group of two or more, without anyone taking avoidable hits from the following: Warden attacks, obelisk attacks, lightning attacks in phase three, skull attack in phase three, Demi god attacks in phase three. Hits for zero damage still count. You must have all Wardens invocations activated.",
+    "points": 5,
     "boss": true
   },
   "445": {
@@ -3261,6 +4010,7 @@
     "type": "Perfection",
     "name": "Insanity",
     "description": "Complete 'Perfect Wardens' at expert or above.",
+    "points": 6,
     "boss": true
   },
   "446": {
@@ -3269,6 +4019,7 @@
     "type": "Mechanical",
     "name": "Amascut's Remnant",
     "description": "Complete the Tombs of Amascut at raid level 500 or above without anyone dying.",
+    "points": 6,
     "boss": true
   },
   "447": {
@@ -3277,6 +4028,7 @@
     "type": "Mechanical",
     "name": "Something of an expert myself",
     "description": "Complete the Tombs of Amascut raid at level 350 or above without anyone dying.",
+    "points": 5,
     "boss": true
   },
   "448": {
@@ -3285,6 +4037,7 @@
     "type": "Mechanical",
     "name": "Maybe I'm the boss.",
     "description": "Complete a Tombs of Amascut raid with every single boss invocation activated and without anyone dying.",
+    "points": 6,
     "boss": true
   },
   "449": {
@@ -3293,6 +4046,7 @@
     "type": "Mechanical",
     "name": "Dropped the ball",
     "description": "Defeat Akkha without dropping any materialising orbs and without dying yourself.",
+    "points": 4,
     "boss": true
   },
   "450": {
@@ -3301,6 +4055,7 @@
     "type": "Mechanical",
     "name": "Akkhan't Do it",
     "description": "Defeat Akkha with all Akkha invocations activated and the path levelled up to at least four, without dying yourself.",
+    "points": 6,
     "boss": true
   },
   "451": {
@@ -3309,6 +4064,7 @@
     "type": "Mechanical",
     "name": "No skipping allowed",
     "description": "Defeat Ba-Ba after only attacking the non-weakened boulders in the rolling boulder phase, without dying yourself. The Boulderdash invocation must be activated.",
+    "points": 4,
     "boss": true
   },
   "452": {
@@ -3317,6 +4073,7 @@
     "type": "Mechanical",
     "name": "I'm in a rush",
     "description": "Defeat Ba-Ba after destroying four or fewer rolling boulders in total without dying yourself.",
+    "points": 4,
     "boss": true
   },
   "453": {
@@ -3325,6 +4082,7 @@
     "type": "Mechanical",
     "name": "Ba-Bananza",
     "description": "Defeat Ba-Ba with all Ba-Ba invocations activated and the path levelled up to at least four, without dying yourself.",
+    "points": 5,
     "boss": true
   },
   "454": {
@@ -3333,6 +4091,7 @@
     "type": "Mechanical",
     "name": "All Praise Zebak",
     "description": "Defeat Zebak without losing a single prayer point. You must also meet the conditions of the 'Rockin' Around The Croc' achievement.",
+    "points": 6,
     "boss": true
   },
   "455": {
@@ -3341,6 +4100,7 @@
     "type": "Mechanical",
     "name": "Rockin' around the croc",
     "description": "Defeat Zebak with all Zebak invocations activated and the path levelled up to at least four, without dying yourself.",
+    "points": 5,
     "boss": true
   },
   "456": {
@@ -3349,6 +4109,7 @@
     "type": "Mechanical",
     "name": "Doesn't bug me",
     "description": "Defeat Kephri with all Kephri invocations activated and the path levelled up to at least four, without dying yourself.",
+    "points": 5,
     "boss": true
   },
   "457": {
@@ -3357,6 +4118,7 @@
     "type": "Mechanical",
     "name": "All out of medics",
     "description": "Defeat Kephri without letting her heal above 25% after the first down. The 'Medic' invocation must be activated. You must do this without dying yourself.",
+    "points": 5,
     "boss": true
   },
   "458": {
@@ -3365,6 +4127,7 @@
     "type": "Mechanical",
     "name": "Down Do Specs",
     "description": "Defeat the Wardens after staggering the boss a maximum of twice during phase two, without dying yourself.",
+    "points": 4,
     "boss": true
   },
   "459": {
@@ -3373,6 +4136,7 @@
     "type": "Mechanical",
     "name": "Better get movin'",
     "description": "Defeat Elidinis' Warden in phase three of the Wardens fight with 'Aerial Assault', 'Stay vigilant' and 'Insanity' invocations activated and without dying yourself.",
+    "points": 5,
     "boss": true
   },
   "460": {
@@ -3381,6 +4145,7 @@
     "type": "Mechanical",
     "name": "Warden't you believe it",
     "description": "Defeat the Wardens with all Wardens invocations activated, at expert level and without dying yourself.",
+    "points": 5,
     "boss": true
   },
   "461": {
@@ -3389,6 +4154,7 @@
     "type": "Kill Count",
     "name": "Novice Tomb Explorer",
     "description": "Complete the Tombs of Amascut in Entry mode (or above) once.",
+    "points": 3,
     "boss": true
   },
   "462": {
@@ -3397,6 +4163,7 @@
     "type": "Kill Count",
     "name": "Novice Tomb Looter",
     "description": "Complete the Tombs of Amascut in Entry mode (or above) 25 times.",
+    "points": 3,
     "boss": true
   },
   "463": {
@@ -3405,6 +4172,7 @@
     "type": "Kill Count",
     "name": "Novice Tomb Raider",
     "description": "Complete the Tombs of Amascut in Entry mode (or above) 50 times.",
+    "points": 4,
     "boss": true
   },
   "464": {
@@ -3413,6 +4181,7 @@
     "type": "Restriction",
     "name": "Movin' on up",
     "description": "Complete a Tombs of Amascut raid at level 50 or above.",
+    "points": 3,
     "boss": true
   },
   "465": {
@@ -3421,6 +4190,7 @@
     "type": "Restriction",
     "name": "Confident Raider",
     "description": "Complete a Tombs of Amascut raid at level 100 or above.",
+    "points": 3,
     "boss": true
   },
   "466": {
@@ -3429,6 +4199,7 @@
     "type": "Kill Count",
     "name": "Tomb Looter",
     "description": "Complete the Tombs of Amascut 25 times.",
+    "points": 5,
     "boss": true
   },
   "467": {
@@ -3437,6 +4208,7 @@
     "type": "Kill Count",
     "name": "Tomb Raider",
     "description": "Complete the Tombs of Amascut 50 times.",
+    "points": 5,
     "boss": true
   },
   "468": {
@@ -3445,6 +4217,7 @@
     "type": "Kill Count",
     "name": "Tomb Explorer",
     "description": "Complete the Tombs of Amascut once.",
+    "points": 4,
     "boss": true
   },
   "469": {
@@ -3453,6 +4226,7 @@
     "type": "Kill Count",
     "name": "Expert Tomb Explorer",
     "description": "Complete the Tombs of Amascut (Expert mode) once.",
+    "points": 4,
     "boss": true
   },
   "470": {
@@ -3461,6 +4235,7 @@
     "type": "Kill Count",
     "name": "Expert Tomb Looter",
     "description": "Complete the Tombs of Amascut (Expert mode) 25 times.",
+    "points": 5,
     "boss": true
   },
   "471": {
@@ -3469,6 +4244,16 @@
     "type": "Kill Count",
     "name": "Expert Tomb Raider",
     "description": "Complete the Tombs of Amascut (Expert mode) 50 times.",
+    "points": 6,
+    "boss": true
+  },
+  "472": {
+    "monster": "Phantom Muspah",
+    "tier": "Master",
+    "type": "Restriction",
+    "name": "More than just a ranged weapon",
+    "description": "Kill the Phantom Muspah by only dealing damage to it with a salamander.",
+    "points": 5,
     "boss": true
   },
   "473": {
@@ -3477,6 +4262,7 @@
     "type": "Restriction",
     "name": "Can't Escape",
     "description": "Kill the Phantom Muspah without running.",
+    "points": 4,
     "boss": true
   },
   "474": {
@@ -3485,6 +4271,7 @@
     "type": "Stamina",
     "name": "Essence Farmer",
     "description": "Kill the Phantom Muspah 10 times in one trip.",
+    "points": 5,
     "boss": true
   },
   "475": {
@@ -3493,6 +4280,7 @@
     "type": "Speed",
     "name": "Phantom Muspah Speed-Trialist",
     "description": "Kill the Phantom Muspah in less than 3 minutes without a slayer task.",
+    "points": 4,
     "boss": true
   },
   "476": {
@@ -3501,6 +4289,7 @@
     "type": "Speed",
     "name": "Phantom Muspah Speed-Chaser",
     "description": "Kill the Phantom Muspah in less than 2 minutes without a slayer task.",
+    "points": 5,
     "boss": true
   },
   "477": {
@@ -3509,6 +4298,7 @@
     "type": "Speed",
     "name": "Phantom Muspah Speed-Runner",
     "description": "Kill the Phantom Muspah in less than 1 minute and 30 seconds without a slayer task.",
+    "points": 6,
     "boss": true
   },
   "478": {
@@ -3517,6 +4307,7 @@
     "type": "Kill Count",
     "name": "Phantom Muspah Adept",
     "description": "Kill the Phantom Muspah.",
+    "points": 3,
     "boss": true
   },
   "479": {
@@ -3525,6 +4316,7 @@
     "type": "Kill Count",
     "name": "Phantom Muspah Veteran",
     "description": "Kill the Phantom Muspah 25 times.",
+    "points": 4,
     "boss": true
   },
   "480": {
@@ -3533,6 +4325,7 @@
     "type": "Kill Count",
     "name": "Phantom Muspah Master",
     "description": "Kill the Phantom Muspah 50 times.",
+    "points": 5,
     "boss": true
   },
   "481": {
@@ -3541,6 +4334,16 @@
     "type": "Mechanical",
     "name": "Space is Tight",
     "description": "Kill the Phantom Muspah whilst it is surrounded by spikes.",
+    "points": 5,
+    "boss": true
+  },
+  "482": {
+    "monster": "Phantom Muspah",
+    "tier": "Elite",
+    "type": "Mechanical",
+    "name": "Versatile Drainer",
+    "description": "Drain the Phantom Muspah's Prayer with three different sources in one kill.",
+    "points": 4,
     "boss": true
   },
   "483": {
@@ -3549,6 +4352,7 @@
     "type": "Perfection",
     "name": "Walk Straight Pray True",
     "description": "Kill the Phantom Muspah without taking any avoidable damage.",
+    "points": 5,
     "boss": true
   },
   "484": {
@@ -3557,6 +4361,7 @@
     "type": "Perfection",
     "name": "Phantom Muspah Manipulator",
     "description": "Kill the Phantom Muspah whilst completing Walk Straight Pray True, Space is Tight & Can't Escape.",
+    "points": 6,
     "boss": true
   },
   "485": {
@@ -3565,6 +4370,7 @@
     "type": "Speed",
     "name": "Vardorvis Speed-Trialist",
     "description": "Kill Vardorvis in less than 1:15 minutes without a slayer task.",
+    "points": 4,
     "boss": true
   },
   "486": {
@@ -3573,6 +4379,7 @@
     "type": "Speed",
     "name": "Vardorvis Speed-Chaser",
     "description": "Kill Vardorvis in less than 1:05 without a slayer task.",
+    "points": 5,
     "boss": true
   },
   "487": {
@@ -3581,6 +4388,7 @@
     "type": "Speed",
     "name": "Vardorvis Speed-Runner",
     "description": "Kill Vardorvis in less than 0:55 without a slayer task.",
+    "points": 6,
     "boss": true
   },
   "488": {
@@ -3589,6 +4397,7 @@
     "type": "Kill Count",
     "name": "Vardorvis Adept",
     "description": "Kill Vardorvis once.",
+    "points": 4,
     "boss": true
   },
   "489": {
@@ -3597,6 +4406,7 @@
     "type": "Kill Count",
     "name": "Vardorvis Master",
     "description": "Kill Vardorvis 50 times.",
+    "points": 5,
     "boss": true
   },
   "490": {
@@ -3605,6 +4415,7 @@
     "type": "Kill Count",
     "name": "Vardorvis Sleeper",
     "description": "Kill Awakened Vardorvis.",
+    "points": 6,
     "boss": true
   },
   "491": {
@@ -3613,6 +4424,7 @@
     "type": "Perfection",
     "name": "Perfect Vardorvis",
     "description": "Kill Vardorvis perfectly 5 times without leaving.",
+    "points": 5,
     "boss": true
   },
   "492": {
@@ -3621,6 +4433,7 @@
     "type": "Mechanical",
     "name": "Axe Enthusiast",
     "description": "Kill Vardorvis after surviving for 3 minutes of Vardorvis' max speed, and never leaving the centre 25 tiles.",
+    "points": 6,
     "boss": true
   },
   "493": {
@@ -3629,6 +4442,7 @@
     "type": "Restriction",
     "name": "Budget Cutter",
     "description": "Kill Vardorvis with gear worth 2m or less in total.",
+    "points": 5,
     "boss": true
   },
   "494": {
@@ -3637,6 +4451,7 @@
     "type": "Speed",
     "name": "Whisperer Speed-Trialist",
     "description": "Kill the Whisperer in less than 3:00 without a slayer task.",
+    "points": 4,
     "boss": true
   },
   "495": {
@@ -3645,6 +4460,7 @@
     "type": "Speed",
     "name": "Whisperer Speed-Chaser",
     "description": "Kill the Whisperer in less than 2:25 without a slayer task.",
+    "points": 5,
     "boss": true
   },
   "496": {
@@ -3653,6 +4469,7 @@
     "type": "Speed",
     "name": "Whisperer Speed-Runner",
     "description": "Kill the Whisperer in less than 2:05 without a slayer task.",
+    "points": 6,
     "boss": true
   },
   "497": {
@@ -3661,6 +4478,7 @@
     "type": "Kill Count",
     "name": "Whisperer Adept",
     "description": "Kill the Whisperer once.",
+    "points": 4,
     "boss": true
   },
   "498": {
@@ -3669,6 +4487,7 @@
     "type": "Kill Count",
     "name": "Whisperer Master",
     "description": "Kill the Whisperer 50 times.",
+    "points": 5,
     "boss": true
   },
   "499": {
@@ -3677,6 +4496,7 @@
     "type": "Kill Count",
     "name": "Whispered",
     "description": "Kill the Awakened Whisperer.",
+    "points": 6,
     "boss": true
   },
   "500": {
@@ -3685,6 +4505,7 @@
     "type": "Perfection",
     "name": "Perfect Whisperer",
     "description": "Kill the Whisperer without taking avoidable damage 5 times without leaving.",
+    "points": 5,
     "boss": true
   },
   "501": {
@@ -3693,6 +4514,7 @@
     "type": "Restriction",
     "name": "Tentacular",
     "description": "Kill the Whisperer whilst only being on the Arceuus spellbook.",
+    "points": 4,
     "boss": true
   },
   "502": {
@@ -3701,6 +4523,7 @@
     "type": "Restriction",
     "name": "Dark Memories",
     "description": "Kill the Whisperer whilst spending less than 6 seconds in the pre-enrage shadow realm.",
+    "points": 6,
     "boss": true
   },
   "503": {
@@ -3709,6 +4532,7 @@
     "type": "Speed",
     "name": "Leviathan Speed-Trialist",
     "description": "Kill the Leviathan in less than 1:50 without a slayer task.",
+    "points": 4,
     "boss": true
   },
   "504": {
@@ -3717,6 +4541,7 @@
     "type": "Speed",
     "name": "Leviathan Speed-Chaser",
     "description": "Kill the Leviathan in less than 1:25 without a slayer task.",
+    "points": 5,
     "boss": true
   },
   "505": {
@@ -3725,6 +4550,7 @@
     "type": "Speed",
     "name": "Leviathan Speed-Runner",
     "description": "Kill the Leviathan in less than 1:10 without a slayer task.",
+    "points": 6,
     "boss": true
   },
   "506": {
@@ -3733,6 +4559,7 @@
     "type": "Kill Count",
     "name": "Leviathan Adept",
     "description": "Kill the Leviathan once.",
+    "points": 4,
     "boss": true
   },
   "507": {
@@ -3741,6 +4568,7 @@
     "type": "Kill Count",
     "name": "Leviathan Master",
     "description": "Kill the Leviathan 50 times.",
+    "points": 5,
     "boss": true
   },
   "508": {
@@ -3749,6 +4577,7 @@
     "type": "Kill Count",
     "name": "Leviathan Sleeper",
     "description": "Kill the Awakened Leviathan.",
+    "points": 6,
     "boss": true
   },
   "509": {
@@ -3757,6 +4586,7 @@
     "type": "Perfection",
     "name": "Perfect Leviathan",
     "description": "Kill the Leviathan perfectly 5 times without leaving.",
+    "points": 5,
     "boss": true
   },
   "510": {
@@ -3765,6 +4595,7 @@
     "type": "Mechanical",
     "name": "Serpentine Solo",
     "description": "Kill the Leviathan without stunning the boss more than once.",
+    "points": 5,
     "boss": true
   },
   "511": {
@@ -3773,6 +4604,7 @@
     "type": "Restriction",
     "name": "Unconventional",
     "description": "Kill the Leviathan using only Mithril ammunition whilst having no more than 25 Hitpoints throughout the entire fight.",
+    "points": 6,
     "boss": true
   },
   "512": {
@@ -3781,6 +4613,7 @@
     "type": "Speed",
     "name": "Duke Sucellus Speed-Trialist",
     "description": "Kill Duke Sucellus in less than 1:45 minutes without a slayer task.",
+    "points": 4,
     "boss": true
   },
   "513": {
@@ -3789,6 +4622,7 @@
     "type": "Speed",
     "name": "Duke Sucellus Speed-Chaser",
     "description": "Kill Duke Sucellus in less than 1:35 minutes without a slayer task.",
+    "points": 5,
     "boss": true
   },
   "514": {
@@ -3797,6 +4631,7 @@
     "type": "Speed",
     "name": "Duke Sucellus Speed-Runner",
     "description": "Kill Duke Sucellus in less than 1:25 minutes without a slayer task.",
+    "points": 6,
     "boss": true
   },
   "515": {
@@ -3805,6 +4640,7 @@
     "type": "Kill Count",
     "name": "Duke Sucellus Adept",
     "description": "Kill Duke Sucellus once.",
+    "points": 4,
     "boss": true
   },
   "516": {
@@ -3813,6 +4649,7 @@
     "type": "Kill Count",
     "name": "Duke Sucellus Master",
     "description": "Kill Duke Sucellus 50 times.",
+    "points": 5,
     "boss": true
   },
   "517": {
@@ -3821,6 +4658,7 @@
     "type": "Kill Count",
     "name": "Duke Sucellus Sleeper",
     "description": "Kill Awakened Duke Sucellus.",
+    "points": 6,
     "boss": true
   },
   "518": {
@@ -3829,6 +4667,7 @@
     "type": "Perfection",
     "name": "Perfect Duke Sucellus",
     "description": "Kill Duke Sucellus without taking any avoidable damage 5 times without leaving.",
+    "points": 5,
     "boss": true
   },
   "519": {
@@ -3837,6 +4676,7 @@
     "type": "Restriction",
     "name": "Cold Feet",
     "description": "Kill Duke Sucellus without taking any avoidable damage, whilst also never running.",
+    "points": 5,
     "boss": true
   },
   "520": {
@@ -3845,6 +4685,7 @@
     "type": "Restriction",
     "name": "Mirror Image",
     "description": "Kill Duke Sucellus whilst only attacking the boss on the same tick Duke attacks you.",
+    "points": 6,
     "boss": true
   },
   "521": {
@@ -3853,6 +4694,7 @@
     "type": "Kill Count",
     "name": "Scurrius Novice",
     "description": "Kill Scurrius once.",
+    "points": 1,
     "boss": true
   },
   "522": {
@@ -3861,6 +4703,7 @@
     "type": "Kill Count",
     "name": "Scurrius Champion",
     "description": "Kill Scurrius 10 times.",
+    "points": 2,
     "boss": true
   },
   "523": {
@@ -3869,6 +4712,7 @@
     "type": "Restriction",
     "name": "Sit Rat",
     "description": "Finish off Scurrius with a ratbane weapon in a private instance.",
+    "points": 1,
     "boss": true
   },
   "524": {
@@ -3877,6 +4721,7 @@
     "type": "Perfection",
     "name": "Perfect Scurrius",
     "description": "Kill Scurrius in a private instance without taking damage from the following attacks: Tail Swipe and Falling Bricks. Pray correctly against the following attacks: Flying Fur and Bolts of Electricity.",
+    "points": 2,
     "boss": true
   },
   "525": {
@@ -3885,6 +4730,7 @@
     "type": "Mechanical",
     "name": "Efficient Pest Control",
     "description": "Kill 6 Giant Rats within Scurrius' lair in 3 seconds.",
+    "points": 2,
     "boss": true
   },
   "526": {
@@ -3893,6 +4739,7 @@
     "type": "Mechanical",
     "name": "The Clone Zone",
     "description": "Defeat the Eclipse moon by only attacking its clones.",
+    "points": 3,
     "boss": true
   },
   "527": {
@@ -3901,6 +4748,7 @@
     "type": "Mechanical",
     "name": "High Hitter",
     "description": "Defeat a Moon before they start their second special attack.",
+    "points": 4,
     "boss": true
   },
   "528": {
@@ -3909,6 +4757,7 @@
     "type": "Kill Count",
     "name": "Lunar Triplet",
     "description": "Open the Reward Chest after defeating all three Moons.",
+    "points": 2,
     "boss": true
   },
   "529": {
@@ -3917,6 +4766,7 @@
     "type": "Kill Count",
     "name": "Perilous Novice",
     "description": "Open the Reward Chest 5 times.",
+    "points": 2,
     "boss": true
   },
   "530": {
@@ -3925,6 +4775,7 @@
     "type": "Kill Count",
     "name": "Perilous Champion",
     "description": "Open the Reward Chest 25 times.",
+    "points": 3,
     "boss": true
   },
   "531": {
@@ -3933,6 +4784,7 @@
     "type": "Perfection",
     "name": "Perilous Dancer",
     "description": "Defeat all the Moons in one run while only taking damage from regular attacks.",
+    "points": 3,
     "boss": true
   },
   "532": {
@@ -3941,6 +4793,7 @@
     "type": "Restriction",
     "name": "Fortified",
     "description": "Defeat a Moon without consuming any supplies.",
+    "points": 3,
     "boss": true
   },
   "533": {
@@ -3949,6 +4802,7 @@
     "type": "Restriction",
     "name": "Betrayal",
     "description": "Defeat a Moon using its associated weapon drop.",
+    "points": 3,
     "boss": true
   },
   "534": {
@@ -3957,6 +4811,7 @@
     "type": "Restriction",
     "name": "Back to Our Roots",
     "description": "Defeat all three Moons in one run by only attacking with a Dragon Scimitar.",
+    "points": 2,
     "boss": true
   },
   "535": {
@@ -3965,6 +4820,7 @@
     "type": "Speed",
     "name": "Moons of Peril Speed-Trialist",
     "description": "Defeat all three Moons in one run in under 8 minutes.",
+    "points": 2,
     "boss": true
   },
   "536": {
@@ -3973,6 +4829,7 @@
     "type": "Speed",
     "name": "Moons of Peril Speed-Chaser",
     "description": "Defeat all three Moons in one run in under 6 minutes.",
+    "points": 3,
     "boss": true
   },
   "537": {
@@ -3981,6 +4838,7 @@
     "type": "Stamina",
     "name": "Fat of the Land",
     "description": "Defeat 30 Moons of Peril bosses without leaving the dungeon.",
+    "points": 3,
     "boss": true
   },
   "538": {
@@ -3989,6 +4847,7 @@
     "type": "Kill Count",
     "name": "Sportsmanship",
     "description": "Defeat Sol Heredit once.",
+    "points": 5,
     "boss": true
   },
   "539": {
@@ -3997,6 +4856,7 @@
     "type": "Kill Count",
     "name": "Colosseum Grand Champion",
     "description": "Defeat Sol Heredit 10 times.",
+    "points": 6,
     "boss": true
   },
   "540": {
@@ -4005,6 +4865,7 @@
     "type": "Restriction",
     "name": "I Brought Mine Too",
     "description": "Defeat Sol Heredit using only a Spear, Hasta or Halberd.",
+    "points": 5,
     "boss": true
   },
   "541": {
@@ -4013,6 +4874,7 @@
     "type": "Restriction",
     "name": "Slow Dancing in the Sand",
     "description": "Defeat Sol Heredit without running during the fight with him.",
+    "points": 6,
     "boss": true
   },
   "542": {
@@ -4021,6 +4883,7 @@
     "type": "Perfection",
     "name": "Furball",
     "description": "Complete Wave 4 without taking avoidable damage from a Manticore.",
+    "points": 4,
     "boss": true
   },
   "543": {
@@ -4029,6 +4892,7 @@
     "type": "Perfection",
     "name": "Perfect Footwork",
     "description": "Defeat Sol Heredit without taking any damage from his Spear, Shield, Grapple or Triple Attack.",
+    "points": 6,
     "boss": true
   },
   "544": {
@@ -4037,6 +4901,7 @@
     "type": "Mechanical",
     "name": "Showboating",
     "description": "Defeat Sol Heredit after Fortis Saluting to the North, East, South and West of the arena while he's below 10% Hitpoints.",
+    "points": 5,
     "boss": true
   },
   "545": {
@@ -4045,6 +4910,7 @@
     "type": "Mechanical",
     "name": "Denied",
     "description": "Complete Wave 7 without the Minotaur ever healing other enemies.",
+    "points": 4,
     "boss": true
   },
   "546": {
@@ -4053,6 +4919,7 @@
     "type": "Mechanical",
     "name": "One-off",
     "description": "Complete Wave 11 with either \"Red Flag\", \"Dynamic Duo\", or \"Doom II\" active.",
+    "points": 5,
     "boss": true
   },
   "547": {
@@ -4061,6 +4928,7 @@
     "type": "Mechanical",
     "name": "Reinforcements",
     "description": "Defeat Sol Heredit with the \"Bees! II\", \"Quartet\", and \"Solarflare II\" modifiers active.",
+    "points": 6,
     "boss": true
   },
   "548": {
@@ -4069,6 +4937,7 @@
     "type": "Mechanical",
     "name": "I was here first!",
     "description": "Kill a Jaguar Warrior using a Claw-type weapon special attack.",
+    "points": 4,
     "boss": true
   },
   "549": {
@@ -4077,6 +4946,7 @@
     "type": "Speed",
     "name": "Colosseum Speed-Chaser",
     "description": "Complete the Colosseum with a total time of 28:00 or less.",
+    "points": 5,
     "boss": true
   },
   "550": {
@@ -4085,6 +4955,7 @@
     "type": "Speed",
     "name": "Colosseum Speed-Runner",
     "description": "Complete the Colosseum with a total time of 24:00 or less.",
+    "points": 6,
     "boss": true
   },
   "551": {
@@ -4093,6 +4964,7 @@
     "type": "Kill Count",
     "name": "Unending Torment",
     "description": "Kill a Tormented Demon.",
+    "points": 4,
     "boss": false
   },
   "552": {
@@ -4101,6 +4973,7 @@
     "type": "Restriction",
     "name": "Through Fire and Flames",
     "description": "Kill a Tormented Demon whilst their shield is inactive.",
+    "points": 4,
     "boss": false
   },
   "553": {
@@ -4109,6 +4982,7 @@
     "type": "Restriction",
     "name": "Two Times the Torment",
     "description": "Kill two Tormented Demons within 2 seconds.",
+    "points": 4,
     "boss": false
   },
   "554": {
@@ -4117,6 +4991,7 @@
     "type": "Restriction",
     "name": "Three Times the Thrashing",
     "description": "Kill three Tormented Demons within 3 seconds.",
+    "points": 5,
     "boss": false
   },
   "555": {
@@ -4125,6 +5000,7 @@
     "type": "Mechanical",
     "name": "Rapid Reload",
     "description": "Hit three Tormented Demons within 3 seconds using a ballista or a crossbow.",
+    "points": 4,
     "boss": false
   },
   "556": {
@@ -4133,6 +5009,7 @@
     "type": "Kill Count",
     "name": "Araxxor Veteran",
     "description": "Kill Araxxor 25 times.",
+    "points": 4,
     "boss": true
   },
   "557": {
@@ -4141,6 +5018,7 @@
     "type": "Kill Count",
     "name": "Araxxor Master",
     "description": "Kill Araxxor 75 times.",
+    "points": 5,
     "boss": true
   },
   "558": {
@@ -4149,6 +5027,7 @@
     "type": "Speed",
     "name": "Araxxor Speed-Trialist",
     "description": "Kill Araxxor 4 times in 10:00.",
+    "points": 4,
     "boss": true
   },
   "559": {
@@ -4157,6 +5036,7 @@
     "type": "Speed",
     "name": "Araxxor Speed-Chaser",
     "description": "Kill Araxxor 5 times in 10:00.",
+    "points": 5,
     "boss": true
   },
   "560": {
@@ -4165,6 +5045,7 @@
     "type": "Speed",
     "name": "Araxxor Speed-Runner",
     "description": "Kill Araxxor 6 times in 10:00.",
+    "points": 6,
     "boss": true
   },
   "561": {
@@ -4173,6 +5054,7 @@
     "type": "Perfection",
     "name": "Perfect Araxxor",
     "description": "Kill Araxxor perfectly, without taking damage from Araxxor's Mage & Range attacks, melee attack off prayer, araxyte minions damage, or damage from acid pools.",
+    "points": 5,
     "boss": true
   },
   "562": {
@@ -4181,6 +5063,7 @@
     "type": "Perfection",
     "name": "Perfect Araxxor 2",
     "description": "Kill Araxxor perfectly, without hitting it during the enrage phase.",
+    "points": 6,
     "boss": true
   },
   "563": {
@@ -4189,6 +5072,7 @@
     "type": "Restriction",
     "name": "Let it seep in",
     "description": "Kill Araxxor without ever having venom or poison immunity.",
+    "points": 5,
     "boss": true
   },
   "564": {
@@ -4197,6 +5081,7 @@
     "type": "Restriction",
     "name": "Relaxxor",
     "description": "Kill Araxxor after destroying six eggs.",
+    "points": 4,
     "boss": true
   },
   "565": {
@@ -4205,6 +5090,7 @@
     "type": "Restriction",
     "name": "Swimming in Venom",
     "description": "Kill Araxxor without the boss ever moving.",
+    "points": 6,
     "boss": true
   },
   "566": {
@@ -4213,6 +5099,7 @@
     "type": "Mechanical",
     "name": "Araxyte Betrayal",
     "description": "Have an Araxyte kill three other Araxytes.",
+    "points": 5,
     "boss": true
   },
   "567": {
@@ -4221,6 +5108,7 @@
     "type": "Stamina",
     "name": "Arachnid Lover",
     "description": "Kill Araxxor 10 times without leaving.",
+    "points": 5,
     "boss": true
   },
   "568": {
@@ -4229,6 +5117,7 @@
     "type": "Kill Count",
     "name": "Hueycoatl Champion",
     "description": "Kill the Hueycoatl once.",
+    "points": 2,
     "boss": true
   },
   "569": {
@@ -4237,6 +5126,7 @@
     "type": "Kill Count",
     "name": "Hueycoatl Adept",
     "description": "Kill the Hueycoatl 10 times.",
+    "points": 3,
     "boss": true
   },
   "570": {
@@ -4245,6 +5135,7 @@
     "type": "Kill Count",
     "name": "Hueycoatl Veteran",
     "description": "Kill the Hueycoatl 25 times.",
+    "points": 4,
     "boss": true
   },
   "571": {
@@ -4253,6 +5144,7 @@
     "type": "Perfection",
     "name": "Perfect Hueycoatl",
     "description": "Kill the Hueycoatl perfectly 5 times without leaving. To get a perfect kill, you must not take any avoidable damage from the Hueycoatl's lightning attack, tail slam attack or off-prayer projectile attacks.",
+    "points": 4,
     "boss": true
   },
   "572": {
@@ -4261,6 +5153,7 @@
     "type": "Mechanical",
     "name": "Pillar Lover",
     "description": "Kill the Hueycoatl whilst it is vulnerable.",
+    "points": 3,
     "boss": true
   },
   "573": {
@@ -4269,6 +5162,7 @@
     "type": "Restriction",
     "name": "Is it a bird?",
     "description": "Kill the Hueycoatl using only dragonbane weaponry.",
+    "points": 5,
     "boss": true
   },
   "574": {
@@ -4277,6 +5171,7 @@
     "type": "Restriction",
     "name": "You're a wizard",
     "description": "Kill the Hueycoatl using only earth spells.",
+    "points": 2,
     "boss": true
   },
   "575": {
@@ -4285,6 +5180,7 @@
     "type": "Restriction",
     "name": "I'm your son",
     "description": "Kill the Hueycoatl whilst wearing two pieces of Hueycoatl armour.",
+    "points": 3,
     "boss": true
   },
   "576": {
@@ -4293,6 +5189,7 @@
     "type": "Speed",
     "name": "Hueycoatl Speed-Trialist",
     "description": "Kill the Hueycoatl in 2:30",
+    "points": 4,
     "boss": true
   },
   "577": {
@@ -4301,6 +5198,7 @@
     "type": "Speed",
     "name": "Hueycoatl Speed-Chaser",
     "description": "Kill the Hueycoatl in 2:30 with five or fewer players.",
+    "points": 5,
     "boss": true
   },
   "578": {
@@ -4309,6 +5207,7 @@
     "type": "Speed",
     "name": "Hueycoatl Speed-Runner",
     "description": "Kill the Hueycoatl in 2:30 with three or fewer players.",
+    "points": 6,
     "boss": true
   },
   "579": {
@@ -4317,6 +5216,7 @@
     "type": "Kill Count",
     "name": "Amoxliatl Champion",
     "description": "Kill Amoxliatl once.",
+    "points": 2,
     "boss": true
   },
   "580": {
@@ -4325,6 +5225,7 @@
     "type": "Kill Count",
     "name": "Amoxliatl Adept",
     "description": "Kill Amoxliatl 20 times.",
+    "points": 3,
     "boss": true
   },
   "581": {
@@ -4333,6 +5234,7 @@
     "type": "Speed",
     "name": "Amoxliatl Speed-Trialist",
     "description": "Kill Amoxliatl in less than 1 minute.",
+    "points": 3,
     "boss": true
   },
   "582": {
@@ -4341,6 +5243,7 @@
     "type": "Speed",
     "name": "Amoxliatl Speed-Chaser",
     "description": "Kill Amoxliatl in less than 30 seconds.",
+    "points": 4,
     "boss": true
   },
   "583": {
@@ -4349,6 +5252,7 @@
     "type": "Perfection",
     "name": "Nagua Negation",
     "description": "Kill Amoxliatl without taking any damage.",
+    "points": 3,
     "boss": true
   },
   "584": {
@@ -4357,6 +5261,7 @@
     "type": "Restriction",
     "name": "Temotli Triumph",
     "description": "Kill Amoxliatl using only glacial temotli as a weapon.",
+    "points": 2,
     "boss": true
   },
   "585": {
@@ -4365,6 +5270,7 @@
     "type": "Restriction",
     "name": "Without Ralos' Light",
     "description": "Kill Amoxliatl without losing any prayer points.",
+    "points": 4,
     "boss": true
   },
   "586": {
@@ -4373,6 +5279,7 @@
     "type": "Stamina",
     "name": "Kemo Makti",
     "description": "Kill Amoxliatl 10 times without leaving her chamber.",
+    "points": 3,
     "boss": true
   },
   "587": {
@@ -4381,6 +5288,7 @@
     "type": "Mechanical",
     "name": "Totally Shattered",
     "description": "Kill Amoxliatl without any of her unstable ice shattering.",
+    "points": 3,
     "boss": true
   },
   "588": {
@@ -4389,6 +5297,7 @@
     "type": "Perfection",
     "name": "Perfect Royal Titan",
     "description": "Kill the Royal Titans without taking any avoidable damage. This includes damage from any melee attacks, explosions from the ice elemental or fire elemental, any icicle or fire spawn, any jump attacks or the ice or fire pulse attack.",
+    "points": 3,
     "boss": true
   },
   "589": {
@@ -4397,6 +5306,7 @@
     "type": "Kill Count",
     "name": "Royal Titan Champion",
     "description": "Kill the Royal Titans 10 times.",
+    "points": 2,
     "boss": true
   },
   "590": {
@@ -4405,6 +5315,7 @@
     "type": "Kill Count",
     "name": "Royal Titan Adept",
     "description": "Kill the Royal Titans 25 times.",
+    "points": 2,
     "boss": true
   },
   "591": {
@@ -4413,6 +5324,7 @@
     "type": "Restriction",
     "name": "One by one",
     "description": "Kill one Titan at a time, without attacking the other.",
+    "points": 1,
     "boss": true
   },
   "592": {
@@ -4421,6 +5333,7 @@
     "type": "Speed",
     "name": "Royal Titan Speed-Runner",
     "description": "Kill the Royal Titans in less than 1:30 minutes.",
+    "points": 3,
     "boss": true
   },
   "593": {
@@ -4429,6 +5342,7 @@
     "type": "Stamina",
     "name": "Titan Killer",
     "description": "Kill the Royal Titans 15 times without leaving the area. If a player joins the fight, the current streak will be reset to 0. If a player leaves the fight, the task will be failed and a new instance will need to be created.",
+    "points": 3,
     "boss": true
   },
   "594": {
@@ -4437,6 +5351,7 @@
     "type": "Restriction",
     "name": "Elemental Company",
     "description": "Kill the Royal Titans without attacking any elementals.",
+    "points": 1,
     "boss": true
   },
   "595": {
@@ -4445,6 +5360,7 @@
     "type": "Restriction",
     "name": "I need room",
     "description": "Kill the Royal Titans while extinguishing all fires and melting all icicles before they dissipate naturally.",
+    "points": 3,
     "boss": true
   },
   "596": {
@@ -4453,6 +5369,7 @@
     "type": "Restriction",
     "name": "No time to pray",
     "description": "Kill the Royal Titans without losing any prayer points.",
+    "points": 4,
     "boss": true
   },
   "597": {
@@ -4461,6 +5378,7 @@
     "type": "Restriction",
     "name": "Let them fight",
     "description": "Kill the Royal Titans while having them kill a total of 10 elementals.",
+    "points": 1,
     "boss": true
   },
   "598": {
@@ -4469,6 +5387,7 @@
     "type": "Mechanical",
     "name": "It takes too long",
     "description": "Kill both royal titans while they are charging up their area attack. Both titans must die during the same charging up phase.",
+    "points": 2,
     "boss": true
   }
 }
