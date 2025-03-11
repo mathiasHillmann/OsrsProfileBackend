@@ -21,10 +21,15 @@ class SummaryService implements OsrsService
 
         $return = [];
 
+        $skills = Collection::wrap($transformedData['skills']);
+        $quests = Collection::wrap($transformedData['quest']);
+        $miniquests = Collection::wrap($transformedData['miniquest']);
+        $tasks = Collection::wrap($transformedData['tasks']);
+
         $return['total'] = [
-            'realLevel' => array_sum(array_column($transformedData['skills'], 'realLevel')),
-            'virtualLevel' => array_sum(array_column($transformedData['skills'], 'virtualLevel')),
-            'experience' => array_sum(array_column($transformedData['skills'], 'experience')),
+            'realLevel' => $skills->sum('realLevel'),
+            'virtualLevel' => $skills->sum('virtualLevel'),
+            'experience' => $skills->sum('experience'),
             'rank' => $overallRank,
         ];
 
@@ -32,12 +37,12 @@ class SummaryService implements OsrsService
 
         $return['updatedAt'] = $player->updated_at;
         $return['quest'] = [
-            RunescapeQuestStatus::Complete->value => Collection::wrap($transformedData['quest'])->filter(fn ($quest) => $quest['status'] === RunescapeQuestStatus::Complete)->count(),
-            'total' => Collection::wrap($transformedData['quest'])->count(),
+            RunescapeQuestStatus::Complete->value => $quests->filter(fn ($quest) => $quest['status'] === RunescapeQuestStatus::Complete)->count(),
+            'total' => $quests->count(),
         ];
         $return['miniquest'] = [
-            RunescapeQuestStatus::Complete->value => Collection::wrap($transformedData['miniquest'])->filter(fn ($quest) => $quest['status'] === RunescapeQuestStatus::Complete)->count(),
-            'total' => Collection::wrap($transformedData['miniquest'])->count(),
+            RunescapeQuestStatus::Complete->value => $miniquests->filter(fn ($quest) => $quest['status'] === RunescapeQuestStatus::Complete)->count(),
+            'total' => $miniquests->count(),
         ];
         [$diaryCompleted, $diaryTotal] = $this->countCompletedDiaries($transformedData['diaries']);
         $return['diary'] = [
@@ -45,15 +50,15 @@ class SummaryService implements OsrsService
             'total' => $diaryTotal,
         ];
         $return['combatTasks'] = [
-            'completed' => Collection::wrap($transformedData['tasks'])->filter(fn ($task) => $task['completed'])->count(),
-            'completedPoints' => Collection::wrap($transformedData['tasks'])->where('completed', true)->sum('points') ?? 0,
-            'total' => Collection::wrap($transformedData['tasks'])->count(),
-            'totalPoints' => Collection::wrap($transformedData['tasks'])->sum('points'),
+            'completed' => $tasks->where('completed', true)->count(),
+            'completedPoints' => $tasks->where('completed', true)->sum('points') ?? 0,
+            'total' => $tasks->count(),
+            'totalPoints' => $tasks->sum('points'),
         ];
-        $return['combatTasks']['tier'] = $this->getCombatAchievementTier($transformedData['tasks'], $return['combatTasks']['completedPoints']);
+        $return['combatTasks']['tier'] = $this->getCombatAchievementTier($return['combatTasks']['completedPoints']);
         $return['collection'] = [
             'complete' => $data['collection_log_total'] ?? 0,
-            'total' => 1477,
+            'total' => 1568,
         ];
 
         return $return;
@@ -97,7 +102,7 @@ class SummaryService implements OsrsService
         return [$completed, $total];
     }
 
-    private function getCombatAchievementTier(array $tasks, ?int $totalPoints): string
+    private function getCombatAchievementTier(int $totalPoints): string
     {
         $currentTier = Collection::wrap(File::json(base_path('data/combat-achievements-tiers.json')))
             ->where('points', '<=', $totalPoints)
