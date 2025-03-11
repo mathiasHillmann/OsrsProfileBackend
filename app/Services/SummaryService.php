@@ -104,7 +104,7 @@ class SummaryService implements OsrsService
             ->sortByDesc('points')
             ->first();
 
-        return $currentTier['name'];
+        return $currentTier['name'] ?? 'No hilt unlocked';
     }
 
     public function getValuesToTrack(): array
