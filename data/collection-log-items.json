@@ -4,6 +4,7 @@
         "activities": [
             {
                 "title": "Abyssal Sire",
+                "total": 9,
                 "items": [
                     {
                         "id": 13262,
@@ -45,6 +46,7 @@
             },
             {
                 "title": "Alchemical Hydra",
+                "total": 11,
                 "items": [
                     {
                         "id": 22746,
@@ -94,6 +96,7 @@
             },
             {
                 "title": "Amoxliatl",
+                "total": 4,
                 "items": [
                     {
                         "id": 30154,
@@ -115,6 +118,7 @@
             },
             {
                 "title": "Araxxor",
+                "total": 10,
                 "items": [
                     {
                         "id": 29836,
@@ -160,6 +164,7 @@
             },
             {
                 "title": "Barrows Chests",
+                "total": 25,
                 "items": [
                     {
                         "id": 4732,
@@ -265,6 +270,7 @@
             },
             {
                 "title": "Bryophyta",
+                "total": 1,
                 "items": [
                     {
                         "id": 22372,
@@ -274,6 +280,7 @@
             },
             {
                 "title": "Callisto and Artio",
+                "total": 6,
                 "items": [
                     {
                         "id": 13178,
@@ -303,6 +310,7 @@
             },
             {
                 "title": "Cerberus",
+                "total": 7,
                 "items": [
                     {
                         "id": 13247,
@@ -336,6 +344,7 @@
             },
             {
                 "title": "Chaos Elemental",
+                "total": 3,
                 "items": [
                     {
                         "id": 11995,
@@ -353,6 +362,7 @@
             },
             {
                 "title": "Chaos Fanatic",
+                "total": 3,
                 "items": [
                     {
                         "id": 11995,
@@ -370,6 +380,7 @@
             },
             {
                 "title": "Commander Zilyana",
+                "total": 8,
                 "items": [
                     {
                         "id": 12651,
@@ -407,6 +418,7 @@
             },
             {
                 "title": "Corporeal Beast",
+                "total": 7,
                 "items": [
                     {
                         "id": 12816,
@@ -440,6 +452,7 @@
             },
             {
                 "title": "Crazy Archaeologist",
+                "total": 3,
                 "items": [
                     {
                         "id": 11929,
@@ -457,6 +470,7 @@
             },
             {
                 "title": "Dagannoth Kings",
+                "total": 10,
                 "items": [
                     {
                         "id": 12644,
@@ -502,6 +516,7 @@
             },
             {
                 "title": "Duke Sucellus",
+                "total": 10,
                 "items": [
                     {
                         "id": 28250,
@@ -547,6 +562,7 @@
             },
             {
                 "title": "The Fight Caves",
+                "total": 2,
                 "items": [
                     {
                         "id": 13225,
@@ -560,6 +576,7 @@
             },
             {
                 "title": "Fortis Colosseum",
+                "total": 9,
                 "items": [
                     {
                         "id": 28960,
@@ -601,6 +618,7 @@
             },
             {
                 "title": "The Gauntlet",
+                "total": 5,
                 "items": [
                     {
                         "id": 23757,
@@ -626,6 +644,7 @@
             },
             {
                 "title": "General Graardor",
+                "total": 8,
                 "items": [
                     {
                         "id": 12650,
@@ -663,6 +682,7 @@
             },
             {
                 "title": "Giant Mole",
+                "total": 3,
                 "items": [
                     {
                         "id": 12646,
@@ -680,6 +700,7 @@
             },
             {
                 "title": "Grotesque Guardians",
+                "total": 7,
                 "items": [
                     {
                         "id": 21748,
@@ -713,6 +734,7 @@
             },
             {
                 "title": "Hespori",
+                "total": 4,
                 "items": [
                     {
                         "id": 22994,
@@ -734,6 +756,7 @@
             },
             {
                 "title": "The Hueycoatl",
+                "total": 6,
                 "items": [
                     {
                         "id": 30152,
@@ -763,6 +786,7 @@
             },
             {
                 "title": "The Inferno",
+                "total": 2,
                 "items": [
                     {
                         "id": 21291,
@@ -776,6 +800,7 @@
             },
             {
                 "title": "Kalphite Queen",
+                "total": 6,
                 "items": [
                     {
                         "id": 12647,
@@ -805,6 +830,7 @@
             },
             {
                 "title": "King Black Dragon",
+                "total": 4,
                 "items": [
                     {
                         "id": 12653,
@@ -826,6 +852,7 @@
             },
             {
                 "title": "Kraken",
+                "total": 4,
                 "items": [
                     {
                         "id": 12655,
@@ -847,6 +874,7 @@
             },
             {
                 "title": "Kree'arra",
+                "total": 8,
                 "items": [
                     {
                         "id": 12649,
@@ -884,6 +912,7 @@
             },
             {
                 "title": "K'ril Tsutsaroth",
+                "total": 8,
                 "items": [
                     {
                         "id": 12652,
@@ -921,6 +950,7 @@
             },
             {
                 "title": "The Leviathan",
+                "total": 10,
                 "items": [
                     {
                         "id": 28252,
@@ -966,6 +996,7 @@
             },
             {
                 "title": "Moons of Peril",
+                "total": 13,
                 "items": [
                     {
                         "id": 29004,
@@ -1023,6 +1054,7 @@
             },
             {
                 "title": "Nex",
+                "total": 8,
                 "items": [
                     {
                         "id": 26348,
@@ -1060,6 +1092,7 @@
             },
             {
                 "title": "The Nightmare",
+                "total": 12,
                 "items": [
                     {
                         "id": 24491,
@@ -1113,6 +1146,7 @@
             },
             {
                 "title": "Obor",
+                "total": 1,
                 "items": [
                     {
                         "id": 20756,
@@ -1122,6 +1156,7 @@
             },
             {
                 "title": "Phantom Muspah",
+                "total": 6,
                 "items": [
                     {
                         "id": 27590,
@@ -1151,6 +1186,7 @@
             },
             {
                 "title": "Royal Titans",
+                "total": 7,
                 "items": [
                     {
                         "id": 30622,
@@ -1184,6 +1220,7 @@
             },
             {
                 "title": "Sarachnis",
+                "total": 4,
                 "items": [
                     {
                         "id": 23495,
@@ -1205,6 +1242,7 @@
             },
             {
                 "title": "Scorpia",
+                "total": 4,
                 "items": [
                     {
                         "id": 13181,
@@ -1226,6 +1264,7 @@
             },
             {
                 "title": "Scurrius",
+                "total": 2,
                 "items": [
                     {
                         "id": 28801,
@@ -1239,6 +1278,7 @@
             },
             {
                 "title": "Skotizo",
+                "total": 6,
                 "items": [
                     {
                         "id": 21273,
@@ -1268,6 +1308,7 @@
             },
             {
                 "title": "Tempoross",
+                "total": 12,
                 "items": [
                     {
                         "id": 25602,
@@ -1321,6 +1362,7 @@
             },
             {
                 "title": "Thermonuclear Smoke Devil",
+                "total": 5,
                 "items": [
                     {
                         "id": 12648,
@@ -1346,6 +1388,7 @@
             },
             {
                 "title": "Vardorvis",
+                "total": 10,
                 "items": [
                     {
                         "id": 28248,
@@ -1391,6 +1434,7 @@
             },
             {
                 "title": "Venenatis and Spindel",
+                "total": 6,
                 "items": [
                     {
                         "id": 13177,
@@ -1420,6 +1464,7 @@
             },
             {
                 "title": "Vet'ion and Calvar'ion",
+                "total": 6,
                 "items": [
                     {
                         "id": 13179,
@@ -1449,6 +1494,7 @@
             },
             {
                 "title": "Vorkath",
+                "total": 6,
                 "items": [
                     {
                         "id": 21992,
@@ -1478,6 +1524,7 @@
             },
             {
                 "title": "The Whisperer",
+                "total": 10,
                 "items": [
                     {
                         "id": 28246,
@@ -1523,6 +1570,7 @@
             },
             {
                 "title": "Wintertodt",
+                "total": 10,
                 "items": [
                     {
                         "id": 20693,
@@ -1568,6 +1616,7 @@
             },
             {
                 "title": "Zalcano",
+                "total": 4,
                 "items": [
                     {
                         "id": 23760,
@@ -1589,6 +1638,7 @@
             },
             {
                 "title": "Zulrah",
+                "total": 10,
                 "items": [
                     {
                         "id": 12921,
@@ -1632,13 +1682,15 @@
                     }
                 ]
             }
-        ]
+        ],
+        "varp": "4614"
     },
     {
         "title": "Raids",
         "activities": [
             {
                 "title": "Chambers of Xeric",
+                "total": 23,
                 "items": [
                     {
                         "id": 20851,
@@ -1736,6 +1788,7 @@
             },
             {
                 "title": "Theatre of Blood",
+                "total": 17,
                 "items": [
                     {
                         "id": 22473,
@@ -1809,6 +1862,7 @@
             },
             {
                 "title": "Tombs of Amascut",
+                "total": 26,
                 "items": [
                     {
                         "id": 27352,
@@ -1916,13 +1970,15 @@
                     }
                 ]
             }
-        ]
+        ],
+        "varp": "4616"
     },
     {
         "title": "Clues",
         "activities": [
             {
                 "title": "Beginner Treasure Trails",
+                "total": 16,
                 "items": [
                     {
                         "id": 23285,
@@ -1992,6 +2048,7 @@
             },
             {
                 "title": "Easy Treasure Trails",
+                "total": 131,
                 "items": [
                     {
                         "id": 20211,
@@ -2521,6 +2578,7 @@
             },
             {
                 "title": "Medium Treasure Trails",
+                "total": 115,
                 "items": [
                     {
                         "id": 2577,
@@ -2986,6 +3044,7 @@
             },
             {
                 "title": "Hard Treasure Trails",
+                "total": 134,
                 "items": [
                     {
                         "id": 2581,
@@ -3527,6 +3586,7 @@
             },
             {
                 "title": "Elite Treasure Trails",
+                "total": 59,
                 "items": [
                     {
                         "id": 23185,
@@ -3768,6 +3828,7 @@
             },
             {
                 "title": "Master Treasure Trails",
+                "total": 49,
                 "items": [
                     {
                         "id": 19730,
@@ -3969,6 +4030,7 @@
             },
             {
                 "title": "Hard Treasure Trails (Rare)",
+                "total": 24,
                 "items": [
                     {
                         "id": 10334,
@@ -4070,6 +4132,7 @@
             },
             {
                 "title": "Elite Treasure Trails (Rare)",
+                "total": 39,
                 "items": [
                     {
                         "id": 12426,
@@ -4231,6 +4294,7 @@
             },
             {
                 "title": "Master Treasure Trails (Rare)",
+                "total": 45,
                 "items": [
                     {
                         "id": 20014,
@@ -4416,6 +4480,7 @@
             },
             {
                 "title": "Shared Treasure Trail Rewards",
+                "total": 49,
                 "items": [
                     {
                         "id": 3827,
@@ -4615,13 +4680,15 @@
                     }
                 ]
             }
-        ]
+        ],
+        "varp": "4618"
     },
     {
         "title": "Minigames",
         "activities": [
             {
                 "title": "Barbarian Assault",
+                "total": 11,
                 "items": [
                     {
                         "id": 12703,
@@ -4671,6 +4738,7 @@
             },
             {
                 "title": "Brimhaven Agility Arena",
+                "total": 9,
                 "items": [
                     {
                         "id": 2996,
@@ -4712,6 +4780,7 @@
             },
             {
                 "title": "Castle Wars",
+                "total": 39,
                 "items": [
                     {
                         "id": 4071,
@@ -4873,6 +4942,7 @@
             },
             {
                 "title": "Fishing Trawler",
+                "total": 4,
                 "items": [
                     {
                         "id": 13258,
@@ -4894,6 +4964,7 @@
             },
             {
                 "title": "Giants' Foundry",
+                "total": 9,
                 "items": [
                     {
                         "id": 27023,
@@ -4935,6 +5006,7 @@
             },
             {
                 "title": "Gnome Restaurant",
+                "total": 4,
                 "items": [
                     {
                         "id": 9469,
@@ -4956,6 +5028,7 @@
             },
             {
                 "title": "Guardians of the Rift",
+                "total": 17,
                 "items": [
                     {
                         "id": 26901,
@@ -5029,6 +5102,7 @@
             },
             {
                 "title": "Hallowed Sepulchre",
+                "total": 16,
                 "items": [
                     {
                         "id": 24711,
@@ -5098,6 +5172,7 @@
             },
             {
                 "title": "Last Man Standing",
+                "total": 32,
                 "items": [
                     {
                         "id": 24189,
@@ -5231,6 +5306,7 @@
             },
             {
                 "title": "Magic Training Arena",
+                "total": 11,
                 "items": [
                     {
                         "id": 6908,
@@ -5280,6 +5356,7 @@
             },
             {
                 "title": "Mahogany Homes",
+                "total": 8,
                 "items": [
                     {
                         "id": 24884,
@@ -5317,6 +5394,7 @@
             },
             {
                 "title": "Mastering Mixology",
+                "total": 7,
                 "items": [
                     {
                         "id": 29974,
@@ -5350,6 +5428,7 @@
             },
             {
                 "title": "Pest Control",
+                "total": 10,
                 "items": [
                     {
                         "id": 8841,
@@ -5395,6 +5474,7 @@
             },
             {
                 "title": "Rogues' Den",
+                "total": 5,
                 "items": [
                     {
                         "id": 5554,
@@ -5420,6 +5500,7 @@
             },
             {
                 "title": "Shades of Mort'ton",
+                "total": 14,
                 "items": [
                     {
                         "id": 12851,
@@ -5481,6 +5562,7 @@
             },
             {
                 "title": "Soul Wars",
+                "total": 3,
                 "items": [
                     {
                         "id": 25348,
@@ -5498,6 +5580,7 @@
             },
             {
                 "title": "Temple Trekking",
+                "total": 4,
                 "items": [
                     {
                         "id": 10941,
@@ -5519,6 +5602,7 @@
             },
             {
                 "title": "Tithe Farm",
+                "total": 7,
                 "items": [
                     {
                         "id": 13646,
@@ -5552,6 +5636,7 @@
             },
             {
                 "title": "Trouble Brewing",
+                "total": 30,
                 "items": [
                     {
                         "id": 8952,
@@ -5677,6 +5762,7 @@
             },
             {
                 "title": "Volcanic Mine",
+                "total": 8,
                 "items": [
                     {
                         "id": 21697,
@@ -5712,13 +5798,15 @@
                     }
                 ]
             }
-        ]
+        ],
+        "varp": "4620"
     },
     {
         "title": "Other",
         "activities": [
             {
                 "title": "Aerial Fishing",
+                "total": 9,
                 "items": [
                     {
                         "id": 22840,
@@ -5760,6 +5848,7 @@
             },
             {
                 "title": "All Pets",
+                "total": 63,
                 "items": [
                     {
                         "id": 13262,
@@ -6017,6 +6106,7 @@
             },
             {
                 "title": "Camdozaal",
+                "total": 10,
                 "items": [
                     {
                         "id": 25641,
@@ -6062,6 +6152,7 @@
             },
             {
                 "title": "Champion's Challenge",
+                "total": 11,
                 "items": [
                     {
                         "id": 6798,
@@ -6111,6 +6202,7 @@
             },
             {
                 "title": "Chompy Bird Hunting",
+                "total": 19,
                 "items": [
                     {
                         "id": 13071,
@@ -6192,6 +6284,7 @@
             },
             {
                 "title": "Colossal Wyrm Agility",
+                "total": 8,
                 "items": [
                     {
                         "id": 30040,
@@ -6229,6 +6322,7 @@
             },
             {
                 "title": "Creature Creation",
+                "total": 7,
                 "items": [
                     {
                         "id": 10859,
@@ -6262,6 +6356,7 @@
             },
             {
                 "title": "Cyclopes",
+                "total": 8,
                 "items": [
                     {
                         "id": 8844,
@@ -6299,6 +6394,7 @@
             },
             {
                 "title": "Elder Chaos Druids",
+                "total": 3,
                 "items": [
                     {
                         "id": 20517,
@@ -6316,6 +6412,7 @@
             },
             {
                 "title": "Forestry",
+                "total": 23,
                 "items": [
                     {
                         "id": 28626,
@@ -6413,6 +6510,7 @@
             },
             {
                 "title": "Fossil Island Notes",
+                "total": 10,
                 "items": [
                     {
                         "id": 21664,
@@ -6458,6 +6556,7 @@
             },
             {
                 "title": "Glough's Experiments",
+                "total": 6,
                 "items": [
                     {
                         "id": 19529,
@@ -6487,6 +6586,7 @@
             },
             {
                 "title": "Hunter Guild",
+                "total": 6,
                 "items": [
                     {
                         "id": 28962,
@@ -6516,6 +6616,7 @@
             },
             {
                 "title": "Monkey Backpacks",
+                "total": 6,
                 "items": [
                     {
                         "id": 24862,
@@ -6545,6 +6646,7 @@
             },
             {
                 "title": "Motherlode Mine",
+                "total": 6,
                 "items": [
                     {
                         "id": 12019,
@@ -6574,6 +6676,7 @@
             },
             {
                 "title": "My Notes",
+                "total": 26,
                 "items": [
                     {
                         "id": 11341,
@@ -6683,6 +6786,7 @@
             },
             {
                 "title": "Random Events",
+                "total": 23,
                 "items": [
                     {
                         "id": 6654,
@@ -6780,6 +6884,7 @@
             },
             {
                 "title": "Revenants",
+                "total": 14,
                 "items": [
                     {
                         "id": 22542,
@@ -6841,6 +6946,7 @@
             },
             {
                 "title": "Rooftop Agility",
+                "total": 7,
                 "items": [
                     {
                         "id": 11849,
@@ -6874,6 +6980,7 @@
             },
             {
                 "title": "Shayzien Armour",
+                "total": 25,
                 "items": [
                     {
                         "id": 13357,
@@ -6979,6 +7086,7 @@
             },
             {
                 "title": "Shooting Stars",
+                "total": 2,
                 "items": [
                     {
                         "id": 25539,
@@ -6992,6 +7100,7 @@
             },
             {
                 "title": "Skilling Pets",
+                "total": 8,
                 "items": [
                     {
                         "id": 13320,
@@ -7029,6 +7138,7 @@
             },
             {
                 "title": "Slayer",
+                "total": 80,
                 "items": [
                     {
                         "id": 7975,
@@ -7354,6 +7464,7 @@
             },
             {
                 "title": "Tormented Demons",
+                "total": 3,
                 "items": [
                     {
                         "id": 29580,
@@ -7371,6 +7482,7 @@
             },
             {
                 "title": "TzHaar",
+                "total": 10,
                 "items": [
                     {
                         "id": 6568,
@@ -7416,6 +7528,7 @@
             },
             {
                 "title": "Miscellaneous",
+                "total": 54,
                 "items": [
                     {
                         "id": 21509,
@@ -7635,6 +7748,7 @@
                     }
                 ]
             }
-        ]
+        ],
+        "varp": "4622"
     }
 ]

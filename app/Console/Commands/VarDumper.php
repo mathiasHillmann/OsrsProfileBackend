@@ -44,23 +44,33 @@ class VarDumper extends Command
     private const COL_GROUPS = [
         [
             'title' => 'Bosses',
+            'activities' => [],
             'enum' => '2103',
+            'varp' => '4614',
         ],
         [
             'title' => 'Raids',
+            'activities' => [],
             'enum' => '2104',
+            'varp' => '4616',
         ],
         [
             'title' => 'Clues',
+            'activities' => [],
             'enum' => '2105',
+            'varp' => '4618',
         ],
         [
             'title' => 'Minigames',
+            'activities' => [],
             'enum' => '2106',
+            'varp' => '4620',
         ],
         [
             'title' => 'Other',
+            'activities' => [],
             'enum' => '2107',
+            'varp' => '4622',
         ],
     ];
 
@@ -101,7 +111,6 @@ class VarDumper extends Command
         $this->getCombatAchievementVariables();
         $this->getCombatAchievementTasks($monsterMap);
         $this->calculateCombatAchievementTiers();
-        $this->getCollectionLogItems();
     }
 
     private function fetchHiscoreData()
@@ -398,9 +407,11 @@ class VarDumper extends Command
                 $activityDetails = $this->readJson('struct', $activity);
                 $activityItems = $this->readJson('enum', $activityDetails['params'][690])['intVals'];
                 $items = [];
+                $totalActivity = 0;
 
                 foreach ($activityItems as $item) {
                     $itemDef = $this->readJson('item_defs', $item);
+                    ++$totalActivity;
 
                     $items[] = [
                         'id' => $itemDef['id'],
@@ -410,6 +421,7 @@ class VarDumper extends Command
 
                 $group['activities'][] = [
                     'title' => $activityDetails['params'][689],
+                    'total' => $totalActivity,
                     'items' => $items,
                 ];
             }
