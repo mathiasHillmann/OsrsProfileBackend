@@ -41,6 +41,31 @@ class VarDumper extends Command
         'bosses' => '3971',
     ];
 
+    private const COL_GROUPS = [
+        [
+            'title' => 'Bosses',
+            'enum' => '2103',
+        ],
+        [
+            'title' => 'Raids',
+            'enum' => '2104',
+        ],
+        [
+            'title' => 'Clues',
+            'enum' => '2105',
+        ],
+        [
+            'title' => 'Minigames',
+            'enum' => '2106',
+        ],
+        [
+            'title' => 'Other',
+            'enum' => '2107',
+        ],
+    ];
+
+    // collection log description storage\app\tmp\dump\rs2asm\2735.rs2asm |  storage\app\tmp\dump\rs2asm\4103.rs2asm
+
     private const NON_BOSSES = [
         'Aberrant Spectre', 'Basilisk Knight', 'Black Dragon', 'Bloodveld',
         'Brutal Black Dragon', 'Demonic Gorilla', 'Fire Giant', 'Greater Demon',
@@ -76,6 +101,7 @@ class VarDumper extends Command
         $this->getCombatAchievementVariables();
         $this->getCombatAchievementTasks($monsterMap);
         $this->calculateCombatAchievementTiers();
+        $this->getCollectionLogItems();
     }
 
     private function fetchHiscoreData()
@@ -359,6 +385,41 @@ class VarDumper extends Command
         File::put(base_path('data/combat-achievements-tiers.json'), json_encode($tiers, JSON_PRETTY_PRINT));
     }
 
+    private function getCollectionLogItems(): void
+    {
+        $this->line(__FUNCTION__);
+
+        $structure = [...self::COL_GROUPS];
+
+        foreach ($structure as &$group) {
+            $activities = $this->readJson('enum', $group['enum'])['intVals'];
+
+            foreach ($activities as $activity) {
+                $activityDetails = $this->readJson('struct', $activity);
+                $activityItems = $this->readJson('enum', $activityDetails['params'][690])['intVals'];
+                $items = [];
+
+                foreach ($activityItems as $item) {
+                    $itemDef = $this->readJson('item_defs', $item);
+
+                    $items[] = [
+                        'id' => $itemDef['id'],
+                        'name' => $itemDef['name'],
+                    ];
+                }
+
+                $group['activities'][] = [
+                    'title' => $activityDetails['params'][689],
+                    'items' => $items,
+                ];
+            }
+
+            unset($group['enum']);
+        }
+
+        File::put(base_path('data/collection-log-items.json'), json_encode($structure, JSON_PRETTY_PRINT));
+    }
+
     private function readAsmFile(string $file, \Closure $callback): void
     {
         $asmFile = File::lines(storage_path(self::DUMP_PATH."/dump/rs2asm/{$file}"));
@@ -379,6 +440,7 @@ class VarDumper extends Command
             'dbrow' => '/dump/dbrow/',
             'enum' => '/dump/enums/',
             'struct' => '/dump/structs/',
+            'item_defs' => '/dump/item_defs/',
             'default' => throw new \UnexpectedValueException("Invalid json type: {$type}"),
         };
 
