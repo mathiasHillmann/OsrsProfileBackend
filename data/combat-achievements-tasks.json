@@ -5389,5 +5389,104 @@
         "description": "Kill both royal titans while they are charging up their area attack. Both titans must die during the same charging up phase.",
         "points": 2,
         "boss": true
+    },
+    "599": {
+        "monster": "Yama",
+        "tier": "Elite",
+        "type": "Kill Count",
+        "name": "Yama Adept",
+        "description": "Defeat Yama once.",
+        "points": 4,
+        "boss": true
+    },
+    "600": {
+        "monster": "Yama",
+        "tier": "Master",
+        "type": "Kill Count",
+        "name": "Yama Veteran",
+        "description": "Defeat Yama 50 times.",
+        "points": 5,
+        "boss": true
+    },
+    "601": {
+        "monster": "Yama",
+        "tier": "Elite",
+        "type": "Speed",
+        "name": "Yama Speed-Trialist",
+        "description": "Defeat Yama in an average time of under 3:38 over your last four kills.",
+        "points": 4,
+        "boss": true
+    },
+    "602": {
+        "monster": "Yama",
+        "tier": "Master",
+        "type": "Speed",
+        "name": "Yama Speed-Chaser",
+        "description": "Defeat Yama in an average time of under 3:00 over your last four kills.",
+        "points": 5,
+        "boss": true
+    },
+    "603": {
+        "monster": "Yama",
+        "tier": "Grandmaster",
+        "type": "Speed",
+        "name": "Yama Speed-Runner",
+        "description": "Defeat Yama in an average time of under 2:34 over your last four kills.",
+        "points": 6,
+        "boss": true
+    },
+    "604": {
+        "monster": "Yama",
+        "tier": "Master",
+        "type": "Restriction",
+        "name": "No toppings, no drinks, thanks",
+        "description": "Defeat Yama without anybody healing using anything other than plain pizza and without anybody drinking any potions.",
+        "points": 5,
+        "boss": true
+    },
+    "605": {
+        "monster": "Yama",
+        "tier": "Master",
+        "type": "Mechanical",
+        "name": "Shadow dancer",
+        "description": "Defeat Yama without getting hit by shadows and without being more than one tile away from the center of his shadow crash attack.",
+        "points": 5,
+        "boss": true
+    },
+    "606": {
+        "monster": "Yama",
+        "tier": "Master",
+        "type": "Mechanical",
+        "name": "Fire fighter",
+        "description": "Defeat Yama without getting hit by fire and having only killed void flares with special attacks.",
+        "points": 5,
+        "boss": true
+    },
+    "607": {
+        "monster": "Yama",
+        "tier": "Elite",
+        "type": "Mechanical",
+        "name": "Back so soon?",
+        "description": "Defeat Yama without the judge being attacked with the wrong style and without taking more than one instance of damage each time you are exiled from the arena.",
+        "points": 4,
+        "boss": true
+    },
+    "608": {
+        "monster": "Yama",
+        "tier": "Grandmaster",
+        "type": "Perfection",
+        "name": "Contract Choreographer",
+        "description": "Defeat Yama whilst completing 'Shadow Dancer', 'Fire Fighter', 'Back so soon?' and without taking any other avoidable damage.",
+        "points": 6,
+        "boss": true
+    },
+    "609": {
+        "monster": "Yama",
+        "tier": "Grandmaster",
+        "type": "Kill Count",
+        "name": "Contractually Unbound",
+        "description": "Defeat Yama under the elevated conditions of one of his non-standard contracts.",
+        "points": 6,
+        "boss": true
     }
 }
