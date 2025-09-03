@@ -1582,5 +1582,53 @@
         "startValue": 0,
         "endValue": 60,
         "text": "The Curse of Arrav"
+    },
+    "The Final Dawn": {
+        "index": "16663",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 68,
+        "text": "The Final Dawn"
+    },
+    "Shadows of Custodia": {
+        "index": "16632",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 24,
+        "text": "Shadows of Custodia"
+    },
+    "Vale Totems": {
+        "index": "17227",
+        "type": "varb",
+        "questType": "miniquest",
+        "startValue": 0,
+        "endValue": 100,
+        "text": "Vale Totems"
+    },
+    "An Existential Crisis": {
+        "index": "16661",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 28,
+        "text": "An Existential Crisis"
+    },
+    "Scrambled!": {
+        "index": "16758",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 30,
+        "text": "Scrambled!"
+    },
+    "Impending Chaos": {
+        "index": "16662",
+        "type": "varb",
+        "questType": "quest",
+        "startValue": 0,
+        "endValue": 28,
+        "text": "Impending Chaos"
     }
 }

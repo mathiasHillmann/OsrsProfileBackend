@@ -319,7 +319,7 @@
         "tier": "Easy",
         "type": "Kill Count",
         "name": "Bryophyta Novice",
-        "description": "Kill Bryophyta once.",
+        "description": "Open Bryophyta's chest once.",
         "points": 1,
         "boss": true
     },
@@ -328,7 +328,7 @@
         "tier": "Medium",
         "type": "Kill Count",
         "name": "Bryophyta Champion",
-        "description": "Kill Bryophyta 5 times.",
+        "description": "Open Bryophyta's chest 5 times.",
         "points": 2,
         "boss": true
     },
@@ -616,7 +616,7 @@
         "tier": "Elite",
         "type": "Restriction",
         "name": "Finding the Weak Spot",
-        "description": "Finish off the Corporeal Beast with a Crystal Halberd special attack.",
+        "description": "Finish off the Corporeal Beast with a Halberd special attack.",
         "points": 4,
         "boss": true
     },
@@ -1165,7 +1165,7 @@
         "tier": "Easy",
         "type": "Kill Count",
         "name": "Obor Novice",
-        "description": "Kill Obor once.",
+        "description": "Open Obor's chest once.",
         "points": 1,
         "boss": true
     },
@@ -1174,7 +1174,7 @@
         "tier": "Medium",
         "type": "Kill Count",
         "name": "Obor Champion",
-        "description": "Kill Obor 5 times.",
+        "description": "Open Obor's chest 5 times.",
         "points": 2,
         "boss": true
     },
@@ -3505,7 +3505,7 @@
         "tier": "Elite",
         "type": "Mechanical",
         "name": "Chally Time",
-        "description": "Defeat the Pestilent Bloat in the Theatre of Blood: Entry Mode by using a crystal halberd special attack as your final attack.",
+        "description": "Defeat the Pestilent Bloat in the Theatre of Blood: Entry Mode by using a halberd special attack as your final attack.",
         "points": 4,
         "boss": true
     },
@@ -3640,7 +3640,7 @@
         "tier": "Master",
         "type": "Speed",
         "name": "Phosani's Speedchaser",
-        "description": "Kill Phosani's Nightmare within 9 minutes.",
+        "description": "Kill Phosani's Nightmare within 7 minutes and 30 seconds",
         "points": 5,
         "boss": true
     },
@@ -3649,7 +3649,7 @@
         "tier": "Grandmaster",
         "type": "Speed",
         "name": "Phosani's Speedrunner",
-        "description": "Kill Phosani's Nightmare within 7 minutes and 30 seconds.",
+        "description": "Kill Phosani's Nightmare within 6 minutes.",
         "points": 6,
         "boss": true
     },
@@ -4612,7 +4612,7 @@
         "tier": "Elite",
         "type": "Speed",
         "name": "Duke Sucellus Speed-Trialist",
-        "description": "Kill Duke Sucellus in less than 1:45 minutes without a slayer task.",
+        "description": "Kill Duke Sucellus in less than 1:00 minutes without a slayer task.",
         "points": 4,
         "boss": true
     },
@@ -4621,7 +4621,7 @@
         "tier": "Master",
         "type": "Speed",
         "name": "Duke Sucellus Speed-Chaser",
-        "description": "Kill Duke Sucellus in less than 1:35 minutes without a slayer task.",
+        "description": "Kill Duke Sucellus in less than 50 seconds without a slayer task.",
         "points": 5,
         "boss": true
     },
@@ -4630,7 +4630,7 @@
         "tier": "Grandmaster",
         "type": "Speed",
         "name": "Duke Sucellus Speed-Runner",
-        "description": "Kill Duke Sucellus in less than 1:25 minutes without a slayer task.",
+        "description": "Kill Duke Sucellus in less than 40 seconds without a slayer task.",
         "points": 6,
         "boss": true
     },
@@ -5486,6 +5486,141 @@
         "type": "Kill Count",
         "name": "Contractually Unbound",
         "description": "Defeat Yama under the elevated conditions of one of his non-standard contracts.",
+        "points": 6,
+        "boss": true
+    },
+    "610": {
+        "monster": "Doom of Mokhaiotl",
+        "tier": "Elite",
+        "type": "Kill Count",
+        "name": "Doom Adept",
+        "description": "Defeat the Doom of Mokhaiotl at delve level 3.",
+        "points": 4,
+        "boss": true
+    },
+    "611": {
+        "monster": "Doom of Mokhaiotl",
+        "tier": "Master",
+        "type": "Kill Count",
+        "name": "Doom Veteran",
+        "description": "Defeat the Doom of Mokhaiotl at delve level 8.",
+        "points": 5,
+        "boss": true
+    },
+    "612": {
+        "monster": "Doom of Mokhaiotl",
+        "tier": "Grandmaster",
+        "type": "Stamina",
+        "name": "It's Dark Down Here",
+        "description": "Defeat the Doom of Mokhaiotl at delve level 16.",
+        "points": 6,
+        "boss": true
+    },
+    "613": {
+        "monster": "Doom of Mokhaiotl",
+        "tier": "Elite",
+        "type": "Mechanical",
+        "name": "Exposed Doom",
+        "description": "Defeat the Doom of Mokhaiotl during its Melee charge phase.",
+        "points": 4,
+        "boss": true
+    },
+    "614": {
+        "monster": "Doom of Mokhaiotl",
+        "tier": "Master",
+        "type": "Mechanical",
+        "name": "Mokhaiotl Drift",
+        "description": "Defeat the Doom of Mokhaiotl at level 8 before he finishes the first burrow phase.",
+        "points": 5,
+        "boss": true
+    },
+    "615": {
+        "monster": "Doom of Mokhaiotl",
+        "tier": "Master",
+        "type": "Mechanical",
+        "name": "Grub Patrol",
+        "description": "Defeat the Doom of Mokhaiotl levels 1-8 without ever letting a grub be absorbed.",
+        "points": 5,
+        "boss": true
+    },
+    "616": {
+        "monster": "Doom of Mokhaiotl",
+        "tier": "Grandmaster",
+        "type": "Perfection",
+        "name": "Perfect Doom",
+        "description": "Defeat the Doom of Mokhaiotl levels 1-8 without taking any damage from the boss, letting any grubs be absorbed, or stepping in acid blood.",
+        "points": 6,
+        "boss": true
+    },
+    "617": {
+        "monster": "Doom of Mokhaiotl",
+        "tier": "Grandmaster",
+        "type": "Restriction",
+        "name": "The Praying Mantis",
+        "description": "Defeat the Doom of Mokhaiotl levels 1-8 without restoring your prayer points through any method.",
+        "points": 6,
+        "boss": true
+    },
+    "618": {
+        "monster": "Doom of Mokhaiotl",
+        "tier": "Grandmaster",
+        "type": "Restriction",
+        "name": "Duel of Mokhaiotl",
+        "description": "Defeat the Doom of Mokhaiotl levels 1-8 whilst only damaging the boss with one-handed melee attacks.",
+        "points": 6,
+        "boss": true
+    },
+    "619": {
+        "monster": "Doom of Mokhaiotl",
+        "tier": "Grandmaster",
+        "type": "Restriction",
+        "name": "Darkness Is Your Ally?",
+        "description": "Defeat the Doom of Mokhaiotl levels 1-8 without equipping a demonbane weapon.",
+        "points": 6,
+        "boss": true
+    },
+    "620": {
+        "monster": "Doom of Mokhaiotl",
+        "tier": "Master",
+        "type": "Restriction",
+        "name": "Mine's Better",
+        "description": "Defeat the Doom of Mokhaiotl levels 1-8 whilst always wearing a shield.",
+        "points": 5,
+        "boss": true
+    },
+    "621": {
+        "monster": "Doom of Mokhaiotl",
+        "tier": "Elite",
+        "type": "Speed",
+        "name": "Doom Crawler",
+        "description": "Defeat the Doom of Mokhaiotl level 1 in less than 30 seconds.",
+        "points": 4,
+        "boss": true
+    },
+    "622": {
+        "monster": "Doom of Mokhaiotl",
+        "tier": "Master",
+        "type": "Speed",
+        "name": "Doom Chaser",
+        "description": "Defeat the Doom of Mokhaiotl levels 1-8 in less than 10:00.",
+        "points": 5,
+        "boss": true
+    },
+    "623": {
+        "monster": "Doom of Mokhaiotl",
+        "tier": "Grandmaster",
+        "type": "Speed",
+        "name": "Doom Racer",
+        "description": "Defeat the Doom of Mokhaiotl levels 1-8 in less than 7:15.",
+        "points": 6,
+        "boss": true
+    },
+    "624": {
+        "monster": "Doom of Mokhaiotl",
+        "tier": "Grandmaster",
+        "type": "Mechanical",
+        "name": "Mopping up",
+        "description": "Clear at least 8 acid splats in a single Volatile Earth special attack.",
         "points": 6,
         "boss": true
     }
